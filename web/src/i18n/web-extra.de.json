@@ -91,5 +91,18 @@
   "web_update_action": "Aktualisieren",
   "web_scan_privacy": "Das Kamerabild verlässt dein Gerät nie. Nur die Barcode-Nummer wird an Open Food Facts gesendet, um das Produkt zu finden.",
   "web_glow_label": "Animierter Hintergrund",
-  "web_glow_description": "Grünes Leuchten hinter der App in dunklen Designs. Zum Akkusparen ausschalten."
+  "web_glow_description": "Grünes Leuchten hinter der App in dunklen Designs. Zum Akkusparen ausschalten.",
+  "web_weight_title": "Gewicht",
+  "web_weight_kg_label": "Gewicht (kg)",
+  "web_weight_date_label": "Datum",
+  "web_weight_save": "Gewicht speichern",
+  "web_weight_saved": "Gewicht gespeichert.",
+  "web_weight_invalid": "Geben Sie ein Gewicht zwischen 20 und 400 kg ein, z. B. 68,4.",
+  "web_weight_invalid_date": "Wählen Sie ein Datum, das nicht in der Zukunft liegt.",
+  "web_weight_empty": "Noch kein Gewicht erfasst.",
+  "web_weight_chart_desc": "Gewichtsverlauf: {1} Messungen vom {2} bis {3}. Zuletzt: {4} kg.",
+  "web_weight_latest": "Zuletzt: {1} kg",
+  "web_weight_change": "{1} kg seit {2}",
+  "web_weight_history": "Alle Messungen",
+  "web_weight_delete": "Gewicht vom {1} löschen"
 }

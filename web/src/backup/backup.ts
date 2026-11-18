@@ -3,7 +3,7 @@ import type { StoreName } from '../db/schema';
 import {
   checkupFromEntity, checkupToEntity, doseLogFromEntity, doseLogToEntity, examFromEntity, examToEntity,
   labResultFromEntity, labResultToEntity, mealFromEntity, mealToEntity, medicationFromEntity,
-  medicationToEntity, profileFromEntity, profileToEntity, stoolFromEntity, stoolToEntity,
+  medicationToEntity, profileFromEntity, profileToEntity, stoolFromEntity, stoolToEntity, weightFromEntity, weightToEntity,
 } from '../domain/entities';
 import type { BackupData } from '../domain/models';
 
@@ -14,13 +14,13 @@ import type { BackupData } from '../domain/models';
 
 /** The stores that make up a backup. */
 const BACKUP_STORES = [
-  'meals', 'stools', 'profile', 'medications', 'checkups', 'lab_results', 'dose_logs', 'exams',
+  'meals', 'stools', 'profile', 'medications', 'checkups', 'lab_results', 'dose_logs', 'exams', 'weights',
 ] as const satisfies readonly StoreName[];
 
 /** Consistent snapshot of all the data to back up (one read-only transaction). */
 export async function snapshot(): Promise<BackupData> {
   return transaction(BACKUP_STORES, 'readonly', async (tx) => {
-    const [meals, stools, profile, medications, checkups, labResults, doseLogs, exams] = await Promise.all([
+    const [meals, stools, profile, medications, checkups, labResults, doseLogs, exams, weights] = await Promise.all([
       tx.objectStore('meals').getAll(),
       tx.objectStore('stools').getAll(),
       tx.objectStore('profile').getAll(),
@@ -29,6 +29,7 @@ export async function snapshot(): Promise<BackupData> {
       tx.objectStore('lab_results').getAll(),
       tx.objectStore('dose_logs').getAll(),
       tx.objectStore('exams').getAll(),
+      tx.objectStore('weights').getAll(),
     ]);
     const profileRow = profile[0];
     return {
@@ -40,6 +41,7 @@ export async function snapshot(): Promise<BackupData> {
       labResults: labResults.map(labResultFromEntity),
       doseLogs: doseLogs.map(doseLogFromEntity),
       exams: exams.map(examFromEntity),
+      weights: weights.map((entity) => weightFromEntity(entity)),
     };
   });
 }
@@ -85,6 +87,11 @@ export async function restore(backup: BackupData): Promise<void> {
       const store = tx.objectStore('exams');
       pending.push(store.clear());
       for (const row of backup.exams) pending.push(store.add(stripAutoId(examToEntity(row))));
+    }
+    if (backup.weights) {
+      const store = tx.objectStore('weights');
+      pending.push(store.clear());
+      for (const row of backup.weights) pending.push(store.add(stripAutoId(weightToEntity(row))));
     }
     await Promise.all(pending);
   });

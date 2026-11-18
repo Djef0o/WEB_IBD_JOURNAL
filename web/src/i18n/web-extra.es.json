@@ -91,5 +91,18 @@
   "web_update_action": "Actualizar",
   "web_scan_privacy": "La imagen de la cámara nunca sale de tu dispositivo. Solo el número del código de barras se envía a Open Food Facts para encontrar el producto.",
   "web_glow_label": "Fondo animado",
-  "web_glow_description": "Resplandor verde detrás de la app en temas oscuros. Desactívalo para ahorrar batería."
+  "web_glow_description": "Resplandor verde detrás de la app en temas oscuros. Desactívalo para ahorrar batería.",
+  "web_weight_title": "Peso",
+  "web_weight_kg_label": "Peso (kg)",
+  "web_weight_date_label": "Fecha",
+  "web_weight_save": "Guardar el peso",
+  "web_weight_saved": "Peso guardado.",
+  "web_weight_invalid": "Introduzca un peso entre 20 y 400 kg, por ejemplo 68,4.",
+  "web_weight_invalid_date": "Elija una fecha que no sea futura.",
+  "web_weight_empty": "Aún no hay ningún peso registrado.",
+  "web_weight_chart_desc": "Curva de peso: {1} mediciones del {2} al {3}. Último: {4} kg.",
+  "web_weight_latest": "Último: {1} kg",
+  "web_weight_change": "{1} kg desde el {2}",
+  "web_weight_history": "Todas las mediciones",
+  "web_weight_delete": "Eliminar el peso del {1}"
 }

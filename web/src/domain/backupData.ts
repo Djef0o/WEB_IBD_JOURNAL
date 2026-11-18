@@ -1,7 +1,7 @@
 import { DOSE_STATUSES, LAB_QUALIFIERS, LAB_TESTS, type DoseLog, type LabResult } from './health';
 import {
   EXAM_TYPES, MEAL_TYPES, nowEpochMillis,
-  type BackupData, type Exam, type Meal, type Product, type Stool,
+  type BackupData, type Exam, type Meal, type Product, type Stool, type Weight,
 } from './models';
 import {
   CHECKUP_TYPES, REPEAT_UNITS, SEXES,
@@ -214,6 +214,13 @@ function readExam(value: unknown, path: string): Exam {
   };
 }
 
+function readWeight(value: unknown, path: string): Weight {
+  const o = obj(value, path);
+  const kg = num(o, 'kg', path);
+  if (kg <= 0) throw new TypeError(`${path}.kg: positive number expected`);
+  return { id: num(o, 'id', path, 0), date: date(o, 'date', path), kg };
+}
+
 /**
  * Decodes the JSON clear text of a backup (`BackupData`). Sections absent from earlier
  * backups come back as `null`, meaning "leave the current data untouched".
@@ -229,6 +236,7 @@ export function decodeBackupData(json: string): BackupData {
     labResults: optionalList(root.labResults, 'labResults', readLabResult),
     doseLogs: optionalList(root.doseLogs, 'doseLogs', readDoseLog),
     exams: optionalList(root.exams, 'exams', readExam),
+    weights: optionalList(root.weights, 'weights', readWeight),
   };
 }
 

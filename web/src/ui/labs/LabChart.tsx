@@ -14,7 +14,7 @@ const RIGHT_PAD = 10;
 const R = 4.5;
 
 /** Width of an element, kept up to date (the chart is drawn in real pixels so its text stays legible). */
-function useElementWidth(ref: { current: HTMLElement | null }, initial: number): number {
+export function useElementWidth(ref: { current: HTMLElement | null }, initial: number): number {
   const [width, setWidth] = useState(initial);
   useEffect(() => {
     const element = ref.current;

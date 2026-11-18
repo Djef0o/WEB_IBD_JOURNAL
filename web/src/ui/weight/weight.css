@@ -1,0 +1,16 @@
+.weight-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: var(--space-3); align-items: end; }
+.weight-chart { margin: 0; }
+.weight-chart-box { inline-size: 100%; }
+.weight-chart svg { display: block; max-inline-size: 100%; overflow: visible; }
+.weight-chart text { fill: var(--c-on-surface-variant); font-size: 11px; font-family: inherit; }
+.weight-chart .weight-grid { stroke: var(--c-outline-variant); stroke-width: 1; stroke-dasharray: 4 4; }
+.weight-chart .weight-line { fill: none; stroke: var(--c-primary); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.weight-chart .weight-point { fill: var(--c-primary); }
+.weight-list ul { list-style: none; padding: 0; margin-block: var(--space-2) 0; display: flex; flex-direction: column; max-block-size: 20rem; overflow-y: auto; }
+.weight-list li { display: flex; align-items: center; gap: var(--space-3); padding-block: var(--space-1); border-block-end: 1px solid var(--c-outline-variant); }
+.weight-list li > :first-child { flex: 1; min-width: 0; }
+.weight-value { font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (forced-colors: active) {
+  .weight-chart .weight-line, .weight-chart .weight-grid { stroke: CanvasText; }
+  .weight-chart .weight-point { fill: CanvasText; }
+}

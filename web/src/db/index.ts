@@ -13,6 +13,7 @@ export { requestPersistentStorage } from './persist';
 
 export * as meals from './meals';
 export * as stools from './stools';
+export * as weights from './weights';
 export * as labs from './labs';
 export * as doses from './doses';
 export * as profile from './profile';

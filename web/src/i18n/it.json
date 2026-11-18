@@ -642,5 +642,18 @@
   "web_undo": "Annulla",
   "web_update_action": "Aggiorna",
   "web_update_available": "Nuova versione disponibile.",
+  "web_weight_change": "{1} kg dal {2}",
+  "web_weight_chart_desc": "Curva del peso: {1} misurazioni dal {2} al {3}. Ultimo: {4} kg.",
+  "web_weight_date_label": "Data",
+  "web_weight_delete": "Elimina il peso del {1}",
+  "web_weight_empty": "Nessun peso registrato finora.",
+  "web_weight_history": "Tutte le misurazioni",
+  "web_weight_invalid": "Inserisci un peso tra 20 e 400 kg, ad esempio 68,4.",
+  "web_weight_invalid_date": "Scegli una data non futura.",
+  "web_weight_kg_label": "Peso (kg)",
+  "web_weight_latest": "Ultimo: {1} kg",
+  "web_weight_save": "Registra il peso",
+  "web_weight_saved": "Peso registrato.",
+  "web_weight_title": "Peso",
   "yesterday_at": "Ieri alle {1}"
 }

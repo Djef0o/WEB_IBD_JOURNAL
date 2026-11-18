@@ -91,5 +91,18 @@
   "web_update_action": "Update",
   "web_scan_privacy": "The camera image never leaves your device. Only the barcode number is sent to Open Food Facts to find the product.",
   "web_glow_label": "Animated background",
-  "web_glow_description": "Green glow behind the app in dark themes. Turn off to save battery."
+  "web_glow_description": "Green glow behind the app in dark themes. Turn off to save battery.",
+  "web_weight_title": "Weight",
+  "web_weight_kg_label": "Weight (kg)",
+  "web_weight_date_label": "Date",
+  "web_weight_save": "Record weight",
+  "web_weight_saved": "Weight recorded.",
+  "web_weight_invalid": "Enter a weight between 20 and 400 kg, for example 68.4.",
+  "web_weight_invalid_date": "Choose a date that is not in the future.",
+  "web_weight_empty": "No weight recorded yet.",
+  "web_weight_chart_desc": "Weight curve: {1} measurements from {2} to {3}. Latest: {4} kg.",
+  "web_weight_latest": "Latest: {1} kg",
+  "web_weight_change": "{1} kg since {2}",
+  "web_weight_history": "All measurements",
+  "web_weight_delete": "Delete the weight of {1}"
 }

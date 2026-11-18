@@ -1,6 +1,6 @@
 import type { DoseLog, DoseStatus, LabQualifier, LabResult, LabTest } from './health';
 import {
-  nowEpochMillis, type Exam, type ExamType, type Meal, type MealType, type Product, type Stool,
+  nowEpochMillis, type Exam, type ExamType, type Meal, type MealType, type Product, type Stool, type Weight,
 } from './models';
 import type { Checkup, CheckupType, Medication, Profile, ReminderSchedule, RepeatUnit, Sex } from './profile';
 import { fromEpochDays, toEpochDays } from './time';
@@ -35,6 +35,14 @@ export interface StoolEntity {
   urgency: boolean;
   nocturnal: boolean;
   falseUrge: boolean;
+}
+
+/** Body weight of one day (web addition). */
+export interface WeightEntity {
+  id: number;
+  dateEpochDay: number;
+  kg: number;
+  createdAt: number;
 }
 
 /** Open Food Facts product cache, by barcode. */
@@ -289,4 +297,12 @@ export function examFromEntity(entity: ExamEntity): Exam {
 
 export function examToEntity(exam: Exam): ExamEntity {
   return { ...exam };
+}
+
+export function weightFromEntity(entity: WeightEntity): Weight {
+  return { id: entity.id, date: fromEpochDays(entity.dateEpochDay), kg: entity.kg };
+}
+
+export function weightToEntity(weight: Weight, createdAt: number = nowEpochMillis()): WeightEntity {
+  return { id: weight.id, dateEpochDay: toEpochDays(weight.date), kg: weight.kg, createdAt };
 }

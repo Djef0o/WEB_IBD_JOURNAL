@@ -117,6 +117,13 @@ export function exam(init: Pick<Exam, 'type' | 'at'> & Partial<Exam>): Exam {
  * Root object for JSON export/import. Sections missing (undefined) from earlier backups
  * leave the current data untouched on import.
  */
+/** Body weight (kg) on a given day; at most one per day. */
+export interface Weight {
+  id: number;
+  date: LocalDate;
+  kg: number;
+}
+
 export interface BackupData {
   meals: Meal[];
   stools: Stool[];
@@ -126,6 +133,8 @@ export interface BackupData {
   labResults?: LabResult[] | null;
   doseLogs?: DoseLog[] | null;
   exams?: Exam[] | null;
+  /** Web addition: the Android app ignores this key. */
+  weights?: Weight[] | null;
 }
 
 /** Result of a product lookup by barcode. */

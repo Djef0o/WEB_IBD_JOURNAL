@@ -9,7 +9,7 @@ import { freshDb } from './helpers/freshDb';
 beforeEach(freshDb);
 
 describe('schema', () => {
-  it('creates database ibd-journal v1 with the 9 Room stores, prefs and photos', async () => {
+  it('creates database ibd-journal with the 9 Room stores, prefs, photos and weights', async () => {
     const db = await getDb();
     expect(db.name).toBe(DB_NAME);
     expect(DB_NAME).toBe('ibd-journal');
@@ -32,6 +32,7 @@ describe('schema', () => {
     }
     expect(keyed('meals').indexes).toEqual(['dateEpochDay']);
     expect(keyed('stools').indexes).toEqual(['dateEpochDay']);
+    expect(keyed('weights')).toMatchObject({ keyPath: 'id', autoIncrement: true, indexes: ['dateEpochDay'] });
     expect(keyed('lab_results').indexes).toEqual(['test_dateEpochDay']);
     expect(tx.objectStore('lab_results').index('test_dateEpochDay').keyPath).toEqual(['test', 'dateEpochDay']);
     expect(keyed('products')).toMatchObject({ keyPath: 'barcode', autoIncrement: false });

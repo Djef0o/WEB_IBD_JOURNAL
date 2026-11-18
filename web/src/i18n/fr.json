@@ -633,5 +633,18 @@
   "web_undo": "Annuler",
   "web_update_action": "Mettre à jour",
   "web_update_available": "Nouvelle version disponible.",
+  "web_weight_change": "{1} kg depuis le {2}",
+  "web_weight_chart_desc": "Courbe de poids : {1} mesures du {2} au {3}. Dernier : {4} kg.",
+  "web_weight_date_label": "Date",
+  "web_weight_delete": "Supprimer le poids du {1}",
+  "web_weight_empty": "Aucun poids enregistré pour l'instant.",
+  "web_weight_history": "Toutes les mesures",
+  "web_weight_invalid": "Saisissez un poids entre 20 et 400 kg, par exemple 68,4.",
+  "web_weight_invalid_date": "Choisissez une date qui n'est pas dans le futur.",
+  "web_weight_kg_label": "Poids (kg)",
+  "web_weight_latest": "Dernier : {1} kg",
+  "web_weight_save": "Enregistrer le poids",
+  "web_weight_saved": "Poids enregistré.",
+  "web_weight_title": "Poids",
   "yesterday_at": "Hier à {1}"
 }

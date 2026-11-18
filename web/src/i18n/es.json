@@ -642,5 +642,18 @@
   "web_undo": "Deshacer",
   "web_update_action": "Actualizar",
   "web_update_available": "Nueva versión disponible.",
+  "web_weight_change": "{1} kg desde el {2}",
+  "web_weight_chart_desc": "Curva de peso: {1} mediciones del {2} al {3}. Último: {4} kg.",
+  "web_weight_date_label": "Fecha",
+  "web_weight_delete": "Eliminar el peso del {1}",
+  "web_weight_empty": "Aún no hay ningún peso registrado.",
+  "web_weight_history": "Todas las mediciones",
+  "web_weight_invalid": "Introduzca un peso entre 20 y 400 kg, por ejemplo 68,4.",
+  "web_weight_invalid_date": "Elija una fecha que no sea futura.",
+  "web_weight_kg_label": "Peso (kg)",
+  "web_weight_latest": "Último: {1} kg",
+  "web_weight_save": "Guardar el peso",
+  "web_weight_saved": "Peso guardado.",
+  "web_weight_title": "Peso",
   "yesterday_at": "Ayer a las {1}"
 }

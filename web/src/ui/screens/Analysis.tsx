@@ -12,6 +12,7 @@ import { Button, Card, SegmentedControl } from '../components';
 import { DailyStoolChart } from '../charts/DailyStoolChart';
 import { historyBars } from '../charts/dailyStool';
 import { formatDecimal } from '../format';
+import { WeightCard } from '../weight/WeightCard';
 import { SymptomsCard } from './analysis/SymptomsCard';
 import { analysisPeriod, periodLabel, periodOptions } from './analysis/period';
 
@@ -71,6 +72,7 @@ export default function Analysis(_props: ScreenProps) {
           {summary.stools.length === 0
             ? <Card><p class="text-muted">{t('analysis_no_data')}</p></Card>
             : <SymptomsCard summary={summary} />}
+          <WeightCard />
         </>
       )}
     </div>

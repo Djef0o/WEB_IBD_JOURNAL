@@ -14,7 +14,7 @@ const enc = new TextEncoder();
 
 async function wipe(): Promise<void> {
   const db = await getDb();
-  const stores = ['meals', 'stools', 'profile', 'medications', 'checkups', 'lab_results', 'dose_logs', 'exams', 'products', 'prefs'] as const;
+  const stores = ['meals', 'stools', 'profile', 'medications', 'checkups', 'lab_results', 'dose_logs', 'exams', 'weights', 'products', 'prefs'] as const;
   const tx = db.transaction(stores, 'readwrite');
   await Promise.all(stores.map((name) => tx.objectStore(name).clear()));
   await tx.done;
@@ -34,6 +34,7 @@ function normalized(b: BackupData): BackupData {
     labResults: byId(b.labResults),
     doseLogs: byId(b.doseLogs),
     exams: byId(b.exams),
+    weights: byId(b.weights),
   };
 }
 
@@ -53,7 +54,7 @@ describe('snapshot / restore', () => {
 
   it('snapshot of an empty database has empty sections and a null profile', async () => {
     expect(await snapshot()).toEqual({
-      meals: [], stools: [], profile: null, medications: [], checkups: [], labResults: [], doseLogs: [], exams: [],
+      meals: [], stools: [], profile: null, medications: [], checkups: [], labResults: [], doseLogs: [], exams: [], weights: [],
     });
   });
 
