@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { BACKUP_PASSWORD, seedBackupFile } from './seed';
-import { completeOnboarding, expect, restoreFromWelcome, test } from './fixtures';
+import { completeOnboarding, expect, restoreFromWelcome, setPin, test, unlockIfLocked } from './fixtures';
 
 test('encrypted backup: export from one browser profile, import into a fresh one', async ({ page, browser }) => {
   await completeOnboarding(page, 'Camille');
@@ -36,9 +36,11 @@ test('encrypted backup: export from one browser profile, import into a fresh one
     await expect(importDialog.getByText('Wrong password, or the file is damaged.')).toBeVisible();
     await importDialog.getByLabel('Password', { exact: true }).fill(BACKUP_PASSWORD);
     await importDialog.getByRole('button', { name: 'Import', exact: true }).click();
+    await setPin(other); // an imported journal gets a PIN before the app opens
     await expect(other).toHaveURL(/\/$/);
     await expect(other.getByText('Stool · Type 5')).toBeVisible();
     await other.goto('/settings');
+    await unlockIfLocked(other);
     await expect(other.getByText('Camille', { exact: true })).toBeVisible();
   } finally {
     await context.close();

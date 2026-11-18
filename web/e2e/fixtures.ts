@@ -16,6 +16,19 @@ export const test = base.extend({
         );
       });
     });
+    // Every full page load of a journal that has a PIN starts on the lock screen: unlock it.
+    const goto = page.goto.bind(page);
+    const reload = page.reload.bind(page);
+    page.goto = async (...args) => {
+      const response = await goto(...args);
+      await unlockIfLocked(page);
+      return response;
+    };
+    page.reload = async (...args) => {
+      const response = await reload(...args);
+      await unlockIfLocked(page);
+      return response;
+    };
     page.on('pageerror', (error) => problems.push(`pageerror: ${error.message}`));
     page.on('console', (msg) => {
       if (msg.type() === 'error') problems.push(`console.error: ${msg.text()}`);
@@ -27,6 +40,29 @@ export const test = base.extend({
 
 export { expect };
 
+/** PIN used by every test journal. */
+export const PIN = '246810';
+
+/** Types the PIN on the lock screen if the page shows it. */
+export async function unlockIfLocked(page: Page): Promise<void> {
+  // Pages that are not the app (robots.txt...) show none of them: nothing to unlock.
+  const shown = await page.locator('.lock-screen, #main, .onboarding').first().waitFor({ timeout: 15_000 }).then(() => true, () => false);
+  if (!shown) return;
+  if (await page.locator('#lock-title').isVisible()) {
+    // Language-independent: the app may be in French (perf test).
+    await page.locator('.lock-screen input').fill(PIN);
+    await page.locator('.lock-screen button[type=submit]').click();
+    await expect(page.locator('#lock-title')).toHaveCount(0);
+  }
+}
+
+/** Fills the PIN form (onboarding step or the gate for an existing install) and submits it. */
+export async function setPin(page: Page, pin = PIN): Promise<void> {
+  await page.getByLabel('PIN', { exact: true }).fill(pin);
+  await page.getByLabel('Confirm the PIN', { exact: true }).fill(pin);
+  await page.getByRole('button', { name: 'Set the PIN' }).click();
+}
+
 /** Fresh browser profile → welcome screen. */
 export async function openFresh(page: Page): Promise<void> {
   await page.goto('/');
@@ -37,7 +73,8 @@ export async function openFresh(page: Page): Promise<void> {
 /** Goes through every onboarding step (all skippable) down to the home screen. */
 export async function completeOnboarding(page: Page, firstName = ''): Promise<void> {
   await openFresh(page);
-  await page.getByRole('button', { name: 'Next' }).click(); // welcome → profile
+  await page.getByRole('button', { name: 'Next' }).click(); // welcome → PIN
+  await setPin(page); // PIN → profile
   if (firstName) await page.getByLabel('First name').fill(firstName);
   for (let i = 0; i < 6; i++) await page.getByRole('button', { name: /^(Next|Skip)$/ }).click();
   await page.getByRole('button', { name: 'Start tracking' }).click();
@@ -55,6 +92,9 @@ export async function restoreFromWelcome(page: Page, file: Buffer | { name: stri
   await dialog.getByLabel('Password', { exact: true }).fill(password);
   await dialog.getByRole('checkbox').check();
   await dialog.getByRole('button', { name: 'Import', exact: true }).click();
+  // The restored journal has no PIN yet: the app asks for one before opening.
+  await expect(page.getByRole('heading', { level: 1, name: 'Protect your data' })).toBeVisible();
+  await setPin(page);
   await expect(page).toHaveURL(/\/$/);
   await expect(page.locator('#main h1')).toBeVisible();
 }

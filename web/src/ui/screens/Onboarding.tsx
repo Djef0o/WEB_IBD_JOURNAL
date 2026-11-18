@@ -7,6 +7,8 @@ import { saveProfile } from '../../db/profile';
 import { profile as emptyProfile, type Medication, type Profile } from '../../domain/profile';
 import { t } from '../../i18n';
 import { navigate, type ScreenProps } from '../../router';
+import { vaultStatus } from '../../security/vault';
+import { PinSetup } from '../security/PinSetup';
 import { ImportBackupButton } from '../backup/ImportBackup';
 import { BristolIcon, Button, Dialog } from '../components';
 import { Glyph, TAB_ICONS } from '../shell/Nav';
@@ -15,14 +17,20 @@ import { NotificationPermission } from './settings/NotificationPermission';
 import { ProfileFields } from './settings/ProfileFields';
 import './settings/settings.css';
 
-type StepId = 'WELCOME' | 'PROFILE' | 'TREATMENTS' | 'TOUR_TODAY' | 'TOUR_HISTORY' | 'TOUR_TRENDS' | 'TOUR_CARE' | 'REMINDERS';
-const STEPS: readonly StepId[] = ['WELCOME', 'PROFILE', 'TREATMENTS', 'TOUR_TODAY', 'TOUR_HISTORY', 'TOUR_TRENDS', 'TOUR_CARE', 'REMINDERS'];
+type StepId = 'WELCOME' | 'SECURITY' | 'PROFILE' | 'TREATMENTS' | 'TOUR_TODAY' | 'TOUR_HISTORY' | 'TOUR_TRENDS' | 'TOUR_CARE' | 'REMINDERS';
+const STEPS: readonly StepId[] = ['WELCOME', 'SECURITY', 'PROFILE', 'TREATMENTS', 'TOUR_TODAY', 'TOUR_HISTORY', 'TOUR_TRENDS', 'TOUR_CARE', 'REMINDERS'];
 
 const ICON: Record<StepId, ComponentChildren> = {
   WELCOME: (
     <>
       <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z" />
       <path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" />
+    </>
+  ),
+  SECURITY: (
+    <>
+      <rect x="4.5" y="10.5" width="15" height="10" rx="2" />
+      <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" />
     </>
   ),
   PROFILE: (
@@ -51,6 +59,7 @@ const ICON: Record<StepId, ComponentChildren> = {
 
 const TITLE: Record<StepId, () => string> = {
   WELCOME: () => t('onboarding_title'),
+  SECURITY: () => t('web_onboarding_security_title'),
   PROFILE: () => t('onboarding_profile_title'),
   TREATMENTS: () => t('onboarding_treatments_title'),
   TOUR_TODAY: () => t('onboarding_tour_today_title'),
@@ -62,6 +71,7 @@ const TITLE: Record<StepId, () => string> = {
 
 const TEXT: Record<StepId, () => string> = {
   WELCOME: () => t('onboarding_text'),
+  SECURITY: () => t('web_onboarding_security_text'),
   PROFILE: () => t('onboarding_profile_text'),
   TREATMENTS: () => t('onboarding_treatments_text'),
   TOUR_TODAY: () => t('onboarding_tour_today_text'),
@@ -137,8 +147,10 @@ export default function Onboarding(_props: ScreenProps) {
     window.scrollTo(0, 0);
   }, [index]);
 
+  const pinPending = step === 'SECURITY' && vaultStatus.value !== 'unlocked';
+
   async function next(): Promise<void> {
-    if (busy) return;
+    if (busy || pinPending) return;
     if (step === 'PROFILE' && !profileEmpty) {
       await saveProfile({ ...draft, firstName: draft.firstName.trim(), lastName: draft.lastName.trim() });
     }
@@ -171,6 +183,9 @@ export default function Onboarding(_props: ScreenProps) {
             </div>
           </>
         )}
+        {step === 'SECURITY' && (vaultStatus.value === 'unlocked'
+          ? <p class="callout" role="status">{t('web_pin_done')}</p>
+          : <PinSetup onDone={() => setIndex((i) => i + 1)} />)}
         {step === 'PROFILE' && <ProfileFields value={draft} onChange={setDraft} />}
         {step === 'TREATMENTS' && <TreatmentsStep />}
         {step === 'TOUR_TODAY' && (
@@ -183,7 +198,7 @@ export default function Onboarding(_props: ScreenProps) {
       <div class="onboarding-nav">
         {index > 0 && <Button variant="text" onClick={() => setIndex(index - 1)}>{t('onboarding_back')}</Button>}
         <span class="spacer" />
-        <Button variant={skipping ? 'outlined' : 'filled'} aria-disabled={busy || undefined} onClick={() => void next()}>
+        <Button variant={skipping ? 'outlined' : 'filled'} aria-disabled={busy || pinPending || undefined} onClick={() => void next()}>
           {isLast ? t('start') : skipping ? t('onboarding_skip') : t('onboarding_next')}
         </Button>
       </div>

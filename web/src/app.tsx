@@ -4,6 +4,9 @@ import { onboardingDone } from './db/prefs';
 import { t } from './i18n';
 import { currentRoute, markRouteRendered, navigate, titleOverride } from './router';
 import { ToastHost } from './ui/components';
+import { vaultStatus } from './security/vault';
+import { LockScreen } from './ui/security/LockScreen';
+import { SetupGate } from './ui/security/SetupGate';
 import { Nav } from './ui/shell/Nav';
 
 /** Place le focus sur le titre de la nouvelle page (sinon sur <main>) : le lecteur d'écran l'annonce. */
@@ -18,6 +21,7 @@ function focusPage(): void {
 export function App() {
   const route = currentRoute.value;
   const done = onboardingDone.value; // undefined tant que les préférences ne sont pas lues
+  const vault = vaultStatus.value;
   const previousPath = useRef<string | null>(null);
 
   const title = route ? (titleOverride.value ?? t(route.titleKey)) : '';
@@ -40,12 +44,19 @@ export function App() {
     else if (leaveOnboarding) void navigate('/', { replace: true });
   }, [needsOnboarding, leaveOnboarding]);
 
-  const ready = done !== undefined && !needsOnboarding && !leaveOnboarding;
+  // Code PIN : écran de verrouillage ; installation existante sans PIN : configuration obligatoire.
+  const locked = vault === 'locked';
+  const needsPin = vault === 'none' && done === true && route?.name !== 'onboarding';
+  const ready = done !== undefined && !needsOnboarding && !leaveOnboarding && vault !== 'loading';
   const bare = route?.name === 'onboarding';
 
   return (
     <>
-      {ready && route ? (
+      {locked ? (
+        <LockScreen />
+      ) : needsPin ? (
+        <SetupGate />
+      ) : ready && route ? (
         <div class="app-shell" data-bare={bare ? '' : undefined}>
           <a
             class="skip-link"

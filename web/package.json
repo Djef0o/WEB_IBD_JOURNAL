@@ -15,6 +15,7 @@
     "e2e": "npm run build && playwright test"
   },
   "dependencies": {
+    "@noble/ciphers": "^2.4.0",
     "@preact/signals": "^2.11.4",
     "idb": "^8.0.4",
     "pdfjs-dist": "^6.5.438",

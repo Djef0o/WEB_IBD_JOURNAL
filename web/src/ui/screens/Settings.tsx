@@ -8,6 +8,7 @@ import { InstallSection } from './settings/InstallSection';
 import { LanguageSection } from './settings/LanguageSection';
 import { ProfileSection } from './settings/ProfileSection';
 import { ReminderSection } from './settings/ReminderSection';
+import { SecuritySection } from './settings/SecuritySection';
 import './settings/settings.css';
 
 export default function Settings(_props: ScreenProps) {
@@ -19,6 +20,7 @@ export default function Settings(_props: ScreenProps) {
         <AppearanceSection />
         <LanguageSection />
         <ReminderSection />
+        <SecuritySection />
         <BackupSection />
         <IcsExportSection />
         <InstallSection />

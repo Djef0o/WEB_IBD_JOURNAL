@@ -1,3 +1,4 @@
+import { effect, untracked } from '@preact/signals';
 import { render } from 'preact';
 import './styles/reset.css';
 import './styles/tokens.css';
@@ -16,6 +17,7 @@ import { initInstall } from './ui/install';
 import { restoreAppearance, syncAppearanceAcrossTabs } from './ui/prefsSync';
 import { initGlow } from './ui/glow/glowPref';
 import { initTheme } from './ui/theme';
+import { loadVault, vaultStatus } from './security/vault';
 
 /**
  * First visit: the app redirects every screen to the onboarding. Doing it before the router loads
@@ -38,10 +40,17 @@ async function boot(): Promise<void> {
   initInstall();
   // The dictionary and the first screen are independent downloads: fetch them side by side
   // (awaiting one after the other adds a full network round trip before the first render).
-  await Promise.all([initI18n(), startRouter()]);
+  await Promise.all([initI18n(), startRouter(), loadVault()]);
   render(<App />, document.getElementById('app')!);
   void requestPersistentStorage();
-  startReminderNotifier();
+  // The reminders read the journal: they wait for the unlock.
+  let notifier = false;
+  effect(() => {
+    const status = vaultStatus.value;
+    if (notifier || (status !== 'none' && status !== 'unlocked')) return;
+    notifier = true;
+    untracked(() => { startReminderNotifier(); });
+  });
   registerServiceWorker();
   syncAppearanceAcrossTabs();
   restoreAppearance().catch((error: unknown) => console.error(error));

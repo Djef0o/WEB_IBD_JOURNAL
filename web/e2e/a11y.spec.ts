@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import type { Page } from '@playwright/test';
 import { dayOffset } from './seed';
-import { expect, openFresh, openSeeded, test } from './fixtures';
+import { expect, openFresh, openSeeded, setPin, test } from './fixtures';
 
 /*
  * axe-core (devDependency, never shipped) injected into each screen, light and dark, at a phone
@@ -67,9 +67,10 @@ test.describe('axe-core', () => {
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await openFresh(page);
     const failures: string[] = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 9; i++) {
       for (const f of await audit(page)) failures.push(`[onboarding ${i + 1}] ${f}`);
-      if (i < 7) await page.getByRole('button', { name: /^(Next|Skip)$/ }).click();
+      if (i === 1) await setPin(page); // the PIN step moves on by itself
+      else if (i < 8) await page.getByRole('button', { name: /^(Next|Skip)$/ }).click();
     }
     await page.getByRole('button', { name: 'Start tracking' }).click();
     await expect(page.locator('#main h1')).toBeVisible();

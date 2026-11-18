@@ -49,7 +49,13 @@ export interface IbdSchema extends DBSchema {
   /** Out-of-line keys: the preference name (see `prefs.ts`). */
   prefs: { key: string; value: unknown };
   /** Out-of-line keys: the relative path stored in `MealEntity.photoPath`. */
-  photos: { key: string; value: Blob };
+  photos: { key: string; value: Blob | EncryptedPhoto };
+}
+
+/** A photo sealed with the data key (see `photos.ts`). */
+export interface EncryptedPhoto {
+  mime: string;
+  enc: Uint8Array;
 }
 
 export type IbdDb = IDBPDatabase<IbdSchema>;

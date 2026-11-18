@@ -1,5 +1,6 @@
-import { openDB, type IDBPTransaction } from 'idb';
+import { openDB } from 'idb';
 import { bumpStores } from './changes';
+import { secureStore, type SecureStore } from './secureStore';
 import { DB_NAME, DB_VERSION, upgradeDb, type IbdDb, type IbdSchema, type StoreName } from './schema';
 
 let dbPromise: Promise<IbdDb> | null = null;
@@ -32,12 +33,17 @@ export async function closeDb(): Promise<void> {
   if (opening) (await opening).close();
 }
 
-/** Transaction handle given to `transaction()` callbacks and to the `tx`-taking repository functions. */
-export type Tx<Mode extends IDBTransactionMode = 'readwrite'> =
-  IDBPTransaction<IbdSchema, readonly StoreName[], Mode>;
+/**
+ * Transaction handle given to `transaction()` callbacks and to the `tx`-taking repository
+ * functions: the stores it opens encrypt and decrypt the records when the app has a PIN
+ * (see `secureStore.ts`).
+ */
+export interface Tx {
+  objectStore<N extends StoreName>(name: N): SecureStore<N>;
+}
 
 /** A transaction of any mode, for the functions that only read. */
-export type ReadTx = Tx<IDBTransactionMode>;
+export type ReadTx = Tx;
 
 /**
  * Runs `fn` in one IndexedDB transaction over `stores`.
@@ -51,14 +57,17 @@ export type ReadTx = Tx<IDBTransactionMode>;
 export async function transaction<Mode extends 'readonly' | 'readwrite', R>(
   stores: readonly StoreName[],
   mode: Mode,
-  fn: (tx: Tx<Mode>) => Promise<R>,
+  fn: (tx: Tx) => Promise<R>,
   changed: readonly StoreName[] = stores,
 ): Promise<R> {
   const db = await getDb();
   const tx = db.transaction(stores, mode);
+  const secure: Tx = {
+    objectStore: (name) => secureStore(name, tx.objectStore(name)),
+  };
   let result: R;
   try {
-    result = await fn(tx);
+    result = await fn(secure);
   } catch (error) {
     try {
       tx.abort();

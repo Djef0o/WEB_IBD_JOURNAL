@@ -1,7 +1,7 @@
 import { createServer, type Server } from 'node:http';
 import type { AddressInfo } from 'node:net';
 import { test as base, expect } from '@playwright/test';
-import { completeOnboarding } from './fixtures';
+import { completeOnboarding, unlockIfLocked } from './fixtures';
 
 /*
  * Service worker update: a new version is announced by a toast ("New version available." +
@@ -65,6 +65,7 @@ test('an update is offered in a toast, keeps the open form, and reloads only on 
     const reloaded = page.waitForEvent('load');
     await page.getByRole('button', { name: 'Update' }).click();
     await reloaded;
+    await unlockIfLocked(page);
     expect(await page.evaluate(() => (window as unknown as { __marker?: number }).__marker)).toBeUndefined();
     await expect(page.locator('#main h1')).toBeVisible();
     await expect.poll(() => page.evaluate(async () => !!(await navigator.serviceWorker.getRegistration())?.waiting)).toBe(false);

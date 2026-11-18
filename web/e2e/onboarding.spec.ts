@@ -2,7 +2,7 @@ import { completeOnboarding, expect, openFresh, test } from './fixtures';
 
 test('first visit redirects to the onboarding, which ends on the home screen', async ({ page }) => {
   await openFresh(page);
-  await expect(page.getByText('Step 1 of 8')).toBeVisible();
+  await expect(page.getByText('Step 1 of 9')).toBeVisible();
   await completeOnboarding(page, 'Camille');
   await expect(page.getByRole('navigation', { name: 'Main navigation' })).toBeVisible();
 
@@ -19,5 +19,5 @@ test('onboarding is keyboard-operable and moves focus to each step title', async
   await page.keyboard.press('Enter');
   await expect(page.getByRole('heading', { level: 1 })).toBeFocused();
   await page.getByRole('button', { name: 'Back' }).click();
-  await expect(page.getByText('Step 1 of 8')).toBeVisible();
+  await expect(page.getByText('Step 1 of 9')).toBeVisible();
 });
