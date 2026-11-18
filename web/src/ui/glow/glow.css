@@ -23,3 +23,10 @@ html[data-glow][data-theme="amoled"] .app-shell { --c-on-surface-variant: #e2ebe
 @media (prefers-color-scheme: dark) {
   html[data-glow][data-theme="system"] .app-shell { --c-on-surface-variant: #e2ebe3; }
 }
+
+/* Écran de verrouillage / configuration du PIN : même traitement que l'app (au-dessus du fond, texte secondaire éclairci). */
+html[data-glow][data-theme="dark"] .lock-screen,
+html[data-glow][data-theme="amoled"] .lock-screen { --c-on-surface-variant: #e2ebe3; }
+@media (prefers-color-scheme: dark) {
+  html[data-glow][data-theme="system"] .lock-screen { --c-on-surface-variant: #e2ebe3; }
+}
