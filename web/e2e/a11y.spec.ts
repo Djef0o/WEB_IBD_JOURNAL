@@ -29,7 +29,7 @@ async function audit(page: Page): Promise<string[]> {
   // The footer sits under the fixed bottom bar while a barely scrollable page is at scroll 0; it
   // clears the bar once scrolled to the end (checked by hand), so axe's "obscured" verdict there is a scroll-position artefact.
   const real = violations
-    .map((v) => (v.id === 'target-size' ? { ...v, nodes: v.nodes.filter((n) => !n.html.includes('github.com/Djef0o/IBD_Journal')) } : v))
+    .map((v) => (v.id === 'target-size' ? { ...v, nodes: v.nodes.filter((n) => !n.html.includes('github.com/Djef0o/WEB_IBD_JOURNAL')) } : v))
     .filter((v) => v.nodes.length > 0);
   return real.map((v) => `${v.id} (${v.impact}): ${v.help}\n` + v.nodes.slice(0, 4).map((n) => `    ${n.target.join(' ')}  ${n.html.slice(0, 120)}\n      ${n.failureSummary?.replace(/\n/g, ' | ')}`).join('\n'));
 }
