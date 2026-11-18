@@ -89,5 +89,7 @@
   "web_scan_again": "Scan another product",
   "web_update_available": "New version available.",
   "web_update_action": "Update",
-  "web_scan_privacy": "The camera image never leaves your device. Only the barcode number is sent to Open Food Facts to find the product."
+  "web_scan_privacy": "The camera image never leaves your device. Only the barcode number is sent to Open Food Facts to find the product.",
+  "web_glow_label": "Animated background",
+  "web_glow_description": "Green glow behind the app in dark themes. Turn off to save battery."
 }

@@ -89,5 +89,7 @@
   "web_scan_again": "Weiteres Produkt scannen",
   "web_update_available": "Neue Version verfügbar.",
   "web_update_action": "Aktualisieren",
-  "web_scan_privacy": "Das Kamerabild verlässt dein Gerät nie. Nur die Barcode-Nummer wird an Open Food Facts gesendet, um das Produkt zu finden."
+  "web_scan_privacy": "Das Kamerabild verlässt dein Gerät nie. Nur die Barcode-Nummer wird an Open Food Facts gesendet, um das Produkt zu finden.",
+  "web_glow_label": "Animierter Hintergrund",
+  "web_glow_description": "Grünes Leuchten hinter der App in dunklen Designs. Zum Akkusparen ausschalten."
 }

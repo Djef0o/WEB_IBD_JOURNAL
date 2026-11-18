@@ -572,6 +572,8 @@
   "web_export_ics_done": "File calendario scaricato.",
   "web_export_ics_empty": "Niente da esportare: nessuna terapia, controllo o esame in programma.",
   "web_footer_license": "Software libero con licenza AGPL-3.0",
+  "web_glow_description": "Alone verde dietro l'app nei temi scuri. Disattivalo per risparmiare batteria.",
+  "web_glow_label": "Sfondo animato",
   "web_ics_privacy_confirm": "Scarica il file",
   "web_ics_privacy_message": "I nomi delle tue terapie e dei tuoi esami verranno scritti nel file del calendario. Se lo importi in un calendario sincronizzato con un account online (Google, Apple, Outlook…), queste informazioni lasceranno questo dispositivo. Importalo in un calendario locale non sincronizzato se vuoi che restino qui.",
   "web_install_app": "Installa l'app",

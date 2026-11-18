@@ -563,6 +563,8 @@
   "web_export_ics_done": "Fichier calendrier téléchargé.",
   "web_export_ics_empty": "Rien à exporter : aucun traitement, contrôle ou examen n'est programmé.",
   "web_footer_license": "Logiciel libre sous licence AGPL-3.0",
+  "web_glow_description": "Halo vert derrière l'app en thèmes sombres. Désactivez-le pour économiser la batterie.",
+  "web_glow_label": "Fond animé",
   "web_ics_privacy_confirm": "Télécharger le fichier",
   "web_ics_privacy_message": "Les noms de vos traitements et examens seront écrits dans le fichier agenda. Si vous l'importez dans un agenda synchronisé avec un compte en ligne (Google, Apple, Outlook…), ces informations quittent cet appareil. Importez-le dans un agenda local non synchronisé si vous voulez qu'elles restent ici.",
   "web_install_app": "Installer l'application",

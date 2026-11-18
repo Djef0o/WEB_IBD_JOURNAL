@@ -89,5 +89,7 @@
   "web_scan_again": "Digitalizar outro produto",
   "web_update_available": "Nova versão disponível.",
   "web_update_action": "Atualizar",
-  "web_scan_privacy": "A imagem da câmara nunca sai do seu dispositivo. Apenas o número do código de barras é enviado ao Open Food Facts para encontrar o produto."
+  "web_scan_privacy": "A imagem da câmara nunca sai do seu dispositivo. Apenas o número do código de barras é enviado ao Open Food Facts para encontrar o produto.",
+  "web_glow_label": "Fundo animado",
+  "web_glow_description": "Brilho verde por trás da app nos temas escuros. Desative para poupar bateria."
 }

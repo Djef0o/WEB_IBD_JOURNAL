@@ -572,6 +572,8 @@
   "web_export_ics_done": "Archivo de calendario descargado.",
   "web_export_ics_empty": "Nada que exportar: no hay ningún tratamiento, control o prueba programado.",
   "web_footer_license": "Software libre bajo licencia AGPL-3.0",
+  "web_glow_description": "Resplandor verde detrás de la app en temas oscuros. Desactívalo para ahorrar batería.",
+  "web_glow_label": "Fondo animado",
   "web_ics_privacy_confirm": "Descargar el archivo",
   "web_ics_privacy_message": "Los nombres de sus tratamientos y exploraciones se escribirán en el archivo de calendario. Si lo importa en un calendario sincronizado con una cuenta en línea (Google, Apple, Outlook…), esta información saldrá de este dispositivo. Impórtelo en un calendario local no sincronizado si quiere que se quede aquí.",
   "web_install_app": "Instalar la aplicación",

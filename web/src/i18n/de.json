@@ -562,6 +562,8 @@
   "web_export_ics_done": "Kalenderdatei heruntergeladen.",
   "web_export_ics_empty": "Nichts zu exportieren: Es ist keine Behandlung, Kontrolle oder Untersuchung geplant.",
   "web_footer_license": "Freie Software unter der Lizenz AGPL-3.0",
+  "web_glow_description": "Grünes Leuchten hinter der App in dunklen Designs. Zum Akkusparen ausschalten.",
+  "web_glow_label": "Animierter Hintergrund",
   "web_ics_privacy_confirm": "Datei herunterladen",
   "web_ics_privacy_message": "Die Namen Ihrer Behandlungen und Untersuchungen werden in die Kalenderdatei geschrieben. Wenn Sie sie in einen Kalender importieren, der mit einem Online-Konto synchronisiert wird (Google, Apple, Outlook …), verlassen diese Informationen dieses Gerät. Importieren Sie sie in einen lokalen, nicht synchronisierten Kalender, wenn sie hier bleiben sollen.",
   "web_install_app": "App installieren",

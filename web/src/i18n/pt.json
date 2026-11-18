@@ -572,6 +572,8 @@
   "web_export_ics_done": "Ficheiro de calendário transferido.",
   "web_export_ics_empty": "Nada para exportar: não há nenhum tratamento, controlo ou exame agendado.",
   "web_footer_license": "Software livre sob a licença AGPL-3.0",
+  "web_glow_description": "Brilho verde por trás da app nos temas escuros. Desative para poupar bateria.",
+  "web_glow_label": "Fundo animado",
   "web_ics_privacy_confirm": "Transferir o ficheiro",
   "web_ics_privacy_message": "Os nomes dos seus tratamentos e exames serão escritos no ficheiro de calendário. Se o importar para um calendário sincronizado com uma conta online (Google, Apple, Outlook…), estas informações saem deste dispositivo. Importe-o para um calendário local não sincronizado se quiser que fiquem aqui.",
   "web_install_app": "Instalar a aplicação",

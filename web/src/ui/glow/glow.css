@@ -1,0 +1,25 @@
+/* Fond « green glow » : visible seulement en thème sombre / AMOLED (le contraste des thèmes clairs n'est pas prévu pour). */
+#glow {
+  position: fixed; inset: 0; z-index: 0; display: none; pointer-events: none; overflow: hidden;
+  background: radial-gradient(circle at 50% 20%, #0d750d 0%, #042e04 38%, #000 78%);
+}
+#glow canvas { display: block; width: 100%; height: 100%; }
+
+html[data-glow][data-theme="dark"] #glow,
+html[data-glow][data-theme="amoled"] #glow { display: block; }
+@media (prefers-color-scheme: dark) {
+  html[data-glow][data-theme="system"] #glow { display: block; }
+}
+
+html[data-glow][data-theme="dark"] .app-shell,
+html[data-glow][data-theme="amoled"] .app-shell { position: relative; z-index: 1; }
+@media (prefers-color-scheme: dark) {
+  html[data-glow][data-theme="system"] .app-shell { position: relative; z-index: 1; }
+}
+
+/* Texte secondaire plus clair sur le fond lumineux (garde un contraste AA sur la bande la plus vive). */
+html[data-glow][data-theme="dark"] .app-shell,
+html[data-glow][data-theme="amoled"] .app-shell { --c-on-surface-variant: #e2ebe3; }
+@media (prefers-color-scheme: dark) {
+  html[data-glow][data-theme="system"] .app-shell { --c-on-surface-variant: #e2ebe3; }
+}

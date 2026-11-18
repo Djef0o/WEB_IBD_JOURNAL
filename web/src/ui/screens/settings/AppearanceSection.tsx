@@ -3,7 +3,8 @@ import type { CSSProperties } from 'preact';
 import { useId } from 'preact/hooks';
 import { setThemeModePref, setThemePalettePref } from '../../../db/prefs';
 import { t } from '../../../i18n';
-import { Card, SegmentedControl } from '../../components';
+import { Card, SegmentedControl, Switch } from '../../components';
+import { glowEnabled, setGlowEnabled } from '../../glow/glowPref';
 import {
   THEME_MODES, THEME_PALETTES, setThemeMode, setThemePalette, themeMode, themePalette,
   type ThemeMode, type ThemePalette,
@@ -83,6 +84,12 @@ export function AppearanceSection() {
           ))}
         </div>
       </fieldset>
+      <Switch
+        label={t('web_glow_label')}
+        description={t('web_glow_description')}
+        checked={glowEnabled.value}
+        onChange={setGlowEnabled}
+      />
     </Card>
   );
 }

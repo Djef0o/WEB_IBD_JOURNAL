@@ -562,6 +562,8 @@
   "web_export_ics_done": "Calendar file downloaded.",
   "web_export_ics_empty": "Nothing to export: no treatment, checkup or exam is scheduled.",
   "web_footer_license": "Free software under the AGPL-3.0 licence",
+  "web_glow_description": "Green glow behind the app in dark themes. Turn off to save battery.",
+  "web_glow_label": "Animated background",
   "web_ics_privacy_confirm": "Download the file",
   "web_ics_privacy_message": "The names of your treatments and exams will be written in the calendar file. If you import it into a calendar synchronized with an online account (Google, Apple, Outlook…), this information leaves this device. Import it into a local calendar that is not synchronized if you want it to stay here.",
   "web_install_app": "Install the app",

@@ -14,6 +14,7 @@ import { startReminderNotifier } from './reminders/notify';
 import { initRouter } from './router';
 import { initInstall } from './ui/install';
 import { restoreAppearance, syncAppearanceAcrossTabs } from './ui/prefsSync';
+import { initGlow } from './ui/glow/glowPref';
 import { initTheme } from './ui/theme';
 
 /**
@@ -33,6 +34,7 @@ async function startRouter(): Promise<void> {
 
 async function boot(): Promise<void> {
   initTheme();
+  initGlow();
   initInstall();
   // The dictionary and the first screen are independent downloads: fetch them side by side
   // (awaiting one after the other adds a full network round trip before the first render).
