@@ -133,5 +133,9 @@
   "web_onboarding_security_text": "Choisissez un code PIN. Il chiffre tout ce que vous enregistrez sur cet appareil : journal, résultats d'analyses, traitements et photos. Vous pouvez ajouter le déverrouillage par empreinte.",
   "web_security_title": "Verrouillage par code PIN",
   "web_security_text": "L'application demande le code PIN à l'ouverture et après quelques minutes en arrière-plan.",
-  "web_lock_now": "Verrouiller maintenant"
+  "web_lock_now": "Verrouiller maintenant",
+  "web_pin_change": "Changer le code PIN",
+  "web_pin_current_label": "Code PIN actuel",
+  "web_pin_new_label": "Nouveau code PIN",
+  "web_pin_changed": "Code PIN modifié."
 }

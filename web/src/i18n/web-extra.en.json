@@ -133,5 +133,9 @@
   "web_onboarding_security_text": "Choose a PIN. It encrypts everything you record on this device: the journal, lab results, treatments and photos. You can add fingerprint unlock.",
   "web_security_title": "PIN lock",
   "web_security_text": "The app asks for the PIN when it opens and after a few minutes in the background.",
-  "web_lock_now": "Lock now"
+  "web_lock_now": "Lock now",
+  "web_pin_change": "Change PIN",
+  "web_pin_current_label": "Current PIN",
+  "web_pin_new_label": "New PIN",
+  "web_pin_changed": "PIN changed."
 }

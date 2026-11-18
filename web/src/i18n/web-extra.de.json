@@ -133,5 +133,9 @@
   "web_onboarding_security_text": "Wählen Sie eine PIN. Sie verschlüsselt alles, was Sie auf diesem Gerät erfassen: Tagebuch, Laborwerte, Behandlungen und Fotos. Sie können die Entsperrung per Fingerabdruck hinzufügen.",
   "web_security_title": "PIN-Sperre",
   "web_security_text": "Die App fragt die PIN beim Öffnen und nach einigen Minuten im Hintergrund ab.",
-  "web_lock_now": "Jetzt sperren"
+  "web_lock_now": "Jetzt sperren",
+  "web_pin_change": "PIN ändern",
+  "web_pin_current_label": "Aktuelle PIN",
+  "web_pin_new_label": "Neue PIN",
+  "web_pin_changed": "PIN geändert."
 }

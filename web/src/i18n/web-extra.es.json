@@ -133,5 +133,9 @@
   "web_onboarding_security_text": "Elija un PIN. Cifra todo lo que registre en este dispositivo: diario, resultados de laboratorio, tratamientos y fotos. Puede añadir el desbloqueo con huella.",
   "web_security_title": "Bloqueo con PIN",
   "web_security_text": "La aplicación pide el PIN al abrirse y tras unos minutos en segundo plano.",
-  "web_lock_now": "Bloquear ahora"
+  "web_lock_now": "Bloquear ahora",
+  "web_pin_change": "Cambiar el PIN",
+  "web_pin_current_label": "PIN actual",
+  "web_pin_new_label": "Nuevo PIN",
+  "web_pin_changed": "PIN cambiado."
 }

@@ -9,7 +9,7 @@ import { getPhoto, importPhoto } from '../src/db/photos';
 import { stool } from '../src/domain/models';
 import { setDataKey, setVaultPresent } from '../src/security/session';
 import {
-  TooManyAttemptsError, WrongPinError, loadVault, setupVault, unlockWithPin, vaultStatus,
+  TooManyAttemptsError, WrongPinError, changePin, loadVault, setupVault, unlockWithPin, vaultStatus,
 } from '../src/security/vault';
 import { freshDb } from './helpers/freshDb';
 
@@ -97,5 +97,18 @@ describe('PIN vault', () => {
     await relaunch();
     for (let i = 0; i < 5; i++) await expect(unlockWithPin('999999')).rejects.toBeInstanceOf(WrongPinError);
     await expect(unlockWithPin('123456')).rejects.toBeInstanceOf(TooManyAttemptsError);
+  });
+
+  it('changes the PIN without touching the data; the old PIN stops working', async () => {
+    await loadVault();
+    await setupVault('123456');
+    await saveStool(stool({ date: '2026-03-01', comment: 'SECRET-NOTE' }));
+    await expect(changePin('000000', '654321')).rejects.toBeInstanceOf(WrongPinError);
+    await changePin('123456', '654321');
+
+    await relaunch();
+    await expect(unlockWithPin('123456')).rejects.toBeInstanceOf(WrongPinError);
+    await unlockWithPin('654321');
+    expect((await getAllStools())[0]!.comment).toBe('SECRET-NOTE');
   });
 });

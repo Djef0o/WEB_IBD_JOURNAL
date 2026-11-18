@@ -88,3 +88,27 @@ test('an install that predates the PIN is asked for one, then its data is encryp
   expect(raw).not.toContain('OLD-DATA');
   expect(raw).toContain('__enc');
 });
+
+test('the PIN can be changed from the settings', async ({ page }) => {
+  await completeOnboarding(page);
+  await page.goto('/settings');
+  await page.getByRole('button', { name: 'Change PIN' }).click();
+  const dialog = page.getByRole('dialog', { name: 'Change PIN' });
+  await dialog.getByLabel('Current PIN', { exact: true }).fill('000000');
+  await dialog.getByLabel('New PIN', { exact: true }).fill('135790');
+  await dialog.getByLabel('Confirm the PIN', { exact: true }).fill('135790');
+  await dialog.getByRole('button', { name: 'Change PIN' }).click();
+  await expect(dialog.getByText('Wrong PIN.')).toBeVisible();
+  await dialog.getByLabel('Current PIN', { exact: true }).fill(PIN);
+  await dialog.getByRole('button', { name: 'Change PIN' }).click();
+  await expect(page.getByText('PIN changed.')).toBeVisible();
+
+  await page.evaluate(() => location.reload());
+  await page.locator('#lock-title').waitFor();
+  await page.locator('.lock-screen input').fill(PIN);
+  await page.locator('.lock-screen button[type=submit]').click();
+  await expect(page.getByText('Wrong PIN.')).toBeVisible();
+  await page.locator('.lock-screen input').fill('135790');
+  await page.locator('.lock-screen button[type=submit]').click();
+  await expect(page.locator('#main h1')).toBeVisible();
+});

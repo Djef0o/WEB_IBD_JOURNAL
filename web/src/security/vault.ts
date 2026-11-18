@@ -184,6 +184,12 @@ function throttle(meta: VaultMeta): void {
   if (wait > 0) throw new TooManyAttemptsError(wait);
 }
 
+async function registerFailure(meta: VaultMeta): Promise<void> {
+  const fails = meta.fails + 1;
+  const lockedUntil = fails >= FREE_ATTEMPTS ? Date.now() + Math.min(30_000 * 2 ** (fails - FREE_ATTEMPTS), 15 * 60_000) : 0;
+  await writeMeta({ ...meta, fails, lockedUntil });
+}
+
 /** Unlocks with the PIN. Throws `WrongPinError` or `TooManyAttemptsError`. */
 export async function unlockWithPin(pin: string): Promise<void> {
   const meta = await readMeta();
@@ -193,14 +199,31 @@ export async function unlockWithPin(pin: string): Promise<void> {
   try {
     key = await unwrap(await pinKey(pin, meta.salt, meta.iterations), meta.pin, 'pin');
   } catch (error) {
-    if (error instanceof WrongPinError) {
-      const fails = meta.fails + 1;
-      const lockedUntil = fails >= FREE_ATTEMPTS ? Date.now() + Math.min(30_000 * 2 ** (fails - FREE_ATTEMPTS), 15 * 60_000) : 0;
-      await writeMeta({ ...meta, fails, lockedUntil });
-    }
+    if (error instanceof WrongPinError) await registerFailure(meta);
     throw error;
   }
   await finishUnlock(meta, key);
+}
+
+/**
+ * Changes the PIN: the current one must be right, then the data key is wrapped again under the
+ * new PIN (new salt). The records are not touched; biometric unlock keeps working.
+ */
+export async function changePin(oldPin: string, newPin: string): Promise<void> {
+  if (!isValidPin(newPin)) throw new RangeError('Invalid PIN');
+  const meta = await readMeta();
+  const dataKey = currentDataKey();
+  if (!meta || !dataKey) throw new Error('The vault must be unlocked');
+  throttle(meta);
+  try {
+    await unwrap(await pinKey(oldPin, meta.salt, meta.iterations), meta.pin, 'pin');
+  } catch (error) {
+    if (error instanceof WrongPinError) await registerFailure(meta);
+    throw error;
+  }
+  const salt = random(16);
+  const pin = await wrap(await pinKey(newPin, salt, PBKDF2_ITERATIONS), dataKey, 'pin');
+  await writeMeta({ ...meta, salt, iterations: PBKDF2_ITERATIONS, pin, fails: 0, lockedUntil: 0 });
 }
 
 /** Unlocks with the biometric secret (a user verification prompt). */

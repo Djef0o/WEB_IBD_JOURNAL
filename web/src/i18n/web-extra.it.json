@@ -133,5 +133,9 @@
   "web_onboarding_security_text": "Scegli un PIN. Cifra tutto ciò che registri su questo dispositivo: diario, esami di laboratorio, terapie e foto. Puoi aggiungere lo sblocco con impronta.",
   "web_security_title": "Blocco con PIN",
   "web_security_text": "L'app chiede il PIN all'apertura e dopo alcuni minuti in background.",
-  "web_lock_now": "Blocca ora"
+  "web_lock_now": "Blocca ora",
+  "web_pin_change": "Cambia il PIN",
+  "web_pin_current_label": "PIN attuale",
+  "web_pin_new_label": "Nuovo PIN",
+  "web_pin_changed": "PIN cambiato."
 }

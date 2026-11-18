@@ -133,5 +133,9 @@
   "web_onboarding_security_text": "Escolha um PIN. Cifra tudo o que registar neste dispositivo: diário, análises, tratamentos e fotografias. Pode adicionar o desbloqueio por impressão digital.",
   "web_security_title": "Bloqueio por PIN",
   "web_security_text": "A aplicação pede o PIN ao abrir e após alguns minutos em segundo plano.",
-  "web_lock_now": "Bloquear agora"
+  "web_lock_now": "Bloquear agora",
+  "web_pin_change": "Alterar o PIN",
+  "web_pin_current_label": "PIN atual",
+  "web_pin_new_label": "Novo PIN",
+  "web_pin_changed": "PIN alterado."
 }
