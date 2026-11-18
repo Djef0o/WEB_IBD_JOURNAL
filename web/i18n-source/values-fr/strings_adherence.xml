@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stool_urgency">Urgence</string>
+    <string name="stool_nocturnal">La nuit</string>
+    <string name="dose_taken">Pris</string>
+    <string name="dose_missed">Oublié</string>
+    <string name="home_doses_title">Traitements du jour</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_step">Passo %1$d di %2$d</string>
+    <string name="onboarding_next">Avanti</string>
+    <string name="onboarding_back">Indietro</string>
+    <string name="onboarding_skip">Salta</string>
+
+    <string name="onboarding_profile_title">Il tuo profilo</string>
+    <string name="onboarding_profile_text">Questi dati compaiono nel tuo report per il medico. Restano sul tuo telefono e si modificano nelle Impostazioni.</string>
+
+    <string name="onboarding_treatments_title">Le tue terapie</string>
+    <string name="onboarding_treatments_text">Aggiungi i farmaci che prendi, dall\'elenco o scrivendone il nome. Per ognuno puoi impostare un promemoria: ogni giorno, ogni 2 settimane, ogni mese…</string>
+    <string name="onboarding_treatments_empty">Nessuna terapia per ora. Potrai aggiungerle anche più tardi nella scheda Cure.</string>
+
+    <string name="onboarding_tour_today_title">Oggi: annota in due tocchi</string>
+    <string name="onboarding_tour_today_text">Tocca «Evacuazione», scegli il tipo di Bristol, da dura (1) a liquida (7), e salva. Aggiungi se serve sangue, muco, dolore o stanchezza. Annota i pasti con una foto o scansionando un codice a barre.</string>
+    <string name="onboarding_tour_history_title">Cronologia: il tuo mese a colpo d\'occhio</string>
+    <string name="onboarding_tour_history_text">Il calendario colora ogni giorno: verde per evacuazioni normali, arancione per molli o liquide. Tocca un giorno per vedere e modificare ciò che hai annotato.</string>
+    <string name="onboarding_tour_trends_title">Tendenze: segui il tuo andamento</string>
+    <string name="onboarding_tour_trends_text">Il grafico mostra le evacuazioni giorno per giorno, con un punto rosso quando c\'è sangue. Confronta gli ultimi 30 giorni, 90 giorni o tutto lo storico e conta i giorni con sintomi.</string>
+    <string name="onboarding_tour_care_title">Cure: terapie ed esami</string>
+    <string name="onboarding_tour_care_text">Lì trovi le tue terapie. Puoi anche programmare esami del sangue e delle feci (calprotectina), con un promemoria il giorno giusto, e conservare i risultati, inseriti a mano o importati da un referto.</string>
+
+    <string name="onboarding_notifications_title">Promemoria quotidiano</string>
+    <string name="onboarding_notifications_text">Ogni sera alle 19, una notifica ti permette di annotare evacuazione, dolore e stanchezza direttamente, senza aprire l\'app; resta finché non li hai compilati tutti e tre. Anche i promemoria di terapie ed esami arrivano come notifiche. Puoi cambiare l\'ora nelle Impostazioni.</string>
+    <string name="onboarding_notifications_allow">Consenti le notifiche</string>
+    <string name="onboarding_notifications_granted">Notifiche consentite</string>
+</resources>

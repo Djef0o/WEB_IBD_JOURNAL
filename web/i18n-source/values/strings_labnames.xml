@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Noms des analyses biologiques -->
+    <string name="lab_red_blood_cells">Red blood cells</string>
+    <string name="lab_hematocrit">Hematocrit</string>
+    <string name="lab_mcv">MCV</string>
+    <string name="lab_mch">MCH</string>
+    <string name="lab_mchc">MCHC</string>
+    <string name="lab_white_blood_cells">White blood cells</string>
+    <string name="lab_neutrophils">Neutrophils</string>
+    <string name="lab_lymphocytes">Lymphocytes</string>
+    <string name="lab_monocytes">Monocytes</string>
+    <string name="lab_eosinophils">Eosinophils</string>
+    <string name="lab_basophils">Basophils</string>
+    <string name="lab_iron">Serum iron</string>
+    <string name="lab_transferrin">Transferrin</string>
+    <string name="lab_iron_binding_capacity">TIBC</string>
+    <string name="lab_transferrin_saturation">Transferrin saturation</string>
+    <string name="lab_creatinine">Creatinine</string>
+    <string name="lab_egfr">eGFR</string>
+    <string name="lab_sodium">Sodium</string>
+    <string name="lab_potassium">Potassium</string>
+    <string name="lab_chloride">Chloride</string>
+    <string name="lab_calcium">Calcium</string>
+    <string name="lab_urine_protein">Urine protein</string>
+    <string name="lab_ast">AST (SGOT)</string>
+    <string name="lab_alt">ALT (SGPT)</string>
+    <string name="lab_ggt">GGT</string>
+    <string name="lab_alkaline_phosphatase">Alkaline phosphatase</string>
+    <string name="lab_bilirubin_total">Total bilirubin</string>
+    <string name="lab_bilirubin_direct">Direct bilirubin</string>
+    <string name="lab_bilirubin_indirect">Indirect bilirubin</string>
+    <string name="lab_glucose">Fasting glucose</string>
+    <string name="lab_cholesterol_total">Total cholesterol</string>
+    <string name="lab_cholesterol_hdl">HDL cholesterol</string>
+    <string name="lab_cholesterol_ldl">LDL cholesterol</string>
+    <string name="lab_triglycerides">Triglycerides</string>
+    <string name="lab_prothrombin_time">Prothrombin time</string>
+    <string name="lab_psa">PSA</string>
+    <!-- Familles d'analyses -->
+    <string name="lab_category_inflammation">Inflammation</string>
+    <string name="lab_category_blood_count">Blood count</string>
+    <string name="lab_category_iron">Iron panel</string>
+    <string name="lab_category_kidney">Kidney &amp; electrolytes</string>
+    <string name="lab_category_liver">Liver</string>
+    <string name="lab_category_metabolic">Glucose &amp; lipids</string>
+    <string name="lab_category_nutrition">Nutrition</string>
+    <string name="lab_category_other">Other</string>
+</resources>

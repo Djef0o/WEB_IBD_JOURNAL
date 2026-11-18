@@ -1,0 +1,40 @@
+/* Rapport médecin, à l'écran (la mise en page papier est dans styles/print.css). */
+.report { display: flex; flex-direction: column; gap: var(--space-4); }
+.report-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.report-hint { flex-basis: 100%; }
+
+.report-sheet {
+  display: flex; flex-direction: column; gap: var(--space-5); padding: var(--space-4);
+  border-radius: var(--radius-lg); background: var(--c-surface); border: 1px solid var(--c-outline-variant);
+  min-width: 0;
+}
+.report-header { display: flex; flex-direction: column; gap: var(--space-1); }
+.report-brand { font-size: var(--text-xs); font-weight: 700; color: var(--c-on-surface-variant); }
+.report-patient { font-weight: 700; }
+.report-note { font-size: var(--text-sm); color: var(--c-on-surface-variant); }
+.report-section { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+
+.report-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: var(--space-2); margin: 0; }
+.report-tile { justify-content: flex-end; border: 1px solid var(--c-outline-variant); border-radius: var(--radius-sm); padding: var(--space-2) var(--space-3); display: flex; flex-direction: column-reverse; }
+.report-tile dd { margin: 0; }
+.report-tile-value { font-size: var(--text-xl); font-weight: 700; }
+
+.report-scroll { overflow-x: auto; }
+.report-table { width: 100%; font-size: var(--text-sm); }
+.report-table th, .report-table td { padding: var(--space-1) var(--space-2); text-align: start; vertical-align: top; border-block-end: 1px solid var(--c-outline-variant); }
+.report-table thead th { color: var(--c-on-surface-variant); font-weight: 700; }
+.report-table tbody th { font-weight: 400; }
+.report-table .num { text-align: end; white-space: nowrap; }
+.report-table .bar-cell { width: 8rem; vertical-align: middle; }
+.report-table .bar-cell .symptom-bar { display: block; width: 100%; height: 0.375rem; }
+.report-table .category-row th { padding-block-start: var(--space-3); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; border-block-end: 0; }
+.report-table td[data-outside] { background: var(--c-surface-variant); }
+.lab-table tbody th[scope="row"] { min-width: 10rem; }
+
+.report-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.report-list li { display: flex; flex-direction: column; font-size: var(--text-sm); }
+.report-lab-notes { display: flex; flex-direction: column; gap: var(--space-1); }
+.report-footer { font-size: var(--text-xs); color: var(--c-on-surface-variant); border-block-start: 1px solid var(--c-outline-variant); padding-block-start: var(--space-2); }
+
+.report-toolbar .segmented { flex: 1 1 16rem; max-width: 24rem; }
+.lab-table th:last-child, .lab-table td:last-child { padding-inline-start: var(--space-4); }

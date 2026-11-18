@@ -1,0 +1,33 @@
+/* Impression du rapport (A4). La coque (navigation, pied de page) est déjà masquée par shell.css. */
+@page { size: A4; margin: 14mm; }
+
+@media print {
+  html, body { background: #fff !important; color: #000 !important; }
+  .report-toolbar { display: none !important; }
+
+  /* Papier : toujours clair, quel que soit le thème choisi (y compris AMOLED). */
+  .report-sheet {
+    color-scheme: light;
+    --c-surface: #fff; --c-on-surface: #111; --c-on-surface-variant: #555;
+    --c-surface-variant: #e8e8e8; --c-outline-variant: #cfcfcf; --c-primary: #333;
+    --c-surface-container-low: #fff; --c-surface-container: #fff;
+    background: #fff; color: #111; border: 0; border-radius: 0; padding: 0; gap: 5mm;
+    font-size: 9.5pt; line-height: 1.35;
+    print-color-adjust: exact; -webkit-print-color-adjust: exact;
+  }
+  .report-sheet h1 { font-size: 20pt; }
+  .report-sheet h2 { font-size: 13pt; break-after: avoid; }
+  .report-sheet h3 { break-after: avoid; }
+
+  .report-section { break-inside: avoid; }
+  .report-labs { break-inside: auto; }
+  .report-table tr, .report-list li, .report-tile { break-inside: avoid; }
+  .report-table thead { display: table-header-group; }
+  .report-table { font-size: 8.5pt; }
+  .report-table th, .report-table td { padding: 1pt 3pt; }
+  .report-scroll { overflow: visible; }
+  .report-tiles { grid-template-columns: repeat(5, 1fr); }
+  .report-tile-value { font-size: 14pt; }
+  .report-footer { break-inside: avoid; }
+  .dsc-caption .card-title { font-size: 13pt; }
+}

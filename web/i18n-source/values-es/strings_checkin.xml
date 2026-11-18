@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notification du soir : douleur et fatigue du jour -->
+    <string name="checkin_fatigue_question">¿Cuánto cansancio hoy?</string>
+    <string name="fatigue_recorded_format">Cansancio %1$d/5 registrado</string>
+    <string name="checkin_pain_question">¿Cuánto dolor hoy?</string>
+    <string name="pain_recorded_format">Dolor %1$d/5 registrado</string>
+</resources>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IBD Journal</string>
+
+    <!-- Calendar -->
+    <string name="today">Today</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="swipe_hint">Swipe horizontally to change the view</string>
+
+    <!-- Meals -->
+    <string name="meal_breakfast">Breakfast</string>
+    <string name="meal_lunch">Lunch</string>
+    <string name="meal_dinner">Dinner</string>
+    <string name="add_meal">Add a meal</string>
+    <string name="edit_meal">Edit meal</string>
+    <string name="meal_description_hint">What are you eating? (foods, amounts, symptoms…)</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="photo">Meal photo</string>
+    <string name="add_photo">Add a photo</string>
+    <string name="remove_photo">Remove photo</string>
+    <string name="scan_barcode">Scan a barcode</string>
+    <string name="no_photo">No meal logged for this time.</string>
+    <string name="edit">Edit</string>
+    <string name="add_meal_hint">Tap to add this meal</string>
+    <string name="open_day">Open</string>
+    <string name="stool_count">%1$d stool(s)</string>
+    <string name="empty_day">No entries for this day.</string>
+
+    <!-- Stools -->
+    <string name="stools">Stool</string>
+    <string name="add_stool">Add a stool</string>
+    <string name="add_stool_hint">Tap to add a stool</string>
+    <string name="new_stool">New stool</string>
+    <string name="edit_stool">Edit stool</string>
+    <string name="hour">Time</string>
+    <string name="tap_to_modify">Tap to edit &gt;</string>
+    <string name="bristol_scale">Bristol scale</string>
+    <string name="stool_type_question">What type of stool?</string>
+    <string name="blood_presence">Blood present</string>
+    <string name="mucus_presence">Mucus present</string>
+    <string name="pain">Pain</string>
+    <string name="fatigue">Fatigue</string>
+    <string name="level_hint">0 = none • 5 = a lot</string>
+    <string name="level_hint_pain">0 = none • 5 = severe</string>
+    <string name="level_hint_fatigue">0 = energetic • 5 = exhausted</string>
+    <string name="stool_comment_hint">Comment…</string>
+    <string name="no_stools">No stools logged.</string>
+    <string name="stool_recorded_format">Type %1$d stool logged!</string>
+    <string name="stool_recorded_type_0">No stool (Type 0) logged!</string>
+    <string name="stool_type_0">Type 0</string>
+    <string name="stool_type_1">Type 1</string>
+    <string name="stool_type_2">Type 2</string>
+    <string name="stool_type_3">Type 3</string>
+    <string name="stool_type_4">Type 4</string>
+    <string name="stool_type_5">Type 5</string>
+    <string name="stool_type_6">Type 6</string>
+    <string name="stool_type_7">Type 7</string>
+
+    <!-- Scanner -->
+    <string name="scan_title">Scan a barcode</string>
+    <string name="scan_hint">Place the product barcode inside the frame</string>
+    <string name="scanning">Looking up product…</string>
+    <string name="scan_close">Close scanner</string>
+    <string name="product_found">Product found</string>
+    <string name="product_not_found">Product not found in the Open Food Facts database</string>
+    <string name="use_product">Use this product</string>
+    <string name="remove_product">Remove product</string>
+    <string name="nutriscore">Nutri-Score %1$s</string>
+    <string name="use_barcode_anyway">Continue with this barcode</string>
+    <string name="scan_error">Scan error. Please try again.</string>
+    <string name="camera_permission_needed">Camera permission is required to scan a barcode.</string>
+    <string name="grant_permission">Allow camera</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Welcome to your tracking journal</string>
+    <string name="onboarding_text">This daily diary helps you track your diet and bowel movements if you live with ulcerative colitis or Crohn\'s disease. Attach photos or barcodes to your meals, and log each stool with a comment, so you can discuss it in more detail with your doctor.</string>
+    <string name="onboarding_disclaimer">Your data stays on your device and is not a substitute for medical advice.</string>
+    <string name="start">Start tracking</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="daily_reminder">Daily reminder</string>
+    <string name="daily_reminder_desc">Get a notification to log your stools, pain and fatigue</string>
+    <string name="reminder_time">Reminder time</string>
+    <string name="test_notification">Test notification</string>
+    <string name="test_notification_desc">Send a demo notification right now</string>
+    <string name="notification_permission_warning">Notification permission has not been granted.</string>
+    <string name="notification_permission_grant">Allow</string>
+    <string name="exact_alarm_warning">Exact alarms are disabled: the reminder may arrive late.</string>
+    <string name="exact_alarm_grant">Enable</string>
+    <string name="modify">Edit</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="export_data">Export data</string>
+    <string name="import_data">Import data</string>
+    <string name="data_management">Data management</string>
+
+    <!-- Main navigation -->
+    <string name="nav_home">Today</string>
+    <string name="nav_history">History</string>
+    <string name="nav_analysis">Trends</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="home_greeting">Hello</string>
+    <string name="home_today">Today</string>
+    <string name="home_stat_stools">stools</string>
+    <string name="home_stat_meals">meals logged</string>
+    <string name="home_stat_bristol">Avg. Bristol</string>
+    <string name="home_action_meal">Meal</string>
+    <string name="home_action_meal_sub">Photo or barcode</string>
+    <string name="home_action_stool">Stool</string>
+    <string name="home_action_stool_sub">In 2 taps</string>
+    <string name="home_feed">Today\'s feed</string>
+    <string name="home_see_all">See all</string>
+    <string name="home_empty">Nothing logged yet. Tap an action above.</string>
+    <string name="home_week">This week</string>
+    <string name="home_week_stools">stools</string>
+    <string name="home_week_avg">average</string>
+    <string name="home_week_meals">meals</string>
+    <string name="home_reminder">Next reminder · %1$s</string>
+    <string name="home_reminder_sub">Every day</string>
+    <string name="home_details">Details</string>
+    <string name="home_calm">Quiet day</string>
+    <string name="home_no_data">No data yet</string>
+
+    <!-- Quick entry -->
+    <string name="quick_stool_title">New stool</string>
+    <string name="quick_stool_details">More details</string>
+    <string name="quick_stool_question">What type of stool?</string>
+
+    <!-- History -->
+    <string name="history_title">History</string>
+    <string name="history_month">This month</string>
+    <string name="history_avg">average %1$s</string>
+    <string name="history_recent">Recent days</string>
+    <string name="history_no_entry">No entries</string>
+    <string name="history_open_calendar">Detailed view</string>
+    <string name="history_legend">Bristol</string>
+    <string name="history_chart_caption">Stools per day · last 7 days</string>
+    <string name="history_legend_note">Green = normal stools · orange = loose or watery</string>
+    <string name="history_day_detail">Day details</string>
+    <string name="history_no_data">No data this month</string>
+
+    <!-- Trends -->
+    <string name="analysis_title">Trends</string>
+    <string name="analysis_period_30">Last 30 days</string>
+    <string name="analysis_period_90">Last 90 days</string>
+    <string name="analysis_period_all">All history</string>
+    <string name="analysis_period_30_short">30 days</string>
+    <string name="analysis_period_90_short">90 days</string>
+    <string name="analysis_period_all_short">All</string>
+    <string name="analysis_stools">Stools</string>
+    <string name="analysis_avg">Average Bristol</string>
+    <string name="analysis_meals">Meals logged</string>
+    <string name="analysis_days">Days tracked</string>
+    <string name="analysis_daily">Stools per day</string>
+    <string name="analysis_daily_period">All history · swipe to see past days</string>
+    <string name="analysis_daily_hint">Tap a bar to see the day</string>
+    <string name="analysis_detail_types">Types %1$s</string>
+    <string name="analysis_legend_hard">Hard (1–2)</string>
+    <string name="analysis_legend_normal">Normal (3–4)</string>
+    <string name="analysis_legend_loose">Loose (5–7)</string>
+    <string name="analysis_legend_blood">Blood</string>
+    <string name="analysis_symptoms">Symptoms</string>
+    <string name="analysis_symptoms_compare">Days affected · change vs the previous %1$d days</string>
+    <string name="analysis_symptoms_days">Days affected</string>
+    <string name="analysis_blood">Blood</string>
+    <string name="analysis_mucus">Mucus</string>
+    <string name="analysis_pain_strong">Strong pain (≥ 3/5)</string>
+    <string name="analysis_fatigue_strong">Strong fatigue (≥ 3/5)</string>
+    <string name="analysis_urgency">Urgency</string>
+    <string name="analysis_nocturnal">Night-time stools</string>
+    <plurals name="analysis_symptom_days">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <string name="analysis_liquid_per_day">Liquid stools per day (types 6–7)</string>
+    <string name="analysis_no_data">Not enough data yet. Keep logging your days.</string>
+    <string name="analysis_type">Type %1$d</string>
+    <string name="close">Close</string>
+
+    <plurals name="history_month_stools">
+        <item quantity="one">%1$d stool</item>
+        <item quantity="other">%1$d stools</item>
+    </plurals>
+    <plurals name="stools_count">
+        <item quantity="one">%1$d stool</item>
+        <item quantity="other">%1$d stools</item>
+    </plurals>
+    <plurals name="stools_label">
+        <item quantity="one">stool</item>
+        <item quantity="other">stools</item>
+    </plurals>
+    <plurals name="meals_label">
+        <item quantity="one">meal logged</item>
+        <item quantity="other">meals logged</item>
+    </plurals>
+    <string name="stool_symptoms">Symptoms</string>
+    <string name="level_hint_common">0 = absent · 5 = severe</string>
+    <string name="level_none">None</string>
+    <string name="bristol_desc_0">No stool</string>
+    <string name="bristol_desc_1">Hard lumps</string>
+    <string name="bristol_desc_2">Lumpy sausage</string>
+    <string name="bristol_desc_3">Cracked</string>
+    <string name="bristol_desc_4">Smooth and soft</string>
+    <string name="bristol_desc_5">Soft blobs</string>
+    <string name="bristol_desc_6">Mushy</string>
+    <string name="bristol_desc_7">Watery</string>
+    <string name="last_reminder">Last reminder</string>
+    <string name="last_reminder_never">No reminder shown yet</string>
+    <string name="battery_title">Background reminders</string>
+    <string name="battery_warning">The system may delay the reminder when the app is frozen in the background.</string>
+    <string name="battery_grant">Allow</string>
+    <string name="battery_exempt">Allowed</string>
+    <string name="today_at">Today at %1$s</string>
+    <string name="yesterday_at">Yesterday at %1$s</string>
+    <string name="day_journal">Journal</string>
+    <string name="meals_section">Meals</string>
+    <string name="stools_section">Stools</string>
+    <string name="add">Add</string>
+    <string name="date_at">%1$s at %2$s</string>
+
+    <!-- Stool summary -->
+    <string name="stool_title">Stool · Type %1$d</string>
+    <string name="stool_flag_blood">Blood reported</string>
+    <string name="stool_flag_mucus">Mucus reported</string>
+    <string name="stool_flag_pain">Pain %1$d/5</string>
+    <string name="stool_flag_none">Nothing to report</string>
+    <string name="bristol_icon_desc">Bristol type %1$d</string>
+    <string name="level_out_of_five">%1$d / 5</string>
+
+    <!-- Appearance and language -->
+    <string name="settings_appearance">Appearance</string>
+    <string name="theme_mode">Brightness</string>
+    <string name="theme_mode_system">System</string>
+    <string name="theme_mode_light">Light</string>
+    <string name="theme_mode_dark">Dark</string>
+    <string name="theme_mode_amoled">AMOLED</string>
+    <string name="theme_palette">Colors</string>
+    <string name="palette_sage">Sage</string>
+    <string name="palette_solarized">Solarized</string>
+    <string name="palette_nord">Nord</string>
+    <string name="palette_gruvbox">Gruvbox</string>
+    <string name="palette_catppuccin">Catppuccin</string>
+    <string name="palette_rose_pine">Rosé Pine</string>
+    <string name="settings_language">Language</string>
+    <string name="language_system">Phone language</string>
+</resources>

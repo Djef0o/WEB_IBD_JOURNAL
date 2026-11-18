@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Rapport pour le médecin (PDF) -->
+    <string name="report_action">Rapport pour le médecin (PDF)</string>
+    <string name="report_generating">Préparation du rapport…</string>
+    <string name="report_error">Impossible de créer le rapport. Veuillez réessayer.</string>
+    <string name="report_share_title">Partager le rapport</string>
+    <string name="report_no_share_app">Aucune application disponible pour partager le PDF</string>
+    <string name="report_title">Rapport de suivi</string>
+    <string name="report_patient">Patient : %1$s</string>
+    <string name="report_period">%1$s · du %2$s au %3$s</string>
+    <string name="report_generated">Généré le %1$s à %2$s</string>
+    <string name="report_summary">Synthèse</string>
+    <string name="report_stools_per_day">Selles par jour suivi</string>
+    <string name="report_summary_note">Les saisies de type 0 (pas de selle) ne comptent pas comme des selles. Les moyennes par jour portent sur les jours avec au moins une saisie de selle.</string>
+    <string name="report_no_data">Aucune selle notée sur cette période.</string>
+    <string name="report_col_symptom">Symptôme</string>
+    <string name="report_col_days">Jours touchés</string>
+    <string name="report_col_previous">Période précédente</string>
+    <string name="report_previous">%1$s (%2$s)</string>
+    <string name="report_schedule">%1$s à %2$s, depuis le %3$s</string>
+    <string name="report_schedule_once">Une fois, le %1$s à %2$s</string>
+    <string name="report_adherence">Observance sur la période : %1$s des prises prévues confirmées (%2$d sur %3$d) · oubliées : %4$d · sans réponse : %5$d</string>
+    <string name="report_adherence_none">Aucune prise confirmée dans l\'app sur cette période</string>
+    <string name="report_labs">Résultats d\'analyses</string>
+    <string name="report_col_date">Date</string>
+    <string name="report_col_test">Analyse</string>
+    <string name="report_col_reference">Valeurs du laboratoire</string>
+    <string name="report_labs_legend">↑ au-dessus · ↓ en dessous (en gras) : hors des valeurs du laboratoire saisies ; – quand il n\'en a pas indiqué.</string>
+    <string name="report_lab_notes">Remarques</string>
+    <string name="report_lab_note">%1$s – %2$s : %3$s</string>
+    <string name="report_col_note">Note</string>
+    <string name="report_checkups">Contrôles à venir</string>
+    <string name="report_checkup_at">%1$s à %2$s</string>
+    <string name="report_footer">Données saisies par le patient — ne remplace pas un avis médical</string>
+    <string name="report_page">Page %1$d</string>
+    <plurals name="report_chart_range">
+        <item quantity="one">Du %2$s au %3$s · %1$d jour</item>
+        <item quantity="other">Du %2$s au %3$s · %1$d jours</item>
+    </plurals>
+</resources>

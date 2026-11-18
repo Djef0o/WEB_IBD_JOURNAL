@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Informe para el médico (PDF) -->
+    <string name="report_action">Informe para el médico (PDF)</string>
+    <string name="report_generating">Preparando el informe…</string>
+    <string name="report_error">No se pudo crear el informe. Inténtalo de nuevo.</string>
+    <string name="report_share_title">Compartir el informe</string>
+    <string name="report_no_share_app">No hay ninguna app para compartir el PDF</string>
+    <string name="report_title">Informe de seguimiento</string>
+    <string name="report_patient">Paciente: %1$s</string>
+    <string name="report_period">%1$s · del %2$s al %3$s</string>
+    <string name="report_generated">Generado el %1$s a las %2$s</string>
+    <string name="report_summary">Resumen</string>
+    <string name="report_stools_per_day">Deposiciones por día registrado</string>
+    <string name="report_summary_note">Los registros de tipo 0 (sin deposición) no cuentan como deposiciones. Los promedios diarios se calculan sobre los días con al menos un registro de deposición.</string>
+    <string name="report_no_data">No hay deposiciones registradas en este período.</string>
+    <string name="report_col_symptom">Síntoma</string>
+    <string name="report_col_days">Días afectados</string>
+    <string name="report_col_previous">Período anterior</string>
+    <string name="report_previous">%1$s (%2$s)</string>
+    <string name="report_schedule">%1$s a las %2$s, desde el %3$s</string>
+    <string name="report_schedule_once">Una vez, el %1$s a las %2$s</string>
+    <string name="report_adherence">Adherencia en el período: %1$s de las tomas previstas confirmadas (%2$d de %3$d) · olvidadas: %4$d · sin respuesta: %5$d</string>
+    <string name="report_adherence_none">Ninguna toma confirmada en la app en este período</string>
+    <string name="report_labs">Resultados de análisis</string>
+    <string name="report_col_date">Fecha</string>
+    <string name="report_col_test">Análisis</string>
+    <string name="report_col_reference">Valores del laboratorio</string>
+    <string name="report_labs_legend">↑ por encima · ↓ por debajo (en negrita): fuera de los valores del laboratorio indicados; – si no se indicaron.</string>
+    <string name="report_lab_notes">Notas</string>
+    <string name="report_lab_note">%1$s – %2$s: %3$s</string>
+    <string name="report_col_note">Nota</string>
+    <string name="report_checkups">Próximos controles</string>
+    <string name="report_checkup_at">%1$s a las %2$s</string>
+    <string name="report_footer">Datos introducidos por el paciente: no sustituyen el consejo médico</string>
+    <string name="report_page">Página %1$d</string>
+    <plurals name="report_chart_range">
+        <item quantity="one">Del %2$s al %3$s · %1$d día</item>
+        <item quantity="other">Del %2$s al %3$s · %1$d días</item>
+    </plurals>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_section_title">Calendario del telefono</string>
+    <string name="calendar_sync">Aggiungi i promemoria al mio calendario</string>
+    <string name="calendar_sync_desc">Assunzioni, ordini, esami del sangue e delle feci diventano eventi del tuo calendario, con il loro avviso. L\'app non invia più queste notifiche. Il promemoria quotidiano delle evacuazioni non cambia.</string>
+    <string name="calendar_target">Calendario</string>
+    <string name="calendar_none">Nessun calendario modificabile su questo telefono</string>
+    <string name="calendar_permission_lost">L\'accesso al calendario è stato revocato: i promemoria tornano a essere inviati dall\'app.</string>
+    <string name="calendar_refill_title">Ordinare %1$s</string>
+    <string name="calendar_event_description">Promemoria aggiunto da IBD Journal.</string>
+</resources>

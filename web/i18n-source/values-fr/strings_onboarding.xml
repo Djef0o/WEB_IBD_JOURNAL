@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_step">Étape %1$d sur %2$d</string>
+    <string name="onboarding_next">Suivant</string>
+    <string name="onboarding_back">Retour</string>
+    <string name="onboarding_skip">Passer</string>
+
+    <string name="onboarding_profile_title">Votre profil</string>
+    <string name="onboarding_profile_text">Ces informations figurent sur votre rapport pour le médecin. Elles restent sur votre téléphone et se modifient dans les Réglages.</string>
+
+    <string name="onboarding_treatments_title">Vos traitements</string>
+    <string name="onboarding_treatments_text">Ajoutez les médicaments que vous prenez, depuis la liste ou en tapant leur nom. Chacun peut avoir un rappel : tous les jours, toutes les 2 semaines, tous les mois…</string>
+    <string name="onboarding_treatments_empty">Aucun traitement pour l\'instant. Vous pourrez aussi les ajouter plus tard dans l\'onglet Soins.</string>
+
+    <string name="onboarding_tour_today_title">Aujourd\'hui : noter en deux gestes</string>
+    <string name="onboarding_tour_today_text">Touchez « Selle », choisissez le type de Bristol, de dur (1) à liquide (7), puis enregistrez. Ajoutez si besoin sang, glaires, douleur ou fatigue. Notez vos repas avec une photo ou en scannant un code-barres.</string>
+    <string name="onboarding_tour_history_title">Historique : votre mois en un coup d\'œil</string>
+    <string name="onboarding_tour_history_text">Le calendrier colore chaque jour : vert pour des selles normales, orange pour des selles molles ou liquides. Touchez un jour pour voir et modifier ce que vous avez noté.</string>
+    <string name="onboarding_tour_trends_title">Tendances : suivre votre évolution</string>
+    <string name="onboarding_tour_trends_text">Le graphique montre vos selles jour par jour, avec un point rouge en cas de sang. Comparez les 30 derniers jours, 90 jours ou tout l\'historique, et comptez les jours avec symptômes.</string>
+    <string name="onboarding_tour_care_title">Soins : traitements et contrôles</string>
+    <string name="onboarding_tour_care_text">Vos traitements s\'y trouvent. Vous pouvez aussi y programmer vos prises de sang et tests des selles (calprotectine), avec un rappel le jour venu, et y garder vos résultats d\'analyses, saisis ou importés d\'un compte rendu.</string>
+
+    <string name="onboarding_notifications_title">Rappel quotidien</string>
+    <string name="onboarding_notifications_text">Chaque soir à 19 h, une notification vous permet de noter votre selle, votre douleur et votre fatigue directement, sans ouvrir l\'app ; elle reste affichée tant que les trois ne sont pas remplis. Les rappels de traitement et de contrôle passent aussi par les notifications. L\'heure se modifie dans les Réglages.</string>
+    <string name="onboarding_notifications_allow">Autoriser les notifications</string>
+    <string name="onboarding_notifications_granted">Notifications autorisées</string>
+</resources>

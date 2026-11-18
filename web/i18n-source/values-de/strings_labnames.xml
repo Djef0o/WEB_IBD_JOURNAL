@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Noms des analyses biologiques -->
+    <string name="lab_red_blood_cells">Erythrozyten</string>
+    <string name="lab_hematocrit">Hämatokrit</string>
+    <string name="lab_mcv">MCV</string>
+    <string name="lab_mch">MCH</string>
+    <string name="lab_mchc">MCHC</string>
+    <string name="lab_white_blood_cells">Leukozyten</string>
+    <string name="lab_neutrophils">Neutrophile</string>
+    <string name="lab_lymphocytes">Lymphozyten</string>
+    <string name="lab_monocytes">Monozyten</string>
+    <string name="lab_eosinophils">Eosinophile</string>
+    <string name="lab_basophils">Basophile</string>
+    <string name="lab_iron">Serumeisen</string>
+    <string name="lab_transferrin">Transferrin</string>
+    <string name="lab_iron_binding_capacity">Eisenbindungskapazität</string>
+    <string name="lab_transferrin_saturation">Transferrinsättigung</string>
+    <string name="lab_creatinine">Kreatinin</string>
+    <string name="lab_egfr">eGFR</string>
+    <string name="lab_sodium">Natrium</string>
+    <string name="lab_potassium">Kalium</string>
+    <string name="lab_chloride">Chlorid</string>
+    <string name="lab_calcium">Calcium</string>
+    <string name="lab_urine_protein">Eiweiß im Urin</string>
+    <string name="lab_ast">GOT (AST)</string>
+    <string name="lab_alt">GPT (ALT)</string>
+    <string name="lab_ggt">Gamma-GT</string>
+    <string name="lab_alkaline_phosphatase">Alkalische Phosphatase</string>
+    <string name="lab_bilirubin_total">Bilirubin gesamt</string>
+    <string name="lab_bilirubin_direct">Bilirubin direkt</string>
+    <string name="lab_bilirubin_indirect">Bilirubin indirekt</string>
+    <string name="lab_glucose">Nüchternglukose</string>
+    <string name="lab_cholesterol_total">Cholesterin gesamt</string>
+    <string name="lab_cholesterol_hdl">HDL-Cholesterin</string>
+    <string name="lab_cholesterol_ldl">LDL-Cholesterin</string>
+    <string name="lab_triglycerides">Triglyceride</string>
+    <string name="lab_prothrombin_time">Quick-Wert</string>
+    <string name="lab_psa">PSA</string>
+    <!-- Familles d'analyses -->
+    <string name="lab_category_inflammation">Entzündung</string>
+    <string name="lab_category_blood_count">Blutbild</string>
+    <string name="lab_category_iron">Eisenstatus</string>
+    <string name="lab_category_kidney">Niere &amp; Elektrolyte</string>
+    <string name="lab_category_liver">Leber</string>
+    <string name="lab_category_metabolic">Zucker &amp; Fette</string>
+    <string name="lab_category_nutrition">Ernährung</string>
+    <string name="lab_category_other">Sonstige</string>
+</resources>

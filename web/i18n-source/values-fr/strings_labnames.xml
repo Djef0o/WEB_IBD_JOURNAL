@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Noms des analyses biologiques -->
+    <string name="lab_red_blood_cells">Hématies</string>
+    <string name="lab_hematocrit">Hématocrite</string>
+    <string name="lab_mcv">VGM</string>
+    <string name="lab_mch">TCMH</string>
+    <string name="lab_mchc">CCMH</string>
+    <string name="lab_white_blood_cells">Leucocytes</string>
+    <string name="lab_neutrophils">Neutrophiles</string>
+    <string name="lab_lymphocytes">Lymphocytes</string>
+    <string name="lab_monocytes">Monocytes</string>
+    <string name="lab_eosinophils">Éosinophiles</string>
+    <string name="lab_basophils">Basophiles</string>
+    <string name="lab_iron">Fer sérique</string>
+    <string name="lab_transferrin">Transferrine</string>
+    <string name="lab_iron_binding_capacity">Capacité totale de fixation</string>
+    <string name="lab_transferrin_saturation">Saturation transferrine</string>
+    <string name="lab_creatinine">Créatinine</string>
+    <string name="lab_egfr">DFG</string>
+    <string name="lab_sodium">Sodium</string>
+    <string name="lab_potassium">Potassium</string>
+    <string name="lab_chloride">Chlore</string>
+    <string name="lab_calcium">Calcium</string>
+    <string name="lab_urine_protein">Protéines urinaires</string>
+    <string name="lab_ast">ASAT (TGO)</string>
+    <string name="lab_alt">ALAT (TGP)</string>
+    <string name="lab_ggt">Gamma-GT</string>
+    <string name="lab_alkaline_phosphatase">Phosphatases alcalines</string>
+    <string name="lab_bilirubin_total">Bilirubine totale</string>
+    <string name="lab_bilirubin_direct">Bilirubine directe</string>
+    <string name="lab_bilirubin_indirect">Bilirubine indirecte</string>
+    <string name="lab_glucose">Glycémie à jeun</string>
+    <string name="lab_cholesterol_total">Cholestérol total</string>
+    <string name="lab_cholesterol_hdl">Cholestérol HDL</string>
+    <string name="lab_cholesterol_ldl">Cholestérol LDL</string>
+    <string name="lab_triglycerides">Triglycérides</string>
+    <string name="lab_prothrombin_time">Taux de prothrombine</string>
+    <string name="lab_psa">PSA</string>
+    <!-- Familles d'analyses -->
+    <string name="lab_category_inflammation">Inflammation</string>
+    <string name="lab_category_blood_count">Hémogramme</string>
+    <string name="lab_category_iron">Bilan martial (fer)</string>
+    <string name="lab_category_kidney">Rein et ionogramme</string>
+    <string name="lab_category_liver">Foie</string>
+    <string name="lab_category_metabolic">Glycémie et lipides</string>
+    <string name="lab_category_nutrition">Nutrition</string>
+    <string name="lab_category_other">Autres</string>
+</resources>

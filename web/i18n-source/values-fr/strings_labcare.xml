@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import de comptes rendus d'analyses (plusieurs fichiers) -->
+    <string name="lab_import_reports_button">Importer des comptes rendus (PDF)</string>
+    <string name="lab_import_reading_progress">Lecture du compte rendu %1$d/%2$d…</string>
+    <string name="lab_import_check_reports">Valeurs lues sur vos comptes rendus. Vérifiez chacune avec le document avant d\'enregistrer.</string>
+    <string name="lab_import_all_nothing">Aucune des analyses suivies n\'a été trouvée dans ces documents.</string>
+    <string name="lab_import_document_untitled">Document %1$d</string>
+    <string name="lab_import_document_nothing">Aucune analyse suivie trouvée dans ce document.</string>
+    <string name="lab_import_document_failed">Ce document n\'a pas pu être lu : seuls les PDF du laboratoire contenant du texte sont pris en charge (pas les documents scannés). Saisissez les valeurs à la main.</string>
+    <string name="lab_import_duplicate_in_import">Déjà dans un autre compte rendu à cette date</string>
+
+    <!-- Libellé du choix de l'analyse dans la saisie -->
+    <string name="lab_result_test">Analyse</string>
+</resources>

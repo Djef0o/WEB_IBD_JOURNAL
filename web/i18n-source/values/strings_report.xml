@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Doctor report (PDF) -->
+    <string name="report_action">Report for my doctor (PDF)</string>
+    <string name="report_generating">Preparing the report…</string>
+    <string name="report_error">The report could not be created. Please try again.</string>
+    <string name="report_share_title">Share the report</string>
+    <string name="report_no_share_app">No app available to share the PDF</string>
+    <string name="report_title">Follow-up report</string>
+    <string name="report_patient">Patient: %1$s</string>
+    <string name="report_period">%1$s · %2$s – %3$s</string>
+    <string name="report_generated">Generated on %1$s at %2$s</string>
+    <string name="report_summary">Summary</string>
+    <string name="report_stools_per_day">Stools per tracked day</string>
+    <string name="report_summary_note">Type 0 entries (no stool) are not counted as stools. Per-day averages use the days with at least one stool entry.</string>
+    <string name="report_no_data">No stool logged over this period.</string>
+    <string name="report_col_symptom">Symptom</string>
+    <string name="report_col_days">Days affected</string>
+    <string name="report_col_previous">Previous period</string>
+    <string name="report_previous">%1$s (%2$s)</string>
+    <string name="report_schedule">%1$s at %2$s, since %3$s</string>
+    <string name="report_schedule_once">Once, on %1$s at %2$s</string>
+    <string name="report_adherence">Adherence over the period: %1$s of planned doses confirmed taken (%2$d of %3$d) · missed: %4$d · no answer: %5$d</string>
+    <string name="report_adherence_none">No dose confirmed in the app over this period</string>
+    <string name="report_labs">Lab results</string>
+    <string name="report_col_date">Date</string>
+    <string name="report_col_test">Test</string>
+    <string name="report_col_reference">Lab reference values</string>
+    <string name="report_labs_legend">↑ above · ↓ below (in bold): outside the lab\'s reference values as entered; – when none were given.</string>
+    <string name="report_lab_notes">Notes</string>
+    <string name="report_lab_note">%1$s – %2$s: %3$s</string>
+    <string name="report_col_note">Note</string>
+    <string name="report_checkups">Upcoming tests</string>
+    <string name="report_checkup_at">%1$s at %2$s</string>
+    <string name="report_footer">Data entered by the patient — does not replace medical advice</string>
+    <string name="report_page">Page %1$d</string>
+    <plurals name="report_chart_range">
+        <item quantity="one">%2$s – %3$s · %1$d day</item>
+        <item quantity="other">%2$s – %3$s · %1$d days</item>
+    </plurals>
+</resources>

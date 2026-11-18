@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_section_title">Calendario del teléfono</string>
+    <string name="calendar_sync">Añadir los recordatorios a mi calendario</string>
+    <string name="calendar_sync_desc">Tomas, pedidos, análisis de sangre y de heces se convierten en eventos de tu calendario, con su aviso. La app deja de enviar estas notificaciones. El recordatorio diario de deposiciones no cambia.</string>
+    <string name="calendar_target">Calendario</string>
+    <string name="calendar_none">No hay ningún calendario editable en este teléfono</string>
+    <string name="calendar_permission_lost">Se retiró el acceso al calendario: los recordatorios vuelven a enviarse desde la app.</string>
+    <string name="calendar_refill_title">Pedir %1$s</string>
+    <string name="calendar_event_description">Recordatorio añadido por IBD Journal.</string>
+</resources>

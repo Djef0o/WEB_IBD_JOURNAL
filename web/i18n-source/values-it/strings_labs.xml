@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analyses de suivi -->
+    <string name="lab_crp">PCR</string>
+    <string name="lab_calprotectin">Calprotectina fecale</string>
+    <string name="lab_hemoglobin">Emoglobina</string>
+    <string name="lab_ferritin">Ferritina</string>
+    <string name="lab_vitamin_d">Vitamina D</string>
+    <string name="lab_albumin">Albumina</string>
+    <string name="lab_platelets">Piastrine</string>
+
+    <!-- Résultats d'analyses (profil) -->
+    <string name="lab_results_title">Risultati delle analisi</string>
+    <string name="lab_results_empty">Nessun risultato registrato.</string>
+    <string name="lab_result_add">Aggiungi un risultato</string>
+    <string name="lab_result_edit">Modifica risultato</string>
+    <string name="lab_result_value">Valore</string>
+    <string name="lab_result_value_invalid">Inserisci un numero positivo</string>
+    <string name="lab_result_date">Data dell\'analisi</string>
+    <string name="lab_result_note">Nota (facoltativa)</string>
+    <string name="lab_result_reference_title">Valori del laboratorio (facoltativi)</string>
+    <string name="lab_result_reference_desc">Come riportati nel referto del laboratorio, nella stessa unità.</string>
+    <string name="lab_result_reference_low">Min</string>
+    <string name="lab_result_reference_high">Max</string>
+    <string name="lab_result_number_invalid">Inserisci un numero</string>
+    <string name="lab_result_reference_reversed">Il min supera il max</string>
+    <string name="lab_chart_description">Andamento di %1$s nel tempo</string>
+    <string name="lab_status_below">Sotto i valori</string>
+    <string name="lab_status_above">Sopra i valori</string>
+    <string name="lab_reference">Valori del laboratorio: %1$s</string>
+
+    <!-- Observance d'un traitement : prises confirmées / prévues sur 30 jours -->
+    <plurals name="treatment_adherence">
+        <item quantity="one">Aderenza (30 giorni): %1$d/%2$d assunzione (%3$d%%)</item>
+        <item quantity="other">Aderenza (30 giorni): %1$d/%2$d assunzioni (%3$d%%)</item>
+    </plurals>
+</resources>

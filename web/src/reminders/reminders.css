@@ -1,0 +1,24 @@
+/* Carte « À faire aujourd'hui », rappels et export .ics. */
+
+.today-list { display: flex; flex-direction: column; gap: var(--space-2); list-style: none; padding: 0; }
+.today-item {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-3);
+  padding: var(--space-3); border-radius: var(--radius-md); background: var(--c-surface-container);
+}
+.today-text { display: flex; flex-direction: column; flex: 1 1 12rem; min-width: 0; overflow-wrap: anywhere; }
+.today-title { font-weight: 600; }
+.today-actions { display: flex; gap: var(--space-2); }
+
+.chip {
+  min-height: var(--target); padding-inline: var(--space-4); border-radius: var(--radius-full);
+  border: 1px solid var(--c-outline); background: var(--c-surface); color: var(--c-on-surface); font-weight: 600;
+}
+.chip:hover { background: color-mix(in srgb, var(--c-on-surface) 8%, var(--c-surface)); }
+.chip[aria-pressed="true"] {
+  background: var(--c-secondary-container); color: var(--c-on-secondary-container); border-color: var(--c-primary);
+  box-shadow: inset 0 0 0 1px var(--c-primary);
+}
+.chip[data-status="MISSED"][aria-pressed="true"] { background: var(--c-error-container); color: var(--c-on-error-container); border-color: var(--c-error); box-shadow: inset 0 0 0 1px var(--c-error); }
+@media (forced-colors: active) {
+  .chip[aria-pressed="true"] { border: 2px solid Highlight; }
+}

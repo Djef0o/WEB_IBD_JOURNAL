@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_care">Cure</string>
+    <string name="care_title">Cure</string>
+    <string name="profile_title">Profilo</string>
+    <string name="profile_edit">Modifica profilo</string>
+    <string name="profile_first_name">Nome</string>
+    <string name="profile_last_name">Cognome</string>
+    <string name="profile_birth_date">Data di nascita</string>
+    <string name="profile_not_set">Non indicata</string>
+    <string name="profile_birth_date_missing">Data di nascita non indicata</string>
+    <string name="profile_empty_name">Aggiungi il tuo nome</string>
+    <string name="profile_born_on">Nascita: %1$s · %2$s</string>
+    <string name="profile_sex">Sesso</string>
+    <string name="profile_sex_missing">Sesso non indicato</string>
+    <string name="sex_female">Donna</string>
+    <string name="sex_male">Uomo</string>
+    <plurals name="profile_age">
+        <item quantity="one">%1$d anno</item>
+        <item quantity="many">%1$d anni</item>
+        <item quantity="other">%1$d anni</item>
+    </plurals>
+
+    <!-- Terapie -->
+    <string name="treatments_title">Terapie</string>
+    <string name="treatments_empty">Nessuna terapia aggiunta.</string>
+    <string name="treatment_add">Aggiungi una terapia</string>
+    <string name="treatment_edit">Modifica terapia</string>
+    <string name="treatment_name">Farmaco</string>
+    <string name="treatment_choose">Scegli un farmaco</string>
+    <string name="treatment_search">Cerca</string>
+    <string name="treatment_other">Altro farmaco</string>
+    <string name="treatment_other_named">Altro: «%1$s»</string>
+    <string name="treatment_other_desc">Non è nell\'elenco? Scrivi il nome.</string>
+    <string name="treatment_dosage">Dosaggio</string>
+    <string name="treatment_dosage_hint">es. 2 g, 40 mg, 1 compressa</string>
+    <string name="treatment_start_date">Data di inizio</string>
+
+    <!-- Controlli -->
+    <string name="checkups_title">Esami del sangue e delle feci</string>
+    <string name="checkups_empty">Nessun esame programmato.</string>
+    <string name="checkup_add">Programma un esame</string>
+    <string name="checkup_edit">Modifica esame</string>
+    <string name="checkup_blood_test">Esame del sangue</string>
+    <string name="checkup_stool_test">Esame delle feci</string>
+    <string name="checkup_note">Nota</string>
+    <string name="checkup_note_hint">es. PCR, calprotectina fecale, laboratorio</string>
+    <string name="checkup_date">Data</string>
+
+    <!-- Pianificazione -->
+    <string name="reminder_enabled">Promemoria</string>
+    <string name="reminder_enabled_desc">Ricevi una notifica all\'ora prevista</string>
+    <string name="reminder_off">Promemoria disattivato</string>
+    <string name="repeat_label">Frequenza</string>
+    <string name="repeat_unit_once">Nessuna ripetizione</string>
+    <string name="repeat_unit_day">Giornaliera</string>
+    <string name="repeat_unit_week">Settimanale</string>
+    <string name="repeat_unit_month">Mensile</string>
+    <string name="repeat_once">Una volta</string>
+    <plurals name="repeat_every_days">
+        <item quantity="one">Ogni giorno</item>
+        <item quantity="many">Ogni %1$d giorni</item>
+        <item quantity="other">Ogni %1$d giorni</item>
+    </plurals>
+    <plurals name="repeat_every_weeks">
+        <item quantity="one">Ogni settimana</item>
+        <item quantity="many">Ogni %1$d settimane</item>
+        <item quantity="other">Ogni %1$d settimane</item>
+    </plurals>
+    <plurals name="repeat_every_months">
+        <item quantity="one">Ogni mese</item>
+        <item quantity="many">Ogni %1$d mesi</item>
+        <item quantity="other">Ogni %1$d mesi</item>
+    </plurals>
+    <string name="schedule_next">Prossimo: %1$s</string>
+    <string name="decrease">Diminuisci</string>
+    <string name="increase">Aumenta</string>
+
+    <!-- Notifiche -->
+    <string name="medication_reminder_channel">Promemoria terapia</string>
+    <string name="medication_reminder_title">È l\'ora della tua terapia</string>
+    <string name="medication_reminder_text">Prendi %1$s</string>
+    <string name="medication_reminder_text_dosage">Prendi %1$s · %2$s</string>
+    <string name="checkup_reminder_channel">Promemoria esami</string>
+    <string name="checkup_reminder_text">Previsto per oggi</string>
+
+    <!-- Avviso di ordine -->
+    <string name="refill_alert_label">Avvisami %1$d giorni prima per ordinare</string>
+    <string name="refill_hint_dose">L\'avviso arriva %1$d giorni prima di ogni assunzione.</string>
+    <string name="refill_stock_end">Fine della scorta</string>
+    <string name="refill_hint_stock">L\'avviso arriva %1$d giorni prima di questa data. Aggiornala a ogni rinnovo.</string>
+    <string name="refill_next">Ordine: avviso %1$s</string>
+    <string name="refill_reminder_title">È ora di ordinare la tua terapia</string>
+    <string name="refill_reminder_text_dose">%1$s: prossima assunzione %2$s</string>
+    <string name="refill_reminder_text_stock">%1$s: scorta finita %2$s</string>
+
+    <!-- Elenco farmaci -->
+    <string name="med_category_aminosalicylates">Aminosalicilati (5-ASA)</string>
+    <string name="med_category_corticosteroids">Corticosteroidi</string>
+    <string name="med_category_immunosuppressants">Immunosoppressori</string>
+    <string name="med_category_biologics">Farmaci biologici</string>
+    <string name="med_category_small_molecules">Terapie orali mirate (JAK, S1P)</string>
+    <string name="med_category_antibiotics">Antibiotici</string>
+    <string name="med_category_supportive">Integratori e terapie di supporto</string>
+    <string name="indication_crohn">Crohn</string>
+    <string name="indication_uc">CU</string>
+    <string name="med_iron">Ferro</string>
+    <string name="med_vitamin_d">Vitamina D</string>
+    <string name="med_vitamin_b12">Vitamina B12</string>
+    <string name="med_folic_acid">Acido folico</string>
+    <string name="med_calcium">Calcio</string>
+    <string name="med_loperamide">Loperamide</string>
+</resources>

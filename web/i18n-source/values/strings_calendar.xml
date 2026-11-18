@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_section_title">Phone calendar</string>
+    <string name="calendar_sync">Add reminders to my calendar</string>
+    <string name="calendar_sync_desc">Doses, orders, blood and stool tests become events in your calendar, with their alert. The app no longer sends these notifications. The daily stool reminder does not change.</string>
+    <string name="calendar_target">Calendar</string>
+    <string name="calendar_none">No writable calendar on this phone</string>
+    <string name="calendar_permission_lost">Calendar access was removed: reminders are sent by the app again.</string>
+    <string name="calendar_refill_title">Order %1$s</string>
+    <string name="calendar_event_description">Reminder added by IBD Journal.</string>
+</resources>

@@ -1,0 +1,25 @@
+/* Feuilles de saisie des selles. */
+
+.stool-form h3 { font-size: var(--text-md); }
+.stool-symptoms-head { justify-content: space-between; }
+.stool-type-desc { font-size: var(--text-sm); font-weight: 600; color: var(--c-primary); }
+
+.choice-tile {
+  min-height: var(--target); padding: var(--space-2) var(--space-4); border-radius: var(--radius-md);
+  border: 1px solid var(--c-outline-variant); background: var(--c-surface-variant); color: var(--c-on-surface-variant);
+  font-weight: 600; text-align: center;
+}
+.choice-tile[aria-pressed="true"] {
+  border: 2px solid var(--c-primary); background: var(--c-primary-container); color: var(--c-on-primary-container);
+}
+.choice-tile:focus-visible { outline: 3px solid var(--c-primary); outline-offset: 2px; }
+
+.sheet-actions { display: flex; flex-direction: column; gap: var(--space-2); }
+.sheet-actions-sticky {
+  position: sticky; inset-block-end: calc(-1 * var(--space-5)); margin-inline: calc(-1 * var(--space-5));
+  padding: var(--space-3) var(--space-5); background: var(--c-surface-container-high);
+  border-block-start: 1px solid var(--c-outline-variant);
+}
+@media (min-width: 30rem) {
+  .sheet-actions-sticky { flex-direction: row-reverse; justify-content: flex-start; }
+}

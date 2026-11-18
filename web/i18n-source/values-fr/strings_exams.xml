@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exam_colonoscopy">Coloscopie</string>
+    <string name="exam_rectosigmoidoscopy">Rectosigmoïdoscopie</string>
+    <string name="exam_step_anesthesia">Consultation d\'anesthésie</string>
+    <string name="exam_step_diet">Début du régime sans résidu</string>
+    <string name="exam_step_prep_first">1re prise de la préparation</string>
+    <string name="exam_step_prep_second">2e prise de la préparation</string>
+    <string name="exam_step_exam">Examen</string>
+
+    <string name="exams_title">Examens</string>
+    <string name="exam_add">Programmer un examen</string>
+    <string name="exam_edit">Modifier l\'examen</string>
+    <string name="exams_empty">Aucun examen programmé. Ajoutez votre coloscopie ou rectosigmoïdoscopie pour noter sa préparation et recevoir des rappels.</string>
+    <string name="exam_next_step">Prochaine étape : %1$s, %2$s</string>
+    <string name="exam_anesthesia_missing">Rendez-vous chez l\'anesthésiste à prendre</string>
+
+    <string name="exam_date">Date de l\'examen</string>
+    <string name="exam_note">Note</string>
+    <string name="exam_note_hint">ex. lieu, médecin</string>
+    <string name="exam_preparation">Préparation</string>
+    <string name="exam_preparation_desc">Notez les consignes de votre médecin ou du centre d\'endoscopie.</string>
+    <plurals name="exam_diet_days">
+        <item quantity="one">Régime sans résidu : %1$d jour avant</item>
+        <item quantity="many">Régime sans résidu : %1$d jours avant</item>
+        <item quantity="other">Régime sans résidu : %1$d jours avant</item>
+    </plurals>
+    <string name="exam_diet_none">Régime sans résidu : aucun</string>
+    <string name="exam_diet_start">À partir du %1$s</string>
+    <string name="exam_not_set">Pas encore fixée</string>
+    <string name="exam_clear">Effacer</string>
+    <string name="exam_reminders">Me rappeler chaque étape</string>
+    <string name="exam_reminders_desc">%1$d h avant les rendez-vous, à l\'heure de chaque prise de la préparation et à %2$s le premier jour du régime.</string>
+</resources>

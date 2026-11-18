@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fausses envies (ténesme) : passage aux toilettes sans selle -->
+    <string name="false_urge">Falsa urgencia</string>
+    <string name="stool_kind_stool">Deposición</string>
+    <string name="new_false_urge">Nueva falsa urgencia</string>
+    <string name="edit_false_urge">Editar falsa urgencia</string>
+    <string name="false_urge_hint">Ganas de ir al baño sin deposición, a veces con sangre o moco.</string>
+    <string name="analysis_false_urge">Falsas urgencias</string>
+    <plurals name="false_urge_count">
+        <item quantity="one">%1$d falsa urgencia</item>
+        <item quantity="many">%1$d falsas urgencias</item>
+        <item quantity="other">%1$d falsas urgencias</item>
+    </plurals>
+</resources>

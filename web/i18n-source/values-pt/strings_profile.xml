@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_care">Cuidados</string>
+    <string name="care_title">Cuidados</string>
+    <string name="profile_title">Perfil</string>
+    <string name="profile_edit">Editar perfil</string>
+    <string name="profile_first_name">Nome</string>
+    <string name="profile_last_name">Sobrenome</string>
+    <string name="profile_birth_date">Data de nascimento</string>
+    <string name="profile_not_set">Não informada</string>
+    <string name="profile_birth_date_missing">Data de nascimento não informada</string>
+    <string name="profile_empty_name">Adicione seu nome</string>
+    <string name="profile_born_on">Nascimento: %1$s · %2$s</string>
+    <string name="profile_sex">Sexo</string>
+    <string name="profile_sex_missing">Sexo não informado</string>
+    <string name="sex_female">Feminino</string>
+    <string name="sex_male">Masculino</string>
+    <plurals name="profile_age">
+        <item quantity="one">%1$d ano</item>
+        <item quantity="many">%1$d anos</item>
+        <item quantity="other">%1$d anos</item>
+    </plurals>
+
+    <!-- Tratamentos -->
+    <string name="treatments_title">Tratamentos</string>
+    <string name="treatments_empty">Nenhum tratamento adicionado.</string>
+    <string name="treatment_add">Adicionar um tratamento</string>
+    <string name="treatment_edit">Editar tratamento</string>
+    <string name="treatment_name">Medicamento</string>
+    <string name="treatment_choose">Escolher um medicamento</string>
+    <string name="treatment_search">Pesquisar</string>
+    <string name="treatment_other">Outro medicamento</string>
+    <string name="treatment_other_named">Outro: “%1$s”</string>
+    <string name="treatment_other_desc">Não está na lista? Digite o nome.</string>
+    <string name="treatment_dosage">Dosagem</string>
+    <string name="treatment_dosage_hint">ex. 2 g, 40 mg, 1 comprimido</string>
+    <string name="treatment_start_date">Data de início</string>
+
+    <!-- Exames -->
+    <string name="checkups_title">Exames de sangue e de fezes</string>
+    <string name="checkups_empty">Nenhum exame agendado.</string>
+    <string name="checkup_add">Agendar um exame</string>
+    <string name="checkup_edit">Editar exame</string>
+    <string name="checkup_blood_test">Exame de sangue</string>
+    <string name="checkup_stool_test">Exame de fezes</string>
+    <string name="checkup_note">Observação</string>
+    <string name="checkup_note_hint">ex. PCR, calprotectina fecal, laboratório</string>
+    <string name="checkup_date">Data</string>
+
+    <!-- Agendamento -->
+    <string name="reminder_enabled">Lembrete</string>
+    <string name="reminder_enabled_desc">Receber uma notificação no horário previsto</string>
+    <string name="reminder_off">Lembrete desativado</string>
+    <string name="repeat_label">Periodicidade</string>
+    <string name="repeat_unit_once">Sem repetição</string>
+    <string name="repeat_unit_day">Diário</string>
+    <string name="repeat_unit_week">Semanal</string>
+    <string name="repeat_unit_month">Mensal</string>
+    <string name="repeat_once">Uma vez</string>
+    <plurals name="repeat_every_days">
+        <item quantity="one">Todos os dias</item>
+        <item quantity="many">A cada %1$d dias</item>
+        <item quantity="other">A cada %1$d dias</item>
+    </plurals>
+    <plurals name="repeat_every_weeks">
+        <item quantity="one">Todas as semanas</item>
+        <item quantity="many">A cada %1$d semanas</item>
+        <item quantity="other">A cada %1$d semanas</item>
+    </plurals>
+    <plurals name="repeat_every_months">
+        <item quantity="one">Todos os meses</item>
+        <item quantity="many">A cada %1$d meses</item>
+        <item quantity="other">A cada %1$d meses</item>
+    </plurals>
+    <string name="schedule_next">Próximo: %1$s</string>
+    <string name="decrease">Diminuir</string>
+    <string name="increase">Aumentar</string>
+
+    <!-- Notificações -->
+    <string name="medication_reminder_channel">Lembretes de tratamento</string>
+    <string name="medication_reminder_title">Hora do seu tratamento</string>
+    <string name="medication_reminder_text">Tomar %1$s</string>
+    <string name="medication_reminder_text_dosage">Tomar %1$s · %2$s</string>
+    <string name="checkup_reminder_channel">Lembretes de exames</string>
+    <string name="checkup_reminder_text">Previsto para hoje</string>
+
+    <!-- Aviso de pedido -->
+    <string name="refill_alert_label">Avisar-me %1$d dias antes para pedir</string>
+    <string name="refill_hint_dose">O aviso chega %1$d dias antes de cada dose.</string>
+    <string name="refill_stock_end">Fim do estoque</string>
+    <string name="refill_hint_stock">O aviso chega %1$d dias antes desta data. Atualize-a a cada renovação.</string>
+    <string name="refill_next">Pedido: aviso %1$s</string>
+    <string name="refill_reminder_title">Hora de pedir seu tratamento</string>
+    <string name="refill_reminder_text_dose">%1$s: próxima dose %2$s</string>
+    <string name="refill_reminder_text_stock">%1$s: estoque acaba %2$s</string>
+
+    <!-- Lista de medicamentos -->
+    <string name="med_category_aminosalicylates">Aminossalicilatos (5-ASA)</string>
+    <string name="med_category_corticosteroids">Corticosteroides</string>
+    <string name="med_category_immunosuppressants">Imunossupressores</string>
+    <string name="med_category_biologics">Biológicos</string>
+    <string name="med_category_small_molecules">Terapias orais direcionadas (JAK, S1P)</string>
+    <string name="med_category_antibiotics">Antibióticos</string>
+    <string name="med_category_supportive">Suplementos e tratamentos de suporte</string>
+    <string name="indication_crohn">Crohn</string>
+    <string name="indication_uc">RCU</string>
+    <string name="med_iron">Ferro</string>
+    <string name="med_vitamin_d">Vitamina D</string>
+    <string name="med_vitamin_b12">Vitamina B12</string>
+    <string name="med_folic_acid">Ácido fólico</string>
+    <string name="med_calcium">Cálcio</string>
+    <string name="med_loperamide">Loperamida</string>
+</resources>

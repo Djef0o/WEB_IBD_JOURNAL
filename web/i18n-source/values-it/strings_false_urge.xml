@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fausses envies (ténesme) : passage aux toilettes sans selle -->
+    <string name="false_urge">Falso stimolo</string>
+    <string name="stool_kind_stool">Evacuazione</string>
+    <string name="new_false_urge">Nuovo falso stimolo</string>
+    <string name="edit_false_urge">Modifica falso stimolo</string>
+    <string name="false_urge_hint">Stimolo ad andare in bagno senza evacuare, a volte con sangue o muco.</string>
+    <string name="analysis_false_urge">Falsi stimoli</string>
+    <plurals name="false_urge_count">
+        <item quantity="one">%1$d falso stimolo</item>
+        <item quantity="many">%1$d falsi stimoli</item>
+        <item quantity="other">%1$d falsi stimoli</item>
+    </plurals>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_care">Soins</string>
+    <string name="care_title">Soins</string>
+    <string name="profile_title">Profil</string>
+    <string name="profile_edit">Modifier le profil</string>
+    <string name="profile_first_name">Prénom</string>
+    <string name="profile_last_name">Nom</string>
+    <string name="profile_birth_date">Date de naissance</string>
+    <string name="profile_not_set">Non renseignée</string>
+    <string name="profile_birth_date_missing">Date de naissance non renseignée</string>
+    <string name="profile_empty_name">Ajoutez votre nom</string>
+    <string name="profile_born_on">Né(e) le %1$s · %2$s</string>
+    <string name="profile_sex">Sexe</string>
+    <string name="profile_sex_missing">Sexe non renseigné</string>
+    <string name="sex_female">Femme</string>
+    <string name="sex_male">Homme</string>
+    <plurals name="profile_age">
+        <item quantity="one">%1$d an</item>
+        <item quantity="other">%1$d ans</item>
+    </plurals>
+
+    <!-- Traitements -->
+    <string name="treatments_title">Traitements</string>
+    <string name="treatments_empty">Aucun traitement ajouté.</string>
+    <string name="treatment_add">Ajouter un traitement</string>
+    <string name="treatment_edit">Modifier le traitement</string>
+    <string name="treatment_name">Médicament</string>
+    <string name="treatment_choose">Choisir un médicament</string>
+    <string name="treatment_search">Rechercher</string>
+    <string name="treatment_other">Autre médicament</string>
+    <string name="treatment_other_named">Autre : « %1$s »</string>
+    <string name="treatment_other_desc">Absent de la liste ? Saisissez son nom.</string>
+    <string name="treatment_dosage">Posologie</string>
+    <string name="treatment_dosage_hint">ex. 2 g, 40 mg, 1 comprimé</string>
+    <string name="treatment_start_date">Date de début</string>
+
+    <!-- Contrôles -->
+    <string name="checkups_title">Prises de sang et tests des selles</string>
+    <string name="checkups_empty">Aucun contrôle programmé.</string>
+    <string name="checkup_add">Programmer un contrôle</string>
+    <string name="checkup_edit">Modifier le contrôle</string>
+    <string name="checkup_blood_test">Prise de sang</string>
+    <string name="checkup_stool_test">Test des selles</string>
+    <string name="checkup_note">Note</string>
+    <string name="checkup_note_hint">ex. CRP, calprotectine fécale, laboratoire</string>
+    <string name="checkup_date">Date</string>
+
+    <!-- Planification -->
+    <string name="reminder_enabled">Rappel</string>
+    <string name="reminder_enabled_desc">Recevoir une notification à l\'heure prévue</string>
+    <string name="reminder_off">Rappel désactivé</string>
+    <string name="repeat_label">Périodicité</string>
+    <string name="repeat_unit_once">Une seule fois</string>
+    <string name="repeat_unit_day">Quotidien</string>
+    <string name="repeat_unit_week">Hebdomadaire</string>
+    <string name="repeat_unit_month">Mensuel</string>
+    <string name="repeat_once">Une fois</string>
+    <plurals name="repeat_every_days">
+        <item quantity="one">Tous les jours</item>
+        <item quantity="other">Tous les %1$d jours</item>
+    </plurals>
+    <plurals name="repeat_every_weeks">
+        <item quantity="one">Toutes les semaines</item>
+        <item quantity="other">Toutes les %1$d semaines</item>
+    </plurals>
+    <plurals name="repeat_every_months">
+        <item quantity="one">Tous les mois</item>
+        <item quantity="other">Tous les %1$d mois</item>
+    </plurals>
+    <string name="schedule_next">Prochain : %1$s</string>
+    <string name="decrease">Diminuer</string>
+    <string name="increase">Augmenter</string>
+
+    <!-- Notifications -->
+    <string name="medication_reminder_channel">Rappels de traitement</string>
+    <string name="medication_reminder_title">C\'est l\'heure de votre traitement</string>
+    <string name="medication_reminder_text">Prendre %1$s</string>
+    <string name="medication_reminder_text_dosage">Prendre %1$s · %2$s</string>
+    <string name="checkup_reminder_channel">Rappels de contrôle</string>
+    <string name="checkup_reminder_text">Prévu aujourd\'hui</string>
+
+    <!-- Alerte de commande -->
+    <string name="refill_alert_label">Me prévenir %1$d jours avant pour commander</string>
+    <string name="refill_hint_dose">L\'alerte arrive %1$d jours avant chaque prise.</string>
+    <string name="refill_stock_end">Fin du stock le</string>
+    <string name="refill_hint_stock">L\'alerte arrive %1$d jours avant cette date. Mettez-la à jour à chaque renouvellement.</string>
+    <string name="refill_next">Commande : alerte %1$s</string>
+    <string name="refill_reminder_title">Pensez à commander votre traitement</string>
+    <string name="refill_reminder_text_dose">%1$s : prochaine prise %2$s</string>
+    <string name="refill_reminder_text_stock">%1$s : fin du stock %2$s</string>
+
+    <!-- Liste des médicaments -->
+    <string name="med_category_aminosalicylates">Aminosalicylés (5-ASA)</string>
+    <string name="med_category_corticosteroids">Corticoïdes</string>
+    <string name="med_category_immunosuppressants">Immunosuppresseurs</string>
+    <string name="med_category_biologics">Biothérapies</string>
+    <string name="med_category_small_molecules">Traitements oraux ciblés (JAK, S1P)</string>
+    <string name="med_category_antibiotics">Antibiotiques</string>
+    <string name="med_category_supportive">Compléments et traitements d\'appoint</string>
+    <string name="indication_crohn">Crohn</string>
+    <string name="indication_uc">RCH</string>
+    <string name="med_iron">Fer</string>
+    <string name="med_vitamin_d">Vitamine D</string>
+    <string name="med_vitamin_b12">Vitamine B12</string>
+    <string name="med_folic_acid">Acide folique</string>
+    <string name="med_calcium">Calcium</string>
+    <string name="med_loperamide">Lopéramide</string>
+</resources>

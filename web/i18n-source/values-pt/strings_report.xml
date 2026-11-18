@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Relatório para o médico (PDF) -->
+    <string name="report_action">Relatório para o médico (PDF)</string>
+    <string name="report_generating">Preparando o relatório…</string>
+    <string name="report_error">Não foi possível criar o relatório. Tente novamente.</string>
+    <string name="report_share_title">Compartilhar o relatório</string>
+    <string name="report_no_share_app">Nenhum app disponível para compartilhar o PDF</string>
+    <string name="report_title">Relatório de acompanhamento</string>
+    <string name="report_patient">Paciente: %1$s</string>
+    <string name="report_period">%1$s · de %2$s a %3$s</string>
+    <string name="report_generated">Gerado em %1$s às %2$s</string>
+    <string name="report_summary">Resumo</string>
+    <string name="report_stools_per_day">Evacuações por dia acompanhado</string>
+    <string name="report_summary_note">Registros do tipo 0 (sem evacuação) não contam como evacuações. As médias diárias consideram os dias com pelo menos um registro de evacuação.</string>
+    <string name="report_no_data">Nenhuma evacuação registrada neste período.</string>
+    <string name="report_col_symptom">Sintoma</string>
+    <string name="report_col_days">Dias afetados</string>
+    <string name="report_col_previous">Período anterior</string>
+    <string name="report_previous">%1$s (%2$s)</string>
+    <string name="report_schedule">%1$s às %2$s, desde %3$s</string>
+    <string name="report_schedule_once">Uma vez, em %1$s às %2$s</string>
+    <string name="report_adherence">Adesão no período: %1$s das doses previstas confirmadas (%2$d de %3$d) · esquecidas: %4$d · sem resposta: %5$d</string>
+    <string name="report_adherence_none">Nenhuma dose confirmada no app neste período</string>
+    <string name="report_labs">Resultados de exames</string>
+    <string name="report_col_date">Data</string>
+    <string name="report_col_test">Exame</string>
+    <string name="report_col_reference">Valores do laboratório</string>
+    <string name="report_labs_legend">↑ acima · ↓ abaixo (em negrito): fora dos valores do laboratório informados; – quando não informados.</string>
+    <string name="report_lab_notes">Observações</string>
+    <string name="report_lab_note">%1$s – %2$s: %3$s</string>
+    <string name="report_col_note">Observação</string>
+    <string name="report_checkups">Próximos exames</string>
+    <string name="report_checkup_at">%1$s às %2$s</string>
+    <string name="report_footer">Dados registrados pelo paciente — não substitui orientação médica</string>
+    <string name="report_page">Página %1$d</string>
+    <plurals name="report_chart_range">
+        <item quantity="one">De %2$s a %3$s · %1$d dia</item>
+        <item quantity="other">De %2$s a %3$s · %1$d dias</item>
+    </plurals>
+</resources>

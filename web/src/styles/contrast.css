@@ -1,0 +1,60 @@
+/*
+ * Ajustements WCAG AA des palettes (contraste texte >= 4,5:1 sur toutes les surfaces de la palette,
+ * clair, sombre et AMOLED). Les jetons de palettes.css (généré depuis Palettes.kt) restent tels quels :
+ * seuls les rôles utilisés pour du texte sont éclaircis/assombris, à teinte et chroma constants.
+ * Garde-fou : test/contrast.test.ts.
+ */
+
+:root,
+:root[data-palette="sage"] {
+  --c-on-surface-variant: light-dark(#4A5B56, #94A9A2);
+  --c-tertiary: light-dark(#925419, #F3B57C);
+}
+
+:root[data-palette="solarized"] {
+  --c-error: light-dark(#C50F18, #FE9286);
+  --c-on-error: light-dark(#FFFFFF, #424242);
+  --c-on-primary: light-dark(#FFFFFF, #414141);
+  --c-on-secondary: light-dark(#FFFFFF, #414141);
+  --c-on-surface-variant: light-dark(#50656D, #A4B2B2);
+  --c-on-tertiary: light-dark(#FFFFFF, #424242);
+  --c-primary: light-dark(#016E68, #55C0B6);
+  --c-secondary: light-dark(#10669E, #5AB6FE);
+  --c-tertiary: light-dark(#AD3B05, #F59873);
+}
+
+:root[data-palette="nord"] {
+  --c-error: light-dark(#9A404B, #FEACB1);
+  --c-on-error: light-dark(#FFFFFF, #4E4E4E);
+  --c-on-error-container: light-dark(#53272B, #E2AAAC);
+  --c-on-secondary: light-dark(#FFFFFF, #4E4E4E);
+  --c-primary: light-dark(#415F86, #91CADA);
+  --c-secondary: light-dark(#366665, #A4C5E7);
+  --c-tertiary: light-dark(#8E4A36, #F0B4A2);
+}
+
+:root[data-palette="gruvbox"] {
+  --c-error: light-dark(#9D0006, #FE806D);
+  --c-on-error: light-dark(#FFFFFF, #3A3A3A);
+  --c-on-secondary: light-dark(#FFFFFF, #3A3A3A);
+  --c-on-surface-variant: light-dark(#695D52, #B3A48F);
+  --c-primary: light-dark(#306947, #8EC07C);
+  --c-secondary: light-dark(#076678, #8BADA0);
+  --c-tertiary: light-dark(#AA3803, #FE8323);
+}
+
+:root[data-palette="catppuccin"] {
+  --c-error: light-dark(#BA0630, #F38BA8);
+  --c-on-surface-variant: light-dark(#585B70, #A6ADC8);
+  --c-primary: light-dark(#7B25DF, #CBA6F7);
+  --c-secondary: light-dark(#024EDC, #89B4FA);
+  --c-tertiary: light-dark(#A03C00, #FAB387);
+}
+
+:root[data-palette="rose-pine"] {
+  --c-error: light-dark(#9A4C63, #F27598);
+  --c-on-error: light-dark(#FFFFFF, #343434);
+  --c-on-surface-variant: light-dark(#65617E, #9E9AB8);
+  --c-secondary: light-dark(#6F5A87, #C4A7E7);
+  --c-tertiary: light-dark(#8A5905, #F6C177);
+}

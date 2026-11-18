@@ -1,0 +1,39 @@
+{
+  "name": "ibd-journal-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "i18n": "tsx scripts/strings-to-json.ts",
+    "prebuild": "npm run i18n && npm run i18n:check-keys",
+    "i18n:check-keys": "tsx scripts/check-i18n-keys.ts",
+    "e2e": "npm run build && playwright test"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.4",
+    "idb": "^8.0.4",
+    "pdfjs-dist": "^6.5.438",
+    "preact": "^11.2.0",
+    "zxing-wasm": "^3.1.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^26.6.6",
+    "axe-core": "^4.14.1",
+    "fake-indexeddb": "^6.2.8",
+    "fast-xml-parser": "^5.12.1",
+    "jsdom": "^31.0.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.1",
+    "workbox-build": "^7.4.1"
+  }
+}

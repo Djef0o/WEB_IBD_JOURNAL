@@ -1,0 +1,9 @@
+keystore/
+keystore.properties
+local.properties
+web/node_modules
+web/dist
+web/.vite
+*.ibdj
+web/test-results
+web/playwright-report

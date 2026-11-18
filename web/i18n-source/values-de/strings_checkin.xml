@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notification du soir : douleur et fatigue du jour -->
+    <string name="checkin_fatigue_question">Wie erschöpft bist du heute?</string>
+    <string name="fatigue_recorded_format">Erschöpfung %1$d/5 gespeichert</string>
+    <string name="checkin_pain_question">Wie stark sind deine Schmerzen heute?</string>
+    <string name="pain_recorded_format">Schmerzen %1$d/5 gespeichert</string>
+</resources>

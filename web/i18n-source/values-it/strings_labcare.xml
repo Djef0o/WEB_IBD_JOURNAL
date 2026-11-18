@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import de comptes rendus d'analyses (plusieurs fichiers) -->
+    <string name="lab_import_reports_button">Importa referti (PDF)</string>
+    <string name="lab_import_reading_progress">Lettura del referto %1$d/%2$d…</string>
+    <string name="lab_import_check_reports">Valori letti dai tuoi referti. Controllali uno per uno con il documento prima di salvare.</string>
+    <string name="lab_import_all_nothing">Nessuno degli esami monitorati è stato trovato in questi documenti.</string>
+    <string name="lab_import_document_untitled">Documento %1$d</string>
+    <string name="lab_import_document_nothing">Nessun esame monitorato trovato in questo documento.</string>
+    <string name="lab_import_document_failed">Impossibile leggere questo documento: sono supportati solo i PDF del laboratorio che contengono testo (non i documenti scansionati). Inserisci i valori a mano.</string>
+    <string name="lab_import_duplicate_in_import">Già presente in un altro referto con questa data</string>
+
+    <!-- Libellé du choix de l'analyse dans la saisie -->
+    <string name="lab_result_test">Esame</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_export_desc">File cifrato, protetto da una password</string>
+    <string name="backup_import_desc">Backup cifrato o vecchia esportazione non cifrata</string>
+    <string name="backup_export_title">Proteggi il backup</string>
+    <string name="backup_export_message">Il file viene cifrato con questa password. Ti servirà per importare il file.</string>
+    <string name="backup_password">Password</string>
+    <string name="backup_password_confirm">Conferma password</string>
+    <string name="backup_password_min_length">Almeno %1$d caratteri</string>
+    <string name="backup_password_mismatch">Le password non coincidono</string>
+    <string name="backup_password_show">Mostra password</string>
+    <string name="backup_password_hide">Nascondi password</string>
+    <string name="backup_password_warning">Se dimentichi questa password, il file non sarà recuperabile. Nessuno può aprirlo senza la password.</string>
+    <string name="backup_export_choose_file">Scegli il file</string>
+    <string name="backup_exporting">Cifratura dei tuoi dati…</string>
+    <string name="backup_importing">Importazione dei tuoi dati…</string>
+    <string name="backup_export_done">Backup salvato. Conserva la password in un luogo sicuro.</string>
+    <string name="backup_export_failed">Impossibile salvare il backup.</string>
+    <string name="backup_import_title">Backup cifrato</string>
+    <string name="backup_import_message">Inserisci la password scelta quando hai esportato questo file. L\'importazione sostituisce i dati attualmente nell\'app.</string>
+    <string name="backup_import_wrong_password">Password errata o file danneggiato.</string>
+    <string name="backup_import_button">Importa</string>
+    <string name="backup_import_done">Dati importati.</string>
+    <string name="backup_import_failed">Importazione non riuscita: impossibile leggere il file. I tuoi dati non sono stati modificati.</string>
+    <string name="backup_import_unrecognized">Questo file non è un backup di IBD Journal. Non è stato importato nulla.</string>
+    <string name="calendar_privacy_title">Informazioni sanitarie nel tuo calendario</string>
+    <string name="calendar_privacy_message">I nomi delle tue terapie e dei tuoi esami verranno scritti nel calendario del telefono. Questo calendario può essere sincronizzato con un account online (Google, Samsung, Outlook…) e quindi lasciare il telefono. Scegli un calendario del telefono non sincronizzato se vuoi che queste informazioni restino sul telefono.</string>
+    <string name="calendar_privacy_confirm">Aggiungi al mio calendario</string>
+    <string name="calendar_privacy_note">I nomi di terapie ed esami vengono scritti in questo calendario. Se è sincronizzato con un account online, lasciano il telefono: meglio un calendario del telefono non sincronizzato.</string>
+</resources>

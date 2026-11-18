@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import de comptes rendus d'analyses (plusieurs fichiers) -->
+    <string name="lab_import_reports_button">Importar laudos de exames (PDF)</string>
+    <string name="lab_import_reading_progress">Lendo o laudo %1$d/%2$d…</string>
+    <string name="lab_import_check_reports">Valores lidos nos seus laudos. Confira cada um com o documento antes de salvar.</string>
+    <string name="lab_import_all_nothing">Nenhum dos exames acompanhados foi encontrado nestes documentos.</string>
+    <string name="lab_import_document_untitled">Documento %1$d</string>
+    <string name="lab_import_document_nothing">Nenhum exame acompanhado encontrado neste documento.</string>
+    <string name="lab_import_document_failed">Não foi possível ler este documento: só são aceitos PDFs do laboratório que contêm texto (não documentos digitalizados). Digite os valores manualmente.</string>
+    <string name="lab_import_duplicate_in_import">Já está em outro laudo nesta data</string>
+
+    <!-- Libellé du choix de l'analyse dans la saisie -->
+    <string name="lab_result_test">Exame</string>
+</resources>

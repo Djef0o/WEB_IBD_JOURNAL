@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analyses de suivi -->
+    <string name="lab_crp">CRP</string>
+    <string name="lab_calprotectin">Fecal calprotectin</string>
+    <string name="lab_hemoglobin">Hemoglobin</string>
+    <string name="lab_ferritin">Ferritin</string>
+    <string name="lab_vitamin_d">Vitamin D</string>
+    <string name="lab_albumin">Albumin</string>
+    <string name="lab_platelets">Platelets</string>
+
+    <!-- Résultats d'analyses (profil) -->
+    <string name="lab_results_title">Lab results</string>
+    <string name="lab_results_empty">No result recorded.</string>
+    <string name="lab_result_add">Add a result</string>
+    <string name="lab_result_edit">Edit result</string>
+    <string name="lab_result_value">Value</string>
+    <string name="lab_result_value_invalid">Enter a positive number</string>
+    <string name="lab_result_date">Test date</string>
+    <string name="lab_result_note">Note (optional)</string>
+    <string name="lab_result_reference_title">Lab reference values (optional)</string>
+    <string name="lab_result_reference_desc">As printed on the lab report, in the same unit.</string>
+    <string name="lab_result_reference_low">Min</string>
+    <string name="lab_result_reference_high">Max</string>
+    <string name="lab_result_number_invalid">Enter a number</string>
+    <string name="lab_result_reference_reversed">Min is above max</string>
+    <string name="lab_chart_description">Change in %1$s over time</string>
+    <string name="lab_status_below">Below range</string>
+    <string name="lab_status_above">Above range</string>
+    <string name="lab_reference">Lab reference values: %1$s</string>
+
+    <!-- Observance d'un traitement : prises confirmées / prévues sur 30 jours -->
+    <plurals name="treatment_adherence">
+        <item quantity="one">Adherence (30 days): %1$d/%2$d dose taken (%3$d%%)</item>
+        <item quantity="other">Adherence (30 days): %1$d/%2$d doses taken (%3$d%%)</item>
+    </plurals>
+</resources>

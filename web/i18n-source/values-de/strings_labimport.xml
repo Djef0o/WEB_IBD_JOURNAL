@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import d'un compte rendu d'analyses -->
+    <string name="lab_import_title">Ergebnisse prüfen</string>
+    <string name="lab_import_no_date">Entnahmedatum nicht gefunden: bitte prüfen.</string>
+    <string name="lab_import_already_saved">Für dieses Datum bereits gespeichert</string>
+    <string name="lab_import_save">Speichern (%1$d)</string>
+</resources>

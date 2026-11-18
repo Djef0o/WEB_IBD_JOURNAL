@@ -1,0 +1,31 @@
+/* Champs de formulaire. Couleurs : --c-* (palettes.css), jetons : tokens.css. */
+
+.field { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.field-name { font-size: var(--text-sm); font-weight: 600; color: var(--c-on-surface-variant); }
+.field-hint { font-size: var(--text-sm); color: var(--c-on-surface-variant); }
+/* Indication au-dessus du champ : le clavier mobile et la complétion ne la masquent pas. */
+
+.field-control { position: relative; display: flex; align-items: stretch; }
+.input {
+  flex: 1; min-width: 0; width: 100%;
+  min-height: var(--target); padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--c-outline); border-radius: var(--radius-md);
+  background: var(--c-surface); color: var(--c-on-surface);
+}
+.input:hover:not(:disabled) { border-color: var(--c-on-surface-variant); }
+.input:focus-visible { outline: 3px solid var(--c-primary); outline-offset: 1px; border-color: var(--c-primary); }
+.input:disabled { opacity: 0.38; cursor: not-allowed; }
+.field-control > .input:has(+ .field-trailing) { padding-inline-end: var(--target); }
+.field-trailing { position: absolute; inset-block: 0; inset-inline-end: 0; display: flex; align-items: center; }
+
+/* Erreur : visible seulement après interaction (état posé par le composant), jamais par la couleur seule. */
+.field[data-invalid] .input { border-color: var(--c-error); background: var(--c-error-container); color: var(--c-on-error-container); }
+.error-msg { display: flex; gap: var(--space-1); align-items: baseline; font-size: var(--text-sm); color: var(--c-error); }
+.field[data-invalid] .error-msg { color: var(--c-on-error-container); font-weight: 600; }
+.field[data-invalid] .field-name { color: var(--c-error); }
+
+select.input { appearance: auto; }
+
+@media (forced-colors: active) {
+  .field[data-invalid] .input { border: 2px solid Mark; }
+}

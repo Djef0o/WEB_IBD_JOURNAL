@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_export_desc">Fichier chiffré, protégé par un mot de passe</string>
+    <string name="backup_import_desc">Sauvegarde chiffrée, ou ancien export non chiffré</string>
+    <string name="backup_export_title">Protéger la sauvegarde</string>
+    <string name="backup_export_message">Le fichier est chiffré avec ce mot de passe. Il vous sera demandé pour importer le fichier.</string>
+    <string name="backup_password">Mot de passe</string>
+    <string name="backup_password_confirm">Confirmer le mot de passe</string>
+    <string name="backup_password_min_length">Au moins %1$d caractères</string>
+    <string name="backup_password_mismatch">Les mots de passe ne correspondent pas</string>
+    <string name="backup_password_show">Afficher le mot de passe</string>
+    <string name="backup_password_hide">Masquer le mot de passe</string>
+    <string name="backup_password_warning">Si vous oubliez ce mot de passe, le fichier sera irrécupérable. Personne ne peut l\'ouvrir sans le mot de passe.</string>
+    <string name="backup_export_choose_file">Choisir le fichier</string>
+    <string name="backup_exporting">Chiffrement de vos données…</string>
+    <string name="backup_importing">Import de vos données…</string>
+    <string name="backup_export_done">Sauvegarde enregistrée. Conservez le mot de passe en lieu sûr.</string>
+    <string name="backup_export_failed">La sauvegarde n\'a pas pu être enregistrée.</string>
+    <string name="backup_import_title">Sauvegarde chiffrée</string>
+    <string name="backup_import_message">Saisissez le mot de passe choisi lors de l\'export de ce fichier. L\'import remplace les données actuellement dans l\'app.</string>
+    <string name="backup_import_wrong_password">Mot de passe incorrect, ou fichier endommagé.</string>
+    <string name="backup_import_button">Importer</string>
+    <string name="backup_import_done">Données importées.</string>
+    <string name="backup_import_failed">Échec de l\'import : le fichier n\'a pas pu être lu. Vos données n\'ont pas été modifiées.</string>
+    <string name="backup_import_unrecognized">Ce fichier n\'est pas une sauvegarde d\'IBD Journal. Rien n\'a été importé.</string>
+    <string name="calendar_privacy_title">Informations de santé dans votre agenda</string>
+    <string name="calendar_privacy_message">Les noms de vos traitements et examens seront écrits dans l\'agenda de votre téléphone. Cet agenda peut être synchronisé avec un compte en ligne (Google, Samsung, Outlook…) et donc quitter le téléphone. Choisissez un agenda du téléphone non synchronisé si vous voulez que ces informations restent sur le téléphone.</string>
+    <string name="calendar_privacy_confirm">Ajouter à mon agenda</string>
+    <string name="calendar_privacy_note">Les noms des traitements et examens sont écrits dans cet agenda. S\'il est synchronisé avec un compte en ligne, ils quittent le téléphone : préférez un agenda du téléphone non synchronisé.</string>
+</resources>

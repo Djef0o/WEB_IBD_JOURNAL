@@ -1,0 +1,310 @@
+/* Généré depuis app/.../ui/theme/Palettes.kt (interpolation Oklab comme Compose). Ne pas éditer à la main. */
+/* --c-* : jeu de couleurs Material 3. Le mode (clair/sombre) vient de color-scheme (tokens.css). */
+
+:root,
+:root[data-palette="sage"] {
+  --c-primary: light-dark(#0B6E63, #7FD8C4);
+  --c-on-primary: light-dark(#FFFFFF, #00332C);
+  --c-primary-container: light-dark(#B7F0E5, #0F3B34);
+  --c-on-primary-container: light-dark(#00201B, #B7F0E5);
+  --c-secondary: light-dark(#4A635E, #B1CCC5);
+  --c-on-secondary: light-dark(#FFFFFF, #1C3530);
+  --c-secondary-container: light-dark(#CDE8E0, #223833);
+  --c-on-secondary-container: light-dark(#06201B, #D6EDE7);
+  --c-tertiary: light-dark(#9A5B22, #F3B57C);
+  --c-on-tertiary: light-dark(#FFFFFF, #3A1D00);
+  --c-tertiary-container: light-dark(#FFDCC2, #4A2A0C);
+  --c-on-tertiary-container: light-dark(#321300, #FFDCC2);
+  --c-background: light-dark(#F7FAF8, #0C1311);
+  --c-on-background: light-dark(#171D1B, #E9F1EE);
+  --c-surface: light-dark(#FFFFFF, #141D1A);
+  --c-on-surface: light-dark(#171D1B, #E9F1EE);
+  --c-surface-variant: light-dark(#E6EFEB, #1B2723);
+  --c-on-surface-variant: light-dark(#4A5B56, #92A7A0);
+  --c-surface-dim: light-dark(#DCE5E1, #0C1311);
+  --c-surface-bright: light-dark(#FBFDFB, #333B38);
+  --c-surface-container-lowest: light-dark(#FFFFFF, #080E0C);
+  --c-surface-container-low: light-dark(#F3F8F5, #141D1A);
+  --c-surface-container: light-dark(#EDF3F0, #18221F);
+  --c-surface-container-high: light-dark(#E7EEEB, #1F2A27);
+  --c-surface-container-highest: light-dark(#E1E9E6, #26332F);
+  --c-inverse-surface: light-dark(#2C3230, #E9F1EE);
+  --c-inverse-on-surface: light-dark(#EDF1EF, #2C3230);
+  --c-inverse-primary: light-dark(#7FD8C4, #0B6E63);
+  --c-outline: light-dark(#7A8C86, #3A4A45);
+  --c-outline-variant: light-dark(#C9D8D3, #283832);
+  --c-error: light-dark(#B3261E, #FF8A80);
+  --c-on-error: light-dark(#FFFFFF, #4A0500);
+  --c-error-container: light-dark(#F9DEDC, #8C1D18);
+  --c-on-error-container: light-dark(#410E0B, #F9DEDC);
+}
+
+:root[data-palette="solarized"] {
+  --c-primary: light-dark(#1E7F78, #39A89F);
+  --c-on-primary: light-dark(#FFFFFF, #FFFFFF);
+  --c-primary-container: light-dark(#D9E4D9, #0B4B52);
+  --c-on-primary-container: light-dark(#073531, #9BCFC9);
+  --c-secondary: light-dark(#1E6FA8, #268BD2);
+  --c-on-secondary: light-dark(#FFFFFF, #FFFFFF);
+  --c-secondary-container: light-dark(#D8E1E4, #06445E);
+  --c-on-secondary-container: light-dark(#072D48, #91C0E8);
+  --c-tertiary: light-dark(#CB4B16, #DB815C);
+  --c-on-tertiary: light-dark(#FFFFFF, #FFFFFF);
+  --c-tertiary-container: light-dark(#F9DCCB, #434443);
+  --c-on-tertiary-container: light-dark(#591C04, #EEBAA5);
+  --c-error: light-dark(#DC322F, #DC322F);
+  --c-on-error: light-dark(#FFFFFF, #FFFFFF);
+  --c-error-container: light-dark(#FEDACD, #483739);
+  --c-on-error-container: light-dark(#61100F, #F5988D);
+  --c-background: light-dark(#FDF6E3, #002B36);
+  --c-on-background: light-dark(#073642, #EEE8D5);
+  --c-surface: light-dark(#FFFBF0, #073642);
+  --c-on-surface: light-dark(#073642, #EEE8D5);
+  --c-surface-variant: light-dark(#EEE8D5, #0F3C47);
+  --c-on-surface-variant: light-dark(#657B83, #93A1A1);
+  --c-outline: light-dark(#93A1A1, #586E75);
+  --c-inverse-surface: light-dark(#073642, #EEE8D5);
+  --c-inverse-on-surface: light-dark(#FDF6E3, #002B36);
+  --c-inverse-primary: light-dark(#81B1AC, #17524D);
+  --c-surface-dim: light-dark(#E3E1D2, #002B36);
+  --c-surface-bright: light-dark(#FFFBF0, #27464D);
+  --c-surface-container-lowest: light-dark(#FFFBF0, #00161E);
+  --c-surface-container-low: light-dark(#F8F2E0, #07303A);
+  --c-surface-container: light-dark(#F2EEDC, #0D333D);
+  --c-surface-container-high: light-dark(#EDE9D9, #153842);
+  --c-surface-container-highest: light-dark(#E8E5D5, #1C3D46);
+  --c-outline-variant: light-dark(#CCCFC5, #324F58);
+}
+
+:root[data-palette="nord"] {
+  --c-primary: light-dark(#56759D, #88C0D0);
+  --c-on-primary: light-dark(#FFFFFF, #2E3440);
+  --c-primary-container: light-dark(#D9E0EA, #465865);
+  --c-on-primary-container: light-dark(#213043, #BEDCE5);
+  --c-secondary: light-dark(#4F7F7E, #81A1C1);
+  --c-on-secondary: light-dark(#FFFFFF, #FFFFFF);
+  --c-secondary-container: light-dark(#D9E2E3, #445062);
+  --c-on-secondary-container: light-dark(#1E3534, #B9CBDD);
+  --c-tertiary: light-dark(#A6604B, #DAA08E);
+  --c-on-tertiary: light-dark(#FFFFFF, #2E3440);
+  --c-tertiary-container: light-dark(#EBDDDA, #5B5156);
+  --c-on-tertiary-container: light-dark(#47261C, #ECCAC0);
+  --c-error: light-dark(#BF616A, #BF616A);
+  --c-on-error: light-dark(#FFFFFF, #FFFFFF);
+  --c-error-container: light-dark(#F0DDE0, #56424C);
+  --c-on-error-container: light-dark(#53272B, #E0A8AA);
+  --c-background: light-dark(#ECEFF4, #2E3440);
+  --c-on-background: light-dark(#2E3440, #ECEFF4);
+  --c-surface: light-dark(#F8F9FB, #3B4252);
+  --c-on-surface: light-dark(#2E3440, #ECEFF4);
+  --c-surface-variant: light-dark(#E5E9F0, #434C5E);
+  --c-on-surface-variant: light-dark(#4C566A, #C0C8D6);
+  --c-outline: light-dark(#8F9BB0, #4C566A);
+  --c-inverse-surface: light-dark(#2E3440, #ECEFF4);
+  --c-inverse-on-surface: light-dark(#ECEFF4, #2E3440);
+  --c-inverse-primary: light-dark(#97AAC4, #415F67);
+  --c-surface-dim: light-dark(#D7DAE0, #2E3440);
+  --c-surface-bright: light-dark(#F8F9FB, #494E5A);
+  --c-surface-container-lowest: light-dark(#F8F9FB, #181C24);
+  --c-surface-container-low: light-dark(#E8EBF0, #333945);
+  --c-surface-container: light-dark(#E4E7EC, #363C48);
+  --c-surface-container-high: light-dark(#DFE3E8, #3B414D);
+  --c-surface-container-highest: light-dark(#DBDEE4, #404652);
+  --c-outline-variant: light-dark(#C1C8D5, #3E4657);
+}
+
+:root[data-palette="gruvbox"] {
+  --c-primary: light-dark(#427B58, #8EC07C);
+  --c-on-primary: light-dark(#FFFFFF, #1D2021);
+  --c-primary-container: light-dark(#D7DEBF, #3A4839);
+  --c-on-primary-container: light-dark(#183322, #C0DDB7);
+  --c-secondary: light-dark(#076678, #83A598);
+  --c-on-secondary: light-dark(#FFFFFF, #FFFFFF);
+  --c-secondary-container: light-dark(#D1DAC6, #37423F);
+  --c-on-secondary-container: light-dark(#012931, #BACDC5);
+  --c-tertiary: light-dark(#AF3A03, #FE8019);
+  --c-on-tertiary: light-dark(#FFFFFF, #1D2021);
+  --c-tertiary-container: light-dark(#EFD4B3, #563B2A);
+  --c-on-tertiary-container: light-dark(#4C1400, #FFBC92);
+  --c-error: light-dark(#9D0006, #FB4934);
+  --c-on-error: light-dark(#FFFFFF, #FFFFFF);
+  --c-error-container: light-dark(#EDCEB1, #57312A);
+  --c-on-error-container: light-dark(#430001, #FFA493);
+  --c-background: light-dark(#FBF1C7, #1D2021);
+  --c-on-background: light-dark(#3C3836, #EBDBB2);
+  --c-surface: light-dark(#F9F5D7, #282828);
+  --c-on-surface: light-dark(#3C3836, #EBDBB2);
+  --c-surface-variant: light-dark(#EBDBB2, #3C3836);
+  --c-on-surface-variant: light-dark(#7C6F64, #A89984);
+  --c-outline: light-dark(#A89984, #665C54);
+  --c-inverse-surface: light-dark(#3C3836, #EBDBB2);
+  --c-inverse-on-surface: light-dark(#FBF1C7, #1D2021);
+  --c-inverse-primary: light-dark(#8DAE98, #445F3B);
+  --c-surface-dim: light-dark(#E6DDB7, #1D2021);
+  --c-surface-bright: light-dark(#F9F5D7, #393A36);
+  --c-surface-container-lowest: light-dark(#F9F5D7, #0E0F10);
+  --c-surface-container-low: light-dark(#F7EDC4, #222525);
+  --c-surface-container: light-dark(#F3E9C1, #252827);
+  --c-surface-container-high: light-dark(#EEE5BE, #2B2D2B);
+  --c-surface-container-highest: light-dark(#EAE1BA, #30312F);
+  --c-outline-variant: light-dark(#D5C9A8, #44403C);
+}
+
+:root[data-palette="catppuccin"] {
+  --c-primary: light-dark(#8839EF, #CBA6F7);
+  --c-on-primary: light-dark(#FFFFFF, #181825);
+  --c-primary-container: light-dark(#DAD4F7, #443B59);
+  --c-on-primary-container: light-dark(#39146A, #E2CEFC);
+  --c-secondary: light-dark(#1E66F5, #89B4FA);
+  --c-on-secondary: light-dark(#FFFFFF, #181825);
+  --c-secondary-container: light-dark(#CADAF8, #353F5A);
+  --c-on-secondary-container: light-dark(#07296D, #BED6FE);
+  --c-tertiary: light-dark(#BC4A08, #FAB387);
+  --c-on-tertiary: light-dark(#FFFFFF, #181825);
+  --c-tertiary-container: light-dark(#E9D4CE, #4F3F41);
+  --c-on-tertiary-container: light-dark(#521C01, #FED6BD);
+  --c-error: light-dark(#D20F39, #F38BA8);
+  --c-on-error: light-dark(#FFFFFF, #181825);
+  --c-error-container: light-dark(#F0D0D2, #4E3647);
+  --c-on-error-container: light-dark(#5C0314, #FCC0CE);
+  --c-background: light-dark(#E6E9EF, #181825);
+  --c-on-background: light-dark(#4C4F69, #CDD6F4);
+  --c-surface: light-dark(#EFF1F5, #1E1E2E);
+  --c-on-surface: light-dark(#4C4F69, #CDD6F4);
+  --c-surface-variant: light-dark(#DCE0E8, #313244);
+  --c-on-surface-variant: light-dark(#6C6F85, #A6ADC8);
+  --c-outline: light-dark(#9CA0B0, #6C7086);
+  --c-inverse-surface: light-dark(#4C4F69, #CDD6F4);
+  --c-inverse-on-surface: light-dark(#E6E9EF, #181825);
+  --c-inverse-primary: light-dark(#B392FB, #65517C);
+  --c-surface-dim: light-dark(#D5D8E1, #181825);
+  --c-surface-bright: light-dark(#EFF1F5, #303242);
+  --c-surface-container-lowest: light-dark(#EFF1F5, #0A0A13);
+  --c-surface-container-low: light-dark(#E3E6EC, #1C1D2A);
+  --c-surface-container: light-dark(#DFE2E9, #1F202E);
+  --c-surface-container-high: light-dark(#DCDFE7, #242533);
+  --c-surface-container-highest: light-dark(#D9DCE4, #292938);
+  --c-outline-variant: light-dark(#C4C8D2, #444658);
+}
+
+:root[data-palette="rose-pine"] {
+  --c-primary: light-dark(#286983, #9CCFD8);
+  --c-on-primary: light-dark(#FFFFFF, #191724);
+  --c-primary-container: light-dark(#D8DFDF, #3A4451);
+  --c-on-primary-container: light-dark(#0C2A37, #C9E5EA);
+  --c-secondary: light-dark(#907AA9, #C4A7E7);
+  --c-on-secondary: light-dark(#FFFFFF, #191724);
+  --c-secondary-container: light-dark(#EAE2E6, #433B54);
+  --c-on-secondary-container: light-dark(#3D3249, #DECEF3);
+  --c-tertiary: light-dark(#9D6819, #F6C177);
+  --c-on-tertiary: light-dark(#FFFFFF, #191724);
+  --c-tertiary-container: light-dark(#EEDFCD, #4F423D);
+  --c-on-tertiary-container: light-dark(#432A05, #FBDDB6);
+  --c-error: light-dark(#B4637A, #EB6F92);
+  --c-on-error: light-dark(#FFFFFF, #FFFFFF);
+  --c-error-container: light-dark(#F3DEDC, #4E2F41);
+  --c-on-error-container: light-dark(#4E2832, #F9B1C2);
+  --c-background: light-dark(#FAF4ED, #191724);
+  --c-on-background: light-dark(#575279, #E0DEF4);
+  --c-surface: light-dark(#FFFAF3, #1F1D2E);
+  --c-on-surface: light-dark(#575279, #E0DEF4);
+  --c-surface-variant: light-dark(#F2E9E1, #26233A);
+  --c-on-surface-variant: light-dark(#797593, #908CAA);
+  --c-outline: light-dark(#9893A5, #524F67);
+  --c-inverse-surface: light-dark(#575279, #E0DEF4);
+  --c-inverse-on-surface: light-dark(#FAF4ED, #191724);
+  --c-inverse-primary: light-dark(#7FA3B4, #4C676B);
+  --c-surface-dim: light-dark(#E8E3E1, #191724);
+  --c-surface-bright: light-dark(#FFFAF3, #343241);
+  --c-surface-container-lowest: light-dark(#FFFAF3, #0B0A12);
+  --c-surface-container-low: light-dark(#F6F1EB, #1E1C29);
+  --c-surface-container: light-dark(#F3EDE8, #211F2D);
+  --c-surface-container-high: light-dark(#EFEAE6, #262432);
+  --c-surface-container-highest: light-dark(#ECE6E4, #2B2937);
+  --c-outline-variant: light-dark(#CDC7CC, #373547);
+}
+
+:root[data-theme="amoled"], :root[data-theme="amoled"][data-palette="sage"] {
+  --c-background: #000000;
+  --c-surface: #000000;
+  --c-surface-dim: #000000;
+  --c-surface-container-lowest: #000000;
+  --c-surface-container-low: #030504;
+  --c-surface-container: #070B0A;
+  --c-surface-container-high: #0F1614;
+  --c-surface-container-highest: #192320;
+  --c-surface-variant: #0C1411;
+  --c-surface-bright: #232927;
+  --c-inverse-on-surface: #000000;
+}
+
+:root[data-theme="amoled"][data-palette="solarized"] {
+  --c-background: #000000;
+  --c-surface: #000000;
+  --c-surface-dim: #000000;
+  --c-surface-container-lowest: #000000;
+  --c-surface-container-low: #010C10;
+  --c-surface-container: #03141A;
+  --c-surface-container-high: #081F25;
+  --c-surface-container-highest: #122B32;
+  --c-surface-variant: #052128;
+  --c-surface-bright: #1A3237;
+  --c-inverse-on-surface: #000000;
+}
+
+:root[data-theme="amoled"][data-palette="nord"] {
+  --c-background: #000000;
+  --c-surface: #000000;
+  --c-surface-dim: #000000;
+  --c-surface-container-lowest: #000000;
+  --c-surface-container-low: #0D1015;
+  --c-surface-container: #16191F;
+  --c-surface-container-high: #21252C;
+  --c-surface-container-highest: #2D323B;
+  --c-surface-variant: #262C37;
+  --c-surface-bright: #343841;
+  --c-inverse-on-surface: #000000;
+}
+
+:root[data-theme="amoled"][data-palette="gruvbox"] {
+  --c-background: #000000;
+  --c-surface: #000000;
+  --c-surface-dim: #000000;
+  --c-surface-container-lowest: #000000;
+  --c-surface-container-low: #070808;
+  --c-surface-container: #0D0F0E;
+  --c-surface-container-high: #161816;
+  --c-surface-container-highest: #212220;
+  --c-surface-variant: #211F1E;
+  --c-surface-bright: #282825;
+  --c-inverse-on-surface: #000000;
+}
+
+:root[data-theme="amoled"][data-palette="catppuccin"] {
+  --c-background: #000000;
+  --c-surface: #000000;
+  --c-surface-dim: #000000;
+  --c-surface-container-lowest: #000000;
+  --c-surface-container-low: #05050A;
+  --c-surface-container: #0A0A12;
+  --c-surface-container-high: #12131C;
+  --c-surface-container-highest: #1C1C27;
+  --c-surface-variant: #1A1B26;
+  --c-surface-bright: #21222F;
+  --c-inverse-on-surface: #000000;
+}
+
+:root[data-theme="amoled"][data-palette="rose-pine"] {
+  --c-background: #000000;
+  --c-surface: #000000;
+  --c-surface-dim: #000000;
+  --c-surface-container-lowest: #000000;
+  --c-surface-container-low: #050509;
+  --c-surface-container: #0B0A11;
+  --c-surface-container-high: #13121B;
+  --c-surface-container-highest: #1D1C26;
+  --c-surface-variant: #131120;
+  --c-surface-bright: #24222E;
+  --c-inverse-on-surface: #000000;
+}
+

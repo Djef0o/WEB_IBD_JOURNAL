@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Resoconto per il medico (PDF) -->
+    <string name="report_action">Resoconto per il medico (PDF)</string>
+    <string name="report_generating">Preparazione del resoconto…</string>
+    <string name="report_error">Impossibile creare il resoconto. Riprova.</string>
+    <string name="report_share_title">Condividi il resoconto</string>
+    <string name="report_no_share_app">Nessuna app disponibile per condividere il PDF</string>
+    <string name="report_title">Resoconto di monitoraggio</string>
+    <string name="report_patient">Paziente: %1$s</string>
+    <string name="report_period">%1$s · dal %2$s al %3$s</string>
+    <string name="report_generated">Generato il %1$s alle %2$s</string>
+    <string name="report_summary">Riepilogo</string>
+    <string name="report_stools_per_day">Evacuazioni per giorno monitorato</string>
+    <string name="report_summary_note">Le registrazioni di tipo 0 (nessuna evacuazione) non contano come evacuazioni. Le medie giornaliere considerano i giorni con almeno una registrazione di evacuazione.</string>
+    <string name="report_no_data">Nessuna evacuazione registrata in questo periodo.</string>
+    <string name="report_col_symptom">Sintomo</string>
+    <string name="report_col_days">Giorni con sintomi</string>
+    <string name="report_col_previous">Periodo precedente</string>
+    <string name="report_previous">%1$s (%2$s)</string>
+    <string name="report_schedule">%1$s alle %2$s, dal %3$s</string>
+    <string name="report_schedule_once">Una volta, il %1$s alle %2$s</string>
+    <string name="report_adherence">Aderenza nel periodo: %1$s delle assunzioni previste confermate (%2$d su %3$d) · dimenticate: %4$d · senza risposta: %5$d</string>
+    <string name="report_adherence_none">Nessuna assunzione confermata nell\'app in questo periodo</string>
+    <string name="report_labs">Risultati degli esami</string>
+    <string name="report_col_date">Data</string>
+    <string name="report_col_test">Esame</string>
+    <string name="report_col_reference">Valori del laboratorio</string>
+    <string name="report_labs_legend">↑ sopra · ↓ sotto (in grassetto): fuori dai valori del laboratorio inseriti; – se non indicati.</string>
+    <string name="report_lab_notes">Note</string>
+    <string name="report_lab_note">%1$s – %2$s: %3$s</string>
+    <string name="report_col_note">Nota</string>
+    <string name="report_checkups">Prossimi controlli</string>
+    <string name="report_checkup_at">%1$s alle %2$s</string>
+    <string name="report_footer">Dati inseriti dal paziente: non sostituiscono il parere medico</string>
+    <string name="report_page">Pagina %1$d</string>
+    <plurals name="report_chart_range">
+        <item quantity="one">Dal %2$s al %3$s · %1$d giorno</item>
+        <item quantity="other">Dal %2$s al %3$s · %1$d giorni</item>
+    </plurals>
+</resources>

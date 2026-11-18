@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_export_desc">Arquivo criptografado, protegido por senha</string>
+    <string name="backup_import_desc">Backup criptografado ou exportação antiga sem criptografia</string>
+    <string name="backup_export_title">Proteger o backup</string>
+    <string name="backup_export_message">O arquivo é criptografado com esta senha. Você vai precisar dela para importar o arquivo.</string>
+    <string name="backup_password">Senha</string>
+    <string name="backup_password_confirm">Confirmar senha</string>
+    <string name="backup_password_min_length">Pelo menos %1$d caracteres</string>
+    <string name="backup_password_mismatch">As senhas não coincidem</string>
+    <string name="backup_password_show">Mostrar senha</string>
+    <string name="backup_password_hide">Ocultar senha</string>
+    <string name="backup_password_warning">Se você esquecer esta senha, o arquivo não poderá ser recuperado. Ninguém consegue abri-lo sem a senha.</string>
+    <string name="backup_export_choose_file">Escolher arquivo</string>
+    <string name="backup_exporting">Criptografando seus dados…</string>
+    <string name="backup_importing">Importando seus dados…</string>
+    <string name="backup_export_done">Backup salvo. Guarde a senha em um lugar seguro.</string>
+    <string name="backup_export_failed">Não foi possível salvar o backup.</string>
+    <string name="backup_import_title">Backup criptografado</string>
+    <string name="backup_import_message">Digite a senha escolhida ao exportar este arquivo. A importação substitui os dados que estão agora no app.</string>
+    <string name="backup_import_wrong_password">Senha incorreta ou arquivo danificado.</string>
+    <string name="backup_import_button">Importar</string>
+    <string name="backup_import_done">Dados importados.</string>
+    <string name="backup_import_failed">Falha na importação: não foi possível ler o arquivo. Seus dados não foram alterados.</string>
+    <string name="backup_import_unrecognized">Este arquivo não é um backup do IBD Journal. Nada foi importado.</string>
+    <string name="calendar_privacy_title">Informações de saúde na sua agenda</string>
+    <string name="calendar_privacy_message">Os nomes dos seus tratamentos e exames serão gravados na agenda do seu celular. Essa agenda pode estar sincronizada com uma conta on-line (Google, Samsung, Outlook…) e assim sair do celular. Escolha uma agenda do celular não sincronizada se quiser que essas informações fiquem no celular.</string>
+    <string name="calendar_privacy_confirm">Adicionar à minha agenda</string>
+    <string name="calendar_privacy_note">Os nomes de tratamentos e exames são gravados nesta agenda. Se ela estiver sincronizada com uma conta on-line, eles saem do celular: prefira uma agenda do celular não sincronizada.</string>
+</resources>

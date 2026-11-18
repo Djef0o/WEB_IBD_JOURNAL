@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import de comptes rendus d'analyses (plusieurs fichiers) -->
+    <string name="lab_import_reports_button">Import lab reports (PDF)</string>
+    <string name="lab_import_reading_progress">Reading report %1$d/%2$d…</string>
+    <string name="lab_import_check_reports">Values read from your reports. Check each one against the document before saving.</string>
+    <string name="lab_import_all_nothing">None of the tracked tests was found in these documents.</string>
+    <string name="lab_import_document_untitled">Document %1$d</string>
+    <string name="lab_import_document_nothing">No tracked test found in this document.</string>
+    <string name="lab_import_document_failed">This document could not be read: only PDFs from the lab that contain text are supported (not scanned documents). Enter the values by hand.</string>
+    <string name="lab_import_duplicate_in_import">Already in another report for this date</string>
+
+    <!-- Libellé du choix de l'analyse dans la saisie -->
+    <string name="lab_result_test">Test</string>
+</resources>

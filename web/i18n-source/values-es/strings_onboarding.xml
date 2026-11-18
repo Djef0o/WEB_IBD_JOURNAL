@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_step">Paso %1$d de %2$d</string>
+    <string name="onboarding_next">Siguiente</string>
+    <string name="onboarding_back">Atrás</string>
+    <string name="onboarding_skip">Omitir</string>
+
+    <string name="onboarding_profile_title">Tu perfil</string>
+    <string name="onboarding_profile_text">Estos datos aparecen en tu informe para el médico. Se quedan en tu teléfono y puedes cambiarlos en Ajustes.</string>
+
+    <string name="onboarding_treatments_title">Tus tratamientos</string>
+    <string name="onboarding_treatments_text">Añade los medicamentos que tomas, desde la lista o escribiendo su nombre. Cada uno puede tener un recordatorio: diario, cada 2 semanas, mensual…</string>
+    <string name="onboarding_treatments_empty">Aún no hay tratamientos. También puedes añadirlos más tarde en la pestaña Cuidados.</string>
+
+    <string name="onboarding_tour_today_title">Hoy: anotar en dos toques</string>
+    <string name="onboarding_tour_today_text">Toca «Deposición», elige el tipo de Bristol, de dura (1) a líquida (7), y guarda. Añade si hace falta sangre, moco, dolor o cansancio. Anota tus comidas con una foto o escaneando un código de barras.</string>
+    <string name="onboarding_tour_history_title">Historial: tu mes de un vistazo</string>
+    <string name="onboarding_tour_history_text">El calendario colorea cada día: verde para deposiciones normales, naranja para blandas o líquidas. Toca un día para ver y editar lo que anotaste.</string>
+    <string name="onboarding_tour_trends_title">Tendencias: sigue tu evolución</string>
+    <string name="onboarding_tour_trends_text">El gráfico muestra tus deposiciones día a día, con un punto rojo cuando hay sangre. Compara los últimos 30 días, 90 días o todo el historial, y cuenta los días con síntomas.</string>
+    <string name="onboarding_tour_care_title">Cuidados: tratamientos y análisis</string>
+    <string name="onboarding_tour_care_text">Ahí están tus tratamientos. También puedes programar análisis de sangre y de heces (calprotectina), con un recordatorio el día indicado, y guardar tus resultados, escritos a mano o importados de un informe.</string>
+
+    <string name="onboarding_notifications_title">Recordatorio diario</string>
+    <string name="onboarding_notifications_text">Cada tarde a las 19:00, una notificación te permite anotar tu deposición, tu dolor y tu cansancio directamente, sin abrir la app; se queda hasta que rellenes los tres. Los recordatorios de tratamiento y de análisis también llegan como notificaciones. Puedes cambiar la hora en Ajustes.</string>
+    <string name="onboarding_notifications_allow">Permitir notificaciones</string>
+    <string name="onboarding_notifications_granted">Notificaciones permitidas</string>
+</resources>

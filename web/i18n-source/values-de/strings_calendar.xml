@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_section_title">Kalender des Telefons</string>
+    <string name="calendar_sync">Erinnerungen in meinen Kalender eintragen</string>
+    <string name="calendar_sync_desc">Einnahmen, Bestellungen, Blut- und Stuhltests werden zu Terminen in deinem Kalender, mit Erinnerung. Die App sendet diese Benachrichtigungen dann nicht mehr. Die tägliche Stuhlgang-Erinnerung bleibt unverändert.</string>
+    <string name="calendar_target">Kalender</string>
+    <string name="calendar_none">Kein beschreibbarer Kalender auf diesem Telefon</string>
+    <string name="calendar_permission_lost">Der Kalenderzugriff wurde entzogen: Die Erinnerungen kommen wieder von der App.</string>
+    <string name="calendar_refill_title">%1$s bestellen</string>
+    <string name="calendar_event_description">Erinnerung von IBD Journal.</string>
+</resources>

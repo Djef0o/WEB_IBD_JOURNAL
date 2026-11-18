@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exam_colonoscopy">Darmspiegelung</string>
+    <string name="exam_rectosigmoidoscopy">Rektosigmoidoskopie</string>
+    <string name="exam_step_anesthesia">Narkosevorgespräch</string>
+    <string name="exam_step_diet">Beginn der ballaststoffarmen Kost</string>
+    <string name="exam_step_prep_first">1. Einnahme der Abführlösung</string>
+    <string name="exam_step_prep_second">2. Einnahme der Abführlösung</string>
+    <string name="exam_step_exam">Untersuchung</string>
+
+    <string name="exams_title">Untersuchungen</string>
+    <string name="exam_add">Untersuchung planen</string>
+    <string name="exam_edit">Untersuchung bearbeiten</string>
+    <string name="exams_empty">Keine Untersuchung geplant. Trag deine Darmspiegelung oder Rektosigmoidoskopie ein, um die Vorbereitung zu notieren und Erinnerungen zu erhalten.</string>
+    <string name="exam_next_step">Nächster Schritt: %1$s, %2$s</string>
+    <string name="exam_anesthesia_missing">Termin beim Anästhesisten vereinbaren</string>
+
+    <string name="exam_date">Datum der Untersuchung</string>
+    <string name="exam_note">Notiz</string>
+    <string name="exam_note_hint">z. B. Ort, Ärztin/Arzt</string>
+    <string name="exam_preparation">Vorbereitung</string>
+    <string name="exam_preparation_desc">Notiere die Anweisungen deiner Ärztin, deines Arztes oder des Endoskopiezentrums.</string>
+    <plurals name="exam_diet_days">
+        <item quantity="one">Ballaststoffarme Kost: %1$d Tag vorher</item>
+        <item quantity="other">Ballaststoffarme Kost: %1$d Tage vorher</item>
+    </plurals>
+    <string name="exam_diet_none">Ballaststoffarme Kost: keine</string>
+    <string name="exam_diet_start">Ab %1$s</string>
+    <string name="exam_not_set">Noch nicht festgelegt</string>
+    <string name="exam_clear">Löschen</string>
+    <string name="exam_reminders">An jeden Schritt erinnern</string>
+    <string name="exam_reminders_desc">%1$d h vor Terminen, zum Zeitpunkt jeder Einnahme und um %2$s am ersten Tag der Kost.</string>
+</resources>

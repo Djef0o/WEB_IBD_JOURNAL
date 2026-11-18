@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_section_title">Agenda du téléphone</string>
+    <string name="calendar_sync">Ajouter les rappels à mon agenda</string>
+    <string name="calendar_sync_desc">Prises, commandes, prises de sang et tests des selles deviennent des événements de votre agenda, avec leur alerte. L\'app n\'envoie plus ces notifications. Le rappel quotidien des selles ne change pas.</string>
+    <string name="calendar_target">Agenda</string>
+    <string name="calendar_none">Aucun agenda modifiable sur ce téléphone</string>
+    <string name="calendar_permission_lost">L\'accès à l\'agenda a été retiré : les rappels repassent par les notifications de l\'app.</string>
+    <string name="calendar_refill_title">Commander %1$s</string>
+    <string name="calendar_event_description">Rappel ajouté par IBD Journal.</string>
+</resources>

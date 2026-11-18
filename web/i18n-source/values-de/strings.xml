@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CED-Tagebuch</string>
+
+    <!-- Kalender -->
+    <string name="today">Heute</string>
+    <string name="previous">Zurück</string>
+    <string name="next">Weiter</string>
+    <string name="swipe_hint">Horizontal wischen, um die Ansicht zu wechseln</string>
+
+    <!-- Mahlzeiten -->
+    <string name="meal_breakfast">Frühstück</string>
+    <string name="meal_lunch">Mittagessen</string>
+    <string name="meal_dinner">Abendessen</string>
+    <string name="add_meal">Mahlzeit hinzufügen</string>
+    <string name="edit_meal">Mahlzeit bearbeiten</string>
+    <string name="meal_description_hint">Was isst du? (Lebensmittel, Mengen, Symptome…)</string>
+    <string name="save">Speichern</string>
+    <string name="delete">Löschen</string>
+    <string name="photo">Foto der Mahlzeit</string>
+    <string name="add_photo">Foto hinzufügen</string>
+    <string name="remove_photo">Foto entfernen</string>
+    <string name="scan_barcode">Barcode scannen</string>
+    <string name="no_photo">Für diesen Zeitpunkt ist keine Mahlzeit eingetragen.</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="add_meal_hint">Tippen, um diese Mahlzeit hinzuzufügen</string>
+    <string name="open_day">Öffnen</string>
+    <string name="stool_count">%1$d Stuhlgang/-gänge</string>
+    <string name="empty_day">Keine Einträge für diesen Tag.</string>
+
+    <!-- Stuhlgang -->
+    <string name="stools">Stuhlgang</string>
+    <string name="add_stool">Stuhlgang hinzufügen</string>
+    <string name="add_stool_hint">Tippen, um einen Stuhlgang hinzuzufügen</string>
+    <string name="new_stool">Neuer Stuhlgang</string>
+    <string name="edit_stool">Stuhlgang bearbeiten</string>
+    <string name="hour">Uhrzeit</string>
+    <string name="tap_to_modify">Zum Bearbeiten tippen &gt;</string>
+    <string name="bristol_scale">Bristol-Stuhlformen-Skala</string>
+    <string name="stool_type_question">Welche Stuhlform?</string>
+    <string name="blood_presence">Blut im Stuhl</string>
+    <string name="mucus_presence">Schleim im Stuhl</string>
+    <string name="pain">Schmerzen</string>
+    <string name="fatigue">Erschöpfung</string>
+    <string name="level_hint">0 = keins • 5 = sehr viel</string>
+    <string name="level_hint_pain">0 = keine • 5 = sehr stark</string>
+    <string name="level_hint_fatigue">0 = fit • 5 = erschöpft</string>
+    <string name="stool_comment_hint">Freier Kommentar…</string>
+    <string name="no_stools">Kein Stuhlgang eingetragen.</string>
+    <string name="stool_recorded_format">Stuhlgang Typ %1$d gespeichert!</string>
+    <string name="stool_recorded_type_0">Kein Stuhlgang (Typ 0) gespeichert!</string>
+    <string name="stool_type_0">Typ 0</string>
+    <string name="stool_type_1">Typ 1</string>
+    <string name="stool_type_2">Typ 2</string>
+    <string name="stool_type_3">Typ 3</string>
+    <string name="stool_type_4">Typ 4</string>
+    <string name="stool_type_5">Typ 5</string>
+    <string name="stool_type_6">Typ 6</string>
+    <string name="stool_type_7">Typ 7</string>
+
+    <!-- Scanner -->
+    <string name="scan_title">Barcode scannen</string>
+    <string name="scan_hint">Halte den Barcode des Produkts in den Rahmen</string>
+    <string name="scanning">Produkt wird gesucht…</string>
+    <string name="scan_close">Scanner schließen</string>
+    <string name="product_found">Produkt gefunden</string>
+    <string name="product_not_found">Produkt nicht in der Open-Food-Facts-Datenbank gefunden</string>
+    <string name="use_product">Dieses Produkt verwenden</string>
+    <string name="remove_product">Produkt entfernen</string>
+    <string name="nutriscore">Nutri-Score %1$s</string>
+    <string name="use_barcode_anyway">Mit diesem Barcode fortfahren</string>
+    <string name="scan_error">Fehler beim Scannen. Versuche es erneut.</string>
+    <string name="camera_permission_needed">Zum Scannen eines Barcodes wird die Kameraberechtigung benötigt.</string>
+    <string name="grant_permission">Kamera erlauben</string>
+
+    <!-- Einführung -->
+    <string name="onboarding_title">Willkommen in deinem Tagebuch</string>
+    <string name="onboarding_text">Dieses tägliche Tagebuch hilft dir, deine Ernährung und deinen Stuhlgang zu verfolgen, wenn du mit Colitis ulcerosa oder Morbus Crohn lebst. Ergänze deine Mahlzeiten mit Fotos oder Barcodes und notiere jeden Stuhlgang mit einem Kommentar – so kannst du genauer mit deiner Ärztin oder deinem Arzt darüber sprechen.</string>
+    <string name="onboarding_disclaimer">Die Daten bleiben auf deinem Gerät und ersetzen keinen ärztlichen Rat.</string>
+    <string name="start">Loslegen</string>
+
+    <!-- Einstellungen -->
+    <string name="settings">Einstellungen</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="daily_reminder">Tägliche Erinnerung</string>
+    <string name="daily_reminder_desc">Benachrichtigung erhalten, um Stuhlgang, Schmerzen und Erschöpfung einzutragen</string>
+    <string name="reminder_time">Uhrzeit der Erinnerung</string>
+    <string name="test_notification">Benachrichtigung testen</string>
+    <string name="test_notification_desc">Sofort eine Test-Benachrichtigung senden</string>
+    <string name="notification_permission_warning">Die Berechtigung für Benachrichtigungen wurde nicht erteilt.</string>
+    <string name="notification_permission_grant">Erlauben</string>
+    <string name="exact_alarm_warning">Exakte Wecker sind deaktiviert: Die Erinnerung kann verspätet kommen.</string>
+    <string name="exact_alarm_grant">Aktivieren</string>
+    <string name="modify">Ändern</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="export_data">Daten exportieren</string>
+    <string name="import_data">Daten importieren</string>
+    <string name="data_management">Datenverwaltung</string>
+
+    <!-- Hauptnavigation -->
+    <string name="nav_home">Heute</string>
+    <string name="nav_history">Verlauf</string>
+    <string name="nav_analysis">Trends</string>
+    <string name="nav_settings">Einstellungen</string>
+
+    <!-- Übersicht -->
+    <string name="home_greeting">Hallo</string>
+    <string name="home_today">Heute</string>
+    <string name="home_stat_stools">Stuhlgänge</string>
+    <string name="home_stat_meals">Mahlzeit notiert</string>
+    <string name="home_stat_bristol">Ø Bristol</string>
+    <string name="home_action_meal">Mahlzeit</string>
+    <string name="home_action_meal_sub">Foto oder Barcode</string>
+    <string name="home_action_stool">Stuhlgang</string>
+    <string name="home_action_stool_sub">In 2 Schritten</string>
+    <string name="home_feed">Heutige Einträge</string>
+    <string name="home_see_all">Alle anzeigen</string>
+    <string name="home_empty">Noch nichts eingetragen. Tippe oben auf eine Aktion.</string>
+    <string name="home_week">Diese Woche</string>
+    <string name="home_week_stools">Stuhlgänge</string>
+    <string name="home_week_avg">Durchschnitt</string>
+    <string name="home_week_meals">Mahlzeiten</string>
+    <string name="home_reminder">Nächste Erinnerung · %1$s</string>
+    <string name="home_reminder_sub">Täglich</string>
+    <string name="home_details">Details</string>
+    <string name="home_calm">Ruhiger Tag</string>
+    <string name="home_no_data">Noch keine Daten</string>
+
+    <!-- Schnelleingabe -->
+    <string name="quick_stool_title">Neuer Stuhlgang</string>
+    <string name="quick_stool_details">Mehr Details</string>
+    <string name="quick_stool_question">Welche Stuhlform?</string>
+
+    <!-- Verlauf -->
+    <string name="history_title">Verlauf</string>
+    <string name="history_month">Dieser Monat</string>
+    <string name="history_avg">Durchschnitt %1$s</string>
+    <string name="history_recent">Letzte Tage</string>
+    <string name="history_no_entry">Kein Eintrag</string>
+    <string name="history_open_calendar">Detailansicht</string>
+    <string name="history_legend">Bristol</string>
+    <string name="history_chart_caption">Stuhlgänge pro Tag · letzte 7 Tage</string>
+    <string name="history_legend_note">Grün = normaler Stuhl · Orange = weich oder flüssig</string>
+    <string name="history_day_detail">Tagesdetails</string>
+    <string name="history_no_data">Keine Daten in diesem Monat</string>
+
+    <!-- Trends -->
+    <string name="analysis_title">Trends</string>
+    <string name="analysis_period_30">Letzte 30 Tage</string>
+    <string name="analysis_period_90">Letzte 90 Tage</string>
+    <string name="analysis_period_all">Gesamter Verlauf</string>
+    <string name="analysis_period_30_short">30 Tage</string>
+    <string name="analysis_period_90_short">90 Tage</string>
+    <string name="analysis_period_all_short">Alles</string>
+    <string name="analysis_stools">Stuhlgänge</string>
+    <string name="analysis_avg">Ø Bristol</string>
+    <string name="analysis_meals">Mahlzeiten</string>
+    <string name="analysis_days">Erfasste Tage</string>
+    <string name="analysis_daily">Stuhlgänge pro Tag</string>
+    <string name="analysis_daily_period">Gesamter Verlauf · wische für frühere Tage</string>
+    <string name="analysis_daily_hint">Tippe auf einen Balken, um den Tag zu sehen</string>
+    <string name="analysis_detail_types">Typen %1$s</string>
+    <string name="analysis_legend_hard">Hart (1–2)</string>
+    <string name="analysis_legend_normal">Normal (3–4)</string>
+    <string name="analysis_legend_loose">Weich (5–7)</string>
+    <string name="analysis_legend_blood">Blut</string>
+    <string name="analysis_symptoms">Symptome</string>
+    <string name="analysis_symptoms_compare">Betroffene Tage · Veränderung zu den %1$d Tagen davor</string>
+    <string name="analysis_symptoms_days">Betroffene Tage</string>
+    <string name="analysis_blood">Blut</string>
+    <string name="analysis_mucus">Schleim</string>
+    <string name="analysis_pain_strong">Starke Schmerzen (≥ 3/5)</string>
+    <string name="analysis_fatigue_strong">Starke Erschöpfung (≥ 3/5)</string>
+    <string name="analysis_urgency">Stuhldrang</string>
+    <string name="analysis_nocturnal">Nächtlicher Stuhlgang</string>
+    <plurals name="analysis_symptom_days">
+        <item quantity="one">%1$d Tag</item>
+        <item quantity="other">%1$d Tage</item>
+    </plurals>
+    <string name="analysis_liquid_per_day">Flüssige Stühle pro Tag (Typ 6–7)</string>
+    <string name="analysis_no_data">Noch nicht genug Daten. Trage deine Tage weiter ein.</string>
+    <string name="analysis_type">Typ %1$d</string>
+    <string name="close">Schließen</string>
+
+    <plurals name="history_month_stools">
+        <item quantity="one">%1$d Stuhlgang</item>
+        <item quantity="other">%1$d Stuhlgänge</item>
+    </plurals>
+    <plurals name="stools_count">
+        <item quantity="one">%1$d Stuhlgang</item>
+        <item quantity="other">%1$d Stuhlgänge</item>
+    </plurals>
+    <plurals name="stools_label">
+        <item quantity="one">Stuhlgang</item>
+        <item quantity="other">Stuhlgänge</item>
+    </plurals>
+    <plurals name="meals_label">
+        <item quantity="one">Mahlzeit notiert</item>
+        <item quantity="other">Mahlzeiten notiert</item>
+    </plurals>
+    <string name="stool_symptoms">Symptome</string>
+    <string name="level_hint_common">0 = keine · 5 = sehr stark</string>
+    <string name="level_none">Keine</string>
+    <string name="bristol_desc_0">Kein Stuhlgang</string>
+    <string name="bristol_desc_1">Harte Klumpen</string>
+    <string name="bristol_desc_2">Klumpige Wurst</string>
+    <string name="bristol_desc_3">Rissige Wurst</string>
+    <string name="bristol_desc_4">Glatt und weich</string>
+    <string name="bristol_desc_5">Weiche Stücke</string>
+    <string name="bristol_desc_6">Breiig</string>
+    <string name="bristol_desc_7">Flüssig</string>
+    <string name="last_reminder">Letzte Erinnerung</string>
+    <string name="last_reminder_never">Bisher keine Erinnerung angezeigt</string>
+    <string name="battery_title">Erinnerungen im Hintergrund</string>
+    <string name="battery_warning">Das System kann die Erinnerung verzögern, wenn die App im Hintergrund pausiert wird.</string>
+    <string name="battery_grant">Erlauben</string>
+    <string name="battery_exempt">Erlaubt</string>
+    <string name="today_at">Heute um %1$s</string>
+    <string name="yesterday_at">Gestern um %1$s</string>
+    <string name="day_journal">Tagebuch</string>
+    <string name="meals_section">Mahlzeiten</string>
+    <string name="stools_section">Stuhlgänge</string>
+    <string name="add">Hinzufügen</string>
+    <string name="date_at">%1$s um %2$s</string>
+
+    <!-- Zusammenfassung eines Stuhlgangs -->
+    <string name="stool_title">Stuhlgang · Typ %1$d</string>
+    <string name="stool_flag_blood">Blut festgestellt</string>
+    <string name="stool_flag_mucus">Schleim festgestellt</string>
+    <string name="stool_flag_pain">Schmerzen %1$d/5</string>
+    <string name="stool_flag_none">Keine Auffälligkeiten</string>
+    <string name="bristol_icon_desc">Bristol-Typ %1$d</string>
+    <string name="level_out_of_five">%1$d / 5</string>
+
+    <!-- Darstellung und Sprache -->
+    <string name="settings_appearance">Darstellung</string>
+    <string name="theme_mode">Helligkeit</string>
+    <string name="theme_mode_system">System</string>
+    <string name="theme_mode_light">Hell</string>
+    <string name="theme_mode_dark">Dunkel</string>
+    <string name="theme_mode_amoled">AMOLED</string>
+    <string name="theme_palette">Farben</string>
+    <string name="palette_sage">Salbei</string>
+    <string name="palette_solarized">Solarized</string>
+    <string name="palette_nord">Nord</string>
+    <string name="palette_gruvbox">Gruvbox</string>
+    <string name="palette_catppuccin">Catppuccin</string>
+    <string name="palette_rose_pine">Rosé Pine</string>
+    <string name="settings_language">Sprache</string>
+    <string name="language_system">Systemsprache</string>
+</resources>

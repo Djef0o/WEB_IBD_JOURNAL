@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exam_colonoscopy">Colonoscopy</string>
+    <string name="exam_rectosigmoidoscopy">Sigmoidoscopy</string>
+    <string name="exam_step_anesthesia">Anesthesia consultation</string>
+    <string name="exam_step_diet">Start of low-residue diet</string>
+    <string name="exam_step_prep_first">1st dose of bowel prep</string>
+    <string name="exam_step_prep_second">2nd dose of bowel prep</string>
+    <string name="exam_step_exam">Exam</string>
+
+    <string name="exams_title">Exams</string>
+    <string name="exam_add">Schedule an exam</string>
+    <string name="exam_edit">Edit exam</string>
+    <string name="exams_empty">No exam scheduled. Add your colonoscopy or sigmoidoscopy to note its preparation and get reminders.</string>
+    <string name="exam_next_step">Next step: %1$s, %2$s</string>
+    <string name="exam_anesthesia_missing">Anesthesiologist appointment to book</string>
+
+    <string name="exam_date">Exam date</string>
+    <string name="exam_note">Note</string>
+    <string name="exam_note_hint">e.g. place, gastroenterologist</string>
+    <string name="exam_preparation">Preparation</string>
+    <string name="exam_preparation_desc">Note your doctor\'s or endoscopy center\'s instructions.</string>
+    <plurals name="exam_diet_days">
+        <item quantity="one">Low-residue diet: %1$d day before</item>
+        <item quantity="other">Low-residue diet: %1$d days before</item>
+    </plurals>
+    <string name="exam_diet_none">Low-residue diet: none</string>
+    <string name="exam_diet_start">Starting %1$s</string>
+    <string name="exam_not_set">Not scheduled yet</string>
+    <string name="exam_clear">Clear</string>
+    <string name="exam_reminders">Remind me of each step</string>
+    <string name="exam_reminders_desc">%1$d h before appointments, at the time of each prep dose, and at %2$s on the first diet day.</string>
+</resources>

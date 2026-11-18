@@ -1,0 +1,33 @@
+/* Vue d'un jour. */
+.day-head { display: flex; align-items: center; gap: var(--space-1); margin-block-end: var(--space-3); }
+.day-title { flex: 1; min-width: 0; }
+.day-title h1 { overflow-wrap: anywhere; }
+.chevron[data-dir="next"] { transform: scaleX(-1); }
+.day-today { display: flex; justify-content: flex-end; }
+.day-layout { display: grid; gap: var(--space-4); align-items: start; }
+@media (min-width: 60rem) {
+  .day-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .day-summary { grid-column: 1 / -1; }
+}
+.day-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: 0; }
+.day-stat { display: flex; flex-direction: column-reverse; }
+.day-stat dd { margin: 0; }
+.day-stat dt { margin: 0; }
+.day-stat-value { font-size: var(--text-xl); font-weight: 700; }
+.day-section-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.day-empty { padding: var(--space-4); border-radius: var(--radius-md); background: color-mix(in srgb, var(--c-surface-variant) 40%, transparent); }
+.day-list { display: flex; flex-direction: column; list-style: none; padding: 0; margin: 0; border: 1px solid var(--c-outline-variant); border-radius: var(--radius-lg); background: var(--c-surface); overflow: hidden; }
+.day-item { display: flex; align-items: center; }
+.day-item + .day-item { border-block-start: 1px solid var(--c-outline-variant); }
+.day-item-main {
+  display: flex; align-items: center; gap: var(--space-3); flex: 1; min-width: 0; min-height: var(--target);
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-4);
+  border: 0; background: transparent; color: inherit; text-align: start; font: inherit;
+}
+.day-item-main:hover { background: color-mix(in srgb, var(--c-on-surface) 6%, transparent); }
+.day-item-text { display: flex; flex-direction: column; min-width: 0; }
+.day-item-title { font-weight: 600; }
+.day-clamp { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.day-item-icon { display: grid; place-items: center; flex: none; width: 2rem; height: 2rem; border-radius: var(--radius-sm); }
+.day-item-meal { background: color-mix(in srgb, var(--c-tertiary-container) 50%, transparent); color: var(--c-tertiary); }
+.day-delete { color: var(--c-error); margin-inline-end: var(--space-1); }

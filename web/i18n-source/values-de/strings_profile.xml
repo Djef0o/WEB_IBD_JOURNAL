@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_care">Behandlung</string>
+    <string name="care_title">Behandlung</string>
+    <string name="profile_title">Profil</string>
+    <string name="profile_edit">Profil bearbeiten</string>
+    <string name="profile_first_name">Vorname</string>
+    <string name="profile_last_name">Nachname</string>
+    <string name="profile_birth_date">Geburtsdatum</string>
+    <string name="profile_not_set">Nicht angegeben</string>
+    <string name="profile_birth_date_missing">Geburtsdatum nicht angegeben</string>
+    <string name="profile_empty_name">Gib deinen Namen ein</string>
+    <string name="profile_born_on">Geboren am %1$s · %2$s</string>
+    <string name="profile_sex">Geschlecht</string>
+    <string name="profile_sex_missing">Geschlecht nicht angegeben</string>
+    <string name="sex_female">Weiblich</string>
+    <string name="sex_male">Männlich</string>
+    <plurals name="profile_age">
+        <item quantity="one">%1$d Jahr</item>
+        <item quantity="other">%1$d Jahre</item>
+    </plurals>
+
+    <!-- Behandlungen -->
+    <string name="treatments_title">Behandlungen</string>
+    <string name="treatments_empty">Keine Behandlung hinzugefügt.</string>
+    <string name="treatment_add">Behandlung hinzufügen</string>
+    <string name="treatment_edit">Behandlung bearbeiten</string>
+    <string name="treatment_name">Medikament</string>
+    <string name="treatment_choose">Medikament auswählen</string>
+    <string name="treatment_search">Suchen</string>
+    <string name="treatment_other">Anderes Medikament</string>
+    <string name="treatment_other_named">Anderes: „%1$s“</string>
+    <string name="treatment_other_desc">Nicht in der Liste? Gib den Namen ein.</string>
+    <string name="treatment_dosage">Dosierung</string>
+    <string name="treatment_dosage_hint">z. B. 2 g, 40 mg, 1 Tablette</string>
+    <string name="treatment_start_date">Startdatum</string>
+
+    <!-- Kontrollen -->
+    <string name="checkups_title">Blut- und Stuhltests</string>
+    <string name="checkups_empty">Kein Test geplant.</string>
+    <string name="checkup_add">Test planen</string>
+    <string name="checkup_edit">Test bearbeiten</string>
+    <string name="checkup_blood_test">Blutabnahme</string>
+    <string name="checkup_stool_test">Stuhltest</string>
+    <string name="checkup_note">Notiz</string>
+    <string name="checkup_note_hint">z. B. CRP, fäkales Calprotectin, Labor</string>
+    <string name="checkup_date">Datum</string>
+
+    <!-- Planung -->
+    <string name="reminder_enabled">Erinnerung</string>
+    <string name="reminder_enabled_desc">Zur geplanten Zeit eine Benachrichtigung erhalten</string>
+    <string name="reminder_off">Erinnerung aus</string>
+    <string name="repeat_label">Wiederholung</string>
+    <string name="repeat_unit_once">Keine Wiederholung</string>
+    <string name="repeat_unit_day">Täglich</string>
+    <string name="repeat_unit_week">Wöchentlich</string>
+    <string name="repeat_unit_month">Monatlich</string>
+    <string name="repeat_once">Einmalig</string>
+    <plurals name="repeat_every_days">
+        <item quantity="one">Jeden Tag</item>
+        <item quantity="other">Alle %1$d Tage</item>
+    </plurals>
+    <plurals name="repeat_every_weeks">
+        <item quantity="one">Jede Woche</item>
+        <item quantity="other">Alle %1$d Wochen</item>
+    </plurals>
+    <plurals name="repeat_every_months">
+        <item quantity="one">Jeden Monat</item>
+        <item quantity="other">Alle %1$d Monate</item>
+    </plurals>
+    <string name="schedule_next">Nächste: %1$s</string>
+    <string name="decrease">Verringern</string>
+    <string name="increase">Erhöhen</string>
+
+    <!-- Benachrichtigungen -->
+    <string name="medication_reminder_channel">Behandlungserinnerungen</string>
+    <string name="medication_reminder_title">Zeit für deine Behandlung</string>
+    <string name="medication_reminder_text">%1$s einnehmen</string>
+    <string name="medication_reminder_text_dosage">%1$s einnehmen · %2$s</string>
+    <string name="checkup_reminder_channel">Test-Erinnerungen</string>
+    <string name="checkup_reminder_text">Für heute geplant</string>
+
+    <!-- Bestellerinnerung -->
+    <string name="refill_alert_label">%1$d Tage vorher zum Bestellen erinnern</string>
+    <string name="refill_hint_dose">Die Erinnerung kommt %1$d Tage vor jeder Einnahme.</string>
+    <string name="refill_stock_end">Vorrat reicht bis</string>
+    <string name="refill_hint_stock">Die Erinnerung kommt %1$d Tage vor diesem Datum. Aktualisiere es bei jeder neuen Packung.</string>
+    <string name="refill_next">Bestellung: Erinnerung %1$s</string>
+    <string name="refill_reminder_title">Zeit, deine Behandlung zu bestellen</string>
+    <string name="refill_reminder_text_dose">%1$s: nächste Einnahme %2$s</string>
+    <string name="refill_reminder_text_stock">%1$s: Vorrat leer %2$s</string>
+
+    <!-- Medikamentenliste -->
+    <string name="med_category_aminosalicylates">Aminosalicylate (5-ASA)</string>
+    <string name="med_category_corticosteroids">Kortikosteroide</string>
+    <string name="med_category_immunosuppressants">Immunsuppressiva</string>
+    <string name="med_category_biologics">Biologika</string>
+    <string name="med_category_small_molecules">Gezielte orale Therapien (JAK, S1P)</string>
+    <string name="med_category_antibiotics">Antibiotika</string>
+    <string name="med_category_supportive">Ergänzungs- und Begleitmittel</string>
+    <string name="indication_crohn">Morbus Crohn</string>
+    <string name="indication_uc">Colitis ulcerosa</string>
+    <string name="med_iron">Eisen</string>
+    <string name="med_vitamin_d">Vitamin D</string>
+    <string name="med_vitamin_b12">Vitamin B12</string>
+    <string name="med_folic_acid">Folsäure</string>
+    <string name="med_calcium">Calcium</string>
+    <string name="med_loperamide">Loperamid</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_step">Etapa %1$d de %2$d</string>
+    <string name="onboarding_next">Próximo</string>
+    <string name="onboarding_back">Voltar</string>
+    <string name="onboarding_skip">Pular</string>
+
+    <string name="onboarding_profile_title">Seu perfil</string>
+    <string name="onboarding_profile_text">Esses dados aparecem no seu relatório para o médico. Eles ficam no seu telefone e podem ser alterados nas Configurações.</string>
+
+    <string name="onboarding_treatments_title">Seus tratamentos</string>
+    <string name="onboarding_treatments_text">Adicione os medicamentos que você toma, pela lista ou digitando o nome. Cada um pode ter um lembrete: diário, a cada 2 semanas, mensal…</string>
+    <string name="onboarding_treatments_empty">Nenhum tratamento ainda. Você também pode adicioná-los depois na aba Cuidados.</string>
+
+    <string name="onboarding_tour_today_title">Hoje: registre em dois toques</string>
+    <string name="onboarding_tour_today_text">Toque em “Evacuação”, escolha o tipo de Bristol, de dura (1) a líquida (7), e salve. Acrescente sangue, muco, dor ou cansaço se precisar. Registre suas refeições com uma foto ou lendo um código de barras.</string>
+    <string name="onboarding_tour_history_title">Histórico: seu mês num relance</string>
+    <string name="onboarding_tour_history_text">O calendário colore cada dia: verde para evacuações normais, laranja para moles ou líquidas. Toque em um dia para ver e editar o que você registrou.</string>
+    <string name="onboarding_tour_trends_title">Tendências: acompanhe sua evolução</string>
+    <string name="onboarding_tour_trends_text">O gráfico mostra suas evacuações dia a dia, com um ponto vermelho quando há sangue. Compare os últimos 30 dias, 90 dias ou todo o histórico e conte os dias com sintomas.</string>
+    <string name="onboarding_tour_care_title">Cuidados: tratamentos e exames</string>
+    <string name="onboarding_tour_care_text">Seus tratamentos ficam ali. Você também pode agendar exames de sangue e de fezes (calprotectina), com um lembrete no dia certo, e guardar seus resultados, digitados ou importados de um laudo.</string>
+
+    <string name="onboarding_notifications_title">Lembrete diário</string>
+    <string name="onboarding_notifications_text">Todas as noites às 19h, uma notificação permite registrar sua evacuação, sua dor e seu cansaço diretamente, sem abrir o app; ela fica até você preencher os três. Os lembretes de tratamento e de exames também chegam como notificações. Você pode mudar o horário nas Configurações.</string>
+    <string name="onboarding_notifications_allow">Permitir notificações</string>
+    <string name="onboarding_notifications_granted">Notificações permitidas</string>
+</resources>

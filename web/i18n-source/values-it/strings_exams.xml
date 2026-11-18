@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exam_colonoscopy">Colonscopia</string>
+    <string name="exam_rectosigmoidoscopy">Rettosigmoidoscopia</string>
+    <string name="exam_step_anesthesia">Visita anestesiologica</string>
+    <string name="exam_step_diet">Inizio della dieta priva di scorie</string>
+    <string name="exam_step_prep_first">1ª assunzione della preparazione</string>
+    <string name="exam_step_prep_second">2ª assunzione della preparazione</string>
+    <string name="exam_step_exam">Esame</string>
+
+    <string name="exams_title">Esami</string>
+    <string name="exam_add">Programma un esame endoscopico</string>
+    <string name="exam_edit">Modifica l\'esame</string>
+    <string name="exams_empty">Nessun esame endoscopico programmato. Aggiungi la tua colonscopia o rettosigmoidoscopia per annotare la preparazione e ricevere promemoria.</string>
+    <string name="exam_next_step">Prossima tappa: %1$s, %2$s</string>
+    <string name="exam_anesthesia_missing">Appuntamento con l\'anestesista da prendere</string>
+
+    <string name="exam_date">Data dell\'esame</string>
+    <string name="exam_note">Nota</string>
+    <string name="exam_note_hint">es. luogo, medico</string>
+    <string name="exam_preparation">Preparazione</string>
+    <string name="exam_preparation_desc">Annota le indicazioni del tuo medico o del centro di endoscopia.</string>
+    <plurals name="exam_diet_days">
+        <item quantity="one">Dieta priva di scorie: %1$d giorno prima</item>
+        <item quantity="many">Dieta priva di scorie: %1$d giorni prima</item>
+        <item quantity="other">Dieta priva di scorie: %1$d giorni prima</item>
+    </plurals>
+    <string name="exam_diet_none">Dieta priva di scorie: nessuna</string>
+    <string name="exam_diet_start">Da %1$s</string>
+    <string name="exam_not_set">Non ancora fissata</string>
+    <string name="exam_clear">Cancella</string>
+    <string name="exam_reminders">Ricordami ogni tappa</string>
+    <string name="exam_reminders_desc">%1$d h prima degli appuntamenti, all\'ora di ogni assunzione della preparazione e alle %2$s il primo giorno di dieta.</string>
+</resources>

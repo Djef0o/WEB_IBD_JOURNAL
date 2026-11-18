@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import de comptes rendus d'analyses (plusieurs fichiers) -->
+    <string name="lab_import_reports_button">Laborbefunde importieren (PDF)</string>
+    <string name="lab_import_reading_progress">Befund %1$d/%2$d wird gelesen…</string>
+    <string name="lab_import_check_reports">Aus deinen Befunden gelesene Werte. Prüfe jeden Wert mit dem Dokument, bevor du speicherst.</string>
+    <string name="lab_import_all_nothing">In diesen Dokumenten wurde keiner der erfassten Laborwerte gefunden.</string>
+    <string name="lab_import_document_untitled">Dokument %1$d</string>
+    <string name="lab_import_document_nothing">Kein erfasster Laborwert in diesem Dokument gefunden.</string>
+    <string name="lab_import_document_failed">Dieses Dokument konnte nicht gelesen werden: Unterstützt werden nur PDFs des Labors mit Text (keine eingescannten Dokumente). Trage die Werte von Hand ein.</string>
+    <string name="lab_import_duplicate_in_import">Für dieses Datum schon in einem anderen Befund</string>
+
+    <!-- Libellé du choix de l'analyse dans la saisie -->
+    <string name="lab_result_test">Laborwert</string>
+</resources>

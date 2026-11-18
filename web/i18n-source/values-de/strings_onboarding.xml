@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_step">Schritt %1$d von %2$d</string>
+    <string name="onboarding_next">Weiter</string>
+    <string name="onboarding_back">Zurück</string>
+    <string name="onboarding_skip">Überspringen</string>
+
+    <string name="onboarding_profile_title">Dein Profil</string>
+    <string name="onboarding_profile_text">Diese Angaben erscheinen in deinem Bericht für den Arzt. Sie bleiben auf deinem Telefon und lassen sich in den Einstellungen ändern.</string>
+
+    <string name="onboarding_treatments_title">Deine Behandlungen</string>
+    <string name="onboarding_treatments_text">Füge die Medikamente hinzu, die du nimmst – aus der Liste oder mit eigenem Namen. Für jedes kannst du eine Erinnerung einstellen: täglich, alle 2 Wochen, monatlich…</string>
+    <string name="onboarding_treatments_empty">Noch keine Behandlung. Du kannst sie auch später im Tab Behandlung hinzufügen.</string>
+
+    <string name="onboarding_tour_today_title">Heute: in zwei Schritten eintragen</string>
+    <string name="onboarding_tour_today_text">Tippe auf „Stuhlgang“, wähle den Bristol-Typ von hart (1) bis flüssig (7) und speichere. Ergänze bei Bedarf Blut, Schleim, Schmerzen oder Erschöpfung. Trage Mahlzeiten mit einem Foto oder per Barcode ein.</string>
+    <string name="onboarding_tour_history_title">Verlauf: dein Monat auf einen Blick</string>
+    <string name="onboarding_tour_history_text">Der Kalender färbt jeden Tag: grün für normalen Stuhl, orange für weichen oder flüssigen. Tippe auf einen Tag, um deine Einträge zu sehen und zu bearbeiten.</string>
+    <string name="onboarding_tour_trends_title">Trends: deinen Verlauf verfolgen</string>
+    <string name="onboarding_tour_trends_text">Das Diagramm zeigt deine Stuhlgänge Tag für Tag, mit einem roten Punkt, wenn Blut vermerkt wurde. Vergleiche die letzten 30 Tage, 90 Tage oder den gesamten Verlauf und zähle die Tage mit Symptomen.</string>
+    <string name="onboarding_tour_care_title">Behandlung: Medikamente und Tests</string>
+    <string name="onboarding_tour_care_text">Dort findest du deine Behandlungen. Du kannst auch Blutabnahmen und Stuhltests (Calprotectin) planen, mit einer Erinnerung am richtigen Tag, und deine Laborwerte speichern, eingetippt oder aus einem Befund importiert.</string>
+
+    <string name="onboarding_notifications_title">Tägliche Erinnerung</string>
+    <string name="onboarding_notifications_text">Jeden Abend um 19 Uhr kannst du Stuhlgang, Schmerzen und Erschöpfung direkt in der Benachrichtigung eintragen, ohne die App zu öffnen; sie bleibt, bis alle drei ausgefüllt sind. Auch Behandlungs- und Testerinnerungen kommen als Benachrichtigung. Die Uhrzeit änderst du in den Einstellungen.</string>
+    <string name="onboarding_notifications_allow">Benachrichtigungen erlauben</string>
+    <string name="onboarding_notifications_granted">Benachrichtigungen erlaubt</string>
+</resources>

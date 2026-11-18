@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fausses envies (ténesme) : passage aux toilettes sans selle -->
+    <string name="false_urge">Falsa vontade</string>
+    <string name="stool_kind_stool">Evacuação</string>
+    <string name="new_false_urge">Nova falsa vontade</string>
+    <string name="edit_false_urge">Editar falsa vontade</string>
+    <string name="false_urge_hint">Vontade de evacuar sem resultado, às vezes com sangue ou muco.</string>
+    <string name="analysis_false_urge">Falsas vontades</string>
+    <plurals name="false_urge_count">
+        <item quantity="one">%1$d falsa vontade</item>
+        <item quantity="many">%1$d falsas vontades</item>
+        <item quantity="other">%1$d falsas vontades</item>
+    </plurals>
+</resources>

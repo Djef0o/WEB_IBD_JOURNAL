@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_step">Step %1$d of %2$d</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_back">Back</string>
+    <string name="onboarding_skip">Skip</string>
+
+    <string name="onboarding_profile_title">Your profile</string>
+    <string name="onboarding_profile_text">These details appear on your report for the doctor. They stay on your phone and can be changed in Settings.</string>
+
+    <string name="onboarding_treatments_title">Your treatments</string>
+    <string name="onboarding_treatments_text">Add the medications you take, from the list or by typing their name. Each one can have a reminder: daily, every 2 weeks, monthly…</string>
+    <string name="onboarding_treatments_empty">No treatment yet. You can also add them later in the Care tab.</string>
+
+    <string name="onboarding_tour_today_title">Today: log in two taps</string>
+    <string name="onboarding_tour_today_text">Tap “Stool”, pick the Bristol type, from hard (1) to watery (7), and save. Add blood, mucus, pain or fatigue when needed. Log your meals with a photo or by scanning a barcode.</string>
+    <string name="onboarding_tour_history_title">History: your month at a glance</string>
+    <string name="onboarding_tour_history_text">The calendar colors each day: green for normal stools, orange for loose or watery ones. Tap a day to see and edit what you logged.</string>
+    <string name="onboarding_tour_trends_title">Trends: see how you are doing</string>
+    <string name="onboarding_tour_trends_text">The chart shows your stools day by day, with a red dot when blood is reported. Compare the last 30 days, 90 days or your whole history, and count the days with symptoms.</string>
+    <string name="onboarding_tour_care_title">Care: treatments and tests</string>
+    <string name="onboarding_tour_care_text">Your treatments are there. You can also schedule blood tests and stool tests (calprotectin) with a reminder on the right day, and keep your lab results, typed in or imported from a lab report.</string>
+
+    <string name="onboarding_notifications_title">Daily reminder</string>
+    <string name="onboarding_notifications_text">Every evening at 7 pm, a notification lets you log your stool type, pain and fatigue directly, without opening the app; it stays until all three are filled in. Treatment and test reminders use notifications too. You can change the time in Settings.</string>
+    <string name="onboarding_notifications_allow">Allow notifications</string>
+    <string name="onboarding_notifications_granted">Notifications allowed</string>
+</resources>

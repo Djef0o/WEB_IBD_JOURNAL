@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import de comptes rendus d'analyses (plusieurs fichiers) -->
+    <string name="lab_import_reports_button">Importar informes de análisis (PDF)</string>
+    <string name="lab_import_reading_progress">Leyendo el informe %1$d/%2$d…</string>
+    <string name="lab_import_check_reports">Valores leídos en tus informes. Revisa cada uno con el documento antes de guardar.</string>
+    <string name="lab_import_all_nothing">No se encontró ninguno de los análisis seguidos en estos documentos.</string>
+    <string name="lab_import_document_untitled">Documento %1$d</string>
+    <string name="lab_import_document_nothing">No se encontró ningún análisis seguido en este documento.</string>
+    <string name="lab_import_document_failed">No se pudo leer este documento: solo se admiten los PDF del laboratorio que contienen texto (no documentos escaneados). Introduce los valores a mano.</string>
+    <string name="lab_import_duplicate_in_import">Ya está en otro informe con esta fecha</string>
+
+    <!-- Libellé du choix de l'analyse dans la saisie -->
+    <string name="lab_result_test">Análisis</string>
+</resources>

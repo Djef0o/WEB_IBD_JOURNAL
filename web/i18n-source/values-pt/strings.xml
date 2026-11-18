@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diário DII</string>
+
+    <!-- Calendário -->
+    <string name="today">Hoje</string>
+    <string name="previous">Anterior</string>
+    <string name="next">Próximo</string>
+    <string name="swipe_hint">Deslize na horizontal para mudar a visualização</string>
+
+    <!-- Refeições -->
+    <string name="meal_breakfast">Café da manhã</string>
+    <string name="meal_lunch">Almoço</string>
+    <string name="meal_dinner">Jantar</string>
+    <string name="add_meal">Adicionar refeição</string>
+    <string name="edit_meal">Editar refeição</string>
+    <string name="meal_description_hint">O que você está comendo? (alimentos, quantidades, sintomas…)</string>
+    <string name="save">Salvar</string>
+    <string name="delete">Excluir</string>
+    <string name="photo">Foto do prato</string>
+    <string name="add_photo">Adicionar foto</string>
+    <string name="remove_photo">Remover foto</string>
+    <string name="scan_barcode">Escanear código de barras</string>
+    <string name="no_photo">Nenhuma refeição registrada para este momento.</string>
+    <string name="edit">Editar</string>
+    <string name="add_meal_hint">Toque para adicionar esta refeição</string>
+    <string name="open_day">Abrir</string>
+    <string name="stool_count">%1$d evacuação(ões)</string>
+    <string name="empty_day">Nenhum registro para este dia.</string>
+
+    <!-- Evacuações -->
+    <string name="stools">Evacuação</string>
+    <string name="add_stool">Adicionar evacuação</string>
+    <string name="add_stool_hint">Toque para adicionar uma evacuação</string>
+    <string name="new_stool">Nova evacuação</string>
+    <string name="edit_stool">Editar evacuação</string>
+    <string name="hour">Hora</string>
+    <string name="tap_to_modify">Toque para editar &gt;</string>
+    <string name="bristol_scale">Escala de Bristol</string>
+    <string name="stool_type_question">Qual é o tipo de fezes?</string>
+    <string name="blood_presence">Presença de sangue</string>
+    <string name="mucus_presence">Presença de muco</string>
+    <string name="pain">Dor</string>
+    <string name="fatigue">Cansaço</string>
+    <string name="level_hint">0 = nenhum • 5 = abundante</string>
+    <string name="level_hint_pain">0 = nenhuma • 5 = muito forte</string>
+    <string name="level_hint_fatigue">0 = disposto • 5 = exausto</string>
+    <string name="stool_comment_hint">Comentário livre…</string>
+    <string name="no_stools">Nenhuma evacuação registrada.</string>
+    <string name="stool_recorded_format">Evacuação tipo %1$d registrada!</string>
+    <string name="stool_recorded_type_0">Sem evacuação (Tipo 0) registrado!</string>
+    <string name="stool_type_0">Tipo 0</string>
+    <string name="stool_type_1">Tipo 1</string>
+    <string name="stool_type_2">Tipo 2</string>
+    <string name="stool_type_3">Tipo 3</string>
+    <string name="stool_type_4">Tipo 4</string>
+    <string name="stool_type_5">Tipo 5</string>
+    <string name="stool_type_6">Tipo 6</string>
+    <string name="stool_type_7">Tipo 7</string>
+
+    <!-- Leitor -->
+    <string name="scan_title">Escanear código de barras</string>
+    <string name="scan_hint">Posicione o código de barras do produto dentro da moldura</string>
+    <string name="scanning">Buscando o produto…</string>
+    <string name="scan_close">Fechar o leitor</string>
+    <string name="product_found">Produto encontrado</string>
+    <string name="product_not_found">Produto não encontrado na base Open Food Facts</string>
+    <string name="use_product">Usar este produto</string>
+    <string name="remove_product">Remover o produto</string>
+    <string name="nutriscore">Nutri-Score %1$s</string>
+    <string name="use_barcode_anyway">Continuar com este código de barras</string>
+    <string name="scan_error">Erro ao escanear. Tente novamente.</string>
+    <string name="camera_permission_needed">A permissão da câmera é necessária para escanear um código de barras.</string>
+    <string name="grant_permission">Permitir câmera</string>
+
+    <!-- Boas-vindas -->
+    <string name="onboarding_title">Boas-vindas ao seu diário de acompanhamento</string>
+    <string name="onboarding_text">Este diário ajuda você a acompanhar sua alimentação e seu trânsito intestinal se você vive com retocolite ulcerativa ou doença de Crohn. Associe suas refeições a fotos ou códigos de barras e registre cada evacuação com um comentário: assim você poderá conversar com mais precisão com seu médico.</string>
+    <string name="onboarding_disclaimer">Os dados ficam no seu aparelho e não substituem orientação médica.</string>
+    <string name="start">Começar o acompanhamento</string>
+
+    <!-- Configurações -->
+    <string name="settings">Configurações</string>
+    <string name="notifications">Notificações</string>
+    <string name="daily_reminder">Lembrete diário</string>
+    <string name="daily_reminder_desc">Receber uma notificação para registrar suas evacuações, sua dor e seu cansaço</string>
+    <string name="reminder_time">Horário do lembrete</string>
+    <string name="test_notification">Testar notificação</string>
+    <string name="test_notification_desc">Enviar agora uma notificação de demonstração</string>
+    <string name="notification_permission_warning">A permissão de notificações não foi concedida.</string>
+    <string name="notification_permission_grant">Permitir</string>
+    <string name="exact_alarm_warning">Os alarmes exatos estão desativados: o lembrete pode atrasar.</string>
+    <string name="exact_alarm_grant">Ativar</string>
+    <string name="modify">Editar</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="export_data">Exportar dados</string>
+    <string name="import_data">Importar dados</string>
+    <string name="data_management">Gerenciamento de dados</string>
+
+    <!-- Navegação principal -->
+    <string name="nav_home">Hoje</string>
+    <string name="nav_history">Histórico</string>
+    <string name="nav_analysis">Tendências</string>
+    <string name="nav_settings">Configurações</string>
+
+    <!-- Painel -->
+    <string name="home_greeting">Olá</string>
+    <string name="home_today">Hoje</string>
+    <string name="home_stat_stools">evacuações</string>
+    <string name="home_stat_meals">refeição registrada</string>
+    <string name="home_stat_bristol">Bristol méd.</string>
+    <string name="home_action_meal">Refeição</string>
+    <string name="home_action_meal_sub">Foto ou código de barras</string>
+    <string name="home_action_stool">Evacuação</string>
+    <string name="home_action_stool_sub">Em 2 toques</string>
+    <string name="home_feed">Registros do dia</string>
+    <string name="home_see_all">Ver tudo</string>
+    <string name="home_empty">Nada registrado ainda. Toque em uma ação acima.</string>
+    <string name="home_week">Esta semana</string>
+    <string name="home_week_stools">evacuações</string>
+    <string name="home_week_avg">média</string>
+    <string name="home_week_meals">refeições</string>
+    <string name="home_reminder">Próximo lembrete · %1$s</string>
+    <string name="home_reminder_sub">Todos os dias</string>
+    <string name="home_details">Detalhes</string>
+    <string name="home_calm">Dia tranquilo</string>
+    <string name="home_no_data">Ainda sem dados</string>
+
+    <!-- Registro rápido -->
+    <string name="quick_stool_title">Nova evacuação</string>
+    <string name="quick_stool_details">Mais detalhes</string>
+    <string name="quick_stool_question">Qual é o tipo de fezes?</string>
+
+    <!-- Histórico -->
+    <string name="history_title">Histórico</string>
+    <string name="history_month">Este mês</string>
+    <string name="history_avg">média %1$s</string>
+    <string name="history_recent">Últimos dias</string>
+    <string name="history_no_entry">Nenhum registro</string>
+    <string name="history_open_calendar">Visão detalhada</string>
+    <string name="history_legend">Bristol</string>
+    <string name="history_chart_caption">Evacuações por dia · últimos 7 dias</string>
+    <string name="history_legend_note">Verde = fezes normais · laranja = moles ou líquidas</string>
+    <string name="history_day_detail">Detalhes do dia</string>
+    <string name="history_no_data">Nenhum dado neste mês</string>
+
+    <!-- Tendências -->
+    <string name="analysis_title">Tendências</string>
+    <string name="analysis_period_30">Últimos 30 dias</string>
+    <string name="analysis_period_90">Últimos 90 dias</string>
+    <string name="analysis_period_all">Todo o histórico</string>
+    <string name="analysis_period_30_short">30 dias</string>
+    <string name="analysis_period_90_short">90 dias</string>
+    <string name="analysis_period_all_short">Tudo</string>
+    <string name="analysis_stools">Evacuações</string>
+    <string name="analysis_avg">Bristol médio</string>
+    <string name="analysis_meals">Refeições registradas</string>
+    <string name="analysis_days">Dias acompanhados</string>
+    <string name="analysis_daily">Evacuações por dia</string>
+    <string name="analysis_daily_period">Todo o histórico · deslize para ver dias anteriores</string>
+    <string name="analysis_daily_hint">Toque em uma barra para ver o dia</string>
+    <string name="analysis_detail_types">Tipos %1$s</string>
+    <string name="analysis_legend_hard">Duras (1–2)</string>
+    <string name="analysis_legend_normal">Normais (3–4)</string>
+    <string name="analysis_legend_loose">Moles (5–7)</string>
+    <string name="analysis_legend_blood">Sangue</string>
+    <string name="analysis_symptoms">Sintomas</string>
+    <string name="analysis_symptoms_compare">Dias afetados · variação em relação aos %1$d dias anteriores</string>
+    <string name="analysis_symptoms_days">Dias afetados</string>
+    <string name="analysis_blood">Sangue</string>
+    <string name="analysis_mucus">Muco</string>
+    <string name="analysis_pain_strong">Dor forte (≥ 3/5)</string>
+    <string name="analysis_fatigue_strong">Cansaço forte (≥ 3/5)</string>
+    <string name="analysis_urgency">Urgência</string>
+    <string name="analysis_nocturnal">Evacuações noturnas</string>
+    <plurals name="analysis_symptom_days">
+        <item quantity="one">%1$d dia</item>
+        <item quantity="many">%1$d dias</item>
+        <item quantity="other">%1$d dias</item>
+    </plurals>
+    <string name="analysis_liquid_per_day">Evacuações líquidas por dia (tipos 6–7)</string>
+    <string name="analysis_no_data">Ainda não há dados suficientes. Continue registrando seus dias.</string>
+    <string name="analysis_type">Tipo %1$d</string>
+    <string name="close">Fechar</string>
+
+    <plurals name="history_month_stools">
+        <item quantity="one">%1$d evacuação</item>
+        <item quantity="many">%1$d evacuações</item>
+        <item quantity="other">%1$d evacuações</item>
+    </plurals>
+    <plurals name="stools_count">
+        <item quantity="one">%1$d evacuação</item>
+        <item quantity="many">%1$d evacuações</item>
+        <item quantity="other">%1$d evacuações</item>
+    </plurals>
+    <plurals name="stools_label">
+        <item quantity="one">evacuação</item>
+        <item quantity="many">evacuações</item>
+        <item quantity="other">evacuações</item>
+    </plurals>
+    <plurals name="meals_label">
+        <item quantity="one">refeição registrada</item>
+        <item quantity="many">refeições registradas</item>
+        <item quantity="other">refeições registradas</item>
+    </plurals>
+    <string name="stool_symptoms">Sintomas</string>
+    <string name="level_hint_common">0 = ausente · 5 = muito intenso</string>
+    <string name="level_none">Nenhum</string>
+    <string name="bristol_desc_0">Sem evacuação</string>
+    <string name="bristol_desc_1">Duras, em bolinhas</string>
+    <string name="bristol_desc_2">Encaroçadas</string>
+    <string name="bristol_desc_3">Com rachaduras</string>
+    <string name="bristol_desc_4">Lisas e macias</string>
+    <string name="bristol_desc_5">Pedaços moles</string>
+    <string name="bristol_desc_6">Pastosas</string>
+    <string name="bristol_desc_7">Líquidas</string>
+    <string name="last_reminder">Último lembrete</string>
+    <string name="last_reminder_never">Nenhum lembrete exibido ainda</string>
+    <string name="battery_title">Lembretes em segundo plano</string>
+    <string name="battery_warning">O sistema pode atrasar o lembrete quando o app fica congelado em segundo plano.</string>
+    <string name="battery_grant">Permitir</string>
+    <string name="battery_exempt">Permitido</string>
+    <string name="today_at">Hoje às %1$s</string>
+    <string name="yesterday_at">Ontem às %1$s</string>
+    <string name="day_journal">Diário</string>
+    <string name="meals_section">Refeições</string>
+    <string name="stools_section">Evacuações</string>
+    <string name="add">Adicionar</string>
+    <string name="date_at">%1$s às %2$s</string>
+
+    <!-- Resumo de uma evacuação -->
+    <string name="stool_title">Evacuação · Tipo %1$d</string>
+    <string name="stool_flag_blood">Sangue relatado</string>
+    <string name="stool_flag_mucus">Muco relatado</string>
+    <string name="stool_flag_pain">Dor %1$d/5</string>
+    <string name="stool_flag_none">Nada a relatar</string>
+    <string name="bristol_icon_desc">Bristol tipo %1$d</string>
+    <string name="level_out_of_five">%1$d / 5</string>
+
+    <!-- Aparência e idioma -->
+    <string name="settings_appearance">Aparência</string>
+    <string name="theme_mode">Luminosidade</string>
+    <string name="theme_mode_system">Sistema</string>
+    <string name="theme_mode_light">Claro</string>
+    <string name="theme_mode_dark">Escuro</string>
+    <string name="theme_mode_amoled">AMOLED</string>
+    <string name="theme_palette">Cores</string>
+    <string name="palette_sage">Sálvia</string>
+    <string name="palette_solarized">Solarized</string>
+    <string name="palette_nord">Nord</string>
+    <string name="palette_gruvbox">Gruvbox</string>
+    <string name="palette_catppuccin">Catppuccin</string>
+    <string name="palette_rose_pine">Rosé Pine</string>
+    <string name="settings_language">Idioma</string>
+    <string name="language_system">Idioma do celular</string>
+</resources>

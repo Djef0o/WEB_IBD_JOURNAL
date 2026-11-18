@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Résultats d'analyses : vue par analyse ou tableau des bilans -->
+    <string name="lab_view_by_test">Por análisis</string>
+    <string name="lab_view_by_date">Por fecha</string>
+
+    <!-- Groupes de la vue par analyse -->
+    <string name="lab_group_outside">Fuera de los valores del laboratorio</string>
+
+    <!-- En-tête de la colonne des analyses du tableau -->
+    <string name="lab_table_test">Análisis</string>
+
+    <!-- Description des symboles « = », « < », « > » de la saisie -->
+    <string name="lab_qualifier_exact">Valor exacto</string>
+    <string name="lab_qualifier_below">Por debajo del límite de medición</string>
+    <string name="lab_qualifier_above">Por encima del límite de medición</string>
+
+    <!-- Période de la courbe -->
+    <string name="lab_period_6_months">6 meses</string>
+    <string name="lab_period_1_year">1 año</string>
+    <string name="lab_period_all">Todo</string>
+    <!-- Résumé des analyses dans l'onglet Soins -->
+    <string name="lab_summary_latest">Último análisis: %1$s</string>
+    <plurals name="lab_summary_tests">
+        <item quantity="one">%1$d análisis seguido</item>
+        <item quantity="many">%1$d análisis seguidos</item>
+        <item quantity="other">%1$d análisis seguidos</item>
+    </plurals>
+    <plurals name="lab_summary_outside">
+        <item quantity="one">%1$d fuera de los valores del laboratorio</item>
+        <item quantity="many">%1$d fuera de los valores del laboratorio</item>
+        <item quantity="other">%1$d fuera de los valores del laboratorio</item>
+    </plurals>
+</resources>

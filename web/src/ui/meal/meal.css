@@ -1,0 +1,21 @@
+/* Éditeur de repas. */
+.meal-form { min-width: 0; }
+.meal-description { display: block; width: 100%; resize: vertical; min-height: 5.5rem; font: inherit; padding: var(--space-2) var(--space-3); border: 1px solid var(--c-outline); border-radius: var(--radius-sm); background: var(--c-surface); color: var(--c-on-surface); }
+.meal-photo-row { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.meal-photo { width: 7.5rem; height: 7.5rem; object-fit: cover; border-radius: var(--radius-md); background: var(--c-surface-container); }
+.meal-photo-missing { display: grid; place-items: center; text-align: center; padding: var(--space-2); }
+@media (pointer: fine) { .meal-touch-only { display: none; } }
+.meal-product {
+  display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3);
+  border-radius: var(--radius-md); background: var(--c-secondary-container); color: var(--c-on-secondary-container);
+}
+.meal-product-img { flex: none; width: 3rem; height: 3rem; border-radius: var(--radius-sm); object-fit: cover; background: var(--c-surface-variant); }
+.meal-product-text { display: flex; flex-direction: column; flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.meal-nutri { font-weight: 700; }
+.meal-actions { justify-content: flex-end; }
+.meal-type-list { display: flex; flex-direction: column; list-style: none; padding: 0; margin: 0; }
+.meal-type-btn {
+  display: flex; align-items: center; width: 100%; min-height: var(--target); padding: var(--space-3) var(--space-2);
+  border: 0; border-radius: var(--radius-md); background: transparent; color: inherit; font-size: var(--text-md); text-align: start;
+}
+.meal-type-btn:hover { background: color-mix(in srgb, var(--c-on-surface) 8%, transparent); }

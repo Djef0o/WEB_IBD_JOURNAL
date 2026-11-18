@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_section_title">Agenda do telefone</string>
+    <string name="calendar_sync">Adicionar os lembretes à minha agenda</string>
+    <string name="calendar_sync_desc">Doses, pedidos, exames de sangue e de fezes viram eventos da sua agenda, com o respectivo alerta. O app deixa de enviar essas notificações. O lembrete diário de evacuações não muda.</string>
+    <string name="calendar_target">Agenda</string>
+    <string name="calendar_none">Nenhuma agenda editável neste telefone</string>
+    <string name="calendar_permission_lost">O acesso à agenda foi removido: os lembretes voltam a ser enviados pelo app.</string>
+    <string name="calendar_refill_title">Pedir %1$s</string>
+    <string name="calendar_event_description">Lembrete adicionado pelo IBD Journal.</string>
+</resources>

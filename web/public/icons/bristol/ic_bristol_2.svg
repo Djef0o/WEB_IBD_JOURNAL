@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg33"
+   sodipodi:docname="ic_bristol_2.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs33" />
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="24.854167"
+     inkscape:cx="23.979883"
+     inkscape:cy="24"
+     inkscape:window-width="3440"
+     inkscape:window-height="1406"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg33" />
+  <path
+     d="m 4.6378877,23.436714 a 5,5 0 1 1 10.0000003,0 5,5 0 0 1 -10.0000003,0 z"
+     fill="#3e1e0e"
+     id="path1" />
+  <path
+     d="m 5.1378877,22.936714 a 4,4 0 1 1 8.0000003,0 4,4 0 0 1 -8.0000003,0 z"
+     fill="#5c2e17"
+     id="path2" />
+  <path
+     d="m 6.1378877,21.936714 a 2.5,2.5 0 1 1 5.0000003,0 2.5,2.5 0 0 1 -5.0000003,0 z"
+     fill="#8c4e2b"
+     id="path3" />
+  <path
+     d="m 36.41995,23.959765 a 5,5 0 1 1 10,0 5,5 0 0 1 -10,0 z"
+     fill="#3e1e0e"
+     id="path4" />
+  <path
+     d="m 36.91995,23.459765 a 4,4 0 1 1 8,0 4,4 0 0 1 -8,0 z"
+     fill="#5c2e17"
+     id="path5" />
+  <path
+     d="m 37.91995,22.459765 a 2.5,2.5 0 1 1 5,0 2.5,2.5 0 0 1 -5,0 z"
+     fill="#8c4e2b"
+     id="path6" />
+  <path
+     d="m 10.21249,18.764459 a 5.5,5.5 0 1 1 11,0 5.5,5.5 0 0 1 -11,0 z"
+     fill="#3e1e0e"
+     id="path7" />
+  <path
+     d="m 10.71249,18.264459 a 4.5,4.5 0 1 1 9,0 4.5,4.5 0 0 1 -9,0 z"
+     fill="#5c2e17"
+     id="path8" />
+  <path
+     d="m 11.71249,17.264459 a 3,3 0 1 1 6,0 3,3 0 0 1 -6,0 z"
+     fill="#8c4e2b"
+     id="path9" />
+  <path
+     d="m 9.608969,28.752724 a 5.5,5.5 0 1 1 11,0 5.5,5.5 0 0 1 -11,0 z"
+     fill="#3e1e0e"
+     id="path10" />
+  <path
+     d="m 10.108969,28.252724 a 4.5,4.5 0 1 1 9,0 4.5,4.5 0 0 1 -9,0 z"
+     fill="#5c2e17"
+     id="path11" />
+  <path
+     d="m 11.108969,27.252724 a 3,3 0 1 1 6,0 3,3 0 0 1 -6,0 z"
+     fill="#8c4e2b"
+     id="path12" />
+  <path
+     d="m 27.994552,19.327745 a 5.5,5.5 0 1 1 11,0 5.5,5.5 0 0 1 -11,0 z"
+     fill="#3e1e0e"
+     id="path13" />
+  <path
+     d="m 28.494552,18.827745 a 4.5,4.5 0 1 1 9,0 4.5,4.5 0 0 1 -9,0 z"
+     fill="#5c2e17"
+     id="path14" />
+  <path
+     d="m 29.494552,17.827745 a 3,3 0 1 1 6,0 3,3 0 0 1 -6,0 z"
+     fill="#8c4e2b"
+     id="path15" />
+  <path
+     d="m 27.873847,28.672255 a 5.5,5.5 0 1 1 11,0 5.5,5.5 0 0 1 -11,0 z"
+     fill="#3e1e0e"
+     id="path16" />
+  <path
+     d="m 28.373847,28.172255 a 4.5,4.5 0 1 1 9,0 4.5,4.5 0 0 1 -9,0 z"
+     fill="#5c2e17"
+     id="path17" />
+  <path
+     d="m 29.373847,27.172255 a 3,3 0 1 1 6,0 3,3 0 0 1 -6,0 z"
+     fill="#8c4e2b"
+     id="path18" />
+  <path
+     d="M10,24A6,6 0,1,1 22,24A6,6 0,0,1 10,24Z"
+     fill="#3E1E0E"
+     id="path19" />
+  <path
+     d="M10.5,23.5A5,5 0,1,1 20.5,23.5A5,5 0,0,1 10.5,23.5Z"
+     fill="#5C2E17"
+     id="path20" />
+  <path
+     d="M11.5,22.5A3.5,3.5 0,1,1 18.5,22.5A3.5,3.5 0,0,1 11.5,22.5Z"
+     fill="#8C4E2B"
+     id="path21" />
+  <path
+     d="M26,24A6,6 0,1,1 38,24A6,6 0,0,1 26,24Z"
+     fill="#3E1E0E"
+     id="path22" />
+  <path
+     d="M26.5,23.5A5,5 0,1,1 36.5,23.5A5,5 0,0,1 26.5,23.5Z"
+     fill="#5C2E17"
+     id="path23" />
+  <path
+     d="M27.5,22.5A3.5,3.5 0,1,1 34.5,22.5A3.5,3.5 0,0,1 27.5,22.5Z"
+     fill="#8C4E2B"
+     id="path24" />
+  <path
+     d="m 18.057418,17.891031 a 5.5,5.5 0 1 1 11,0 5.5,5.5 0 0 1 -11,0 z"
+     fill="#3e1e0e"
+     id="path25" />
+  <path
+     d="m 18.557418,17.391031 a 4.5,4.5 0 1 1 9,0 4.5,4.5 0 0 1 -9,0 z"
+     fill="#5c2e17"
+     id="path26" />
+  <path
+     d="m 19.557418,16.391031 a 3,3 0 1 1 6,0 3,3 0 0 1 -6,0 z"
+     fill="#8c4e2b"
+     id="path27" />
+  <path
+     d="m 18.017184,29.827326 a 5.5,5.5 0 1 1 11,0 5.5,5.5 0 0 1 -11,0 z"
+     fill="#3e1e0e"
+     id="path28" />
+  <path
+     d="m 18.517184,29.327326 a 4.5,4.5 0 1 1 9,0 4.5,4.5 0 0 1 -9,0 z"
+     fill="#5c2e17"
+     id="path29" />
+  <path
+     d="m 19.517184,28.327326 a 3,3 0 1 1 6,0 3,3 0 0 1 -6,0 z"
+     fill="#8c4e2b"
+     id="path30" />
+  <path
+     d="M17.5,24A6.5,6.5 0,1,1 30.5,24A6.5,6.5 0,0,1 17.5,24Z"
+     fill="#3E1E0E"
+     id="path31" />
+  <path
+     d="M18,23.5A5.5,5.5 0,1,1 29,23.5A5.5,5.5 0,0,1 18,23.5Z"
+     fill="#5C2E17"
+     id="path32" />
+  <path
+     d="M19,22.5A4,4 0,1,1 27,22.5A4,4 0,0,1 19,22.5Z"
+     fill="#8C4E2B"
+     id="path33" />
+</svg>

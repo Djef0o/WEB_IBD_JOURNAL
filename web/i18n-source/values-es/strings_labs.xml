@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analyses de suivi -->
+    <string name="lab_crp">PCR</string>
+    <string name="lab_calprotectin">Calprotectina fecal</string>
+    <string name="lab_hemoglobin">Hemoglobina</string>
+    <string name="lab_ferritin">Ferritina</string>
+    <string name="lab_vitamin_d">Vitamina D</string>
+    <string name="lab_albumin">Albúmina</string>
+    <string name="lab_platelets">Plaquetas</string>
+
+    <!-- Résultats d'analyses (profil) -->
+    <string name="lab_results_title">Resultados de análisis</string>
+    <string name="lab_results_empty">No hay resultados registrados.</string>
+    <string name="lab_result_add">Añadir un resultado</string>
+    <string name="lab_result_edit">Editar resultado</string>
+    <string name="lab_result_value">Valor</string>
+    <string name="lab_result_value_invalid">Introduce un número positivo</string>
+    <string name="lab_result_date">Fecha del análisis</string>
+    <string name="lab_result_note">Nota (opcional)</string>
+    <string name="lab_result_reference_title">Valores del laboratorio (opcional)</string>
+    <string name="lab_result_reference_desc">Tal como aparecen en el informe del laboratorio, en la misma unidad.</string>
+    <string name="lab_result_reference_low">Mín.</string>
+    <string name="lab_result_reference_high">Máx.</string>
+    <string name="lab_result_number_invalid">Introduce un número</string>
+    <string name="lab_result_reference_reversed">El mín. supera el máx.</string>
+    <string name="lab_chart_description">Evolución de %1$s en el tiempo</string>
+    <string name="lab_status_below">Por debajo</string>
+    <string name="lab_status_above">Por encima</string>
+    <string name="lab_reference">Valores del laboratorio: %1$s</string>
+
+    <!-- Observance d'un traitement : prises confirmées / prévues sur 30 jours -->
+    <plurals name="treatment_adherence">
+        <item quantity="one">Adherencia (30 días): %1$d/%2$d toma (%3$d %%)</item>
+        <item quantity="other">Adherencia (30 días): %1$d/%2$d tomas (%3$d %%)</item>
+    </plurals>
+</resources>

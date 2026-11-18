@@ -1,0 +1,55 @@
+/* Graphique des selles par jour (SVG en ligne) : couleurs de Bristol via les jetons --bristol-*. */
+.dsc { display: flex; flex-direction: column; gap: var(--space-3); margin: 0; min-width: 0; }
+.dsc-caption { display: flex; flex-direction: column; gap: var(--space-1); }
+.dsc-months { font-weight: 600; color: var(--c-primary); min-height: 1.5em; }
+
+.dsc-scroller {
+  display: flex; overflow-x: auto; overscroll-behavior-x: contain;
+  border-block-end: 1px solid var(--c-outline-variant);
+}
+.dsc-axis-svg { position: sticky; inset-inline-start: 0; z-index: 1; flex: none; background: var(--c-surface); }
+.dsc-svg, .dsc-axis-svg { flex: none; max-width: none; }
+/* Rapport : toutes les barres dans la largeur disponible ; sous 40rem, défilement horizontal plutôt que du texte illisible. */
+.dsc-fit { overflow-x: auto; }
+.dsc[data-layout="fit"] .dsc-svg { width: 100%; min-width: 40rem; max-width: none; height: auto; }
+
+.dsc-axis, .dsc-label { fill: var(--c-on-surface-variant); font-size: 11px; }
+.dsc-month { fill: var(--c-primary); font-size: 11px; font-weight: 600; }
+.dsc-rule { stroke: var(--c-outline-variant); stroke-width: 1; }
+.dsc-hit { fill: transparent; }
+.dsc-day { cursor: pointer; }
+.dsc[data-layout="fit"] .dsc-day { cursor: default; }
+.dsc-day[data-dim] { opacity: 0.35; }
+.dsc-day[data-selected] .dsc-label { fill: var(--c-primary); font-weight: 700; }
+
+.dsc-hard { fill: var(--bristol-1); }
+.dsc-normal { fill: var(--bristol-3); }
+.dsc-loose { fill: var(--bristol-5); }
+.dsc-blood { fill: var(--bristol-0); }
+.dsc-bar, .dsc-blood { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+
+.dsc-detail { min-height: 3em; }
+.dsc-detail-date { font-weight: 600; }
+
+.dsc-legend { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); list-style: none; padding: 0; font-size: var(--text-sm); }
+.dsc-legend li { display: inline-flex; align-items: center; gap: var(--space-2); }
+.dsc-swatch { display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 2px; background: currentColor; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.dsc-swatch.dsc-hard { background: var(--bristol-1); }
+.dsc-swatch.dsc-normal { background: var(--bristol-3); }
+.dsc-swatch.dsc-loose { background: var(--bristol-5); }
+.dsc-swatch.dsc-dot { background: var(--bristol-0); border-radius: 50%; }
+
+.dsc-table-details summary { min-height: var(--target); display: flex; align-items: center; cursor: pointer; color: var(--c-primary); font-weight: 600; }
+.dsc-table-wrap { overflow: auto; max-block-size: min(24rem, 70vh); }
+
+/* Tableau de données (responsive-table : en-têtes figés, défilement dans une région au clavier). */
+.dsc-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: var(--text-sm); }
+.dsc-table caption { text-align: start; font-weight: 600; padding-block-end: var(--space-2); }
+.dsc-table th, .dsc-table td { padding: var(--space-2) var(--space-3); text-align: start; border-block-end: 1px solid var(--c-outline-variant); white-space: nowrap; }
+.dsc-table thead th { position: sticky; inset-block-start: 0; z-index: 2; background: var(--c-surface-container); }
+.dsc-table tbody th { position: sticky; inset-inline-start: 0; z-index: 1; background: var(--c-surface-container-low); font-weight: 500; }
+
+@media print {
+  .dsc-scroller, .dsc-fit { overflow: visible; }
+  .dsc[data-layout="fit"] .dsc-svg { min-width: 0; }
+}

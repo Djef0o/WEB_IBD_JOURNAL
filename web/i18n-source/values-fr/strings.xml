@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Journal IBD</string>
+
+    <!-- Calendar -->
+    <string name="today">Aujourd\'hui</string>
+    <string name="previous">Précédent</string>
+    <string name="next">Suivant</string>
+    <string name="swipe_hint">Glissez horizontalement pour changer la vue</string>
+
+    <!-- Meals -->
+    <string name="meal_breakfast">Petit-déjeuner</string>
+    <string name="meal_lunch">Déjeuner</string>
+    <string name="meal_dinner">Dîner</string>
+    <string name="add_meal">Ajouter un repas</string>
+    <string name="edit_meal">Modifier le repas</string>
+    <string name="meal_description_hint">Que mangez-vous ? (aliments, quantités, symptômes…)</string>
+    <string name="save">Enregistrer</string>
+    <string name="delete">Supprimer</string>
+    <string name="photo">Photo du plat</string>
+    <string name="add_photo">Ajouter une photo</string>
+    <string name="remove_photo">Retirer la photo</string>
+    <string name="scan_barcode">Scanner un code-barres</string>
+    <string name="no_photo">Aucun repas enregistré pour ce moment.</string>
+    <string name="edit">Modifier</string>
+    <string name="add_meal_hint">Appuyez pour ajouter ce repas</string>
+    <string name="open_day">Ouvrir</string>
+    <string name="stool_count">%1$d selle(s)</string>
+    <string name="empty_day">Aucune entrée pour ce jour.</string>
+
+    <!-- Stools -->
+    <string name="stools">Selle</string>
+    <string name="add_stool">Ajouter une selle</string>
+    <string name="add_stool_hint">Appuyez pour ajouter une selle</string>
+    <string name="new_stool">Nouvelle selle</string>
+    <string name="edit_stool">Modifier la selle</string>
+    <string name="hour">Heure</string>
+    <string name="tap_to_modify">Appuyer pour modifier &gt;</string>
+    <string name="bristol_scale">Échelle de Bristol</string>
+    <string name="stool_type_question">Quel est le type de selle ?</string>
+    <string name="blood_presence">Présence de sang</string>
+    <string name="mucus_presence">Présence de glaires</string>
+    <string name="pain">Douleur</string>
+    <string name="fatigue">Fatigue</string>
+    <string name="level_hint">0 = aucun • 5 = abondant</string>
+    <string name="level_hint_pain">0 = aucune • 5 = très vive</string>
+    <string name="level_hint_fatigue">0 = forme • 5 = épuisé</string>
+    <string name="stool_comment_hint">Commentaire libre…</string>
+    <string name="no_stools">Aucune selle enregistrée.</string>
+    <string name="stool_recorded_format">Selle de type %1$d enregistrée !</string>
+    <string name="stool_recorded_type_0">Pas de selle (Type 0) enregistrée !</string>
+    <string name="stool_type_0">Type 0</string>
+    <string name="stool_type_1">Type 1</string>
+    <string name="stool_type_2">Type 2</string>
+    <string name="stool_type_3">Type 3</string>
+    <string name="stool_type_4">Type 4</string>
+    <string name="stool_type_5">Type 5</string>
+    <string name="stool_type_6">Type 6</string>
+    <string name="stool_type_7">Type 7</string>
+
+    <!-- Scanner -->
+    <string name="scan_title">Scanner un code-barres</string>
+    <string name="scan_hint">Placez le code-barres du produit dans le cadre</string>
+    <string name="scanning">Recherche du produit…</string>
+    <string name="scan_close">Fermer le scanner</string>
+    <string name="product_found">Produit trouvé</string>
+    <string name="product_not_found">Produit introuvable dans la base Open Food Facts</string>
+    <string name="use_product">Utiliser ce produit</string>
+    <string name="remove_product">Retirer le produit</string>
+    <string name="nutriscore">Nutri-Score %1$s</string>
+    <string name="use_barcode_anyway">Continuer avec ce code-barres</string>
+    <string name="scan_error">Erreur lors du scan. Réessayez.</string>
+    <string name="camera_permission_needed">L\'autorisation caméra est nécessaire pour scanner un code-barres.</string>
+    <string name="grant_permission">Autoriser la caméra</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Bienvenue dans votre journal de suivi</string>
+    <string name="onboarding_text">Ce carnet quotidien vous aide à suivre votre alimentation et votre transit si vous vivez avec une RCH ou une maladie de Crohn. Associez vos repas à des photos ou des codes-barres, et notez chaque selle avec un commentaire : vous pourrez en parler plus précisément avec votre médecin.</string>
+    <string name="onboarding_disclaimer">Les données restent sur votre appareil et ne remplacent pas un avis médical.</string>
+    <string name="start">Commencer le suivi</string>
+
+    <!-- Settings -->
+    <string name="settings">Réglages</string>
+    <string name="notifications">Notifications</string>
+    <string name="daily_reminder">Rappel quotidien</string>
+    <string name="daily_reminder_desc">Recevoir une notification pour noter vos selles, votre douleur et votre fatigue</string>
+    <string name="reminder_time">Heure du rappel</string>
+    <string name="test_notification">Tester la notification</string>
+    <string name="test_notification_desc">Envoyer immédiatement une notification de démonstration</string>
+    <string name="notification_permission_warning">L\'autorisation de notification n\'est pas accordée.</string>
+    <string name="notification_permission_grant">Autoriser</string>
+    <string name="exact_alarm_warning">Les alarmes exactes sont désactivées : le rappel peut arriver en retard.</string>
+    <string name="exact_alarm_grant">Activer</string>
+    <string name="modify">Modifier</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="export_data">Exporter les données</string>
+    <string name="import_data">Importer les données</string>
+    <string name="data_management">Gestion des données</string>
+
+    <!-- Navigation principale -->
+    <string name="nav_home">Aujourd’hui</string>
+    <string name="nav_history">Historique</string>
+    <string name="nav_analysis">Tendances</string>
+    <string name="nav_settings">Réglages</string>
+
+    <!-- Tableau de bord -->
+    <string name="home_greeting">Bonjour</string>
+    <string name="home_today">Aujourd’hui</string>
+    <string name="home_stat_stools">selles</string>
+    <string name="home_stat_meals">repas noté</string>
+    <string name="home_stat_bristol">Bristol moy.</string>
+    <string name="home_action_meal">Repas</string>
+    <string name="home_action_meal_sub">Photo ou code-barres</string>
+    <string name="home_action_stool">Selle</string>
+    <string name="home_action_stool_sub">En 2 gestes</string>
+    <string name="home_feed">Le fil du jour</string>
+    <string name="home_see_all">Tout voir</string>
+    <string name="home_empty">Rien de noté pour l’instant. Touche une action ci-dessus.</string>
+    <string name="home_week">Cette semaine</string>
+    <string name="home_week_stools">selles</string>
+    <string name="home_week_avg">moyenne</string>
+    <string name="home_week_meals">repas</string>
+    <string name="home_reminder">Prochain rappel · %1$s</string>
+    <string name="home_reminder_sub">Tous les jours</string>
+    <string name="home_details">Détails</string>
+    <string name="home_calm">Journée calme</string>
+    <string name="home_no_data">Pas encore de donnée</string>
+
+    <!-- Saisie rapide -->
+    <string name="quick_stool_title">Nouvelle selle</string>
+    <string name="quick_stool_details">Plus de détails</string>
+    <string name="quick_stool_question">Quel est le type de selle ?</string>
+
+    <!-- Historique -->
+    <string name="history_title">Historique</string>
+    <string name="history_month">Ce mois</string>
+    <string name="history_avg">moyenne %1$s</string>
+    <string name="history_recent">Derniers jours</string>
+    <string name="history_no_entry">Aucune entrée</string>
+    <string name="history_open_calendar">Vue détaillée</string>
+    <string name="history_legend">Bristol</string>
+    <string name="history_chart_caption">Nombre de selles par jour · 7 derniers jours</string>
+    <string name="history_legend_note">Vert = selles normales · orange = molles ou liquides</string>
+    <string name="history_day_detail">Détail du jour</string>
+    <string name="history_no_data">Aucune donnée ce mois-ci</string>
+
+    <!-- Tendances -->
+    <string name="analysis_title">Tendances</string>
+    <string name="analysis_period_30">30 derniers jours</string>
+    <string name="analysis_period_90">90 derniers jours</string>
+    <string name="analysis_period_all">Tout l\'historique</string>
+    <string name="analysis_period_30_short">30 jours</string>
+    <string name="analysis_period_90_short">90 jours</string>
+    <string name="analysis_period_all_short">Tout</string>
+    <string name="analysis_stools">Selles</string>
+    <string name="analysis_avg">Bristol moyen</string>
+    <string name="analysis_meals">Repas notés</string>
+    <string name="analysis_days">Jours suivis</string>
+    <string name="analysis_daily">Selles par jour</string>
+    <string name="analysis_daily_period">Tout l\'historique · faites glisser pour remonter le temps</string>
+    <string name="analysis_daily_hint">Touchez une barre pour voir le jour</string>
+    <string name="analysis_detail_types">Types %1$s</string>
+    <string name="analysis_legend_hard">Dur (1–2)</string>
+    <string name="analysis_legend_normal">Normal (3–4)</string>
+    <string name="analysis_legend_loose">Mou (5–7)</string>
+    <string name="analysis_legend_blood">Sang</string>
+    <string name="analysis_symptoms">Symptômes</string>
+    <string name="analysis_symptoms_compare">Jours touchés · écart avec les %1$d jours précédents</string>
+    <string name="analysis_symptoms_days">Jours touchés</string>
+    <string name="analysis_blood">Sang</string>
+    <string name="analysis_mucus">Glaires</string>
+    <string name="analysis_pain_strong">Douleur forte (≥ 3/5)</string>
+    <string name="analysis_fatigue_strong">Fatigue forte (≥ 3/5)</string>
+    <string name="analysis_urgency">Urgence</string>
+    <string name="analysis_nocturnal">Selles nocturnes</string>
+    <plurals name="analysis_symptom_days">
+        <item quantity="one">%1$d jour</item>
+        <item quantity="other">%1$d jours</item>
+    </plurals>
+    <string name="analysis_liquid_per_day">Selles liquides par jour (types 6–7)</string>
+    <string name="analysis_no_data">Pas encore assez de données. Continue à noter tes journées.</string>
+    <string name="analysis_type">Type %1$d</string>
+    <string name="close">Fermer</string>
+
+    <plurals name="history_month_stools">
+        <item quantity="one">%1$d selle</item>
+        <item quantity="other">%1$d selles</item>
+    </plurals>
+    <plurals name="stools_count">
+        <item quantity="one">%1$d selle</item>
+        <item quantity="other">%1$d selles</item>
+    </plurals>
+    <plurals name="stools_label">
+        <item quantity="one">selle</item>
+        <item quantity="other">selles</item>
+    </plurals>
+    <plurals name="meals_label">
+        <item quantity="one">repas noté</item>
+        <item quantity="other">repas notés</item>
+    </plurals>
+    <string name="stool_symptoms">Symptômes</string>
+    <string name="level_hint_common">0 = absent · 5 = très marqué</string>
+    <string name="level_none">Aucun</string>
+    <string name="bristol_desc_0">Aucune selle</string>
+    <string name="bristol_desc_1">Dur, en billes</string>
+    <string name="bristol_desc_2">Bosselé</string>
+    <string name="bristol_desc_3">Fissuré</string>
+    <string name="bristol_desc_4">Lisse et souple</string>
+    <string name="bristol_desc_5">Fragments mous</string>
+    <string name="bristol_desc_6">Floconneux</string>
+    <string name="bristol_desc_7">Liquide</string>
+    <string name="last_reminder">Dernier rappel</string>
+    <string name="last_reminder_never">Aucun rappel affiché pour l’instant</string>
+    <string name="battery_title">Rappels en arrière-plan</string>
+    <string name="battery_warning">Le système peut retarder le rappel quand l’app est gelée en arrière-plan.</string>
+    <string name="battery_grant">Autoriser</string>
+    <string name="battery_exempt">Autorisé</string>
+    <string name="today_at">Aujourd’hui à %1$s</string>
+    <string name="yesterday_at">Hier à %1$s</string>
+    <string name="day_journal">Journal</string>
+    <string name="meals_section">Repas</string>
+    <string name="stools_section">Selles</string>
+    <string name="add">Ajouter</string>
+    <string name="date_at">%1$s à %2$s</string>
+
+    <!-- Résumé d'une selle -->
+    <string name="stool_title">Selle · Type %1$d</string>
+    <string name="stool_flag_blood">Sang signalé</string>
+    <string name="stool_flag_mucus">Glaires signalées</string>
+    <string name="stool_flag_pain">Douleur %1$d/5</string>
+    <string name="stool_flag_none">Rien à signaler</string>
+    <string name="bristol_icon_desc">Bristol type %1$d</string>
+    <string name="level_out_of_five">%1$d / 5</string>
+
+    <!-- Apparence et langue -->
+    <string name="settings_appearance">Apparence</string>
+    <string name="theme_mode">Luminosité</string>
+    <string name="theme_mode_system">Système</string>
+    <string name="theme_mode_light">Clair</string>
+    <string name="theme_mode_dark">Sombre</string>
+    <string name="theme_mode_amoled">AMOLED</string>
+    <string name="theme_palette">Couleurs</string>
+    <string name="palette_sage">Sauge</string>
+    <string name="palette_solarized">Solarized</string>
+    <string name="palette_nord">Nord</string>
+    <string name="palette_gruvbox">Gruvbox</string>
+    <string name="palette_catppuccin">Catppuccin</string>
+    <string name="palette_rose_pine">Rosé Pine</string>
+    <string name="settings_language">Langue</string>
+    <string name="language_system">Langue du téléphone</string>
+</resources>

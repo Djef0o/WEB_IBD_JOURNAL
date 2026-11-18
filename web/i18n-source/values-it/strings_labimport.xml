@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import d'un compte rendu d'analyses -->
+    <string name="lab_import_title">Controlla i risultati</string>
+    <string name="lab_import_no_date">Data del prelievo non trovata: controllala.</string>
+    <string name="lab_import_already_saved">Già salvato in questa data</string>
+    <string name="lab_import_save">Salva (%1$d)</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Rappels des étapes d'un examen (notifications) -->
+    <string name="exam_reminder_channel">Untersuchungen und Vorbereitung</string>
+    <string name="exam_reminder_when">%1$s um %2$s</string>
+    <string name="exam_reminder_anesthesia">Heute um %1$s, vor deiner Untersuchung am %2$s.</string>
+    <string name="exam_reminder_diet">Beginne heute mit der ballaststoffarmen Kost, bis zu deiner Untersuchung am %1$s.</string>
+    <string name="exam_reminder_prep">Zeit, die Darmvorbereitung zu trinken, für deine Untersuchung am %1$s.</string>
+    <string name="exam_reminder_exam">Heute um %1$s. Denk an Überweisung und Ausweis.</string>
+</resources>

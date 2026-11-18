@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fausses envies (ténesme) : passage aux toilettes sans selle -->
+    <string name="false_urge">Falscher Stuhldrang</string>
+    <string name="stool_kind_stool">Stuhlgang</string>
+    <string name="new_false_urge">Neuer falscher Stuhldrang</string>
+    <string name="edit_false_urge">Falschen Stuhldrang bearbeiten</string>
+    <string name="false_urge_hint">Stuhldrang ohne Stuhlgang, manchmal mit Blut oder Schleim.</string>
+    <string name="analysis_false_urge">Falscher Stuhldrang</string>
+    <plurals name="false_urge_count">
+        <item quantity="one">%1$d falscher Stuhldrang</item>
+        <item quantity="many">%1$d-mal falscher Stuhldrang</item>
+        <item quantity="other">%1$d-mal falscher Stuhldrang</item>
+    </plurals>
+</resources>

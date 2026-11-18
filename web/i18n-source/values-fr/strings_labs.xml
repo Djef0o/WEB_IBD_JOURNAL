@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analyses de suivi -->
+    <string name="lab_crp">CRP</string>
+    <string name="lab_calprotectin">Calprotectine fécale</string>
+    <string name="lab_hemoglobin">Hémoglobine</string>
+    <string name="lab_ferritin">Ferritine</string>
+    <string name="lab_vitamin_d">Vitamine D</string>
+    <string name="lab_albumin">Albumine</string>
+    <string name="lab_platelets">Plaquettes</string>
+
+    <!-- Résultats d'analyses (profil) -->
+    <string name="lab_results_title">Résultats d\'analyses</string>
+    <string name="lab_results_empty">Aucun résultat enregistré.</string>
+    <string name="lab_result_add">Ajouter un résultat</string>
+    <string name="lab_result_edit">Modifier le résultat</string>
+    <string name="lab_result_value">Valeur</string>
+    <string name="lab_result_value_invalid">Saisissez un nombre positif</string>
+    <string name="lab_result_date">Date de l\'analyse</string>
+    <string name="lab_result_note">Note (facultatif)</string>
+    <string name="lab_result_reference_title">Valeurs du laboratoire (facultatif)</string>
+    <string name="lab_result_reference_desc">Telles qu\'imprimées sur le compte rendu, dans la même unité.</string>
+    <string name="lab_result_reference_low">Min</string>
+    <string name="lab_result_reference_high">Max</string>
+    <string name="lab_result_number_invalid">Saisissez un nombre</string>
+    <string name="lab_result_reference_reversed">Le min dépasse le max</string>
+    <string name="lab_chart_description">Évolution de %1$s dans le temps</string>
+    <string name="lab_status_below">En dessous</string>
+    <string name="lab_status_above">Au-dessus</string>
+    <string name="lab_reference">Valeurs du laboratoire : %1$s</string>
+
+    <!-- Observance d'un traitement : prises confirmées / prévues sur 30 jours -->
+    <plurals name="treatment_adherence">
+        <item quantity="one">Observance 30 j : %1$d/%2$d prise (%3$d %%)</item>
+        <item quantity="other">Observance 30 j : %1$d/%2$d prises (%3$d %%)</item>
+    </plurals>
+</resources>

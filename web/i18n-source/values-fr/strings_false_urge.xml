@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fausses envies (ténesme) : passage aux toilettes sans selle -->
+    <string name="false_urge">Fausse envie</string>
+    <string name="stool_kind_stool">Selle</string>
+    <string name="new_false_urge">Nouvelle fausse envie</string>
+    <string name="edit_false_urge">Modifier la fausse envie</string>
+    <string name="false_urge_hint">Envie d\'aller à la selle sans résultat, parfois avec du sang ou des glaires.</string>
+    <string name="analysis_false_urge">Fausses envies</string>
+    <plurals name="false_urge_count">
+        <item quantity="one">%1$d fausse envie</item>
+        <item quantity="many">%1$d fausses envies</item>
+        <item quantity="other">%1$d fausses envies</item>
+    </plurals>
+</resources>

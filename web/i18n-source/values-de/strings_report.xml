@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Arztbericht (PDF) -->
+    <string name="report_action">Bericht für die Arztpraxis (PDF)</string>
+    <string name="report_generating">Bericht wird erstellt…</string>
+    <string name="report_error">Der Bericht konnte nicht erstellt werden. Versuche es noch einmal.</string>
+    <string name="report_share_title">Bericht teilen</string>
+    <string name="report_no_share_app">Keine App zum Teilen der PDF verfügbar</string>
+    <string name="report_title">Verlaufsbericht</string>
+    <string name="report_patient">Patient: %1$s</string>
+    <string name="report_period">%1$s · %2$s – %3$s</string>
+    <string name="report_generated">Erstellt am %1$s um %2$s</string>
+    <string name="report_summary">Übersicht</string>
+    <string name="report_stools_per_day">Stuhlgänge pro erfasstem Tag</string>
+    <string name="report_summary_note">Einträge vom Typ 0 (kein Stuhlgang) zählen nicht als Stuhlgang. Tagesdurchschnitte beziehen sich auf Tage mit mindestens einem Stuhleintrag.</string>
+    <string name="report_no_data">In diesem Zeitraum wurde kein Stuhlgang erfasst.</string>
+    <string name="report_col_symptom">Symptom</string>
+    <string name="report_col_days">Betroffene Tage</string>
+    <string name="report_col_previous">Vorheriger Zeitraum</string>
+    <string name="report_previous">%1$s (%2$s)</string>
+    <string name="report_schedule">%1$s um %2$s, seit %3$s</string>
+    <string name="report_schedule_once">Einmalig am %1$s um %2$s</string>
+    <string name="report_adherence">Therapietreue im Zeitraum: %1$s der geplanten Einnahmen bestätigt (%2$d von %3$d) · vergessen: %4$d · ohne Antwort: %5$d</string>
+    <string name="report_adherence_none">Im Zeitraum wurde keine Einnahme in der App bestätigt</string>
+    <string name="report_labs">Laborwerte</string>
+    <string name="report_col_date">Datum</string>
+    <string name="report_col_test">Untersuchung</string>
+    <string name="report_col_reference">Referenzwerte des Labors</string>
+    <string name="report_labs_legend">↑ darüber · ↓ darunter (fett): außerhalb der eingetragenen Referenzwerte des Labors; – wenn keine angegeben sind.</string>
+    <string name="report_lab_notes">Notizen</string>
+    <string name="report_lab_note">%1$s – %2$s: %3$s</string>
+    <string name="report_col_note">Notiz</string>
+    <string name="report_checkups">Anstehende Kontrollen</string>
+    <string name="report_checkup_at">%1$s um %2$s</string>
+    <string name="report_footer">Vom Patienten erfasste Daten – ersetzt keinen ärztlichen Rat</string>
+    <string name="report_page">Seite %1$d</string>
+    <plurals name="report_chart_range">
+        <item quantity="one">%2$s – %3$s · %1$d Tag</item>
+        <item quantity="other">%2$s – %3$s · %1$d Tage</item>
+    </plurals>
+</resources>

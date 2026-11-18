@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Résultats d'analyses : vue par analyse ou tableau des bilans -->
+    <string name="lab_view_by_test">By test</string>
+    <string name="lab_view_by_date">By date</string>
+
+    <!-- Groupes de la vue par analyse -->
+    <string name="lab_group_outside">Outside lab reference values</string>
+
+    <!-- En-tête de la colonne des analyses du tableau -->
+    <string name="lab_table_test">Test</string>
+
+    <!-- Description des symboles « = », « < », « > » de la saisie -->
+    <string name="lab_qualifier_exact">Exact value</string>
+    <string name="lab_qualifier_below">Below the measurable limit</string>
+    <string name="lab_qualifier_above">Above the measurable limit</string>
+
+    <!-- Période de la courbe -->
+    <string name="lab_period_6_months">6 months</string>
+    <string name="lab_period_1_year">1 year</string>
+    <string name="lab_period_all">All</string>
+    <!-- Résumé des analyses dans l'onglet Soins -->
+    <string name="lab_summary_latest">Latest test: %1$s</string>
+    <plurals name="lab_summary_tests">
+        <item quantity="one">%1$d test tracked</item>
+        <item quantity="many">%1$d tests tracked</item>
+        <item quantity="other">%1$d tests tracked</item>
+    </plurals>
+    <plurals name="lab_summary_outside">
+        <item quantity="one">%1$d outside lab reference values</item>
+        <item quantity="many">%1$d outside lab reference values</item>
+        <item quantity="other">%1$d outside lab reference values</item>
+    </plurals>
+</resources>

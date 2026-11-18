@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_export_desc">Verschlüsselte Datei, durch ein Passwort geschützt</string>
+    <string name="backup_import_desc">Verschlüsselte Sicherung oder älterer unverschlüsselter Export</string>
+    <string name="backup_export_title">Sicherung schützen</string>
+    <string name="backup_export_message">Die Datei wird mit diesem Passwort verschlüsselt. Du brauchst es, um die Datei zu importieren.</string>
+    <string name="backup_password">Passwort</string>
+    <string name="backup_password_confirm">Passwort bestätigen</string>
+    <string name="backup_password_min_length">Mindestens %1$d Zeichen</string>
+    <string name="backup_password_mismatch">Die Passwörter stimmen nicht überein</string>
+    <string name="backup_password_show">Passwort anzeigen</string>
+    <string name="backup_password_hide">Passwort verbergen</string>
+    <string name="backup_password_warning">Wenn du dieses Passwort vergisst, kann die Datei nicht wiederhergestellt werden. Ohne das Passwort kann niemand sie öffnen.</string>
+    <string name="backup_export_choose_file">Datei wählen</string>
+    <string name="backup_exporting">Deine Daten werden verschlüsselt…</string>
+    <string name="backup_importing">Deine Daten werden importiert…</string>
+    <string name="backup_export_done">Sicherung gespeichert. Bewahre das Passwort sicher auf.</string>
+    <string name="backup_export_failed">Die Sicherung konnte nicht gespeichert werden.</string>
+    <string name="backup_import_title">Verschlüsselte Sicherung</string>
+    <string name="backup_import_message">Gib das Passwort ein, das beim Export dieser Datei gewählt wurde. Der Import ersetzt die aktuellen Daten in der App.</string>
+    <string name="backup_import_wrong_password">Falsches Passwort oder beschädigte Datei.</string>
+    <string name="backup_import_button">Importieren</string>
+    <string name="backup_import_done">Daten importiert.</string>
+    <string name="backup_import_failed">Import fehlgeschlagen: Die Datei konnte nicht gelesen werden. Deine Daten wurden nicht verändert.</string>
+    <string name="backup_import_unrecognized">Diese Datei ist keine Sicherung von IBD Journal. Es wurde nichts importiert.</string>
+    <string name="calendar_privacy_title">Gesundheitsdaten in deinem Kalender</string>
+    <string name="calendar_privacy_message">Die Namen deiner Behandlungen und Untersuchungen werden in den Kalender deines Handys eingetragen. Dieser Kalender kann mit einem Online-Konto (Google, Samsung, Outlook…) synchronisiert werden und damit das Handy verlassen. Wähle einen nicht synchronisierten Kalender auf dem Handy, wenn diese Informationen auf dem Handy bleiben sollen.</string>
+    <string name="calendar_privacy_confirm">In meinen Kalender eintragen</string>
+    <string name="calendar_privacy_note">Namen von Behandlungen und Untersuchungen werden in diesen Kalender eingetragen. Ist er mit einem Online-Konto synchronisiert, verlassen sie das Handy: Wähle besser einen nicht synchronisierten Kalender auf dem Handy.</string>
+</resources>

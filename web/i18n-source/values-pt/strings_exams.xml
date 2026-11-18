@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exam_colonoscopy">Colonoscopia</string>
+    <string name="exam_rectosigmoidoscopy">Retossigmoidoscopia</string>
+    <string name="exam_step_anesthesia">Consulta pré-anestésica</string>
+    <string name="exam_step_diet">Início da dieta sem resíduos</string>
+    <string name="exam_step_prep_first">1ª dose do preparo</string>
+    <string name="exam_step_prep_second">2ª dose do preparo</string>
+    <string name="exam_step_exam">Exame</string>
+
+    <string name="exams_title">Exames endoscópicos</string>
+    <string name="exam_add">Agendar um exame endoscópico</string>
+    <string name="exam_edit">Editar o exame</string>
+    <string name="exams_empty">Nenhum exame endoscópico agendado. Adicione sua colonoscopia ou retossigmoidoscopia para anotar o preparo e receber lembretes.</string>
+    <string name="exam_next_step">Próxima etapa: %1$s, %2$s</string>
+    <string name="exam_anesthesia_missing">Consulta com o anestesista a marcar</string>
+
+    <string name="exam_date">Data do exame</string>
+    <string name="exam_note">Observação</string>
+    <string name="exam_note_hint">ex.: local, médico</string>
+    <string name="exam_preparation">Preparo</string>
+    <string name="exam_preparation_desc">Anote as orientações do seu médico ou do centro de endoscopia.</string>
+    <plurals name="exam_diet_days">
+        <item quantity="one">Dieta sem resíduos: %1$d dia antes</item>
+        <item quantity="many">Dieta sem resíduos: %1$d dias antes</item>
+        <item quantity="other">Dieta sem resíduos: %1$d dias antes</item>
+    </plurals>
+    <string name="exam_diet_none">Dieta sem resíduos: nenhuma</string>
+    <string name="exam_diet_start">A partir de %1$s</string>
+    <string name="exam_not_set">Ainda não marcada</string>
+    <string name="exam_clear">Limpar</string>
+    <string name="exam_reminders">Lembrar cada etapa</string>
+    <string name="exam_reminders_desc">%1$d h antes das consultas, na hora de cada dose do preparo e às %2$s no primeiro dia da dieta.</string>
+</resources>

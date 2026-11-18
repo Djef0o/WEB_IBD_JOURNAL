@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import d'un compte rendu d'analyses -->
+    <string name="lab_import_title">Confira os resultados</string>
+    <string name="lab_import_no_date">Data da coleta não encontrada: confira.</string>
+    <string name="lab_import_already_saved">Já salvo nesta data</string>
+    <string name="lab_import_save">Salvar (%1$d)</string>
+</resources>

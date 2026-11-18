@@ -1,0 +1,44 @@
+/* Scanner de code-barres : caméra, saisie manuelle, fiche produit. */
+
+.scan { display: flex; flex-direction: column; gap: var(--space-4); }
+.scan-camera {
+  position: relative; overflow: hidden; border-radius: var(--radius-lg); background: #000; color: #fff;
+  aspect-ratio: 4 / 3; max-block-size: 55dvh; inline-size: 100%; margin-inline: auto;
+}
+.scan-camera video { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
+.scan-frame {
+  position: absolute; inset: 0; margin: auto; inline-size: 62%; aspect-ratio: 1.6; max-block-size: 70%;
+  border: 2px solid #fff; border-radius: var(--radius-md); box-shadow: 0 0 0 100vmax rgb(0 0 0 / 0.25);
+  pointer-events: none;
+}
+.scan-message {
+  position: absolute; inset: 0; display: grid; place-content: center; gap: var(--space-3);
+  padding: var(--space-4); text-align: center; background: #000;
+}
+.scan-message .btn { justify-self: center; }
+.scan-hint { text-align: center; color: var(--c-on-surface-variant); }
+
+.scan-manual { display: flex; align-items: flex-end; gap: var(--space-2); }
+.scan-manual .field { flex: 1; }
+@media (max-width: 29.99rem) { .scan-manual { flex-direction: column; align-items: stretch; } }
+
+.scan-result { display: flex; flex-direction: column; gap: var(--space-3); min-block-size: 1.5rem; }
+.scan-result h2 { font-size: var(--text-md); }
+.scan-barcode { font-family: var(--font-mono); font-weight: 600; color: var(--c-primary); }
+.scan-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.scan-actions .btn { flex: 1 1 12rem; }
+.scan-privacy { font-size: var(--text-xs); color: var(--c-on-surface-variant); }
+
+.product-card {
+  display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3);
+  border-radius: var(--radius-md); background: var(--c-secondary-container); color: var(--c-on-secondary-container);
+}
+.product-card-image { flex: none; inline-size: 3rem; block-size: 3rem; border-radius: var(--radius-sm); object-fit: cover; background: var(--c-surface-variant); }
+.product-card-text { min-inline-size: 0; display: flex; flex-direction: column; }
+.product-card-name { font-weight: 600; overflow-wrap: anywhere; }
+.product-card-brand { font-size: var(--text-sm); opacity: 0.85; }
+.product-nutriscore { font-size: var(--text-sm); font-weight: 700; }
+.product-nutriscore[data-grade="a"], .product-nutriscore[data-grade="b"] { color: light-dark(#1B5E20, #81C784); }
+.product-nutriscore[data-grade="c"] { color: light-dark(#7A5B00, #E6C34D); }
+.product-nutriscore[data-grade="d"] { color: light-dark(#B34700, #FFB074); }
+.product-nutriscore[data-grade="e"] { color: light-dark(#B71C1C, #FF8A80); }

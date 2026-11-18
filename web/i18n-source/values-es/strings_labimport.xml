@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import d'un compte rendu d'analyses -->
+    <string name="lab_import_title">Revisa los resultados</string>
+    <string name="lab_import_no_date">No se encontró la fecha de extracción: revísala.</string>
+    <string name="lab_import_already_saved">Ya guardado en esta fecha</string>
+    <string name="lab_import_save">Guardar (%1$d)</string>
+</resources>

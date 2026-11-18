@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_export_desc">Encrypted file, protected by a password</string>
+    <string name="backup_import_desc">Encrypted backup, or an older unencrypted export</string>
+    <string name="backup_export_title">Protect the backup</string>
+    <string name="backup_export_message">The file is encrypted with this password. You will need it to import the file.</string>
+    <string name="backup_password">Password</string>
+    <string name="backup_password_confirm">Confirm password</string>
+    <string name="backup_password_min_length">At least %1$d characters</string>
+    <string name="backup_password_mismatch">Passwords do not match</string>
+    <string name="backup_password_show">Show password</string>
+    <string name="backup_password_hide">Hide password</string>
+    <string name="backup_password_warning">If you forget this password, the file cannot be recovered. Nobody can open it without the password.</string>
+    <string name="backup_export_choose_file">Choose file</string>
+    <string name="backup_exporting">Encrypting your data…</string>
+    <string name="backup_importing">Importing your data…</string>
+    <string name="backup_export_done">Backup saved. Keep the password somewhere safe.</string>
+    <string name="backup_export_failed">The backup could not be saved.</string>
+    <string name="backup_import_title">Encrypted backup</string>
+    <string name="backup_import_message">Enter the password chosen when this file was exported. Importing replaces the data currently in the app.</string>
+    <string name="backup_import_wrong_password">Wrong password, or the file is damaged.</string>
+    <string name="backup_import_button">Import</string>
+    <string name="backup_import_done">Data imported.</string>
+    <string name="backup_import_failed">Import failed: the file could not be read. Your data was not changed.</string>
+    <string name="backup_import_unrecognized">This file is not an IBD Journal backup. Nothing was imported.</string>
+    <string name="calendar_privacy_title">Health information in your calendar</string>
+    <string name="calendar_privacy_message">The names of your treatments and exams will be written into your phone calendar. This calendar may be synchronized with an online account (Google, Samsung, Outlook…) and then leave your phone. Choose a local calendar that is not synchronized (phone calendar) if you want this information to stay on the phone.</string>
+    <string name="calendar_privacy_confirm">Add to my calendar</string>
+    <string name="calendar_privacy_note">Treatment and exam names are written into this calendar. If it is synchronized with an online account, they leave the phone: prefer a local phone calendar that is not synchronized.</string>
+</resources>
