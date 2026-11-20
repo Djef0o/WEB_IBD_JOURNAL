@@ -24,7 +24,7 @@ type Loader = () => Promise<{ default: Screen }>;
 export type TabId = 'home' | 'history' | 'analysis' | 'care' | 'settings';
 export type RouteName =
   | 'home' | 'history' | 'day' | 'analysis' | 'care' | 'labs'
-  | 'settings' | 'onboarding' | 'report' | 'scan' | 'notFound';
+  | 'settings' | 'onboarding' | 'report' | 'scan' | 'travel' | 'urgent' | 'notFound';
 
 interface RouteDef {
   name: RouteName;
@@ -54,10 +54,12 @@ const ROUTES: readonly RouteDef[] = [
   { name: 'analysis', pattern: '/analysis', load: () => import('./ui/screens/Analysis'), tab: 'analysis', titleKey: 'analysis_title' },
   { name: 'care', pattern: '/care', load: () => import('./ui/screens/Care'), tab: 'care', titleKey: 'care_title' },
   { name: 'labs', pattern: '/care/labs', load: () => import('./ui/screens/Labs'), tab: 'care', titleKey: 'lab_results_title' },
+  { name: 'travel', pattern: '/travel', load: () => import('./ui/screens/Travel'), tab: 'care', titleKey: 'travel_title' },
   { name: 'settings', pattern: '/settings', load: () => import('./ui/screens/Settings'), tab: 'settings', titleKey: 'nav_settings' },
   { name: 'onboarding', pattern: '/onboarding', load: () => import('./ui/screens/Onboarding'), tab: null, titleKey: 'onboarding_title' },
   { name: 'report', pattern: '/report', load: () => import('./ui/screens/Report'), tab: 'analysis', titleKey: 'report_title' },
   { name: 'scan', pattern: '/scan', load: () => import('./ui/screens/Scan'), tab: 'home', titleKey: 'scan_title' },
+  { name: 'urgent', pattern: '/urgent', load: () => import('./ui/screens/Urgent'), tab: 'home', titleKey: 'urgent_card_title' },
 ];
 const NOT_FOUND: RouteDef = {
   name: 'notFound', pattern: '*', load: () => import('./ui/screens/NotFound'), tab: null, titleKey: 'web_not_found_title',

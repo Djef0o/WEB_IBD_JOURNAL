@@ -13,8 +13,11 @@ import { DailyStoolChart } from '../charts/DailyStoolChart';
 import { historyBars } from '../charts/dailyStool';
 import { formatDecimal } from '../format';
 import { WeightCard } from '../weight/WeightCard';
+import { FoodLinksCard } from './analysis/FoodLinksCard';
 import { SymptomsCard } from './analysis/SymptomsCard';
+import { WellbeingLinksCard } from './analysis/WellbeingLinksCard';
 import { analysisPeriod, periodLabel, periodOptions } from './analysis/period';
+import { useFlares } from '../care/flares/FlareMarks';
 
 /** Trends: tiles and symptoms over the chosen period; the chart always covers the whole history. */
 export default function Analysis(_props: ScreenProps) {
@@ -31,7 +34,8 @@ export default function Analysis(_props: ScreenProps) {
     () => (data ? analyze(data.history, data.meals, data.today, period) : null),
     [data, period],
   );
-  const bars = useMemo(() => (data ? historyBars(data.history, data.today) : null), [data]);
+  const flares = useFlares();
+  const bars = useMemo(() => (data ? historyBars(data.history, data.today, flares ?? []) : null), [data, flares]);
 
   return (
     <div class="stack">
@@ -72,6 +76,8 @@ export default function Analysis(_props: ScreenProps) {
           {summary.stools.length === 0
             ? <Card><p class="text-muted">{t('analysis_no_data')}</p></Card>
             : <SymptomsCard summary={summary} />}
+          <FoodLinksCard />
+          <WellbeingLinksCard />
           <WeightCard />
         </>
       )}

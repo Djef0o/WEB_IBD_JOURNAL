@@ -3,6 +3,7 @@ import { today } from '../../../domain/time';
 import { t } from '../../../i18n';
 import { SegmentedControl } from '../../components';
 import { TextField } from '../../forms';
+import { DiagnosisSelector } from '../../emergency/DiagnosisSelector';
 
 const SEX_LABEL: Record<Sex, () => string> = {
   FEMALE: () => t('sex_female'),
@@ -44,6 +45,7 @@ export function ProfileFields({ value, onChange }: { value: Profile; onChange: (
           if (sex !== '') onChange({ ...value, sex });
         }}
       />
+      <DiagnosisSelector value={value.diagnosis} onChange={(diagnosis) => onChange({ ...value, diagnosis })} />
     </div>
   );
 }

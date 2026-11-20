@@ -9,6 +9,8 @@ import { LanguageSection } from './settings/LanguageSection';
 import { ProfileSection } from './settings/ProfileSection';
 import { ReminderSection } from './settings/ReminderSection';
 import { SecuritySection } from './settings/SecuritySection';
+import { EmergencySection } from './settings/EmergencySection';
+import { WeighInSection } from './settings/WeighInSection';
 import './settings/settings.css';
 
 export default function Settings(_props: ScreenProps) {
@@ -19,8 +21,10 @@ export default function Settings(_props: ScreenProps) {
         <ProfileSection />
         <AppearanceSection />
         <LanguageSection />
-        <ReminderSection />
         <SecuritySection />
+        <EmergencySection />
+        <ReminderSection />
+        <WeighInSection />
         <BackupSection />
         <IcsExportSection />
         <InstallSection />

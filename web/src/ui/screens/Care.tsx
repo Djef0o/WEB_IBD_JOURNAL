@@ -27,6 +27,15 @@ import { ExamEditor } from '../care/ExamEditor';
 import { ChevronIcon, ReminderIcon } from '../care/icons';
 import { summarizeLabs } from '../care/labSummary';
 import { MedicationEditor, refillStatus } from '../care/MedicationEditor';
+import { TravelLink } from './travel/TravelLink';
+import { ActivityScoresSection } from '../care/scores/ActivityScoresSection';
+import { AppointmentsSection } from '../care/appointments/AppointmentsSection';
+import { QuestionsSection } from '../care/questions/QuestionsSection';
+import { getAllAppointments } from '../../db/followup';
+import { stockStatus } from '../care/stockStatus';
+import { FlaresSection } from '../care/flares/FlaresSection';
+import { SteroidsSection } from '../care/steroids/SteroidsSection';
+import { VaccinationsSection } from '../care/vaccinations/VaccinationsSection';
 
 /** Adherence window shown under each treatment, today included. */
 const ADHERENCE_DAYS = 30;
@@ -91,6 +100,7 @@ export default function Care(_props: ScreenProps) {
   const now = localDateTimeAt(clock);
   const [editing, setEditing] = useState<Editing | null>(null);
   const permission = notificationPermission.value;
+  const appointments = useLiveQuery(['appointments'], getAllAppointments);
 
   const data = useLiveQuery(
     ['medications', 'checkups', 'exams', 'dose_logs', 'lab_results'],
@@ -117,7 +127,8 @@ export default function Care(_props: ScreenProps) {
   const pastExams = data.exams.filter((e) => e.at < now).sort((a, b) => (a.at < b.at ? 1 : -1));
   const anyReminder = data.medications.some((m) => m.schedule.enabled || m.refillAlert)
     || data.checkups.some((c) => c.schedule.enabled)
-    || upcomingExams.some((e) => e.remindersEnabled);
+    || upcomingExams.some((e) => e.remindersEnabled)
+    || (appointments ?? []).some((a) => a.remindersEnabled && a.at >= now);
   const labs = summarizeLabs(data.labResults);
 
   return (
@@ -146,6 +157,7 @@ export default function Care(_props: ScreenProps) {
               title={[medication.name, medication.dosage].filter((s) => s.trim() !== '').join(' · ')}
               lines={[
                 scheduleStatus(medication.schedule, now),
+                stockStatus(medication),
                 refillStatus(medication, now),
                 adherenceStatus(medication, data.doseLogs, now),
               ].filter((s): s is string => s !== null)}
@@ -202,6 +214,13 @@ export default function Care(_props: ScreenProps) {
           })}
         </Section>
 
+        <QuestionsSection />
+        <AppointmentsSection />
+        <FlaresSection />
+
+        <ActivityScoresSection />
+        <VaccinationsSection />
+        <SteroidsSection />
         <Card title={t('lab_results_title')}>
           <a class="care-lab-link" href="/care/labs">
             <span class="care-row-text">
@@ -214,6 +233,9 @@ export default function Care(_props: ScreenProps) {
             <ChevronIcon />
           </a>
         </Card>
+
+        <TravelLink />
+
       </div>
       {editor}
     </>

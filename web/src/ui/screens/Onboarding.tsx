@@ -5,14 +5,16 @@ import { getAllMedications } from '../../db/medications';
 import { markOnboardingDone } from '../../db/prefs';
 import { saveProfile } from '../../db/profile';
 import { profile as emptyProfile, type Medication, type Profile } from '../../domain/profile';
+import { localDateTimeAt } from '../../domain/time';
 import { t } from '../../i18n';
+import { scheduleStatus } from '../../reminders/text';
 import { navigate, type ScreenProps } from '../../router';
 import { vaultStatus } from '../../security/vault';
 import { PinSetup } from '../security/PinSetup';
 import { ImportBackupButton } from '../backup/ImportBackup';
-import { BristolIcon, Button, Dialog } from '../components';
+import { BristolIcon, Button } from '../components';
 import { Glyph, TAB_ICONS } from '../shell/Nav';
-import { MedicationForm, describeSchedule } from './onboarding/MedicationForm';
+import { MedicationEditor } from '../care/MedicationEditor';
 import { NotificationPermission } from './settings/NotificationPermission';
 import { ProfileFields } from './settings/ProfileFields';
 import './settings/settings.css';
@@ -100,7 +102,7 @@ function TreatmentsStep() {
             <li key={m.id} class="med-item">
               <div>
                 <p class="setting-title">{[m.name, m.dosage].filter((s) => s.trim() !== '').join(' · ')}</p>
-                <p class="text-muted text-sm">{describeSchedule(m)}</p>
+                <p class="text-muted text-sm">{scheduleStatus(m.schedule, localDateTimeAt(Date.now()))}</p>
               </div>
               <Button variant="tonal" onClick={() => setEditing({ item: m })}>{t('modify')}</Button>
             </li>
@@ -110,15 +112,7 @@ function TreatmentsStep() {
       <div>
         <Button variant="outlined" onClick={() => setEditing({ item: null })}>{t('treatment_add')}</Button>
       </div>
-      <Dialog
-        open={editing !== null}
-        onClose={() => setEditing(null)}
-        title={t(editing?.item ? 'treatment_edit' : 'treatment_add')}
-        closeLabel={t('close')}
-        lightDismiss={false}
-      >
-        {editing && <MedicationForm initial={editing.item} onDone={() => setEditing(null)} />}
-      </Dialog>
+      {editing && <MedicationEditor initial={editing.item} onClose={() => setEditing(null)} />}
     </>
   );
 }
@@ -133,7 +127,8 @@ export default function Onboarding(_props: ScreenProps) {
 
   const step = STEPS[index] ?? 'WELCOME';
   const isLast = index === STEPS.length - 1;
-  const profileEmpty = draft.firstName.trim() === '' && draft.lastName.trim() === '' && draft.birthDate === null && draft.sex === null;
+  const profileEmpty = draft.firstName.trim() === '' && draft.lastName.trim() === '' && draft.birthDate === null && draft.sex === null
+    && draft.diagnosis === null;
   // « Passer » plutôt que « Suivant » quand l'étape de saisie est restée vide.
   const skipping = (step === 'PROFILE' && profileEmpty) || (step === 'TREATMENTS' && (meds?.length ?? 0) === 0);
 

@@ -15,6 +15,8 @@ import { StoolSheet } from '../stool/StoolSheet';
 import { stoolSummary, stoolTitle } from '../stool/stoolText';
 import { averageBristol } from './history/calendar';
 import { timeOfDay, weekdayDayMonth } from './history/labels';
+import { DayExtras } from '../day/DayExtras';
+import { FlareDayChip } from '../care/flares/FlareMarks';
 
 /** Vue d'un jour : repas et selles, avec ajout, modification et suppression (`DayScreen.kt`). */
 export default function Day({ params }: ScreenProps) {
@@ -67,6 +69,7 @@ function DayView({ date }: { date: LocalDate }) {
           <Button variant="text" href={`/day/${todayDate()}`}>{t('today')}</Button>
         </div>
       )}
+      <FlareDayChip date={date} />
 
       <div class="day-layout">
         <Card variant="outlined" class="day-summary">
@@ -79,6 +82,8 @@ function DayView({ date }: { date: LocalDate }) {
             />
           </dl>
         </Card>
+
+        <DayExtras date={date} />
 
         <section class="stack-sm" aria-labelledby="meals-title">
           <div class="day-section-head">

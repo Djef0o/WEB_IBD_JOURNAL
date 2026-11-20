@@ -18,6 +18,7 @@ import { restoreAppearance, syncAppearanceAcrossTabs } from './ui/prefsSync';
 import { initGlow } from './ui/glow/glowPref';
 import { initTheme } from './ui/theme';
 import { loadVault, vaultStatus } from './security/vault';
+import { startLockScreenEmergencySync } from './db/emergencyLock';
 
 /**
  * First visit: the app redirects every screen to the onboarding. Doing it before the router loads
@@ -50,6 +51,14 @@ async function boot(): Promise<void> {
     if (notifier || (status !== 'none' && status !== 'unlocked')) return;
     notifier = true;
     untracked(() => { startReminderNotifier(); });
+  });
+  // The emergency sheet copy readable on the lock screen follows the journal while it is open.
+  let lockCopy = false;
+  effect(() => {
+    const status = vaultStatus.value;
+    if (lockCopy || (status !== 'none' && status !== 'unlocked')) return;
+    lockCopy = true;
+    untracked(() => { startLockScreenEmergencySync(); });
   });
   registerServiceWorker();
   syncAppearanceAcrossTabs();

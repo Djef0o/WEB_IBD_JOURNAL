@@ -6,6 +6,7 @@ import { monthsUntil, today } from '../../../domain/time';
 import { t, tp } from '../../../i18n';
 import { Button, Card, Dialog } from '../../components';
 import { formatLocalDate } from '../../format';
+import { diagnosisLabel } from '../../emergency/DiagnosisSelector';
 import { ProfileFields } from './ProfileFields';
 
 function EditForm({ initial, onDone }: { initial: Profile; onDone: () => void }) {
@@ -50,6 +51,8 @@ export function ProfileSection() {
                 : t('profile_birth_date_missing')}
               {'\n'}
               {profile.sex ? t(profile.sex === 'FEMALE' ? 'sex_female' : 'sex_male') : t('profile_sex_missing')}
+              {'\n'}
+              {profile.diagnosis ? diagnosisLabel(profile.diagnosis) : t('diagnosis_missing')}
             </p>
           </div>
           <Button variant="tonal" onClick={() => setEditing(true)}>{t('modify')}</Button>

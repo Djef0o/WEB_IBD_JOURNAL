@@ -10,7 +10,8 @@ import { formatNumber, t, tp } from '../../i18n';
 import TodayTasksCard from '../../reminders/TodayTasksCard';
 import type { ScreenProps } from '../../router';
 import { Card, EmptyState } from '../components';
-import { formatLocalDate, formatTime } from '../format';
+import { formatTime } from '../format';
+import { weekdayDayMonth } from './history/labels';
 import { MealEditorSheet } from '../meal/MealEditorSheet';
 import { MealTypeSheet } from '../meal/MealTypeSheet';
 import { QuickStoolSheet } from '../stool/QuickStoolSheet';
@@ -21,6 +22,8 @@ import { CheckInCard } from './home/CheckInCard';
 import { BellIcon, DropIcon, EditIcon, RestaurantIcon } from './home/icons';
 import { averageBristol, feedEntries, isCalmDay, realStoolCount, weekStart } from './home/homeLogic';
 import { useNow } from './home/useNow';
+import { EmergencyButton } from '../emergency/EmergencyButton';
+import { FlareHomeCard } from '../care/flares/FlareMarks';
 
 interface StoolEditor {
   stoolId?: number;
@@ -78,12 +81,14 @@ export default function Home(_props: ScreenProps) {
   return (
     <div class="home">
       <header class="home-header">
+        <EmergencyButton />
         <p class="text-muted text-sm">{t('home_greeting')}</p>
-        <h1 class="page-title">{formatLocalDate(date, { weekday: 'long', day: 'numeric', month: 'long' })}</h1>
+        <h1 class="page-title">{weekdayDayMonth(date)}</h1>
       </header>
 
       <div class="home-grid">
         <div class="home-col home-col-main">
+          <FlareHomeCard today={date} />
           <Card variant="outlined" class="home-card home-summary" title={t('home_today')} headingLevel={2}>
             {isCalmDay(stools) && <span class="pill">{t('home_calm')}</span>}
             <div class="stats">

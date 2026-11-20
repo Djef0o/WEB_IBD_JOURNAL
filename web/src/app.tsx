@@ -48,7 +48,7 @@ export function App() {
   const locked = vault === 'locked';
   const needsPin = vault === 'none' && done === true && route?.name !== 'onboarding';
   const ready = done !== undefined && !needsOnboarding && !leaveOnboarding && vault !== 'loading';
-  const bare = route?.name === 'onboarding';
+  const bare = route?.name === 'onboarding' || route?.name === 'urgent';
 
   return (
     <>
