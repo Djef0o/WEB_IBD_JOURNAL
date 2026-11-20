@@ -10,7 +10,7 @@ import { expect, openFresh, openSeeded, setPin, test } from './fixtures';
  */
 const axeSource = readFileSync(createRequire(import.meta.url).resolve('axe-core/axe.min.js'), 'utf8');
 
-const ROUTES = ['/', '/history', `/day/${dayOffset(0)}`, '/analysis', '/care', '/care/labs', '/settings', '/report', '/scan', '/nope'];
+const ROUTES = ['/', '/history', `/day/${dayOffset(0)}`, '/analysis', '/care', '/care/labs', '/settings', '/report', '/travel', '/urgent', '/scan', '/nope'];
 const SCHEMES = ['light', 'dark'] as const;
 const VIEWPORTS = [{ width: 360, height: 740 }, { width: 1280, height: 800 }];
 
@@ -31,7 +31,32 @@ async function audit(page: Page): Promise<string[]> {
   const real = violations
     .map((v) => (v.id === 'target-size' ? { ...v, nodes: v.nodes.filter((n) => !n.html.includes('github.com/Djef0o/WEB_IBD_JOURNAL')) } : v))
     .filter((v) => v.nodes.length > 0);
-  return real.map((v) => `${v.id} (${v.impact}): ${v.help}\n` + v.nodes.slice(0, 4).map((n) => `    ${n.target.join(' ')}  ${n.html.slice(0, 120)}\n      ${n.failureSummary?.replace(/\n/g, ' | ')}`).join('\n'));
+  // The same artefact hits any control that straddles the fixed bar at the current scroll position:
+  // a "partially obscured" verdict only counts if it holds once the control is scrolled to the middle of the screen.
+  for (const violation of real) {
+    if (violation.id !== 'target-size') continue;
+    const kept: AxeNode[] = [];
+    for (const node of violation.nodes) {
+      const selector = node.target[0];
+      const obscured = /partially obscured/.test(node.failureSummary ?? '');
+      if (!obscured || typeof selector !== 'string') {
+        kept.push(node);
+        continue;
+      }
+      const stillFails = await page.evaluate(async (sel: string): Promise<boolean> => {
+        const el = document.querySelector(sel);
+        if (!el) return true;
+        el.scrollIntoView({ block: 'center' });
+        const axe = (window as unknown as { axe: { run(ctx: Element, opts: object): Promise<{ violations: unknown[] }> } }).axe;
+        const result = await axe.run(el, { runOnly: { type: 'rule', values: ['target-size'] } });
+        return result.violations.length > 0;
+      }, selector);
+      if (stillFails) kept.push(node);
+    }
+    violation.nodes = kept;
+  }
+  const remaining = real.filter((v) => v.nodes.length > 0);
+  return remaining.map((v) => `${v.id} (${v.impact}): ${v.help}\n` + v.nodes.slice(0, 4).map((n) => `    ${n.target.join(' ')}  ${n.html.slice(0, 120)}\n      ${n.failureSummary?.replace(/\n/g, ' | ')}`).join('\n'));
 }
 
 test.describe('axe-core', () => {
