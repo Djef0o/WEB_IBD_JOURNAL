@@ -1,0 +1,18 @@
+/* Vaccinations : liste groupée par vaccin, doses dépliables, éditeur. */
+.vaccine-notice {
+  display: flex; gap: var(--space-3); align-items: flex-start; padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md); background: var(--c-surface-variant); color: var(--c-on-surface-variant);
+  font-size: var(--text-sm);
+}
+.vaccine-notice svg { flex: none; color: var(--c-primary); }
+
+.vaccine-group { display: flex; align-items: center; gap: var(--space-1); }
+.vaccine-group > .care-row { flex: 1; min-width: 0; }
+.vaccine-trailing { display: inline-flex; align-items: center; gap: var(--space-2); flex: none; }
+.vaccine-count { font-size: var(--text-sm); color: var(--c-on-surface-variant); white-space: nowrap; }
+.vaccine-toggle svg { transition: transform var(--dur) var(--ease); }
+.vaccine-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  .vaccine-toggle svg { transition: none; }
+}
+.vaccine-doses { margin-inline-start: var(--space-6); }

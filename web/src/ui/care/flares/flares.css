@@ -1,0 +1,53 @@
+/* Poussées : liste des Soins, éditeur, marques du calendrier, du jour, de l'accueil et du graphique. */
+.flare-row-icon { flex: none; align-self: flex-start; margin-block-start: 2px; color: var(--c-on-surface-variant); }
+.flare-row-lead { display: flex; align-items: flex-start; gap: var(--space-3); min-width: 0; flex: 1; }
+
+/* Poussée en cours : se distingue par le fond (jamais par la couleur seule : le libellé dit « en cours »). */
+.care-row.flare-row[data-ongoing] { background: var(--c-error-container); color: var(--c-on-error-container); }
+.care-row.flare-row[data-ongoing]:hover { background: color-mix(in srgb, var(--c-on-error-container) 8%, var(--c-error-container)); }
+.flare-row[data-ongoing] .care-row-title { font-weight: 600; }
+.flare-row[data-ongoing] .text-muted, .flare-row[data-ongoing] .flare-row-icon { color: inherit; }
+
+/* Outlined, not tinted: error text on a tint of itself misses 4.5:1 in some palettes. */
+.flare-badge {
+  align-self: flex-start; margin-block-start: var(--space-1); padding: 1px var(--space-2); border-radius: var(--radius-sm);
+  border: 1px solid currentColor; color: var(--c-error);
+  font-size: var(--text-xs); font-weight: 600;
+}
+.flare-row[data-ongoing] .flare-badge { color: var(--c-on-error-container); }
+
+.flare-error { color: var(--c-error); font-size: var(--text-sm); }
+
+/* Accueil : rappel d'une poussée en cours, au-dessus du résumé du jour. */
+.flare-home {
+  order: 0; padding: var(--space-4); border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--c-error-container) 60%, var(--c-surface)); color: var(--c-on-error-container);
+  font-size: var(--text-md); font-weight: 600;
+}
+
+/* Jour : bandeau « Poussée · jour N ». */
+.flare-chip {
+  display: flex; justify-content: flex-start; margin-block-end: var(--space-3);
+}
+.flare-chip > span {
+  padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+  background: var(--c-error-container); color: var(--c-on-error-container); font-size: var(--text-sm); font-weight: 600;
+}
+
+/* Légende des marques (calendrier). */
+.flare-legend { display: flex; align-items: center; gap: var(--space-2); }
+.flare-legend-bar { width: 1rem; height: 3px; border-radius: 2px; background: color-mix(in srgb, var(--c-error) 70%, transparent); }
+
+/* Calendrier : fine barre en haut des jours de poussée ; les jours voisins forment un trait continu. */
+.cal-day[data-flare] { position: relative; overflow: hidden; }
+.cal-day[data-flare]::before {
+  content: ""; position: absolute; inset-block-start: 0; inset-inline: 0; height: 3px;
+  background: color-mix(in srgb, var(--c-error) 70%, transparent);
+}
+@media (forced-colors: active) {
+  .cal-day[data-flare]::before, .flare-legend-bar { background: Highlight; }
+}
+
+/* Graphique des selles : bande derrière les jours de poussée. */
+.dsc-flare { fill: color-mix(in srgb, var(--c-error) 12%, transparent); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.dsc-swatch.dsc-flare-swatch { background: color-mix(in srgb, var(--c-error) 25%, transparent); border: 1px solid color-mix(in srgb, var(--c-error) 60%, transparent); }

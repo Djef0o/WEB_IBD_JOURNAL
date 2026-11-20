@@ -1,4 +1,5 @@
 import './charts.css';
+import '../care/flares/flares.css';
 import { useEffect, useId, useMemo, useRef, useState } from 'preact/hooks';
 import { dateParts, type LocalDate } from '../../domain/time';
 import { lang, t, tp } from '../../i18n';
@@ -138,6 +139,8 @@ export function DailyStoolChart({ bars, layout, title, subtitle, headingLevel = 
         return (
           <g key={bar.date} class="dsc-day" data-dim={selected !== null && selected !== bar.date ? '' : undefined} data-selected={selected === bar.date ? '' : undefined}>
             <title>{dayTitle(bar, formatLocalDate(bar.date))}</title>
+            {/* Flare day: band behind the bar, full slot width so that adjacent days join up. */}
+            {bar.flare && <rect class="dsc-flare" x={center - slot / 2} y={0} width={slot} height={height} />}
             {/* Hit area: the whole column, including empty days. */}
             <rect class="dsc-hit" x={center - slot / 2} y={0} width={slot} height={BASELINE + 40} />
             {segments}
@@ -206,6 +209,7 @@ export function DailyStoolChart({ bars, layout, title, subtitle, headingLevel = 
           <li key={c.id}><span class={`dsc-swatch dsc-${c.id.toLowerCase()}`} aria-hidden="true" />{t(c.legendKey)}</li>
         ))}
         <li><span class="dsc-swatch dsc-dot dsc-blood" aria-hidden="true" />{t('analysis_legend_blood')}</li>
+        {bars.some((b) => b.flare) && <li><span class="dsc-swatch dsc-flare-swatch" aria-hidden="true" />{t('flaremark_chart_legend')}</li>}
       </ul>
       {table && <DataTable bars={bars} caption={title} />}
     </figure>
@@ -217,6 +221,7 @@ function summaryParts(bar: DayBar): string[] {
   if (bar.types.length > 0) parts.push(t('analysis_detail_types', [bar.types.join(', ')]));
   if (bar.falseUrges > 0) parts.push(tp('false_urge_count', bar.falseUrges));
   if (bar.blood) parts.push(t('stool_flag_blood'));
+  if (bar.flare) parts.push(t('flaremark_chart_legend'));
   return parts;
 }
 

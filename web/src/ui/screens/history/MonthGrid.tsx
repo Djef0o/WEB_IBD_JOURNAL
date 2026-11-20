@@ -3,6 +3,7 @@ import type { Stool } from '../../../domain/models';
 import type { LocalDate } from '../../../domain/time';
 import { dateParts } from '../../../domain/time';
 import { t } from '../../../i18n';
+import '../../care/flares/flares.css';
 import { firstDayOf, lastStool, monthCells, monthOf, moveFocus, sameMonth, type MonthRef } from './calendar';
 import { daySummary, fullDate, weekdayHeaders } from './labels';
 
@@ -11,6 +12,8 @@ interface MonthGridProps {
   byDay: ReadonlyMap<LocalDate, readonly Stool[]>;
   today: LocalDate;
   labelledBy: string;
+  /** Jours couverts par une poussée : barre rouge en haut de la case (`FlareMark`). */
+  flareDays?: ReadonlySet<LocalDate>;
   /** Le focus clavier sort du mois : l'écran affiche le mois de `date`. */
   onMonthChange(month: MonthRef): void;
 }
@@ -20,7 +23,7 @@ interface MonthGridProps {
  * aux flèches, Début/Fin, PageHaut/PageBas. Chaque jour est un lien vers `/day/AAAA-MM-JJ` dont
  * le nom annonce la date et le résumé (nombre de selles, dernier type).
  */
-export function MonthGrid({ month, byDay, today, labelledBy, onMonthChange }: MonthGridProps) {
+export function MonthGrid({ month, byDay, today, labelledBy, flareDays, onMonthChange }: MonthGridProps) {
   const root = useRef<HTMLDivElement>(null);
   const [focusDate, setFocusDate] = useState<LocalDate | null>(null);
   const moveFocusPending = useRef(false);
@@ -83,6 +86,7 @@ export function MonthGrid({ month, byDay, today, labelledBy, onMonthChange }: Mo
             const stools = byDay.get(date) ?? [];
             const last = lastStool(stools);
             const isToday = date === today;
+            const isFlare = flareDays?.has(date) === true;
             return (
               <div key={c} class="cal-cell" role="gridcell">
                 <a
@@ -91,8 +95,9 @@ export function MonthGrid({ month, byDay, today, labelledBy, onMonthChange }: Mo
                   data-date={date}
                   data-bristol={last ? last.bristolType : undefined}
                   data-today={isToday ? '' : undefined}
+                  data-flare={isFlare ? '' : undefined}
                   aria-current={isToday ? 'date' : undefined}
-                  aria-label={`${fullDate(date)}${isToday ? `, ${t('today')}` : ''}, ${daySummary(stools)}`}
+                  aria-label={`${isFlare ? t('flaremark_day_desc', [fullDate(date)]) : fullDate(date)}${isToday ? `, ${t('today')}` : ''}, ${daySummary(stools)}`}
                   tabIndex={date === tabStop ? 0 : -1}
                   onFocus={() => setFocusDate(date)}
                 >
