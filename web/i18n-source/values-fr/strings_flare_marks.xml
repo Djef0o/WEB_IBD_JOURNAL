@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flaremark_legend">Jours de poussée</string>
+    <string name="flaremark_day_desc">%1$s, jour de poussée</string>
+    <string name="flaremark_day">Poussée · jour %1$d</string>
+    <string name="flaremark_hospitalized">Hospitalisation</string>
+    <string name="flaremark_home">Poussée en cours depuis le %1$s (jour %2$d)</string>
+    <string name="flaremark_chart_legend">Poussée</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flare_title">Crises</string>
+    <string name="flare_add">Adicionar uma crise</string>
+    <string name="flare_edit">Editar a crise</string>
+    <string name="flare_empty">Nenhuma crise registrada. Anote o início e o fim das suas crises para acompanhá-las.</string>
+    <string name="flare_start">Data de início</string>
+    <string name="flare_end">Data de término</string>
+    <string name="flare_ongoing">Em andamento</string>
+    <string name="flare_ongoing_since">Desde %1$s (em andamento)</string>
+    <plurals name="flare_range_days">
+        <item quantity="one">%1$s – %2$s (%3$d dia)</item>
+        <item quantity="many">%1$s – %2$s (%3$d dias)</item>
+        <item quantity="other">%1$s – %2$s (%3$d dias)</item>
+    </plurals>
+    <string name="flare_treatment">Tratamento</string>
+    <string name="flare_treatment_hint">ex.: prednisona 40 mg</string>
+    <string name="flare_hospitalized">Internação</string>
+    <string name="flare_note">Observação</string>
+    <string name="flare_end_before_start">A data de término não pode ser anterior à de início</string>
+</resources>

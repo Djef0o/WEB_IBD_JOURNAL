@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="day_card_none">Niente annotato</string>
+    <string name="day_card_expand">Espandi</string>
+    <string name="day_card_collapse">Comprimi</string>
+</resources>

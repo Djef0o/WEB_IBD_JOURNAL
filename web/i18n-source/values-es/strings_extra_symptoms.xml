@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="extra_symptom_joints">Dolor articular</string>
+    <string name="extra_symptom_skin">Piel (nódulos rojos, erupción)</string>
+    <string name="extra_symptom_eyes">Ojo rojo o doloroso</string>
+    <string name="extra_symptom_mouth_ulcers">Aftas</string>
+    <string name="extra_symptom_fever">Fiebre</string>
+    <string name="extra_card_title">Otros síntomas</string>
+    <string name="extra_card_hint">Articulaciones, piel, ojos, boca, fiebre: se anotan aquí para tu médico y rellenan previamente las puntuaciones de actividad.</string>
+</resources>

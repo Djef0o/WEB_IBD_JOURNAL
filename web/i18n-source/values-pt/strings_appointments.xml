@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointmentui_title">Consultas</string>
+    <string name="appointmentui_add">Adicionar uma consulta</string>
+    <string name="appointmentui_edit">Editar a consulta</string>
+    <string name="appointmentui_empty">Nenhuma consulta registrada. Adicione as suas consultas para receber um lembrete.</string>
+    <string name="appointmentui_past">Consultas passadas (%1$d)</string>
+    <string name="appointmentui_show_past">Mostrar as consultas passadas</string>
+    <string name="appointmentui_hide_past">Ocultar as consultas passadas</string>
+    <string name="appointmentui_date">Data</string>
+    <string name="appointmentui_time">Hora</string>
+    <string name="appointmentui_place">Médico ou endereço</string>
+    <string name="appointmentui_note">Nota</string>
+    <string name="appointmentui_reminders">Lembretes</string>
+    <string name="appointmentui_reminders_hint">Notificação na véspera às 18h e 2 horas antes</string>
+</resources>

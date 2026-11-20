@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_field">Doses em estoque (opcional)</string>
+    <string name="stock_field_hint">Descontado a cada dose confirmada. Altere quando pegar uma caixa nova.</string>
+    <string name="stock_low_field">Avise-me quando restarem</string>
+    <string name="stock_low_hint">Padrão: 7.</string>
+    <string name="stock_channel">Estoque baixo</string>
+    <string name="stock_notification_title">Está acabando</string>
+    <string name="stock_notification_text">%1$s: restam %2$s. Lembre-se de repor.</string>
+    <string name="stock_status_low">%1$s · repor em breve</string>
+    <plurals name="stock_intakes">
+        <item quantity="one">%d dose</item>
+        <item quantity="many">%d doses</item>
+        <item quantity="other">%d doses</item>
+    </plurals>
+    <plurals name="stock_left">
+        <item quantity="one">resta %d dose</item>
+        <item quantity="many">restam %d doses</item>
+        <item quantity="other">restam %d doses</item>
+    </plurals>
+</resources>

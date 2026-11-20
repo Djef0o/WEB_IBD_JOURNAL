@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointment_kind_gastroenterologist">Gastroenterologist</string>
+    <string name="appointment_kind_dermatologist">Dermatologist</string>
+    <string name="appointment_kind_ophthalmologist">Ophthalmologist</string>
+    <string name="appointment_kind_rheumatologist">Rheumatologist</string>
+    <string name="appointment_kind_dietitian">Dietitian</string>
+    <string name="appointment_kind_general_practitioner">General practitioner</string>
+    <string name="appointment_kind_other">Other</string>
+    <string name="appointment_reminder_title">Appointment reminder</string>
+    <string name="appointment_reminder_text">%1$s: %2$s at %3$s</string>
+    <string name="appointment_reminder_channel">Appointment reminders</string>
+</resources>

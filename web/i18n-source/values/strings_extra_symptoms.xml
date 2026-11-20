@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="extra_symptom_joints">Joint pain</string>
+    <string name="extra_symptom_skin">Skin (red nodules, rash)</string>
+    <string name="extra_symptom_eyes">Eye redness or pain</string>
+    <string name="extra_symptom_mouth_ulcers">Mouth ulcers</string>
+    <string name="extra_symptom_fever">Fever</string>
+    <string name="extra_card_title">Other symptoms</string>
+    <string name="extra_card_hint">Joints, skin, eyes, mouth, fever: noted here for your doctor and used to pre-fill activity scores.</string>
+</resources>

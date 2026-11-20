@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vaccine_title">Vaccinazioni</string>
+    <string name="vaccine_add">Aggiungi una vaccinazione</string>
+    <string name="vaccine_edit">Modifica la vaccinazione</string>
+    <string name="vaccine_empty">Nessuna vaccinazione registrata. Annota i tuoi vaccini e la data della prossima dose o richiamo.</string>
+    <string name="vaccine_live_notice">I vaccini vivi in genere non sono raccomandati durante un trattamento immunosoppressivo: chiedi al tuo medico prima di qualsiasi vaccinazione.</string>
+    <string name="vaccine_type_influenza">Influenza</string>
+    <string name="vaccine_type_pneumococcal">Pneumococco</string>
+    <string name="vaccine_type_covid19">COVID-19</string>
+    <string name="vaccine_type_hepatitis_b">Epatite B</string>
+    <string name="vaccine_type_hpv">HPV</string>
+    <string name="vaccine_type_zoster">Herpes zoster (fuoco di Sant\'Antonio)</string>
+    <string name="vaccine_type_tetanus">Tetano</string>
+    <string name="vaccine_type_other">Altro</string>
+    <string name="vaccine_type">Vaccino</string>
+    <string name="vaccine_date">Data della somministrazione</string>
+    <string name="vaccine_next_due">Prossima dose o richiamo</string>
+    <string name="vaccine_next_none">Non prevista</string>
+    <string name="vaccine_next_before_date">La prossima dose deve essere successiva alla data della somministrazione</string>
+    <string name="vaccine_note">Nota</string>
+    <string name="vaccine_last">Ultima dose: %1$s</string>
+    <string name="vaccine_next">Prossima: %1$s</string>
+    <string name="vaccine_overdue">In ritardo: era prevista il %1$s</string>
+    <plurals name="vaccine_doses">
+        <item quantity="one">%1$d dose</item>
+        <item quantity="many">%1$d dosi</item>
+        <item quantity="other">%1$d dosi</item>
+    </plurals>
+    <string name="vaccine_show_doses">Mostra tutte le dosi</string>
+    <string name="vaccine_hide_doses">Nascondi le dosi</string>
+</resources>

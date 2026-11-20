@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_quick_stool_name">Añadir deposición</string>
+    <string name="widget_quick_stool_label">Deposición</string>
+    <string name="widget_quick_stool_description">Un solo botón que abre el registro rápido de una deposición. No muestra datos.</string>
+    <string name="widget_week_name">Últimos 7 días</string>
+    <string name="widget_week_title">Últimos 7 días</string>
+    <string name="widget_week_summary">%1$s · Bristol medio %2$s</string>
+    <string name="widget_week_summary_none">Ninguna deposición en los últimos 7 días</string>
+    <string name="widget_week_empty">Abre IBD Journal una vez para rellenar este widget.</string>
+    <string name="widget_week_description">Deposiciones por día en los últimos 7 días (● = sangre). Visible en tu pantalla de inicio sin el PIN.</string>
+    <string name="weigh_in_channel">Recordatorio de pesaje</string>
+    <string name="weigh_in_title">Pesaje</string>
+    <string name="weigh_in_text">Es hora de pesarte. Escribe tu peso en kg aquí mismo.</string>
+    <string name="weigh_in_action">Introducir peso</string>
+    <string name="weigh_in_input_hint">Peso (kg)</string>
+    <string name="weigh_in_invalid">Eso no parece un peso en kg. Inténtalo de nuevo.</string>
+    <string name="weigh_in_recorded">Peso guardado: %1$.1f kg</string>
+    <string name="weigh_in_switch">Recordatorio semanal de pesaje</string>
+    <string name="weigh_in_switch_desc">Una notificación donde escribes tu peso, una vez por semana a las 9:00.</string>
+    <string name="weigh_in_day">Día de pesaje</string>
+</resources>

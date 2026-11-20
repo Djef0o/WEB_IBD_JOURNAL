@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_status_title">Copia de seguridad cifrada</string>
+    <string name="backup_status_never">Ninguna copia todavía</string>
+    <string name="backup_status_last">Última copia: %1$s</string>
+    <string name="backup_reminder_switch">Recordatorio de copia</string>
+    <string name="backup_reminder_desc">Te recuerda exportar una copia cifrada cuando la última tiene un mes.</string>
+    <string name="backup_reminder_title">Recordatorio de copia</string>
+    <string name="backup_reminder_text">Tu última copia cifrada es del %1$s. Exporta una nueva desde Ajustes: si olvidas tu PIN, solo una copia puede recuperar tu diario.</string>
+    <string name="backup_reminder_text_never">Todavía no has exportado una copia cifrada. Hazlo desde Ajustes: si olvidas tu PIN, solo una copia puede recuperar tu diario.</string>
+    <string name="backup_reminder_channel">Recordatorios de copia</string>
+    <string name="csv_export_title">Exportar datos (CSV)</string>
+    <string name="csv_export_desc">Archivos para hoja de cálculo en un archivo protegido con contraseña</string>
+    <string name="csv_warning_title">¿Exportar tus datos?</string>
+    <string name="csv_warning_text">Los archivos CSV contienen tus datos de salud. Se empaquetan en un archivo cifrado con una contraseña (AES-256) que elegirás en el siguiente paso. Ábrelo con 7-Zip, Keka u otra herramienta similar: el Explorador de Windows y algunas apps del teléfono no leen este formato. Quien tenga el archivo y la contraseña puede leer tus datos: no los envíes juntos.</string>
+    <string name="csv_warning_continue">Continuar</string>
+    <string name="csv_password_title">Contraseña del archivo</string>
+    <string name="csv_password_message">Elige una contraseña para proteger el archivo. La necesitarás para abrir los ficheros.</string>
+    <string name="csv_password_warning">Si olvidas esta contraseña, el archivo no se puede abrir. Esta exportación no se puede volver a importar en la app: para eso usa la copia cifrada.</string>
+    <string name="csv_export_done">Archivo CSV exportado.</string>
+    <string name="csv_export_failed">La exportación CSV ha fallado. No se ha guardado nada.</string>
+</resources>

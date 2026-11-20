@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="security_setup_title">Proteggi il tuo diario</string>
+    <string name="security_setup_text">Scegli un PIN. Il diario, le foto e i risultati sono cifrati con questo PIN su questo telefono. Se lo dimentichi, i dati non sono recuperabili: conserva i backup cifrati.</string>
+    <string name="security_upgrade_title">Proteggi il tuo diario</string>
+    <string name="security_upgrade_text">Questo aggiornamento cifra il diario, le foto e i risultati con un PIN. Sceglilo ora: senza non si può aprire nulla. Se lo dimentichi, i dati non sono recuperabili, quindi conserva i backup cifrati.</string>
+    <string name="pin_choose">Scegli un PIN</string>
+    <string name="pin_confirm">Conferma il PIN</string>
+    <string name="pin_enter">Inserisci il PIN</string>
+    <string name="pin_validate">Conferma</string>
+    <string name="pin_unlock">Sblocca</string>
+    <string name="pin_length_hint">Da %1$d a %2$d cifre</string>
+    <string name="pin_mismatch">I due PIN sono diversi. Riprova.</string>
+    <string name="pin_wrong">PIN errato</string>
+    <string name="pin_open_failed">Impossibile aprire il diario. Riprova.</string>
+    <string name="pin_locked_out">Troppi errori. Riprova tra %1$s</string>
+    <string name="pin_locked_out_later">Troppi errori. Attendi prima di riprovare.</string>
+    <string name="pin_digits_entered">%1$d cifre inserite</string>
+    <string name="pin_delete_digit">Cancella l\'ultima cifra</string>
+    <string name="pin_encrypting">Cifratura del diario in corso…</string>
+    <string name="pin_set_title">PIN impostato</string>
+    <string name="pin_set_text">Il tuo diario è cifrato.</string>
+    <string name="lock_title">IBD Journal è bloccato</string>
+    <string name="pin_forgot">PIN dimenticato?</string>
+    <string name="pin_forgot_title">Cancellare tutti i dati?</string>
+    <string name="pin_forgot_text">Senza il PIN il diario non può essere decifrato. La cancellazione elimina tutte le voci, foto, terapie e risultati da questo telefono. Potrai poi ripristinare un backup cifrato.</string>
+    <string name="pin_forgot_confirm">Cancella tutto</string>
+    <string name="biometric_offer_title">Sbloccare con l\'impronta?</string>
+    <string name="biometric_offer_text">Usa l\'impronta digitale invece di digitare il PIN. Il PIN resta valido e serve se le impronte registrate sul telefono cambiano.</string>
+    <string name="biometric_enable">Usa l\'impronta</string>
+    <string name="biometric_skip">Non ora</string>
+    <string name="biometric_enable_prompt">Conferma l\'impronta per attivarla</string>
+    <string name="biometric_unlock_prompt">Sblocca IBD Journal</string>
+    <string name="biometric_use_pin">Usa il PIN</string>
+    <string name="biometric_unlock_button">Sblocca con l\'impronta</string>
+    <string name="biometric_invalidated">Le impronte del telefono sono cambiate: lo sblocco con impronta è disattivato. Inserisci il PIN.</string>
+    <string name="settings_security">Sicurezza</string>
+    <string name="settings_change_pin">Cambia il PIN</string>
+    <string name="settings_change_pin_current">Inserisci il PIN attuale</string>
+    <string name="pin_changed">PIN modificato</string>
+    <string name="settings_biometric">Sblocco con impronta</string>
+    <string name="settings_biometric_desc">Apri il diario con l\'impronta digitale</string>
+</resources>

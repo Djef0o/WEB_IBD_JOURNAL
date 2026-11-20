@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flaremark_legend">Giorni di riacutizzazione</string>
+    <string name="flaremark_day_desc">%1$s, giorno di riacutizzazione</string>
+    <string name="flaremark_day">Riacutizzazione · giorno %1$d</string>
+    <string name="flaremark_hospitalized">Ricovero ospedaliero</string>
+    <string name="flaremark_home">Riacutizzazione in corso dal %1$s (giorno %2$d)</string>
+    <string name="flaremark_chart_legend">Riacutizzazione</string>
+</resources>

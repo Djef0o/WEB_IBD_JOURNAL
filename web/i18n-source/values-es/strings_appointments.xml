@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointmentui_title">Citas</string>
+    <string name="appointmentui_add">Añadir una cita</string>
+    <string name="appointmentui_edit">Editar la cita</string>
+    <string name="appointmentui_empty">No hay citas registradas. Añade tus consultas para recibir un recordatorio.</string>
+    <string name="appointmentui_past">Citas pasadas (%1$d)</string>
+    <string name="appointmentui_show_past">Mostrar las citas pasadas</string>
+    <string name="appointmentui_hide_past">Ocultar las citas pasadas</string>
+    <string name="appointmentui_date">Fecha</string>
+    <string name="appointmentui_time">Hora</string>
+    <string name="appointmentui_place">Médico o dirección</string>
+    <string name="appointmentui_note">Nota</string>
+    <string name="appointmentui_reminders">Recordatorios</string>
+    <string name="appointmentui_reminders_hint">Notificación la víspera a las 18:00 y 2 horas antes</string>
+</resources>

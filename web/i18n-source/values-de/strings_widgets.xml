@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_quick_stool_name">Stuhl hinzufügen</string>
+    <string name="widget_quick_stool_label">Stuhl</string>
+    <string name="widget_quick_stool_description">Ein einziger Button, der die schnelle Stuhleingabe öffnet. Zeigt keine Daten.</string>
+    <string name="widget_week_name">Letzte 7 Tage</string>
+    <string name="widget_week_title">Letzte 7 Tage</string>
+    <string name="widget_week_summary">%1$s · Ø Bristol %2$s</string>
+    <string name="widget_week_summary_none">Kein Stuhl in den letzten 7 Tagen</string>
+    <string name="widget_week_empty">Öffne IBD Journal einmal, um dieses Widget zu füllen.</string>
+    <string name="widget_week_description">Stuhlgänge pro Tag der letzten 7 Tage (● = Blut). Auf deinem Startbildschirm ohne PIN sichtbar.</string>
+    <string name="weigh_in_channel">Wiege-Erinnerung</string>
+    <string name="weigh_in_title">Wiegen</string>
+    <string name="weigh_in_text">Zeit, dich zu wiegen. Gib dein Gewicht in kg gleich hier ein.</string>
+    <string name="weigh_in_action">Gewicht eingeben</string>
+    <string name="weigh_in_input_hint">Gewicht (kg)</string>
+    <string name="weigh_in_invalid">Das sieht nicht nach einem Gewicht in kg aus. Versuch es noch einmal.</string>
+    <string name="weigh_in_recorded">Gewicht gespeichert: %1$.1f kg</string>
+    <string name="weigh_in_switch">Wöchentliche Wiege-Erinnerung</string>
+    <string name="weigh_in_switch_desc">Eine Benachrichtigung, in der du dein Gewicht eingibst, einmal pro Woche um 9:00 Uhr.</string>
+    <string name="weigh_in_day">Wiegetag</string>
+</resources>

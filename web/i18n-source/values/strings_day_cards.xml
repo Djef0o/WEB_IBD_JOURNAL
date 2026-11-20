@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="day_card_none">Nothing noted</string>
+    <string name="day_card_expand">Expand</string>
+    <string name="day_card_collapse">Collapse</string>
+</resources>

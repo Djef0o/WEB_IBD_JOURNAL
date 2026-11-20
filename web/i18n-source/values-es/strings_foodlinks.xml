@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analysis: meals and symptoms -->
+    <string name="foodlink_title">Comidas y síntomas</string>
+    <string name="foodlink_row">Seguido de un mal día %1$d de %2$d veces (habitual: %3$d %%)</string>
+    <string name="foodlink_empty">Un alimento aparece aquí cuando lo has comido al menos %1$d veces con deposiciones anotadas el mismo día o el siguiente.</string>
+    <string name="foodlink_caveat">Una observación sobre lo que anotaste, no una causa. Habla con tu médico o dietista antes de quitar alimentos.</string>
+    <string name="foodlink_definition">Mal día: deposición líquida (Bristol 6-7), sangre o dolor de 3 o más, el mismo día o el siguiente.</string>
+</resources>

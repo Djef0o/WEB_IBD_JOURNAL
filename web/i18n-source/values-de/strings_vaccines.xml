@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vaccine_title">Impfungen</string>
+    <string name="vaccine_add">Impfung hinzufügen</string>
+    <string name="vaccine_edit">Impfung bearbeiten</string>
+    <string name="vaccine_empty">Keine Impfung erfasst. Trag deine Impfungen und das Datum der nächsten Dosis oder Auffrischung ein.</string>
+    <string name="vaccine_live_notice">Lebendimpfstoffe werden unter immunsuppressiver Behandlung in der Regel nicht empfohlen: Sprich vor jeder Impfung mit deiner Ärztin oder deinem Arzt.</string>
+    <string name="vaccine_type_influenza">Grippe (Influenza)</string>
+    <string name="vaccine_type_pneumococcal">Pneumokokken</string>
+    <string name="vaccine_type_covid19">COVID-19</string>
+    <string name="vaccine_type_hepatitis_b">Hepatitis B</string>
+    <string name="vaccine_type_hpv">HPV</string>
+    <string name="vaccine_type_zoster">Gürtelrose (Zoster)</string>
+    <string name="vaccine_type_tetanus">Tetanus</string>
+    <string name="vaccine_type_other">Andere</string>
+    <string name="vaccine_type">Impfstoff</string>
+    <string name="vaccine_date">Impfdatum</string>
+    <string name="vaccine_next_due">Nächste Dosis oder Auffrischung</string>
+    <string name="vaccine_next_none">Nicht geplant</string>
+    <string name="vaccine_next_before_date">Die nächste Dosis muss nach dem Impfdatum liegen</string>
+    <string name="vaccine_note">Notiz</string>
+    <string name="vaccine_last">Letzte Dosis: %1$s</string>
+    <string name="vaccine_next">Nächste fällig: %1$s</string>
+    <string name="vaccine_overdue">Überfällig: war fällig am %1$s</string>
+    <plurals name="vaccine_doses">
+        <item quantity="one">%1$d Dosis</item>
+        <item quantity="other">%1$d Dosen</item>
+    </plurals>
+    <string name="vaccine_show_doses">Alle Dosen anzeigen</string>
+    <string name="vaccine_hide_doses">Dosen ausblenden</string>
+</resources>

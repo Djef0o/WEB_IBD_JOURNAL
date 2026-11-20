@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="security_setup_title">Protégez votre journal</string>
+    <string name="security_setup_text">Choisissez un code PIN. Votre journal, vos photos et vos résultats sont chiffrés avec ce code sur ce téléphone. En cas d\'oubli, les données sont irrécupérables : conservez vos sauvegardes chiffrées.</string>
+    <string name="security_upgrade_title">Protégez votre journal</string>
+    <string name="security_upgrade_text">Cette mise à jour chiffre votre journal, vos photos et vos résultats avec un code PIN. Choisissez-le maintenant : sans lui, rien ne peut être ouvert. En cas d\'oubli, les données sont irrécupérables, conservez donc vos sauvegardes chiffrées.</string>
+    <string name="pin_choose">Choisissez un code PIN</string>
+    <string name="pin_confirm">Confirmez votre code PIN</string>
+    <string name="pin_enter">Saisissez votre code PIN</string>
+    <string name="pin_validate">Confirmer</string>
+    <string name="pin_unlock">Déverrouiller</string>
+    <string name="pin_length_hint">%1$d à %2$d chiffres</string>
+    <string name="pin_mismatch">Les deux codes sont différents. Réessayez.</string>
+    <string name="pin_wrong">Code PIN incorrect</string>
+    <string name="pin_open_failed">Impossible d\'ouvrir le journal. Réessayez.</string>
+    <string name="pin_locked_out">Trop d\'erreurs. Réessayez dans %1$s</string>
+    <string name="pin_locked_out_later">Trop d\'erreurs. Patientez avant de réessayer.</string>
+    <string name="pin_digits_entered">%1$d chiffres saisis</string>
+    <string name="pin_delete_digit">Effacer le dernier chiffre</string>
+    <string name="pin_encrypting">Chiffrement de votre journal…</string>
+    <string name="pin_set_title">Code PIN défini</string>
+    <string name="pin_set_text">Votre journal est chiffré.</string>
+    <string name="lock_title">IBD Journal est verrouillé</string>
+    <string name="pin_forgot">Code PIN oublié ?</string>
+    <string name="pin_forgot_title">Effacer toutes les données ?</string>
+    <string name="pin_forgot_text">Sans le code PIN, le journal ne peut pas être déchiffré. L\'effacement supprime toutes les entrées, photos, traitements et résultats de ce téléphone. Vous pourrez ensuite restaurer une sauvegarde chiffrée.</string>
+    <string name="pin_forgot_confirm">Tout effacer</string>
+    <string name="biometric_offer_title">Déverrouiller par empreinte ?</string>
+    <string name="biometric_offer_text">Utilisez votre empreinte au lieu de saisir le code. Le code PIN reste valable, et il sera nécessaire si les empreintes enregistrées sur le téléphone changent.</string>
+    <string name="biometric_enable">Utiliser l\'empreinte</string>
+    <string name="biometric_skip">Plus tard</string>
+    <string name="biometric_enable_prompt">Confirmez votre empreinte pour l\'activer</string>
+    <string name="biometric_unlock_prompt">Déverrouiller IBD Journal</string>
+    <string name="biometric_use_pin">Utiliser le code</string>
+    <string name="biometric_unlock_button">Déverrouiller par empreinte</string>
+    <string name="biometric_invalidated">Les empreintes du téléphone ont changé : le déverrouillage par empreinte est désactivé. Saisissez votre code PIN.</string>
+    <string name="settings_security">Sécurité</string>
+    <string name="settings_change_pin">Changer le code PIN</string>
+    <string name="settings_change_pin_current">Saisissez votre code PIN actuel</string>
+    <string name="pin_changed">Code PIN modifié</string>
+    <string name="settings_biometric">Déverrouillage par empreinte</string>
+    <string name="settings_biometric_desc">Ouvrir le journal avec votre empreinte</string>
+</resources>

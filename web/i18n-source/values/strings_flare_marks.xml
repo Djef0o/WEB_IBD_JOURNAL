@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flaremark_legend">Flare days</string>
+    <string name="flaremark_day_desc">%1$s, flare day</string>
+    <string name="flaremark_day">Flare · day %1$d</string>
+    <string name="flaremark_hospitalized">Hospitalized</string>
+    <string name="flaremark_home">Flare in progress since %1$s (day %2$d)</string>
+    <string name="flaremark_chart_legend">Flare</string>
+</resources>

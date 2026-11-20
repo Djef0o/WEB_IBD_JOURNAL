@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_field">Tomas en reserva (opcional)</string>
+    <string name="stock_field_hint">Se descuenta cada vez que confirmas una toma. Cámbialo cuando recojas una caja nueva.</string>
+    <string name="stock_low_field">Avísame cuando queden</string>
+    <string name="stock_low_hint">Por defecto: 7.</string>
+    <string name="stock_channel">Reserva baja</string>
+    <string name="stock_notification_title">Te queda poco</string>
+    <string name="stock_notification_text">%1$s: quedan %2$s. Recuerda hacer el pedido.</string>
+    <string name="stock_status_low">%1$s · pedir pronto</string>
+    <plurals name="stock_intakes">
+        <item quantity="one">%d toma</item>
+        <item quantity="many">%d tomas</item>
+        <item quantity="other">%d tomas</item>
+    </plurals>
+    <plurals name="stock_left">
+        <item quantity="one">queda %d toma</item>
+        <item quantity="many">quedan %d tomas</item>
+        <item quantity="other">quedan %d tomas</item>
+    </plurals>
+</resources>

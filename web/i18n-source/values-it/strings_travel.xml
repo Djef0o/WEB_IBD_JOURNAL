@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="travel_title">Viaggio</string>
+    <string name="travel_row_title">Pacchetto viaggio</string>
+    <string name="travel_row_desc">Farmaci da portare, lettera per il tuo medico, tessera di urgenza</string>
+    <string name="travel_departure">Partenza</string>
+    <string name="travel_return">Ritorno</string>
+    <string name="travel_margin">Margine di sicurezza</string>
+    <string name="travel_margin_hint">Giorni di terapia in più, in caso di ritardo.</string>
+    <string name="travel_destination">Destinazione (facoltativo)</string>
+    <string name="travel_language">Lingua dei documenti</string>
+    <string name="travel_list_title">Farmaci da portare</string>
+    <string name="travel_line_detail">%1$d per il viaggio + %2$d di margine</string>
+    <string name="travel_line_missing">La tua scorta contata copre %1$d: ne mancano %2$d</string>
+    <string name="travel_empty">Nessuna terapia ha assunzioni previste in queste date.</string>
+    <string name="travel_vaccines">Vaccini: chiedi al tuo medico 6-8 settimane prima di partire. I vaccini vivi in genere non sono raccomandati durante una terapia immunosoppressiva.</string>
+    <string name="travel_disclaimer">La lettera è un modello: diventa un certificato solo quando il tuo medico la data, la firma e la timbra. Informati sulle regole della tua destinazione per i farmaci (ambasciata o autorità sanitaria).</string>
+    <string name="travel_create">Crea il pacchetto viaggio (PDF)</string>
+    <string name="travel_creating">Creazione…</string>
+    <string name="travel_failed">Impossibile creare il PDF.</string>
+    <string name="travel_share_subject">Pacchetto viaggio</string>
+    <string name="travel_pdf_title">Elenco dei farmaci per il viaggio</string>
+    <string name="travel_pdf_trip">Viaggio: dal %1$s al %2$s (%3$s)</string>
+    <string name="travel_pdf_destination">Destinazione: %1$s</string>
+    <string name="travel_pdf_list_title">Farmaci portati</string>
+    <string name="travel_pdf_col_medication">Farmaco</string>
+    <string name="travel_pdf_col_schedule">Assunzione</string>
+    <string name="travel_pdf_col_quantity">Quantità da portare</string>
+    <string name="travel_pdf_empty">Nessuna terapia prevista in queste date.</string>
+    <string name="travel_pdf_margin_note">Le quantità includono un margine di %1$d giorni dopo la data di ritorno.</string>
+    <string name="travel_pdf_carry_note">Conservare i farmaci nella confezione originale, nel bagaglio a mano, con questo elenco e le prescrizioni.</string>
+    <string name="travel_pdf_schedule">%1$s alle %2$s</string>
+    <string name="travel_pdf_schedule_once">Assunzione singola</string>
+    <string name="travel_pdf_card_empty">Compila le informazioni di emergenza nell\'app (Impostazioni, Emergenza) per vederle qui.</string>
+    <string name="travel_cert_title">Lettera per viaggiare con farmaci</string>
+    <string name="travel_cert_greeting">A chi di competenza,</string>
+    <string name="travel_cert_body">%1$s, nato/a il %2$s, è in cura per %3$s e deve portare con sé i farmaci elencati nella tabella allegata, per uso strettamente personale, durante un viaggio dal %4$s al %5$s.</string>
+    <string name="travel_cert_list_ref">Le quantità della tabella coprono il viaggio più %1$d giorni di margine in caso di ritardo.</string>
+    <string name="travel_cert_customs">Si prega di lasciare alla persona i propri farmaci, nella confezione originale, con sé (comprese le terapie iniettabili e il materiale per iniettarle).</string>
+    <string name="travel_cert_sign_place">Data e luogo: ……………………………………………</string>
+    <string name="travel_cert_sign_doctor">Nome, firma e timbro del medico:</string>
+    <string name="travel_cert_disclaimer">Preparato dal paziente con l\'app IBD Journal. Diventa un certificato medico solo quando il medico curante lo data, lo firma e lo timbra.</string>
+    <string name="travel_cert_condition_default">una malattia infiammatoria cronica intestinale (malattia di Crohn o colite ulcerosa)</string>
+    <plurals name="travel_margin_days">
+        <item quantity="one">%d giorno</item>
+        <item quantity="many">%d giorni</item>
+        <item quantity="other">%d giorni</item>
+    </plurals>
+    <plurals name="travel_intakes">
+        <item quantity="one">%d assunzione</item>
+        <item quantity="many">%d assunzioni</item>
+        <item quantity="other">%d assunzioni</item>
+    </plurals>
+    <plurals name="travel_pdf_days">
+        <item quantity="one">%d giorno</item>
+        <item quantity="many">%d giorni</item>
+        <item quantity="other">%d giorni</item>
+    </plurals>
+    <plurals name="travel_pdf_intakes">
+        <item quantity="one">%d assunzione</item>
+        <item quantity="many">%d assunzioni</item>
+        <item quantity="other">%d assunzioni</item>
+    </plurals>
+</resources>

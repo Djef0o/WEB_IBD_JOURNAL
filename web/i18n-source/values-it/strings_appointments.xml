@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointmentui_title">Appuntamenti</string>
+    <string name="appointmentui_add">Aggiungi un appuntamento</string>
+    <string name="appointmentui_edit">Modifica l\'appuntamento</string>
+    <string name="appointmentui_empty">Nessun appuntamento registrato. Aggiungi le tue visite per ricevere un promemoria.</string>
+    <string name="appointmentui_past">Appuntamenti passati (%1$d)</string>
+    <string name="appointmentui_show_past">Mostra gli appuntamenti passati</string>
+    <string name="appointmentui_hide_past">Nascondi gli appuntamenti passati</string>
+    <string name="appointmentui_date">Data</string>
+    <string name="appointmentui_time">Ora</string>
+    <string name="appointmentui_place">Medico o indirizzo</string>
+    <string name="appointmentui_note">Nota</string>
+    <string name="appointmentui_reminders">Promemoria</string>
+    <string name="appointmentui_reminders_hint">Notifica la sera prima alle 18:00 e 2 ore prima</string>
+</resources>

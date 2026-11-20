@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="steroid_title">Ciclos de corticoides</string>
+    <string name="steroid_add">Adicionar um ciclo</string>
+    <string name="steroid_edit">Editar o ciclo</string>
+    <string name="steroid_empty">Nenhum ciclo de corticoides registrado. Anote seus ciclos com as etapas de dose para acompanhar a dose tomada até agora.</string>
+    <string name="steroid_drug_prednisone">Prednisona</string>
+    <string name="steroid_drug_prednisolone">Prednisolona</string>
+    <string name="steroid_drug_methylprednisolone">Metilprednisolona</string>
+    <string name="steroid_drug_budesonide">Budesonida</string>
+    <string name="steroid_drug">Medicamento</string>
+    <string name="steroid_start">Data de início</string>
+    <string name="steroid_steps">Etapas de dose</string>
+    <string name="steroid_steps_hint">Dose diária durante alguns dias, depois a etapa seguinte.</string>
+    <string name="steroid_dose">Dose diária</string>
+    <string name="steroid_mg">mg</string>
+    <string name="steroid_days">Dias</string>
+    <string name="steroid_remove_step">Remover esta etapa</string>
+    <string name="steroid_add_step">Adicionar uma etapa</string>
+    <string name="steroid_steps_invalid">A dose deve ser maior que 0 mg e a duração entre 1 e 365 dias.</string>
+    <plurals name="steroid_summary">
+        <item quantity="one">Total: %1$s mg em %2$d dia, termina em %3$s</item>
+        <item quantity="many">Total: %1$s mg em %2$d dias, termina em %3$s</item>
+        <item quantity="other">Total: %1$s mg em %2$d dias, termina em %3$s</item>
+    </plurals>
+    <string name="steroid_note">Observação</string>
+    <string name="steroid_today_dose">Hoje: %1$s mg</string>
+    <string name="steroid_cumulative">Tomado até agora: %1$s mg</string>
+    <string name="steroid_planned_end">Término previsto: %1$s</string>
+    <plurals name="steroid_planned_total">
+        <item quantity="one">Total previsto: %1$s mg em %2$d dia</item>
+        <item quantity="many">Total previsto: %1$s mg em %2$d dias</item>
+        <item quantity="other">Total previsto: %1$s mg em %2$d dias</item>
+    </plurals>
+    <string name="steroid_row_summary">%1$s – %2$s · %3$s mg</string>
+    <string name="steroid_not_started">Ainda não começou</string>
+</resources>

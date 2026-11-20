@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="emergency_title">Emergency</string>
+    <string name="emergency_info_row">Emergency information</string>
+    <string name="emergency_info_filled">Filled in</string>
+    <string name="emergency_info_empty">Not filled in yet</string>
+    <string name="emergency_lock_switch">Show on the lock screen</string>
+    <string name="emergency_lock_warning">Readable without the PIN: anyone holding your phone can see your name, date of birth, diagnosis, treatments and the information above.</string>
+    <string name="emergency_lock_confirm_title">Show on the lock screen?</string>
+    <string name="emergency_lock_confirm_text">Without the PIN, anyone holding your phone will be able to read your name, date of birth, diagnosis, treatments, allergies, doctor, emergency contact and notes. Your journal itself stays locked. You can turn this off at any time.</string>
+    <string name="emergency_lock_confirm">Show</string>
+    <string name="emergency_preview_sheet">Show emergency sheet</string>
+    <string name="emergency_preview_card">Show urgent-need card</string>
+    <string name="emergency_preview_card_sub">Nothing personal appears on it</string>
+    <string name="emergency_edit_title">Emergency information</string>
+    <string name="emergency_edit_help">Your name, date of birth, diagnosis and treatments come from your profile and your treatments list.</string>
+    <string name="emergency_allergies">Allergies</string>
+    <string name="emergency_allergies_hint">e.g. penicillin, latex</string>
+    <string name="emergency_doctor_name">Doctor</string>
+    <string name="emergency_doctor_phone">Doctor\'s phone number</string>
+    <string name="emergency_contact_name">Emergency contact</string>
+    <string name="emergency_contact_phone">Contact\'s phone number</string>
+    <string name="emergency_notes">Notes</string>
+    <string name="emergency_notes_hint">e.g. medical history, implanted devices</string>
+    <string name="emergency_sheet_title">Emergency information</string>
+    <string name="emergency_sheet_empty">Nothing has been filled in yet. Add this information in Settings, under Emergency.</string>
+    <string name="emergency_field_name">Name</string>
+    <string name="emergency_field_born">Date of birth</string>
+    <string name="emergency_field_allergies">Allergies</string>
+    <string name="emergency_field_treatments">Treatments</string>
+    <string name="emergency_field_doctor">Doctor</string>
+    <string name="emergency_field_contact">Emergency contact</string>
+    <string name="emergency_field_notes">Notes</string>
+    <string name="emergency_chooser_title">Emergency</string>
+    <string name="emergency_open_card">Urgent-need card</string>
+    <string name="emergency_open_sheet">Emergency sheet</string>
+    <string name="urgent_card_title">I urgently need a toilet</string>
+    <string name="urgent_card_text">I have a chronic inflammatory bowel disease (Crohn\'s disease / ulcerative colitis). I urgently need to use a toilet. Thank you for letting me through.</string>
+    <string name="diagnosis_title">Diagnosis</string>
+    <string name="diagnosis_crohn">Crohn\'s disease</string>
+    <string name="diagnosis_uc">Ulcerative colitis</string>
+    <string name="diagnosis_other">Other / not specified</string>
+    <string name="diagnosis_other_short">Other</string>
+    <string name="diagnosis_missing">Diagnosis not set</string>
+</resources>

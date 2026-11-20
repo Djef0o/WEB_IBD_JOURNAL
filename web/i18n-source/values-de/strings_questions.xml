@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_title">Fragen an meine Ärztin oder meinen Arzt</string>
+    <string name="question_add">Frage hinzufügen</string>
+    <string name="question_edit">Frage bearbeiten</string>
+    <string name="question_field">Frage</string>
+    <string name="question_empty">Notiere, was du beim nächsten Termin fragen möchtest; offene Fragen werden deinem Bericht für die Ärztin oder den Arzt hinzugefügt.</string>
+    <string name="question_clear_done">Erledigte entfernen</string>
+</resources>

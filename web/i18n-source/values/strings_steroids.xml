@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="steroid_title">Steroid courses</string>
+    <string name="steroid_add">Add a steroid course</string>
+    <string name="steroid_edit">Edit steroid course</string>
+    <string name="steroid_empty">No steroid course recorded. Note your corticosteroid courses with their dose steps to follow the dose taken so far.</string>
+    <string name="steroid_drug_prednisone">Prednisone</string>
+    <string name="steroid_drug_prednisolone">Prednisolone</string>
+    <string name="steroid_drug_methylprednisolone">Methylprednisolone</string>
+    <string name="steroid_drug_budesonide">Budesonide</string>
+    <string name="steroid_drug">Drug</string>
+    <string name="steroid_start">Start date</string>
+    <string name="steroid_steps">Dose steps</string>
+    <string name="steroid_steps_hint">Daily dose for a number of days, then the next step.</string>
+    <string name="steroid_dose">Daily dose</string>
+    <string name="steroid_mg">mg</string>
+    <string name="steroid_days">Days</string>
+    <string name="steroid_remove_step">Remove this step</string>
+    <string name="steroid_add_step">Add a step</string>
+    <string name="steroid_steps_invalid">The dose must be above 0 mg and the duration between 1 and 365 days.</string>
+    <plurals name="steroid_summary">
+        <item quantity="one">Total %1$s mg over %2$d day, ends %3$s</item>
+        <item quantity="other">Total %1$s mg over %2$d days, ends %3$s</item>
+    </plurals>
+    <string name="steroid_note">Note</string>
+    <string name="steroid_today_dose">Today: %1$s mg</string>
+    <string name="steroid_cumulative">Taken so far: %1$s mg</string>
+    <string name="steroid_planned_end">Planned end: %1$s</string>
+    <plurals name="steroid_planned_total">
+        <item quantity="one">Planned total: %1$s mg over %2$d day</item>
+        <item quantity="other">Planned total: %1$s mg over %2$d days</item>
+    </plurals>
+    <string name="steroid_row_summary">%1$s – %2$s · %3$s mg</string>
+    <string name="steroid_not_started">Not started yet</string>
+</resources>

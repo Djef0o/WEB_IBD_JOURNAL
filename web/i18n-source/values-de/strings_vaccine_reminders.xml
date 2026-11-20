@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vaccine_reminder_switch">Erinnern</string>
+    <string name="vaccine_reminder_hint">Benachrichtigung eine Woche vor dem geplanten Datum und am Tag selbst, um 9:00 Uhr.</string>
+    <string name="vaccine_reminder_title">Impferinnerung</string>
+    <string name="vaccine_reminder_text">%1$s: nächste Dosis geplant am %2$s.</string>
+    <string name="vaccine_reminder_channel">Impferinnerungen</string>
+</resources>

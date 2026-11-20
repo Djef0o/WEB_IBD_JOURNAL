@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="emergency_title">Emergência</string>
+    <string name="emergency_info_row">Informações de emergência</string>
+    <string name="emergency_info_filled">Preenchidas</string>
+    <string name="emergency_info_empty">Ainda não preenchidas</string>
+    <string name="emergency_lock_switch">Mostrar na tela de bloqueio</string>
+    <string name="emergency_lock_warning">Legível sem o PIN: qualquer pessoa com seu celular pode ver seu nome, data de nascimento, diagnóstico, tratamentos e as informações acima.</string>
+    <string name="emergency_lock_confirm_title">Mostrar na tela de bloqueio?</string>
+    <string name="emergency_lock_confirm_text">Sem o PIN, qualquer pessoa com seu celular poderá ler seu nome, data de nascimento, diagnóstico, tratamentos, alergias, médico, contato de emergência e anotações. O diário em si continua bloqueado. Você pode desativar isso a qualquer momento.</string>
+    <string name="emergency_lock_confirm">Mostrar</string>
+    <string name="emergency_preview_sheet">Mostrar a ficha de emergência</string>
+    <string name="emergency_preview_card">Mostrar o cartão de urgência</string>
+    <string name="emergency_preview_card_sub">Nenhum dado pessoal aparece nele</string>
+    <string name="emergency_edit_title">Informações de emergência</string>
+    <string name="emergency_edit_help">Seu nome, data de nascimento, diagnóstico e tratamentos vêm do seu perfil e da sua lista de tratamentos.</string>
+    <string name="emergency_allergies">Alergias</string>
+    <string name="emergency_allergies_hint">ex.: penicilina, látex</string>
+    <string name="emergency_doctor_name">Médico</string>
+    <string name="emergency_doctor_phone">Telefone do médico</string>
+    <string name="emergency_contact_name">Contato de emergência</string>
+    <string name="emergency_contact_phone">Telefone do contato</string>
+    <string name="emergency_notes">Anotações</string>
+    <string name="emergency_notes_hint">ex.: histórico, dispositivos implantados</string>
+    <string name="emergency_sheet_title">Informações de emergência</string>
+    <string name="emergency_sheet_empty">Nada foi preenchido ainda. Adicione estas informações em Ajustes, em Emergência.</string>
+    <string name="emergency_field_name">Nome</string>
+    <string name="emergency_field_born">Data de nascimento</string>
+    <string name="emergency_field_allergies">Alergias</string>
+    <string name="emergency_field_treatments">Tratamentos</string>
+    <string name="emergency_field_doctor">Médico</string>
+    <string name="emergency_field_contact">Contato de emergência</string>
+    <string name="emergency_field_notes">Anotações</string>
+    <string name="emergency_chooser_title">Emergência</string>
+    <string name="emergency_open_card">Cartão de urgência</string>
+    <string name="emergency_open_sheet">Ficha de emergência</string>
+    <string name="urgent_card_title">Preciso urgentemente de um banheiro</string>
+    <string name="urgent_card_text">Tenho uma doença inflamatória intestinal crônica (doença de Crohn / retocolite ulcerativa). Preciso urgentemente usar um banheiro. Obrigado(a) por me deixar passar.</string>
+    <string name="diagnosis_title">Diagnóstico</string>
+    <string name="diagnosis_crohn">Doença de Crohn</string>
+    <string name="diagnosis_uc">Retocolite ulcerativa</string>
+    <string name="diagnosis_other">Outro / não especificado</string>
+    <string name="diagnosis_other_short">Outro</string>
+    <string name="diagnosis_missing">Diagnóstico não informado</string>
+</resources>

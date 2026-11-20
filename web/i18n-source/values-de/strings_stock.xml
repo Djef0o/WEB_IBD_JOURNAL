@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_field">Einnahmen auf Vorrat (optional)</string>
+    <string name="stock_field_hint">Wird bei jeder bestätigten Einnahme abgezogen. Ändere den Wert, wenn du eine neue Packung holst.</string>
+    <string name="stock_low_field">Erinnere mich, wenn nur noch so viele übrig sind</string>
+    <string name="stock_low_hint">Standard: 7.</string>
+    <string name="stock_channel">Niedriger Vorrat</string>
+    <string name="stock_notification_title">Vorrat wird knapp</string>
+    <string name="stock_notification_text">%1$s: noch %2$s. Denk ans Nachbestellen.</string>
+    <string name="stock_status_low">%1$s · bald nachbestellen</string>
+    <plurals name="stock_intakes">
+        <item quantity="one">%d Einnahme</item>
+        <item quantity="other">%d Einnahmen</item>
+    </plurals>
+    <plurals name="stock_left">
+        <item quantity="one">noch %d Einnahme</item>
+        <item quantity="other">noch %d Einnahmen</item>
+    </plurals>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="score_title">Aktivitätsscore</string>
+    <string name="score_add">Score hinzufügen</string>
+    <string name="score_edit">Score bearbeiten</string>
+    <string name="score_empty">Noch kein Score. Fülle einen kurzen Fragebogen aus, um zu verfolgen, wie aktiv sich deine Erkrankung anfühlt.</string>
+    <string name="score_hbi">HBI</string>
+    <string name="score_sccai">SCCAI</string>
+    <string name="score_hbi_full">Harvey-Bradshaw-Index (Morbus Crohn)</string>
+    <string name="score_sccai_full">Simple Clinical Colitis Activity Index (Colitis ulcerosa)</string>
+    <string name="score_headline">%1$s: %2$d</string>
+    <string name="score_level_remission">Remission</string>
+    <string name="score_level_mild">Leichte Aktivität</string>
+    <string name="score_level_moderate">Mäßige Aktivität</string>
+    <string name="score_level_severe">Schwere Aktivität</string>
+    <string name="score_level_active">Aktive Erkrankung</string>
+    <string name="score_latest">Score vom %1$s</string>
+    <string name="score_change">%1$s seit %2$s</string>
+    <string name="score_unchanged">Unverändert seit %1$s</string>
+    <string name="score_history">Verlauf</string>
+    <string name="score_chart_description">Verlauf des %1$s-Scores</string>
+    <string name="score_disclaimer">Selbst eingeschätzter Score, zur Besprechung mit deiner Ärztin oder deinem Arzt.</string>
+    <string name="score_date">Datum</string>
+    <string name="score_prefilled">Aus deinen Stuhlgängen des Tages vorausgefüllt</string>
+    <string name="score_total">Gesamt: %1$d</string>
+    <string name="score_stools_less">Ein Stuhlgang weniger</string>
+    <string name="score_stools_more">Ein Stuhlgang mehr</string>
+    <string name="score_q_wellbeing">Allgemeinbefinden</string>
+    <string name="score_q_pain">Bauchschmerzen</string>
+    <string name="score_q_liquid_stools">Flüssige oder weiche Stühle (Anzahl)</string>
+    <string name="score_q_mass">Tastbare Resistenz im Bauch</string>
+    <string name="score_q_complications">Komplikationen (Zutreffendes ankreuzen)</string>
+    <string name="score_q_stools_day">Stuhlgänge pro Tag</string>
+    <string name="score_q_stools_night">Stuhlgänge nachts</string>
+    <string name="score_q_urgency">Stuhldrang</string>
+    <string name="score_q_blood">Blut im Stuhl</string>
+    <string name="score_q_extracolonic">Weitere Beschwerden außerhalb des Darms (Zutreffendes ankreuzen)</string>
+    <string name="score_flag_arthralgia">Gelenkschmerzen (Arthralgie)</string>
+    <string name="score_flag_uveitis">Augenentzündung (Uveitis)</string>
+    <string name="score_flag_erythema_nodosum">Erythema nodosum</string>
+    <string name="score_flag_aphthous">Aphthen</string>
+    <string name="score_flag_pyoderma">Pyoderma gangraenosum</string>
+    <string name="score_flag_fissure">Analfissur</string>
+    <string name="score_flag_fistula">Neue Fistel</string>
+    <string name="score_flag_abscess">Abszess</string>
+    <string name="score_flag_joint_pains">Gelenkschmerzen</string>
+    <string-array name="score_options_wellbeing">
+        <item>Sehr gut</item>
+        <item>Etwas schlechter als sonst</item>
+        <item>Schlecht</item>
+        <item>Sehr schlecht</item>
+        <item>Schrecklich</item>
+    </string-array>
+    <string-array name="score_options_pain">
+        <item>Keine</item>
+        <item>Leicht</item>
+        <item>Mäßig</item>
+        <item>Stark</item>
+    </string-array>
+    <string-array name="score_options_mass">
+        <item>Keine</item>
+        <item>Fraglich</item>
+        <item>Eindeutig</item>
+        <item>Eindeutig und druckschmerzhaft</item>
+    </string-array>
+    <string-array name="score_options_stools_day">
+        <item>1–3</item>
+        <item>4–6</item>
+        <item>7–9</item>
+        <item>Mehr als 9</item>
+    </string-array>
+    <string-array name="score_options_stools_night">
+        <item>Keine</item>
+        <item>1–3</item>
+        <item>4–6</item>
+    </string-array>
+    <string-array name="score_options_urgency">
+        <item>Keiner</item>
+        <item>Eilig</item>
+        <item>Sofort</item>
+        <item>Inkontinenz</item>
+    </string-array>
+    <string-array name="score_options_blood">
+        <item>Kein</item>
+        <item>Spuren</item>
+        <item>Gelegentlich deutlich</item>
+        <item>Meist deutlich</item>
+    </string-array>
+</resources>

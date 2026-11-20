@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="travel_title">Reise</string>
+    <string name="travel_row_title">Reisepaket</string>
+    <string name="travel_row_desc">Mitzunehmende Medikamente, Brief für deinen Arzt, Notfallkarte</string>
+    <string name="travel_departure">Abreise</string>
+    <string name="travel_return">Rückkehr</string>
+    <string name="travel_margin">Sicherheitsreserve</string>
+    <string name="travel_margin_hint">Zusätzliche Behandlungstage, falls etwas dazwischenkommt.</string>
+    <string name="travel_destination">Reiseziel (optional)</string>
+    <string name="travel_language">Sprache der Dokumente</string>
+    <string name="travel_list_title">Mitzunehmende Medikamente</string>
+    <string name="travel_line_detail">%1$d für die Reise + %2$d Reserve</string>
+    <string name="travel_line_missing">Dein gezählter Vorrat deckt %1$d: es fehlen %2$d</string>
+    <string name="travel_empty">Für diesen Zeitraum ist keine Einnahme geplant.</string>
+    <string name="travel_vaccines">Impfungen: Frag deinen Arzt 6 bis 8 Wochen vor der Abreise. Lebendimpfstoffe werden unter immunsuppressiver Behandlung im Allgemeinen nicht empfohlen.</string>
+    <string name="travel_disclaimer">Der Brief ist eine Vorlage: Er wird erst durch Datum, Unterschrift und Stempel deines Arztes zur Bescheinigung. Informiere dich über die Regeln deines Reiseziels für Medikamente (Botschaft oder Gesundheitsbehörde).</string>
+    <string name="travel_create">Reisepaket erstellen (PDF)</string>
+    <string name="travel_creating">Wird erstellt…</string>
+    <string name="travel_failed">Das PDF konnte nicht erstellt werden.</string>
+    <string name="travel_share_subject">Reisepaket</string>
+    <string name="travel_pdf_title">Medikamentenliste für die Reise</string>
+    <string name="travel_pdf_trip">Reise: %1$s bis %2$s (%3$s)</string>
+    <string name="travel_pdf_destination">Reiseziel: %1$s</string>
+    <string name="travel_pdf_list_title">Mitgeführte Medikamente</string>
+    <string name="travel_pdf_col_medication">Medikament</string>
+    <string name="travel_pdf_col_schedule">Einnahme</string>
+    <string name="travel_pdf_col_quantity">Mitzunehmende Menge</string>
+    <string name="travel_pdf_empty">Für diesen Zeitraum ist keine Behandlung geplant.</string>
+    <string name="travel_pdf_margin_note">Die Mengen enthalten eine Reserve von %1$d Tagen nach dem Rückreisedatum.</string>
+    <string name="travel_pdf_carry_note">Medikamente in der Originalverpackung im Handgepäck aufbewahren, zusammen mit dieser Liste und den Rezepten.</string>
+    <string name="travel_pdf_schedule">%1$s um %2$s</string>
+    <string name="travel_pdf_schedule_once">Einmalige Einnahme</string>
+    <string name="travel_pdf_card_empty">Trage deine Notfallangaben in der App ein (Einstellungen, Notfall), damit sie hier erscheinen.</string>
+    <string name="travel_cert_title">Schreiben für die Reise mit Medikamenten</string>
+    <string name="travel_cert_greeting">Sehr geehrte Damen und Herren,</string>
+    <string name="travel_cert_body">%1$s, geboren am %2$s, wird wegen %3$s behandelt und muss die in der beigefügten Tabelle aufgeführten Medikamente für den streng persönlichen Gebrauch auf einer Reise vom %4$s bis zum %5$s mitführen.</string>
+    <string name="travel_cert_list_ref">Die Mengen in der Tabelle decken die Reise plus %1$d Tage Reserve für den Fall einer Verzögerung.</string>
+    <string name="travel_cert_customs">Bitte lassen Sie die Person ihre Medikamente in der Originalverpackung bei sich behalten (einschließlich Spritzen-Therapien und des Materials zum Spritzen).</string>
+    <string name="travel_cert_sign_place">Datum und Ort: ……………………………………………</string>
+    <string name="travel_cert_sign_doctor">Name, Unterschrift und Stempel des Arztes:</string>
+    <string name="travel_cert_disclaimer">Vom Patienten mit der App IBD Journal erstellt. Es wird erst durch Datum, Unterschrift und Stempel des behandelnden Arztes zu einer ärztlichen Bescheinigung.</string>
+    <string name="travel_cert_condition_default">einer chronisch-entzündlichen Darmerkrankung (Morbus Crohn oder Colitis ulcerosa)</string>
+    <plurals name="travel_margin_days">
+        <item quantity="one">%d Tag</item>
+        <item quantity="other">%d Tage</item>
+    </plurals>
+    <plurals name="travel_intakes">
+        <item quantity="one">%d Einnahme</item>
+        <item quantity="other">%d Einnahmen</item>
+    </plurals>
+    <plurals name="travel_pdf_days">
+        <item quantity="one">%d Tag</item>
+        <item quantity="other">%d Tage</item>
+    </plurals>
+    <plurals name="travel_pdf_intakes">
+        <item quantity="one">%d Einnahme</item>
+        <item quantity="other">%d Einnahmen</item>
+    </plurals>
+</resources>

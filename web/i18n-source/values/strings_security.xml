@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="security_setup_title">Protect your journal</string>
+    <string name="security_setup_text">Choose a PIN. Your journal, photos and results are encrypted with it on this phone. If you forget it, the data cannot be recovered: keep your encrypted backups.</string>
+    <string name="security_upgrade_title">Protect your journal</string>
+    <string name="security_upgrade_text">This update encrypts your journal, photos and results with a PIN. Choose it now: without it, nothing can be opened. If you forget it, the data cannot be recovered, so keep your encrypted backups.</string>
+    <string name="pin_choose">Choose a PIN</string>
+    <string name="pin_confirm">Confirm your PIN</string>
+    <string name="pin_enter">Enter your PIN</string>
+    <string name="pin_validate">Confirm</string>
+    <string name="pin_unlock">Unlock</string>
+    <string name="pin_length_hint">%1$d to %2$d digits</string>
+    <string name="pin_mismatch">The two PINs differ. Try again.</string>
+    <string name="pin_wrong">Wrong PIN</string>
+    <string name="pin_open_failed">Could not open the journal. Try again.</string>
+    <string name="pin_locked_out">Too many errors. Try again in %1$s</string>
+    <string name="pin_locked_out_later">Too many errors. Wait before trying again.</string>
+    <string name="pin_digits_entered">%1$d digits entered</string>
+    <string name="pin_delete_digit">Delete last digit</string>
+    <string name="pin_encrypting">Encrypting your journal…</string>
+    <string name="pin_set_title">PIN set</string>
+    <string name="pin_set_text">Your journal is encrypted.</string>
+    <string name="lock_title">IBD Journal is locked</string>
+    <string name="pin_forgot">PIN forgotten?</string>
+    <string name="pin_forgot_title">Erase all data?</string>
+    <string name="pin_forgot_text">Without the PIN, the journal cannot be decrypted. Erasing deletes all entries, photos, treatments and results from this phone. You can then restore an encrypted backup.</string>
+    <string name="pin_forgot_confirm">Erase everything</string>
+    <string name="biometric_offer_title">Unlock with your fingerprint?</string>
+    <string name="biometric_offer_text">Use your fingerprint instead of typing the PIN. The PIN still works, and you will need it after changing the fingerprints registered on the phone.</string>
+    <string name="biometric_enable">Use fingerprint</string>
+    <string name="biometric_skip">Not now</string>
+    <string name="biometric_enable_prompt">Confirm your fingerprint to enable it</string>
+    <string name="biometric_unlock_prompt">Unlock IBD Journal</string>
+    <string name="biometric_use_pin">Use PIN</string>
+    <string name="biometric_unlock_button">Unlock with fingerprint</string>
+    <string name="biometric_invalidated">The phone\'s fingerprints changed: fingerprint unlock is off. Enter your PIN.</string>
+    <string name="settings_security">Security</string>
+    <string name="settings_change_pin">Change PIN</string>
+    <string name="settings_change_pin_current">Enter your current PIN</string>
+    <string name="pin_changed">PIN changed</string>
+    <string name="settings_biometric">Fingerprint unlock</string>
+    <string name="settings_biometric_desc">Open the journal with your fingerprint</string>
+</resources>

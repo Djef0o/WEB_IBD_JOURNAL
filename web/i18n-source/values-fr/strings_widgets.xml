@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_quick_stool_name">Ajouter une selle</string>
+    <string name="widget_quick_stool_label">Selle</string>
+    <string name="widget_quick_stool_description">Un seul bouton qui ouvre la saisie rapide d\'une selle. N\'affiche aucune donnée.</string>
+    <string name="widget_week_name">7 derniers jours</string>
+    <string name="widget_week_title">7 derniers jours</string>
+    <string name="widget_week_summary">%1$s · Bristol moy. %2$s</string>
+    <string name="widget_week_summary_none">Aucune selle sur les 7 derniers jours</string>
+    <string name="widget_week_empty">Ouvrez IBD Journal une fois pour remplir ce widget.</string>
+    <string name="widget_week_description">Selles par jour sur les 7 derniers jours (● = sang). Visible sur votre écran d\'accueil sans le code PIN.</string>
+    <string name="weigh_in_channel">Rappel de pesée</string>
+    <string name="weigh_in_title">Pesée</string>
+    <string name="weigh_in_text">C\'est l\'heure de vous peser. Saisissez votre poids en kg ici même.</string>
+    <string name="weigh_in_action">Saisir le poids</string>
+    <string name="weigh_in_input_hint">Poids (kg)</string>
+    <string name="weigh_in_invalid">Ce n\'est pas un poids en kg. Réessayez.</string>
+    <string name="weigh_in_recorded">Poids enregistré : %1$.1f kg</string>
+    <string name="weigh_in_switch">Rappel de pesée hebdomadaire</string>
+    <string name="weigh_in_switch_desc">Une notification où vous saisissez votre poids, une fois par semaine à 9 h.</string>
+    <string name="weigh_in_day">Jour de pesée</string>
+</resources>

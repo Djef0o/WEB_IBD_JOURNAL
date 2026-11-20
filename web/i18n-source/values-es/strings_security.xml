@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="security_setup_title">Protege tu diario</string>
+    <string name="security_setup_text">Elige un PIN. Tu diario, fotos y resultados se cifran con él en este teléfono. Si lo olvidas, los datos no se pueden recuperar: conserva tus copias cifradas.</string>
+    <string name="security_upgrade_title">Protege tu diario</string>
+    <string name="security_upgrade_text">Esta actualización cifra tu diario, fotos y resultados con un PIN. Elígelo ahora: sin él no se puede abrir nada. Si lo olvidas, los datos no se pueden recuperar, así que conserva tus copias cifradas.</string>
+    <string name="pin_choose">Elige un PIN</string>
+    <string name="pin_confirm">Confirma tu PIN</string>
+    <string name="pin_enter">Introduce tu PIN</string>
+    <string name="pin_validate">Confirmar</string>
+    <string name="pin_unlock">Desbloquear</string>
+    <string name="pin_length_hint">De %1$d a %2$d dígitos</string>
+    <string name="pin_mismatch">Los dos PIN son distintos. Inténtalo de nuevo.</string>
+    <string name="pin_wrong">PIN incorrecto</string>
+    <string name="pin_open_failed">No se pudo abrir el diario. Inténtalo de nuevo.</string>
+    <string name="pin_locked_out">Demasiados errores. Inténtalo de nuevo en %1$s</string>
+    <string name="pin_locked_out_later">Demasiados errores. Espera antes de volver a intentarlo.</string>
+    <string name="pin_digits_entered">%1$d dígitos introducidos</string>
+    <string name="pin_delete_digit">Borrar el último dígito</string>
+    <string name="pin_encrypting">Cifrando tu diario…</string>
+    <string name="pin_set_title">PIN establecido</string>
+    <string name="pin_set_text">Tu diario está cifrado.</string>
+    <string name="lock_title">IBD Journal está bloqueado</string>
+    <string name="pin_forgot">¿Olvidaste el PIN?</string>
+    <string name="pin_forgot_title">¿Borrar todos los datos?</string>
+    <string name="pin_forgot_text">Sin el PIN no se puede descifrar el diario. Al borrar se eliminan todas las entradas, fotos, tratamientos y resultados de este teléfono. Después podrás restaurar una copia cifrada.</string>
+    <string name="pin_forgot_confirm">Borrar todo</string>
+    <string name="biometric_offer_title">¿Desbloquear con la huella?</string>
+    <string name="biometric_offer_text">Usa tu huella en lugar de escribir el PIN. El PIN sigue siendo válido y lo necesitarás si cambian las huellas registradas en el teléfono.</string>
+    <string name="biometric_enable">Usar la huella</string>
+    <string name="biometric_skip">Ahora no</string>
+    <string name="biometric_enable_prompt">Confirma tu huella para activarla</string>
+    <string name="biometric_unlock_prompt">Desbloquear IBD Journal</string>
+    <string name="biometric_use_pin">Usar el PIN</string>
+    <string name="biometric_unlock_button">Desbloquear con la huella</string>
+    <string name="biometric_invalidated">Las huellas del teléfono han cambiado: el desbloqueo con huella está desactivado. Introduce tu PIN.</string>
+    <string name="settings_security">Seguridad</string>
+    <string name="settings_change_pin">Cambiar el PIN</string>
+    <string name="settings_change_pin_current">Introduce tu PIN actual</string>
+    <string name="pin_changed">PIN cambiado</string>
+    <string name="settings_biometric">Desbloqueo con huella</string>
+    <string name="settings_biometric_desc">Abrir el diario con tu huella</string>
+</resources>

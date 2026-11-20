@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PDF report: care sections -->
+    <string name="report_care_diagnosis">Diagnose: %1$s</string>
+    <string name="report_care_diagnosis_crohn">Morbus Crohn</string>
+    <string name="report_care_diagnosis_uc">Colitis ulcerosa</string>
+    <string name="report_care_diagnosis_other">Andere CED</string>
+    <string name="report_care_flares">Schübe</string>
+    <string name="report_care_flare_ongoing">andauernd</string>
+    <string name="report_care_flare_range">%1$s – %2$s</string>
+    <string name="report_care_flare_hospitalized">Klinikaufenthalt</string>
+    <string name="report_care_flare_treatment">Behandlung: %1$s</string>
+    <string name="report_care_activity">Aktivitätswerte</string>
+    <string name="report_care_activity_note">Selbst eingeschätzte Werte, zur Besprechung mit dem Arzt.</string>
+    <string name="report_care_activity_latest">Zuletzt: %1$s %2$d am %3$s</string>
+    <string name="report_care_activity_latest_level">Zuletzt: %1$s %2$d am %3$s (%4$s)</string>
+    <string name="report_care_activity_entry">%1$s · %2$s %3$d</string>
+    <string name="report_care_score_hbi">HBI</string>
+    <string name="report_care_score_sccai">SCCAI</string>
+    <string name="report_care_level_remission">Remission</string>
+    <string name="report_care_level_mild">leichte Aktivität</string>
+    <string name="report_care_level_moderate">mäßige Aktivität</string>
+    <string name="report_care_level_severe">schwere Aktivität</string>
+    <string name="report_care_level_active">aktive Erkrankung</string>
+    <string name="report_care_steroids">Kortison-Kuren</string>
+    <string name="report_care_steroid_row">%1$s · %2$s – %3$s · gesamt %4$s mg</string>
+    <string name="report_care_vaccinations">Impfungen</string>
+    <string name="report_care_col_vaccine">Impfung</string>
+    <string name="report_care_col_given">Verabreicht</string>
+    <string name="report_care_col_next_due">Nächste fällig</string>
+    <string name="report_care_vaccine_influenza">Grippe</string>
+    <string name="report_care_vaccine_pneumococcal">Pneumokokken</string>
+    <string name="report_care_vaccine_covid19">COVID-19</string>
+    <string name="report_care_vaccine_hepatitis_b">Hepatitis B</string>
+    <string name="report_care_vaccine_hpv">HPV</string>
+    <string name="report_care_vaccine_zoster">Gürtelrose (Zoster)</string>
+    <string name="report_care_vaccine_tetanus">Tetanus</string>
+    <string name="report_care_vaccine_other">Andere</string>
+</resources>

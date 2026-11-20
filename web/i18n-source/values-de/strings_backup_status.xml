@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_status_title">Verschlüsselte Sicherung</string>
+    <string name="backup_status_never">Noch keine Sicherung</string>
+    <string name="backup_status_last">Letzte Sicherung: %1$s</string>
+    <string name="backup_reminder_switch">Sicherungserinnerung</string>
+    <string name="backup_reminder_desc">Erinnert dich daran, eine verschlüsselte Sicherung zu exportieren, wenn die letzte einen Monat alt ist.</string>
+    <string name="backup_reminder_title">Sicherungserinnerung</string>
+    <string name="backup_reminder_text">Deine letzte verschlüsselte Sicherung ist vom %1$s. Exportiere in den Einstellungen eine neue: Wenn du deine PIN vergisst, kann nur eine Sicherung dein Tagebuch wiederherstellen.</string>
+    <string name="backup_reminder_text_never">Du hast noch keine verschlüsselte Sicherung exportiert. Tu es in den Einstellungen: Wenn du deine PIN vergisst, kann nur eine Sicherung dein Tagebuch wiederherstellen.</string>
+    <string name="backup_reminder_channel">Sicherungserinnerungen</string>
+    <string name="csv_export_title">Daten exportieren (CSV)</string>
+    <string name="csv_export_desc">Tabellendateien in einem passwortgeschützten Archiv</string>
+    <string name="csv_warning_title">Daten exportieren?</string>
+    <string name="csv_warning_text">Die CSV-Dateien enthalten deine Gesundheitsdaten. Sie werden in einem mit einem Passwort verschlüsselten Archiv (AES-256) gepackt, das du im nächsten Schritt wählst. Öffne es mit 7-Zip, Keka oder einem ähnlichen Programm: Der Windows-Explorer und manche Handy-Apps können dieses Format nicht lesen. Wer Archiv und Passwort hat, kann deine Daten lesen: Schicke sie nicht zusammen.</string>
+    <string name="csv_warning_continue">Weiter</string>
+    <string name="csv_password_title">Archivpasswort</string>
+    <string name="csv_password_message">Wähle ein Passwort zum Schutz des Archivs. Du brauchst es, um die Dateien zu öffnen.</string>
+    <string name="csv_password_warning">Wenn du dieses Passwort vergisst, lässt sich das Archiv nicht öffnen. Dieser Export kann nicht wieder in die App importiert werden: Dafür gibt es die verschlüsselte Sicherung.</string>
+    <string name="csv_export_done">CSV-Archiv exportiert.</string>
+    <string name="csv_export_failed">Der CSV-Export ist fehlgeschlagen. Nichts wurde gespeichert.</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flare_title">Riacutizzazioni</string>
+    <string name="flare_add">Aggiungi una riacutizzazione</string>
+    <string name="flare_edit">Modifica la riacutizzazione</string>
+    <string name="flare_empty">Nessuna riacutizzazione registrata. Annota l\'inizio e la fine delle tue riacutizzazioni per tenerne traccia.</string>
+    <string name="flare_start">Data di inizio</string>
+    <string name="flare_end">Data di fine</string>
+    <string name="flare_ongoing">In corso</string>
+    <string name="flare_ongoing_since">Dal %1$s (in corso)</string>
+    <plurals name="flare_range_days">
+        <item quantity="one">%1$s – %2$s (%3$d giorno)</item>
+        <item quantity="many">%1$s – %2$s (%3$d giorni)</item>
+        <item quantity="other">%1$s – %2$s (%3$d giorni)</item>
+    </plurals>
+    <string name="flare_treatment">Terapia</string>
+    <string name="flare_treatment_hint">es. prednisone 40 mg</string>
+    <string name="flare_hospitalized">Ricovero ospedaliero</string>
+    <string name="flare_note">Nota</string>
+    <string name="flare_end_before_start">La data di fine non può precedere quella di inizio</string>
+</resources>

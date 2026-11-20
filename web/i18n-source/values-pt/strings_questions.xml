@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_title">Perguntas para o meu médico</string>
+    <string name="question_add">Adicionar uma pergunta</string>
+    <string name="question_edit">Editar a pergunta</string>
+    <string name="question_field">Pergunta</string>
+    <string name="question_empty">Anote o que você quer perguntar na próxima consulta; as perguntas em aberto são adicionadas ao seu relatório para o médico.</string>
+    <string name="question_clear_done">Limpar as respondidas</string>
+</resources>

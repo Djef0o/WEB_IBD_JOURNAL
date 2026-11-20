@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_quick_stool_name">Aggiungi evacuazione</string>
+    <string name="widget_quick_stool_label">Evacuazione</string>
+    <string name="widget_quick_stool_description">Un solo pulsante che apre l\'inserimento rapido di un\'evacuazione. Non mostra dati.</string>
+    <string name="widget_week_name">Ultimi 7 giorni</string>
+    <string name="widget_week_title">Ultimi 7 giorni</string>
+    <string name="widget_week_summary">%1$s · Bristol medio %2$s</string>
+    <string name="widget_week_summary_none">Nessuna evacuazione negli ultimi 7 giorni</string>
+    <string name="widget_week_empty">Apri IBD Journal una volta per riempire questo widget.</string>
+    <string name="widget_week_description">Evacuazioni al giorno negli ultimi 7 giorni (● = sangue). Visibile nella schermata Home senza PIN.</string>
+    <string name="weigh_in_channel">Promemoria peso</string>
+    <string name="weigh_in_title">Peso</string>
+    <string name="weigh_in_text">È ora di pesarti. Scrivi qui il tuo peso in kg.</string>
+    <string name="weigh_in_action">Inserisci il peso</string>
+    <string name="weigh_in_input_hint">Peso (kg)</string>
+    <string name="weigh_in_invalid">Non sembra un peso in kg. Riprova.</string>
+    <string name="weigh_in_recorded">Peso registrato: %1$.1f kg</string>
+    <string name="weigh_in_switch">Promemoria settimanale del peso</string>
+    <string name="weigh_in_switch_desc">Una notifica in cui scrivi il tuo peso, una volta a settimana alle 9:00.</string>
+    <string name="weigh_in_day">Giorno del peso</string>
+</resources>

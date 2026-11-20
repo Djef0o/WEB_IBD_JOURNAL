@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="day_card_none">Nichts eingetragen</string>
+    <string name="day_card_expand">Aufklappen</string>
+    <string name="day_card_collapse">Zuklappen</string>
+</resources>

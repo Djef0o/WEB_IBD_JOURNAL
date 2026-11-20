@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vaccine_reminder_switch">Remind me</string>
+    <string name="vaccine_reminder_hint">Notification a week before the planned date, then on the day, at 9:00.</string>
+    <string name="vaccine_reminder_title">Vaccination reminder</string>
+    <string name="vaccine_reminder_text">%1$s: next dose planned on %2$s.</string>
+    <string name="vaccine_reminder_channel">Vaccination reminders</string>
+</resources>

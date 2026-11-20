@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_field">Assunzioni in scorta (facoltativo)</string>
+    <string name="stock_field_hint">Scalato a ogni assunzione confermata. Modificalo quando ritiri una nuova confezione.</string>
+    <string name="stock_low_field">Avvisami quando ne restano</string>
+    <string name="stock_low_hint">Predefinito: 7.</string>
+    <string name="stock_channel">Scorta bassa</string>
+    <string name="stock_notification_title">Scorta in esaurimento</string>
+    <string name="stock_notification_text">%1$s: ne restano %2$s. Ricordati di riordinare.</string>
+    <string name="stock_status_low">%1$s · da riordinare presto</string>
+    <plurals name="stock_intakes">
+        <item quantity="one">%d assunzione</item>
+        <item quantity="many">%d assunzioni</item>
+        <item quantity="other">%d assunzioni</item>
+    </plurals>
+    <plurals name="stock_left">
+        <item quantity="one">resta %d assunzione</item>
+        <item quantity="many">restano %d assunzioni</item>
+        <item quantity="other">restano %d assunzioni</item>
+    </plurals>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analysis: meals and symptoms -->
+    <string name="foodlink_title">Meals and symptoms</string>
+    <string name="foodlink_row">Followed by a bad day %1$d of %2$d times (usual: %3$d %%)</string>
+    <string name="foodlink_empty">A food appears here once you have eaten it at least %1$d times with stools logged the same day or the next.</string>
+    <string name="foodlink_caveat">An observation on what you logged, not a cause. Talk to your doctor or dietitian before removing foods.</string>
+    <string name="foodlink_definition">Bad day: liquid stool (Bristol 6-7), blood, or pain of 3 and above, the same day or the next.</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="emergency_title">Urgence</string>
+    <string name="emergency_info_row">Informations d\'urgence</string>
+    <string name="emergency_info_filled">Renseignées</string>
+    <string name="emergency_info_empty">Pas encore renseignées</string>
+    <string name="emergency_lock_switch">Afficher sur l\'écran de verrouillage</string>
+    <string name="emergency_lock_warning">Lisible sans le code PIN : toute personne qui a votre téléphone peut voir votre nom, votre date de naissance, votre diagnostic, vos traitements et les informations ci-dessus.</string>
+    <string name="emergency_lock_confirm_title">Afficher sur l\'écran de verrouillage ?</string>
+    <string name="emergency_lock_confirm_text">Sans le code PIN, toute personne qui a votre téléphone pourra lire votre nom, votre date de naissance, votre diagnostic, vos traitements, vos allergies, votre médecin, votre contact d\'urgence et vos notes. Le journal lui-même reste verrouillé. Vous pouvez le désactiver à tout moment.</string>
+    <string name="emergency_lock_confirm">Afficher</string>
+    <string name="emergency_preview_sheet">Afficher la fiche d\'urgence</string>
+    <string name="emergency_preview_card">Afficher la carte « besoin urgent »</string>
+    <string name="emergency_preview_card_sub">Aucune donnée personnelle n\'y figure</string>
+    <string name="emergency_edit_title">Informations d\'urgence</string>
+    <string name="emergency_edit_help">Votre nom, votre date de naissance, votre diagnostic et vos traitements proviennent de votre profil et de votre liste de traitements.</string>
+    <string name="emergency_allergies">Allergies</string>
+    <string name="emergency_allergies_hint">ex. pénicilline, latex</string>
+    <string name="emergency_doctor_name">Médecin</string>
+    <string name="emergency_doctor_phone">Téléphone du médecin</string>
+    <string name="emergency_contact_name">Contact d\'urgence</string>
+    <string name="emergency_contact_phone">Téléphone du contact</string>
+    <string name="emergency_notes">Notes</string>
+    <string name="emergency_notes_hint">ex. antécédents, dispositifs implantés</string>
+    <string name="emergency_sheet_title">Informations d\'urgence</string>
+    <string name="emergency_sheet_empty">Rien n\'est encore renseigné. Ajoutez ces informations dans Réglages, rubrique Urgence.</string>
+    <string name="emergency_field_name">Nom</string>
+    <string name="emergency_field_born">Date de naissance</string>
+    <string name="emergency_field_allergies">Allergies</string>
+    <string name="emergency_field_treatments">Traitements</string>
+    <string name="emergency_field_doctor">Médecin</string>
+    <string name="emergency_field_contact">Contact d\'urgence</string>
+    <string name="emergency_field_notes">Notes</string>
+    <string name="emergency_chooser_title">Urgence</string>
+    <string name="emergency_open_card">Carte « besoin urgent »</string>
+    <string name="emergency_open_sheet">Fiche d\'urgence</string>
+    <string name="urgent_card_title">J\'ai un besoin urgent d\'aller aux toilettes</string>
+    <string name="urgent_card_text">J\'ai une maladie inflammatoire chronique de l\'intestin (maladie de Crohn / rectocolite hémorragique). J\'ai un besoin urgent d\'utiliser des toilettes. Merci de me laisser passer.</string>
+    <string name="diagnosis_title">Diagnostic</string>
+    <string name="diagnosis_crohn">Maladie de Crohn</string>
+    <string name="diagnosis_uc">Rectocolite hémorragique</string>
+    <string name="diagnosis_other">Autre / non précisé</string>
+    <string name="diagnosis_other_short">Autre</string>
+    <string name="diagnosis_missing">Diagnostic non renseigné</string>
+</resources>

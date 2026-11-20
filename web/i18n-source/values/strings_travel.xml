@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="travel_title">Travel</string>
+    <string name="travel_row_title">Travel pack</string>
+    <string name="travel_row_desc">Medication to take, letter for your doctor, urgent-need card</string>
+    <string name="travel_departure">Departure</string>
+    <string name="travel_return">Return</string>
+    <string name="travel_margin">Safety margin</string>
+    <string name="travel_margin_hint">Extra days of treatment, in case of delay.</string>
+    <string name="travel_destination">Destination (optional)</string>
+    <string name="travel_language">Language of the documents</string>
+    <string name="travel_list_title">Medication to take</string>
+    <string name="travel_line_detail">%1$d on the trip + %2$d margin</string>
+    <string name="travel_line_missing">Your counted stock covers %1$d: %2$d missing</string>
+    <string name="travel_empty">No treatment has an intake planned over these dates.</string>
+    <string name="travel_vaccines">Vaccines: ask your doctor 6 to 8 weeks before leaving. Live vaccines are generally not recommended under immunosuppressive treatment.</string>
+    <string name="travel_disclaimer">The letter is a template: it only becomes a certificate once dated, signed and stamped by your doctor. Check the rules of your destination for medication (embassy or health authority).</string>
+    <string name="travel_create">Create the travel pack (PDF)</string>
+    <string name="travel_creating">Creating…</string>
+    <string name="travel_failed">The PDF could not be created.</string>
+    <string name="travel_share_subject">Travel pack</string>
+    <string name="travel_pdf_title">Travel medication list</string>
+    <string name="travel_pdf_trip">Trip: %1$s to %2$s (%3$s)</string>
+    <string name="travel_pdf_destination">Destination: %1$s</string>
+    <string name="travel_pdf_list_title">Medication carried</string>
+    <string name="travel_pdf_col_medication">Medication</string>
+    <string name="travel_pdf_col_schedule">Intake</string>
+    <string name="travel_pdf_col_quantity">Quantity to carry</string>
+    <string name="travel_pdf_empty">No treatment planned over these dates.</string>
+    <string name="travel_pdf_margin_note">Quantities include a margin of %1$d days after the return date.</string>
+    <string name="travel_pdf_carry_note">Keep medication in its original packaging, in hand luggage, with this list and your prescriptions.</string>
+    <string name="travel_pdf_schedule">%1$s at %2$s</string>
+    <string name="travel_pdf_schedule_once">Single intake</string>
+    <string name="travel_pdf_card_empty">Add your emergency information in the app (Settings, Emergency) to see it here.</string>
+    <string name="travel_cert_title">Letter for travelling with medication</string>
+    <string name="travel_cert_greeting">To whom it may concern,</string>
+    <string name="travel_cert_body">%1$s, born on %2$s, is followed for %3$s and must carry the medication listed in the attached table, for strictly personal use, during a trip from %4$s to %5$s.</string>
+    <string name="travel_cert_list_ref">The quantities in the table cover the trip plus %1$d days of margin in case of delay.</string>
+    <string name="travel_cert_customs">Please let this person keep the medication, in its original packaging, with them (including injectable treatments and the material to inject them).</string>
+    <string name="travel_cert_sign_place">Date and place: ……………………………………………</string>
+    <string name="travel_cert_sign_doctor">Doctor\'s name, signature and stamp:</string>
+    <string name="travel_cert_disclaimer">Prepared by the patient with the IBD Journal app. It becomes a medical certificate only once dated, signed and stamped by the treating physician.</string>
+    <string name="travel_cert_condition_default">a chronic inflammatory bowel disease (Crohn\'s disease or ulcerative colitis)</string>
+    <plurals name="travel_margin_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="travel_intakes">
+        <item quantity="one">%d intake</item>
+        <item quantity="other">%d intakes</item>
+    </plurals>
+    <plurals name="travel_pdf_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="travel_pdf_intakes">
+        <item quantity="one">%d intake</item>
+        <item quantity="other">%d intakes</item>
+    </plurals>
+</resources>

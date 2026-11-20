@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flaremark_legend">Dias de crise</string>
+    <string name="flaremark_day_desc">%1$s, dia de crise</string>
+    <string name="flaremark_day">Crise · dia %1$d</string>
+    <string name="flaremark_hospitalized">Internação</string>
+    <string name="flaremark_home">Crise em andamento desde %1$s (dia %2$d)</string>
+    <string name="flaremark_chart_legend">Crise</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_field">Prises en stock (facultatif)</string>
+    <string name="stock_field_hint">Décompté à chaque prise confirmée. Modifiez-le quand vous récupérez une nouvelle boîte.</string>
+    <string name="stock_low_field">Me prévenir quand il en reste</string>
+    <string name="stock_low_hint">Par défaut : 7.</string>
+    <string name="stock_channel">Stock bas</string>
+    <string name="stock_notification_title">Bientôt à court</string>
+    <string name="stock_notification_text">%1$s : %2$s restantes. Pensez à recommander.</string>
+    <string name="stock_status_low">%1$s · à recommander bientôt</string>
+    <plurals name="stock_intakes">
+        <item quantity="one">%d prise</item>
+        <item quantity="many">%d prises</item>
+        <item quantity="other">%d prises</item>
+    </plurals>
+    <plurals name="stock_left">
+        <item quantity="one">%d prise restante</item>
+        <item quantity="many">%d prises restantes</item>
+        <item quantity="other">%d prises restantes</item>
+    </plurals>
+</resources>

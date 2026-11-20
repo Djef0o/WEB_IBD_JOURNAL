@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointmentui_title">Rendez-vous</string>
+    <string name="appointmentui_add">Ajouter un rendez-vous</string>
+    <string name="appointmentui_edit">Modifier le rendez-vous</string>
+    <string name="appointmentui_empty">Aucun rendez-vous enregistré. Ajoutez vos consultations pour recevoir un rappel.</string>
+    <string name="appointmentui_past">Rendez-vous passés (%1$d)</string>
+    <string name="appointmentui_show_past">Afficher les rendez-vous passés</string>
+    <string name="appointmentui_hide_past">Masquer les rendez-vous passés</string>
+    <string name="appointmentui_date">Date</string>
+    <string name="appointmentui_time">Heure</string>
+    <string name="appointmentui_place">Médecin ou adresse</string>
+    <string name="appointmentui_note">Note</string>
+    <string name="appointmentui_reminders">Rappels</string>
+    <string name="appointmentui_reminders_hint">Notification la veille à 18 h et 2 heures avant</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analysis: meals and symptoms -->
+    <string name="foodlink_title">Repas et symptômes</string>
+    <string name="foodlink_row">Suivi d\'une mauvaise journée %1$d fois sur %2$d (habituel : %3$d %%)</string>
+    <string name="foodlink_empty">Un aliment apparaît ici dès que vous l\'avez mangé au moins %1$d fois avec des selles notées le même jour ou le lendemain.</string>
+    <string name="foodlink_caveat">Une observation sur ce que vous avez noté, pas une cause. Parlez-en à votre médecin ou à votre diététicien avant de supprimer des aliments.</string>
+    <string name="foodlink_definition">Mauvaise journée : selle liquide (Bristol 6-7), sang, ou douleur de 3 et plus, le même jour ou le lendemain.</string>
+</resources>

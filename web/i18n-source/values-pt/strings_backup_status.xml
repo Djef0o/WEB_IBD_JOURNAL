@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_status_title">Backup criptografado</string>
+    <string name="backup_status_never">Nenhum backup ainda</string>
+    <string name="backup_status_last">Último backup: %1$s</string>
+    <string name="backup_reminder_switch">Lembrete de backup</string>
+    <string name="backup_reminder_desc">Lembra você de exportar um backup criptografado quando o último tem um mês.</string>
+    <string name="backup_reminder_title">Lembrete de backup</string>
+    <string name="backup_reminder_text">Seu último backup criptografado é de %1$s. Exporte um novo em Configurações: se você esquecer o PIN, só um backup pode restaurar seu diário.</string>
+    <string name="backup_reminder_text_never">Você ainda não exportou um backup criptografado. Faça isso em Configurações: se você esquecer o PIN, só um backup pode restaurar seu diário.</string>
+    <string name="backup_reminder_channel">Lembretes de backup</string>
+    <string name="csv_export_title">Exportar dados (CSV)</string>
+    <string name="csv_export_desc">Arquivos para planilha em um arquivo protegido por senha</string>
+    <string name="csv_warning_title">Exportar seus dados?</string>
+    <string name="csv_warning_text">Os arquivos CSV contêm seus dados de saúde. Eles são reunidos em um arquivo criptografado com uma senha (AES-256) que você escolherá na próxima etapa. Abra-o com 7-Zip, Keka ou uma ferramenta semelhante: o Explorador de Arquivos do Windows e alguns apps do celular não leem este formato. Quem tiver o arquivo e a senha pode ler seus dados: não os envie juntos.</string>
+    <string name="csv_warning_continue">Continuar</string>
+    <string name="csv_password_title">Senha do arquivo</string>
+    <string name="csv_password_message">Escolha uma senha para proteger o arquivo. Você precisará dela para abrir os arquivos.</string>
+    <string name="csv_password_warning">Se você esquecer esta senha, o arquivo não pode ser aberto. Esta exportação não pode ser importada de volta no app: para isso use o backup criptografado.</string>
+    <string name="csv_export_done">Arquivo CSV exportado.</string>
+    <string name="csv_export_failed">A exportação CSV falhou. Nada foi salvo.</string>
+</resources>

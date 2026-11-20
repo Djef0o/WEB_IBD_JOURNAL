@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flaremark_legend">Schub-Tage</string>
+    <string name="flaremark_day_desc">%1$s, Schub-Tag</string>
+    <string name="flaremark_day">Schub · Tag %1$d</string>
+    <string name="flaremark_hospitalized">Im Krankenhaus behandelt</string>
+    <string name="flaremark_home">Schub seit %1$s (Tag %2$d)</string>
+    <string name="flaremark_chart_legend">Schub</string>
+</resources>

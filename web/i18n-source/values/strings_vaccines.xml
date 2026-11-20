@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vaccine_title">Vaccinations</string>
+    <string name="vaccine_add">Add a vaccination</string>
+    <string name="vaccine_edit">Edit vaccination</string>
+    <string name="vaccine_empty">No vaccination recorded. Note your vaccines and the date of the next dose or booster.</string>
+    <string name="vaccine_live_notice">Live vaccines are generally not recommended under immunosuppressive treatment: ask your doctor before any vaccination.</string>
+    <string name="vaccine_type_influenza">Influenza (flu)</string>
+    <string name="vaccine_type_pneumococcal">Pneumococcal</string>
+    <string name="vaccine_type_covid19">COVID-19</string>
+    <string name="vaccine_type_hepatitis_b">Hepatitis B</string>
+    <string name="vaccine_type_hpv">HPV</string>
+    <string name="vaccine_type_zoster">Shingles (zoster)</string>
+    <string name="vaccine_type_tetanus">Tetanus</string>
+    <string name="vaccine_type_other">Other</string>
+    <string name="vaccine_type">Vaccine</string>
+    <string name="vaccine_date">Date given</string>
+    <string name="vaccine_next_due">Next dose or booster</string>
+    <string name="vaccine_next_none">Not planned</string>
+    <string name="vaccine_next_before_date">The next dose must be after the date given</string>
+    <string name="vaccine_note">Note</string>
+    <string name="vaccine_last">Last dose: %1$s</string>
+    <string name="vaccine_next">Next due: %1$s</string>
+    <string name="vaccine_overdue">Overdue: was due on %1$s</string>
+    <plurals name="vaccine_doses">
+        <item quantity="one">%1$d dose</item>
+        <item quantity="other">%1$d doses</item>
+    </plurals>
+    <string name="vaccine_show_doses">Show all doses</string>
+    <string name="vaccine_hide_doses">Hide doses</string>
+</resources>

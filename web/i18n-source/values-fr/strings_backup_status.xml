@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_status_title">Sauvegarde chiffrée</string>
+    <string name="backup_status_never">Aucune sauvegarde pour l\'instant</string>
+    <string name="backup_status_last">Dernière sauvegarde : %1$s</string>
+    <string name="backup_reminder_switch">Rappel de sauvegarde</string>
+    <string name="backup_reminder_desc">Vous rappelle d\'exporter une sauvegarde chiffrée quand la dernière date d\'un mois.</string>
+    <string name="backup_reminder_title">Rappel de sauvegarde</string>
+    <string name="backup_reminder_text">Votre dernière sauvegarde chiffrée date du %1$s. Exportez-en une nouvelle depuis les Réglages : en cas d\'oubli du code PIN, seule une sauvegarde permet de retrouver votre journal.</string>
+    <string name="backup_reminder_text_never">Vous n\'avez pas encore exporté de sauvegarde chiffrée. Faites-le depuis les Réglages : en cas d\'oubli du code PIN, seule une sauvegarde permet de retrouver votre journal.</string>
+    <string name="backup_reminder_channel">Rappels de sauvegarde</string>
+    <string name="csv_export_title">Exporter les données (CSV)</string>
+    <string name="csv_export_desc">Fichiers pour tableur dans une archive protégée par mot de passe</string>
+    <string name="csv_warning_title">Exporter vos données ?</string>
+    <string name="csv_warning_text">Les fichiers CSV contiennent vos données de santé. Ils sont regroupés dans une archive chiffrée par un mot de passe (AES-256) que vous choisirez à l\'étape suivante. Ouvrez-la avec 7-Zip, Keka ou un outil similaire : l\'Explorateur Windows et certaines applications du téléphone ne lisent pas ce format. Toute personne qui a l\'archive et le mot de passe peut lire vos données : ne les envoyez pas ensemble.</string>
+    <string name="csv_warning_continue">Continuer</string>
+    <string name="csv_password_title">Mot de passe de l\'archive</string>
+    <string name="csv_password_message">Choisissez un mot de passe pour protéger l\'archive. Il sera nécessaire pour ouvrir les fichiers.</string>
+    <string name="csv_password_warning">En cas d\'oubli de ce mot de passe, l\'archive est impossible à ouvrir. Cet export ne peut pas être réimporté dans l\'app : utilisez la sauvegarde chiffrée pour cela.</string>
+    <string name="csv_export_done">Archive CSV exportée.</string>
+    <string name="csv_export_failed">L\'export CSV a échoué. Rien n\'a été enregistré.</string>
+</resources>

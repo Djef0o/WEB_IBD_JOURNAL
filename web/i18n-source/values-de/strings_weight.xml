@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weight_title">Gewicht</string>
+    <string name="weight_add">Gewicht hinzufügen</string>
+    <string name="weight_edit">Gewicht bearbeiten</string>
+    <string name="weights_empty">Kein Gewicht erfasst. Wiege dich regelmäßig, um deine Gewichtskurve zu verfolgen.</string>
+    <string name="weight_value_invalid">Gib ein Gewicht zwischen 1 und 400 kg ein</string>
+    <string name="weight_date">Datum der Messung</string>
+    <string name="weight_latest">Zuletzt gewogen am %1$s</string>
+    <string name="weight_change">%1$s kg seit dem %2$s</string>
+    <string name="weight_unchanged">Unverändert seit dem %1$s</string>
+    <string name="weight_history">Verlauf</string>
+    <string name="weight_chart_description">Gewichtsverlauf über die Zeit</string>
+</resources>

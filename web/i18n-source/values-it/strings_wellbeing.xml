@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_card_title">Sonno, stress, umore</string>
+    <string name="wellbeing_card_hint">Facoltativo, da 1 a 5. Tocca di nuovo il valore scelto per cancellarlo.</string>
+    <string name="wellbeing_sleep">Sonno</string>
+    <string name="wellbeing_sleep_scale">1 = pessimo · 5 = ottimo</string>
+    <string name="wellbeing_stress">Stress</string>
+    <string name="wellbeing_stress_scale">1 = calmo · 5 = molto stressato</string>
+    <string name="wellbeing_mood">Umore</string>
+    <string name="wellbeing_mood_scale">1 = molto basso · 5 = ottimo</string>
+    <string name="wellbeing_period">Ciclo oggi</string>
+    <string name="wellbeing_factor_poor_sleep">Sonno scarso (1–2)</string>
+    <string name="wellbeing_factor_high_stress">Stress alto (4–5)</string>
+    <string name="wellbeing_factor_low_mood">Umore basso (1–2)</string>
+    <string name="wellbeing_factor_period">Ciclo</string>
+    <string name="wellbeing_link_title">Sonno, stress, umore e sintomi</string>
+    <string name="wellbeing_link_row">Giornata brutta %1$d volte su %2$d (altri giorni: %3$d %%)</string>
+    <string name="wellbeing_link_caveat">Un\'osservazione su ciò che hai annotato, non una causa. Parlane con il tuo medico prima di cambiare qualcosa.</string>
+    <string name="wellbeing_link_definition">Confronta i giorni con e senza questo fattore, tra i giorni con un\'evacuazione annotata. Giornata brutta: evacuazione liquida (Bristol 6–7), sangue o dolore da 3 in su.</string>
+    <string name="report_wellbeing_title">Sonno, stress e umore</string>
+    <string name="report_wellbeing_note">Annotati giorno per giorno nel diario, su scale da 1 a 5.</string>
+    <string name="report_wellbeing_sleep">Sonno: %1$s / 5 in media</string>
+    <string name="report_wellbeing_stress">Stress: %1$s / 5 in media</string>
+    <string name="report_wellbeing_mood">Umore: %1$s / 5 in media</string>
+    <string name="report_wellbeing_period">Ciclo: %1$s</string>
+    <string name="report_wellbeing_link">%1$s: giornata brutta %2$d volte su %3$d (altri giorni: %4$d %%)</string>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="score_title">Puntuación de actividad</string>
+    <string name="score_add">Añadir una puntuación</string>
+    <string name="score_edit">Editar la puntuación</string>
+    <string name="score_empty">Aún no hay puntuaciones. Rellena un breve cuestionario para seguir cómo percibes la actividad de tu enfermedad a lo largo del tiempo.</string>
+    <string name="score_hbi">HBI</string>
+    <string name="score_sccai">SCCAI</string>
+    <string name="score_hbi_full">Índice de Harvey-Bradshaw (enfermedad de Crohn)</string>
+    <string name="score_sccai_full">Índice simple de actividad clínica de la colitis (colitis ulcerosa)</string>
+    <string name="score_headline">%1$s: %2$d</string>
+    <string name="score_level_remission">Remisión</string>
+    <string name="score_level_mild">Actividad leve</string>
+    <string name="score_level_moderate">Actividad moderada</string>
+    <string name="score_level_severe">Actividad grave</string>
+    <string name="score_level_active">Enfermedad activa</string>
+    <string name="score_latest">Puntuación del %1$s</string>
+    <string name="score_change">%1$s desde el %2$s</string>
+    <string name="score_unchanged">Sin cambios desde el %1$s</string>
+    <string name="score_history">Historial</string>
+    <string name="score_chart_description">Evolución de la puntuación %1$s en el tiempo</string>
+    <string name="score_disclaimer">Puntuación autoevaluada, para comentar con tu médico.</string>
+    <string name="score_date">Fecha</string>
+    <string name="score_prefilled">Rellenado a partir de tus deposiciones del día</string>
+    <string name="score_total">Total: %1$d</string>
+    <string name="score_stools_less">Una deposición menos</string>
+    <string name="score_stools_more">Una deposición más</string>
+    <string name="score_q_wellbeing">Bienestar general</string>
+    <string name="score_q_pain">Dolor abdominal</string>
+    <string name="score_q_liquid_stools">Deposiciones líquidas o blandas (número)</string>
+    <string name="score_q_mass">Masa abdominal</string>
+    <string name="score_q_complications">Complicaciones (marca las presentes)</string>
+    <string name="score_q_stools_day">Deposiciones al día</string>
+    <string name="score_q_stools_night">Deposiciones por la noche</string>
+    <string name="score_q_urgency">Urgencia para defecar</string>
+    <string name="score_q_blood">Sangre en las heces</string>
+    <string name="score_q_extracolonic">Otras manifestaciones fuera del intestino (marca las presentes)</string>
+    <string name="score_flag_arthralgia">Dolor articular (artralgia)</string>
+    <string name="score_flag_uveitis">Inflamación del ojo (uveítis)</string>
+    <string name="score_flag_erythema_nodosum">Eritema nodoso</string>
+    <string name="score_flag_aphthous">Aftas</string>
+    <string name="score_flag_pyoderma">Pioderma gangrenoso</string>
+    <string name="score_flag_fissure">Fisura anal</string>
+    <string name="score_flag_fistula">Nueva fístula</string>
+    <string name="score_flag_abscess">Absceso</string>
+    <string name="score_flag_joint_pains">Dolores articulares</string>
+    <string-array name="score_options_wellbeing">
+        <item>Muy bien</item>
+        <item>Algo peor de lo normal</item>
+        <item>Mal</item>
+        <item>Muy mal</item>
+        <item>Terrible</item>
+    </string-array>
+    <string-array name="score_options_pain">
+        <item>Ninguno</item>
+        <item>Leve</item>
+        <item>Moderado</item>
+        <item>Intenso</item>
+    </string-array>
+    <string-array name="score_options_mass">
+        <item>Ninguna</item>
+        <item>Dudosa</item>
+        <item>Clara</item>
+        <item>Clara y dolorosa</item>
+    </string-array>
+    <string-array name="score_options_stools_day">
+        <item>1–3</item>
+        <item>4–6</item>
+        <item>7–9</item>
+        <item>Más de 9</item>
+    </string-array>
+    <string-array name="score_options_stools_night">
+        <item>Ninguna</item>
+        <item>1–3</item>
+        <item>4–6</item>
+    </string-array>
+    <string-array name="score_options_urgency">
+        <item>Ninguna</item>
+        <item>Con prisa</item>
+        <item>Inmediata</item>
+        <item>Incontinencia</item>
+    </string-array>
+    <string-array name="score_options_blood">
+        <item>Ninguna</item>
+        <item>Rastros</item>
+        <item>Franca a veces</item>
+        <item>Franca casi siempre</item>
+    </string-array>
+</resources>

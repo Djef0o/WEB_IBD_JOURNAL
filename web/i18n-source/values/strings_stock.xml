@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_field">Intakes in stock (optional)</string>
+    <string name="stock_field_hint">Counted down each time you confirm a dose as taken. Change it when you pick up a new box.</string>
+    <string name="stock_low_field">Remind me when this many are left</string>
+    <string name="stock_low_hint">Default: 7.</string>
+    <string name="stock_channel">Low stock</string>
+    <string name="stock_notification_title">Running low</string>
+    <string name="stock_notification_text">%1$s: %2$s left. Remember to reorder.</string>
+    <string name="stock_status_low">%1$s · reorder soon</string>
+    <plurals name="stock_intakes">
+        <item quantity="one">%d intake</item>
+        <item quantity="other">%d intakes</item>
+    </plurals>
+    <plurals name="stock_left">
+        <item quantity="one">%d intake left</item>
+        <item quantity="other">%d intakes left</item>
+    </plurals>
+</resources>

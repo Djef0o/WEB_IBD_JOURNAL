@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_title">Questions pour mon médecin</string>
+    <string name="question_add">Ajouter une question</string>
+    <string name="question_edit">Modifier la question</string>
+    <string name="question_field">Question</string>
+    <string name="question_empty">Notez ce que vous voulez demander lors du prochain rendez-vous ; les questions en attente sont ajoutées à votre rapport pour le médecin.</string>
+    <string name="question_clear_done">Effacer les questions traitées</string>
+</resources>

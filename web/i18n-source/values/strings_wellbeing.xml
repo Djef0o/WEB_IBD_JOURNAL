@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_card_title">Sleep, stress, mood</string>
+    <string name="wellbeing_card_hint">Optional, from 1 to 5. Tap the chosen value again to clear it.</string>
+    <string name="wellbeing_sleep">Sleep</string>
+    <string name="wellbeing_sleep_scale">1 = very poor · 5 = very good</string>
+    <string name="wellbeing_stress">Stress</string>
+    <string name="wellbeing_stress_scale">1 = calm · 5 = very stressed</string>
+    <string name="wellbeing_mood">Mood</string>
+    <string name="wellbeing_mood_scale">1 = very low · 5 = very good</string>
+    <string name="wellbeing_period">Period today</string>
+    <string name="wellbeing_factor_poor_sleep">Poor sleep (1–2)</string>
+    <string name="wellbeing_factor_high_stress">High stress (4–5)</string>
+    <string name="wellbeing_factor_low_mood">Low mood (1–2)</string>
+    <string name="wellbeing_factor_period">Period</string>
+    <string name="wellbeing_link_title">Sleep, stress, mood and symptoms</string>
+    <string name="wellbeing_link_row">Bad day %1$d of %2$d times (other days: %3$d %%)</string>
+    <string name="wellbeing_link_caveat">An observation on what you logged, not a cause. Talk to your doctor before changing anything.</string>
+    <string name="wellbeing_link_definition">Compares days with and without the factor, among days with a stool logged. Bad day: liquid stool (Bristol 6–7), blood or pain of 3 and above.</string>
+    <string name="report_wellbeing_title">Sleep, stress and mood</string>
+    <string name="report_wellbeing_note">Noted day by day in the diary, on scales of 1 to 5.</string>
+    <string name="report_wellbeing_sleep">Sleep: %1$s / 5 on average</string>
+    <string name="report_wellbeing_stress">Stress: %1$s / 5 on average</string>
+    <string name="report_wellbeing_mood">Mood: %1$s / 5 on average</string>
+    <string name="report_wellbeing_period">Period: %1$s</string>
+    <string name="report_wellbeing_link">%1$s: bad day %2$d of %3$d times (other days: %4$d %%)</string>
+</resources>

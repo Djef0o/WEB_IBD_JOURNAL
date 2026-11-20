@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vaccine_reminder_switch">Recordármelo</string>
+    <string name="vaccine_reminder_hint">Notificación una semana antes de la fecha prevista y el mismo día, a las 9:00.</string>
+    <string name="vaccine_reminder_title">Recordatorio de vacunación</string>
+    <string name="vaccine_reminder_text">%1$s: próxima dosis prevista el %2$s.</string>
+    <string name="vaccine_reminder_channel">Recordatorios de vacunación</string>
+</resources>

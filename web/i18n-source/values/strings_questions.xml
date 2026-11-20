@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_title">Questions for my doctor</string>
+    <string name="question_add">Add a question</string>
+    <string name="question_edit">Edit question</string>
+    <string name="question_field">Question</string>
+    <string name="question_empty">Note what you want to ask at the next appointment; open questions are added to your report for the doctor.</string>
+    <string name="question_clear_done">Clear answered</string>
+</resources>

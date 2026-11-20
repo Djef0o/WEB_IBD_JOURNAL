@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_status_title">Backup cifrato</string>
+    <string name="backup_status_never">Nessun backup finora</string>
+    <string name="backup_status_last">Ultimo backup: %1$s</string>
+    <string name="backup_reminder_switch">Promemoria backup</string>
+    <string name="backup_reminder_desc">Ti ricorda di esportare un backup cifrato quando l\'ultimo ha un mese.</string>
+    <string name="backup_reminder_title">Promemoria backup</string>
+    <string name="backup_reminder_text">Il tuo ultimo backup cifrato è del %1$s. Esportane uno nuovo dalle Impostazioni: se dimentichi il PIN, solo un backup può ripristinare il diario.</string>
+    <string name="backup_reminder_text_never">Non hai ancora esportato un backup cifrato. Fallo dalle Impostazioni: se dimentichi il PIN, solo un backup può ripristinare il diario.</string>
+    <string name="backup_reminder_channel">Promemoria backup</string>
+    <string name="csv_export_title">Esporta i dati (CSV)</string>
+    <string name="csv_export_desc">File per foglio di calcolo in un archivio protetto da password</string>
+    <string name="csv_warning_title">Esportare i dati?</string>
+    <string name="csv_warning_text">I file CSV contengono i tuoi dati sanitari. Sono riuniti in un archivio cifrato con una password (AES-256) che sceglierai al passaggio successivo. Aprilo con 7-Zip, Keka o uno strumento simile: Esplora risorse di Windows e alcune app del telefono non leggono questo formato. Chi ha l\'archivio e la password può leggere i tuoi dati: non inviarli insieme.</string>
+    <string name="csv_warning_continue">Continua</string>
+    <string name="csv_password_title">Password dell\'archivio</string>
+    <string name="csv_password_message">Scegli una password per proteggere l\'archivio. Ti servirà per aprire i file.</string>
+    <string name="csv_password_warning">Se dimentichi questa password, l\'archivio non si può aprire. Questa esportazione non si può reimportare nell\'app: per questo usa il backup cifrato.</string>
+    <string name="csv_export_done">Archivio CSV esportato.</string>
+    <string name="csv_export_failed">Esportazione CSV non riuscita. Non è stato salvato nulla.</string>
+</resources>

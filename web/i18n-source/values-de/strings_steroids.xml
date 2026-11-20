@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="steroid_title">Kortison-Kuren</string>
+    <string name="steroid_add">Kur hinzufügen</string>
+    <string name="steroid_edit">Kur bearbeiten</string>
+    <string name="steroid_empty">Keine Kortison-Kur erfasst. Trag deine Kuren mit ihren Dosisstufen ein, um die bisher eingenommene Dosis zu verfolgen.</string>
+    <string name="steroid_drug_prednisone">Prednison</string>
+    <string name="steroid_drug_prednisolone">Prednisolon</string>
+    <string name="steroid_drug_methylprednisolone">Methylprednisolon</string>
+    <string name="steroid_drug_budesonide">Budesonid</string>
+    <string name="steroid_drug">Wirkstoff</string>
+    <string name="steroid_start">Beginn</string>
+    <string name="steroid_steps">Dosisstufen</string>
+    <string name="steroid_steps_hint">Tagesdosis für eine Anzahl von Tagen, danach die nächste Stufe.</string>
+    <string name="steroid_dose">Tagesdosis</string>
+    <string name="steroid_mg">mg</string>
+    <string name="steroid_days">Tage</string>
+    <string name="steroid_remove_step">Stufe entfernen</string>
+    <string name="steroid_add_step">Stufe hinzufügen</string>
+    <string name="steroid_steps_invalid">Die Dosis muss über 0 mg liegen, die Dauer zwischen 1 und 365 Tagen.</string>
+    <plurals name="steroid_summary">
+        <item quantity="one">Gesamt %1$s mg über %2$d Tag, Ende am %3$s</item>
+        <item quantity="other">Gesamt %1$s mg über %2$d Tage, Ende am %3$s</item>
+    </plurals>
+    <string name="steroid_note">Notiz</string>
+    <string name="steroid_today_dose">Heute: %1$s mg</string>
+    <string name="steroid_cumulative">Bisher eingenommen: %1$s mg</string>
+    <string name="steroid_planned_end">Geplantes Ende: %1$s</string>
+    <plurals name="steroid_planned_total">
+        <item quantity="one">Geplante Gesamtdosis: %1$s mg über %2$d Tag</item>
+        <item quantity="other">Geplante Gesamtdosis: %1$s mg über %2$d Tage</item>
+    </plurals>
+    <string name="steroid_row_summary">%1$s – %2$s · %3$s mg</string>
+    <string name="steroid_not_started">Noch nicht begonnen</string>
+</resources>

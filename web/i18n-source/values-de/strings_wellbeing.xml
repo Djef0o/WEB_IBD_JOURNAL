@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_card_title">Schlaf, Stress, Stimmung</string>
+    <string name="wellbeing_card_hint">Optional, von 1 bis 5. Tippe den gewählten Wert erneut an, um ihn zu löschen.</string>
+    <string name="wellbeing_sleep">Schlaf</string>
+    <string name="wellbeing_sleep_scale">1 = sehr schlecht · 5 = sehr gut</string>
+    <string name="wellbeing_stress">Stress</string>
+    <string name="wellbeing_stress_scale">1 = ruhig · 5 = sehr gestresst</string>
+    <string name="wellbeing_mood">Stimmung</string>
+    <string name="wellbeing_mood_scale">1 = sehr schlecht · 5 = sehr gut</string>
+    <string name="wellbeing_period">Periode heute</string>
+    <string name="wellbeing_factor_poor_sleep">Schlechter Schlaf (1–2)</string>
+    <string name="wellbeing_factor_high_stress">Hoher Stress (4–5)</string>
+    <string name="wellbeing_factor_low_mood">Schlechte Stimmung (1–2)</string>
+    <string name="wellbeing_factor_period">Periode</string>
+    <string name="wellbeing_link_title">Schlaf, Stress, Stimmung und Symptome</string>
+    <string name="wellbeing_link_row">Schlechter Tag %1$d von %2$d Mal (andere Tage: %3$d %%)</string>
+    <string name="wellbeing_link_caveat">Eine Beobachtung zu deinen Einträgen, keine Ursache. Sprich mit deinem Arzt, bevor du etwas änderst.</string>
+    <string name="wellbeing_link_definition">Vergleicht Tage mit und ohne diesen Faktor, unter den Tagen mit eingetragenem Stuhl. Schlechter Tag: flüssiger Stuhl (Bristol 6–7), Blut oder Schmerz ab 3.</string>
+    <string name="report_wellbeing_title">Schlaf, Stress und Stimmung</string>
+    <string name="report_wellbeing_note">Tag für Tag im Tagebuch eingetragen, auf Skalen von 1 bis 5.</string>
+    <string name="report_wellbeing_sleep">Schlaf: durchschnittlich %1$s / 5</string>
+    <string name="report_wellbeing_stress">Stress: durchschnittlich %1$s / 5</string>
+    <string name="report_wellbeing_mood">Stimmung: durchschnittlich %1$s / 5</string>
+    <string name="report_wellbeing_period">Periode: %1$s</string>
+    <string name="report_wellbeing_link">%1$s: schlechter Tag %2$d von %3$d Mal (andere Tage: %4$d %%)</string>
+</resources>

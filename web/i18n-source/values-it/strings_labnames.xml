@@ -46,4 +46,9 @@
     <string name="lab_category_metabolic">Glicemia e lipidi</string>
     <string name="lab_category_nutrition">Nutrizione</string>
     <string name="lab_category_other">Altro</string>
+    <string name="lab_infliximab_level">Livello di infliximab</string>
+    <string name="lab_adalimumab_level">Livello di adalimumab</string>
+    <string name="lab_anti_infliximab_antibodies">Anticorpi anti-infliximab</string>
+    <string name="lab_anti_adalimumab_antibodies">Anticorpi anti-adalimumab</string>
+    <string name="lab_category_drug_monitoring">Monitoraggio dei farmaci</string>
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointmentui_title">Appointments</string>
+    <string name="appointmentui_add">Add an appointment</string>
+    <string name="appointmentui_edit">Edit appointment</string>
+    <string name="appointmentui_empty">No appointments recorded. Add your visits to get a reminder.</string>
+    <string name="appointmentui_past">Past appointments (%1$d)</string>
+    <string name="appointmentui_show_past">Show past appointments</string>
+    <string name="appointmentui_hide_past">Hide past appointments</string>
+    <string name="appointmentui_date">Date</string>
+    <string name="appointmentui_time">Time</string>
+    <string name="appointmentui_place">Doctor or address</string>
+    <string name="appointmentui_note">Note</string>
+    <string name="appointmentui_reminders">Reminders</string>
+    <string name="appointmentui_reminders_hint">Notification the evening before at 6 PM and 2 hours before</string>
+</resources>

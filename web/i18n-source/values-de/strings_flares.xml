@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flare_title">Schübe</string>
+    <string name="flare_add">Schub hinzufügen</string>
+    <string name="flare_edit">Schub bearbeiten</string>
+    <string name="flare_empty">Kein Schub erfasst. Trag Beginn und Ende deiner Schübe ein, um sie im Blick zu behalten.</string>
+    <string name="flare_start">Beginn</string>
+    <string name="flare_end">Ende</string>
+    <string name="flare_ongoing">Andauernd</string>
+    <string name="flare_ongoing_since">Seit %1$s (andauernd)</string>
+    <plurals name="flare_range_days">
+        <item quantity="one">%1$s – %2$s (%3$d Tag)</item>
+        <item quantity="other">%1$s – %2$s (%3$d Tage)</item>
+    </plurals>
+    <string name="flare_treatment">Behandlung</string>
+    <string name="flare_treatment_hint">z. B. Prednison 40 mg</string>
+    <string name="flare_hospitalized">Im Krankenhaus behandelt</string>
+    <string name="flare_note">Notiz</string>
+    <string name="flare_end_before_start">Das Ende darf nicht vor dem Beginn liegen</string>
+</resources>

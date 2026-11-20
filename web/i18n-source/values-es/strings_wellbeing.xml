@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_card_title">Sueño, estrés, ánimo</string>
+    <string name="wellbeing_card_hint">Opcional, de 1 a 5. Toca de nuevo el valor elegido para borrarlo.</string>
+    <string name="wellbeing_sleep">Sueño</string>
+    <string name="wellbeing_sleep_scale">1 = muy malo · 5 = muy bueno</string>
+    <string name="wellbeing_stress">Estrés</string>
+    <string name="wellbeing_stress_scale">1 = tranquilo · 5 = muy estresado</string>
+    <string name="wellbeing_mood">Ánimo</string>
+    <string name="wellbeing_mood_scale">1 = muy bajo · 5 = muy bueno</string>
+    <string name="wellbeing_period">Regla hoy</string>
+    <string name="wellbeing_factor_poor_sleep">Mal sueño (1–2)</string>
+    <string name="wellbeing_factor_high_stress">Estrés alto (4–5)</string>
+    <string name="wellbeing_factor_low_mood">Ánimo bajo (1–2)</string>
+    <string name="wellbeing_factor_period">Regla</string>
+    <string name="wellbeing_link_title">Sueño, estrés, ánimo y síntomas</string>
+    <string name="wellbeing_link_row">Mal día %1$d de %2$d veces (otros días: %3$d %%)</string>
+    <string name="wellbeing_link_caveat">Una observación sobre lo que anotaste, no una causa. Habla con tu médico antes de cambiar nada.</string>
+    <string name="wellbeing_link_definition">Compara los días con y sin este factor, entre los días con una deposición anotada. Mal día: deposición líquida (Bristol 6–7), sangre o dolor de 3 o más.</string>
+    <string name="report_wellbeing_title">Sueño, estrés y ánimo</string>
+    <string name="report_wellbeing_note">Anotados día a día en el diario, en escalas de 1 a 5.</string>
+    <string name="report_wellbeing_sleep">Sueño: %1$s / 5 de media</string>
+    <string name="report_wellbeing_stress">Estrés: %1$s / 5 de media</string>
+    <string name="report_wellbeing_mood">Ánimo: %1$s / 5 de media</string>
+    <string name="report_wellbeing_period">Regla: %1$s</string>
+    <string name="report_wellbeing_link">%1$s: mal día %2$d de %3$d veces (otros días: %4$d %%)</string>
+</resources>

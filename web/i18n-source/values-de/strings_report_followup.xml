@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PDF report: follow-up sections -->
+    <string name="report_followup_extra_title">Weitere Beschwerden</string>
+    <string name="report_followup_extra_note">Tageweise im Tagebuch notiert.</string>
+    <string name="report_followup_extra_line">%1$s: %2$s (zuletzt: %3$s)</string>
+    <plurals name="report_followup_days">
+        <item quantity="one">%1$d Tag</item>
+        <item quantity="other">%1$d Tage</item>
+    </plurals>
+    <string name="report_followup_questions">Fragen an die Ärztin oder den Arzt</string>
+    <string name="report_followup_appointments">Kommende Termine</string>
+</resources>

@@ -46,4 +46,9 @@
     <string name="lab_category_metabolic">Zucker &amp; Fette</string>
     <string name="lab_category_nutrition">Ernährung</string>
     <string name="lab_category_other">Sonstige</string>
+    <string name="lab_infliximab_level">Infliximab-Spiegel</string>
+    <string name="lab_adalimumab_level">Adalimumab-Spiegel</string>
+    <string name="lab_anti_infliximab_antibodies">Anti-Infliximab-Antikörper</string>
+    <string name="lab_anti_adalimumab_antibodies">Anti-Adalimumab-Antikörper</string>
+    <string name="lab_category_drug_monitoring">Medikamentenspiegel</string>
 </resources>

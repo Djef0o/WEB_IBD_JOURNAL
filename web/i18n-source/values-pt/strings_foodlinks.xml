@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analysis: meals and symptoms -->
+    <string name="foodlink_title">Refeições e sintomas</string>
+    <string name="foodlink_row">Seguido de um dia ruim %1$d de %2$d vezes (habitual: %3$d %%)</string>
+    <string name="foodlink_empty">Um alimento aparece aqui depois que você o comeu pelo menos %1$d vezes com evacuações registradas no mesmo dia ou no dia seguinte.</string>
+    <string name="foodlink_caveat">Uma observação sobre o que você registrou, não uma causa. Converse com seu médico ou nutricionista antes de retirar alimentos.</string>
+    <string name="foodlink_definition">Dia ruim: fezes líquidas (Bristol 6-7), sangue ou dor de 3 ou mais, no mesmo dia ou no dia seguinte.</string>
+</resources>

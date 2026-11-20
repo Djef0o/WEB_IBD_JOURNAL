@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_title">Preguntas para mi médico</string>
+    <string name="question_add">Añadir una pregunta</string>
+    <string name="question_edit">Editar la pregunta</string>
+    <string name="question_field">Pregunta</string>
+    <string name="question_empty">Anota lo que quieres preguntar en la próxima cita; las preguntas pendientes se añaden a tu informe para el médico.</string>
+    <string name="question_clear_done">Borrar las respondidas</string>
+</resources>

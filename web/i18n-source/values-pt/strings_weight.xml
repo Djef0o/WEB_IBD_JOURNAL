@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weight_title">Peso</string>
+    <string name="weight_add">Adicionar um peso</string>
+    <string name="weight_edit">Editar o peso</string>
+    <string name="weights_empty">Nenhum peso registrado. Pese-se regularmente para acompanhar sua curva de peso.</string>
+    <string name="weight_value_invalid">Insira um peso entre 1 e 400 kg</string>
+    <string name="weight_date">Data da pesagem</string>
+    <string name="weight_latest">Última pesagem em %1$s</string>
+    <string name="weight_change">%1$s kg desde %2$s</string>
+    <string name="weight_unchanged">Sem alteração desde %1$s</string>
+    <string name="weight_history">Histórico</string>
+    <string name="weight_chart_description">Evolução do peso ao longo do tempo</string>
+</resources>

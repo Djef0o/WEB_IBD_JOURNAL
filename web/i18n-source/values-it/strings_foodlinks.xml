@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analysis: meals and symptoms -->
+    <string name="foodlink_title">Pasti e sintomi</string>
+    <string name="foodlink_row">Seguito da una brutta giornata %1$d volte su %2$d (di solito: %3$d %%)</string>
+    <string name="foodlink_empty">Un alimento compare qui quando l\'hai mangiato almeno %1$d volte con feci registrate lo stesso giorno o il giorno dopo.</string>
+    <string name="foodlink_caveat">Un\'osservazione su ciò che hai registrato, non una causa. Parla con il tuo medico o dietista prima di eliminare degli alimenti.</string>
+    <string name="foodlink_definition">Brutta giornata: feci liquide (Bristol 6-7), sangue o dolore da 3 in su, lo stesso giorno o il giorno dopo.</string>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="score_title">Activity score</string>
+    <string name="score_add">Add a score</string>
+    <string name="score_edit">Edit score</string>
+    <string name="score_empty">No score yet. Fill in a short questionnaire to follow how active your disease feels over time.</string>
+    <string name="score_hbi">HBI</string>
+    <string name="score_sccai">SCCAI</string>
+    <string name="score_hbi_full">Harvey-Bradshaw Index (Crohn\'s disease)</string>
+    <string name="score_sccai_full">Simple Clinical Colitis Activity Index (ulcerative colitis)</string>
+    <string name="score_headline">%1$s: %2$d</string>
+    <string name="score_level_remission">Remission</string>
+    <string name="score_level_mild">Mild activity</string>
+    <string name="score_level_moderate">Moderate activity</string>
+    <string name="score_level_severe">Severe activity</string>
+    <string name="score_level_active">Active disease</string>
+    <string name="score_latest">Scored on %1$s</string>
+    <string name="score_change">%1$s since %2$s</string>
+    <string name="score_unchanged">Unchanged since %1$s</string>
+    <string name="score_history">History</string>
+    <string name="score_chart_description">Change in %1$s score over time</string>
+    <string name="score_disclaimer">Self-assessed score, to discuss with your doctor.</string>
+    <string name="score_date">Date</string>
+    <string name="score_prefilled">Pre-filled from your stools of the day</string>
+    <string name="score_total">Total: %1$d</string>
+    <string name="score_stools_less">One fewer stool</string>
+    <string name="score_stools_more">One more stool</string>
+    <string name="score_q_wellbeing">General well-being</string>
+    <string name="score_q_pain">Abdominal pain</string>
+    <string name="score_q_liquid_stools">Liquid or soft stools (number)</string>
+    <string name="score_q_mass">Abdominal mass</string>
+    <string name="score_q_complications">Complications (check those present)</string>
+    <string name="score_q_stools_day">Stools per day</string>
+    <string name="score_q_stools_night">Stools at night</string>
+    <string name="score_q_urgency">Urgency to defecate</string>
+    <string name="score_q_blood">Blood in stool</string>
+    <string name="score_q_extracolonic">Other features outside the gut (check those present)</string>
+    <string name="score_flag_arthralgia">Joint pain (arthralgia)</string>
+    <string name="score_flag_uveitis">Eye inflammation (uveitis)</string>
+    <string name="score_flag_erythema_nodosum">Erythema nodosum</string>
+    <string name="score_flag_aphthous">Aphthous ulcers</string>
+    <string name="score_flag_pyoderma">Pyoderma gangrenosum</string>
+    <string name="score_flag_fissure">Anal fissure</string>
+    <string name="score_flag_fistula">New fistula</string>
+    <string name="score_flag_abscess">Abscess</string>
+    <string name="score_flag_joint_pains">Joint pains</string>
+    <string-array name="score_options_wellbeing">
+        <item>Very well</item>
+        <item>Slightly below par</item>
+        <item>Poor</item>
+        <item>Very poor</item>
+        <item>Terrible</item>
+    </string-array>
+    <string-array name="score_options_pain">
+        <item>None</item>
+        <item>Mild</item>
+        <item>Moderate</item>
+        <item>Severe</item>
+    </string-array>
+    <string-array name="score_options_mass">
+        <item>None</item>
+        <item>Dubious</item>
+        <item>Definite</item>
+        <item>Definite and tender</item>
+    </string-array>
+    <string-array name="score_options_stools_day">
+        <item>1–3</item>
+        <item>4–6</item>
+        <item>7–9</item>
+        <item>More than 9</item>
+    </string-array>
+    <string-array name="score_options_stools_night">
+        <item>None</item>
+        <item>1–3</item>
+        <item>4–6</item>
+    </string-array>
+    <string-array name="score_options_urgency">
+        <item>None</item>
+        <item>Hurry</item>
+        <item>Immediately</item>
+        <item>Incontinence</item>
+    </string-array>
+    <string-array name="score_options_blood">
+        <item>None</item>
+        <item>Trace</item>
+        <item>Occasionally frank</item>
+        <item>Usually frank</item>
+    </string-array>
+</resources>

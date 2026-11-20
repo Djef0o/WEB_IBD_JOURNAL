@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_card_title">Sommeil, stress, humeur</string>
+    <string name="wellbeing_card_hint">Facultatif, de 1 à 5. Touchez à nouveau la valeur choisie pour l\'effacer.</string>
+    <string name="wellbeing_sleep">Sommeil</string>
+    <string name="wellbeing_sleep_scale">1 = très mauvais · 5 = très bon</string>
+    <string name="wellbeing_stress">Stress</string>
+    <string name="wellbeing_stress_scale">1 = calme · 5 = très stressé</string>
+    <string name="wellbeing_mood">Humeur</string>
+    <string name="wellbeing_mood_scale">1 = très bas · 5 = très bon</string>
+    <string name="wellbeing_period">Règles aujourd\'hui</string>
+    <string name="wellbeing_factor_poor_sleep">Mauvais sommeil (1–2)</string>
+    <string name="wellbeing_factor_high_stress">Stress élevé (4–5)</string>
+    <string name="wellbeing_factor_low_mood">Humeur basse (1–2)</string>
+    <string name="wellbeing_factor_period">Règles</string>
+    <string name="wellbeing_link_title">Sommeil, stress, humeur et symptômes</string>
+    <string name="wellbeing_link_row">Mauvaise journée %1$d fois sur %2$d (autres jours : %3$d %%)</string>
+    <string name="wellbeing_link_caveat">Une observation sur ce que vous avez noté, pas une cause. Parlez-en à votre médecin avant de changer quoi que ce soit.</string>
+    <string name="wellbeing_link_definition">Compare les jours avec et sans ce facteur, parmi les jours où une selle est notée. Mauvaise journée : selle liquide (Bristol 6–7), sang ou douleur de 3 et plus.</string>
+    <string name="report_wellbeing_title">Sommeil, stress et humeur</string>
+    <string name="report_wellbeing_note">Notés jour par jour dans le journal, sur des échelles de 1 à 5.</string>
+    <string name="report_wellbeing_sleep">Sommeil : %1$s / 5 en moyenne</string>
+    <string name="report_wellbeing_stress">Stress : %1$s / 5 en moyenne</string>
+    <string name="report_wellbeing_mood">Humeur : %1$s / 5 en moyenne</string>
+    <string name="report_wellbeing_period">Règles : %1$s</string>
+    <string name="report_wellbeing_link">%1$s : mauvaise journée %2$d fois sur %3$d (autres jours : %4$d %%)</string>
+</resources>

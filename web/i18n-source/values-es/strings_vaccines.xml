@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vaccine_title">Vacunas</string>
+    <string name="vaccine_add">Añadir una vacuna</string>
+    <string name="vaccine_edit">Editar la vacuna</string>
+    <string name="vaccine_empty">Ninguna vacuna registrada. Anota tus vacunas y la fecha de la próxima dosis o refuerzo.</string>
+    <string name="vaccine_live_notice">Las vacunas vivas generalmente no se recomiendan durante un tratamiento inmunosupresor: consulta con tu médico antes de cualquier vacunación.</string>
+    <string name="vaccine_type_influenza">Gripe (influenza)</string>
+    <string name="vaccine_type_pneumococcal">Neumococo</string>
+    <string name="vaccine_type_covid19">COVID-19</string>
+    <string name="vaccine_type_hepatitis_b">Hepatitis B</string>
+    <string name="vaccine_type_hpv">VPH</string>
+    <string name="vaccine_type_zoster">Herpes zóster (culebrilla)</string>
+    <string name="vaccine_type_tetanus">Tétanos</string>
+    <string name="vaccine_type_other">Otra</string>
+    <string name="vaccine_type">Vacuna</string>
+    <string name="vaccine_date">Fecha de administración</string>
+    <string name="vaccine_next_due">Próxima dosis o refuerzo</string>
+    <string name="vaccine_next_none">No prevista</string>
+    <string name="vaccine_next_before_date">La próxima dosis debe ser posterior a la fecha de administración</string>
+    <string name="vaccine_note">Nota</string>
+    <string name="vaccine_last">Última dosis: %1$s</string>
+    <string name="vaccine_next">Próxima: %1$s</string>
+    <string name="vaccine_overdue">Atrasada: estaba prevista el %1$s</string>
+    <plurals name="vaccine_doses">
+        <item quantity="one">%1$d dosis</item>
+        <item quantity="many">%1$d dosis</item>
+        <item quantity="other">%1$d dosis</item>
+    </plurals>
+    <string name="vaccine_show_doses">Ver todas las dosis</string>
+    <string name="vaccine_hide_doses">Ocultar las dosis</string>
+</resources>

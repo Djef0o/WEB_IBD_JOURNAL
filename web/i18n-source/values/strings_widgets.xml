@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_quick_stool_name">Add a stool</string>
+    <string name="widget_quick_stool_label">Stool</string>
+    <string name="widget_quick_stool_description">One button that opens the quick stool entry. It shows no data.</string>
+    <string name="widget_week_name">Last 7 days</string>
+    <string name="widget_week_title">Last 7 days</string>
+    <string name="widget_week_summary">%1$s · avg. Bristol %2$s</string>
+    <string name="widget_week_summary_none">No stool in the last 7 days</string>
+    <string name="widget_week_empty">Open IBD Journal once to fill this widget.</string>
+    <string name="widget_week_description">Stools per day over the last 7 days (● = blood). Visible on your home screen without the PIN.</string>
+    <string name="weigh_in_channel">Weigh-in reminder</string>
+    <string name="weigh_in_title">Weigh-in</string>
+    <string name="weigh_in_text">Time to weigh yourself. Type your weight in kg right here.</string>
+    <string name="weigh_in_action">Enter weight</string>
+    <string name="weigh_in_input_hint">Weight (kg)</string>
+    <string name="weigh_in_invalid">That does not look like a weight in kg. Try again.</string>
+    <string name="weigh_in_recorded">Weight recorded: %1$.1f kg</string>
+    <string name="weigh_in_switch">Weekly weigh-in reminder</string>
+    <string name="weigh_in_switch_desc">A notification where you type your weight, once a week at 9:00.</string>
+    <string name="weigh_in_day">Weigh-in day</string>
+</resources>

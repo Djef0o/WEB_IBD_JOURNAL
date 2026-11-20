@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Analysis: meals and symptoms -->
+    <string name="foodlink_title">Mahlzeiten und Symptome</string>
+    <string name="foodlink_row">Danach %1$d von %2$d Mal ein schlechter Tag (üblich: %3$d %%)</string>
+    <string name="foodlink_empty">Ein Lebensmittel erscheint hier, sobald du es mindestens %1$d Mal gegessen hast und am selben oder nächsten Tag Stuhlgänge erfasst sind.</string>
+    <string name="foodlink_caveat">Eine Beobachtung zu deinen Einträgen, keine Ursache. Sprich mit deiner Ärztin, deinem Arzt oder deiner Ernährungsberatung, bevor du Lebensmittel weglässt.</string>
+    <string name="foodlink_definition">Schlechter Tag: flüssiger Stuhl (Bristol 6-7), Blut oder Schmerzen ab 3, am selben oder am nächsten Tag.</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PDF report: care sections -->
+    <string name="report_care_diagnosis">Diagnosis: %1$s</string>
+    <string name="report_care_diagnosis_crohn">Crohn\'s disease</string>
+    <string name="report_care_diagnosis_uc">Ulcerative colitis</string>
+    <string name="report_care_diagnosis_other">Other IBD</string>
+    <string name="report_care_flares">Flares</string>
+    <string name="report_care_flare_ongoing">ongoing</string>
+    <string name="report_care_flare_range">%1$s – %2$s</string>
+    <string name="report_care_flare_hospitalized">hospitalised</string>
+    <string name="report_care_flare_treatment">Treatment: %1$s</string>
+    <string name="report_care_activity">Activity scores</string>
+    <string name="report_care_activity_note">Self-assessed estimates, to discuss with the doctor.</string>
+    <string name="report_care_activity_latest">Latest: %1$s %2$d on %3$s</string>
+    <string name="report_care_activity_latest_level">Latest: %1$s %2$d on %3$s (%4$s)</string>
+    <string name="report_care_activity_entry">%1$s · %2$s %3$d</string>
+    <string name="report_care_score_hbi">HBI</string>
+    <string name="report_care_score_sccai">SCCAI</string>
+    <string name="report_care_level_remission">remission range</string>
+    <string name="report_care_level_mild">mild range</string>
+    <string name="report_care_level_moderate">moderate range</string>
+    <string name="report_care_level_severe">severe range</string>
+    <string name="report_care_level_active">active range</string>
+    <string name="report_care_steroids">Corticosteroid courses</string>
+    <string name="report_care_steroid_row">%1$s · %2$s – %3$s · total %4$s mg</string>
+    <string name="report_care_vaccinations">Vaccinations</string>
+    <string name="report_care_col_vaccine">Vaccine</string>
+    <string name="report_care_col_given">Given</string>
+    <string name="report_care_col_next_due">Next due</string>
+    <string name="report_care_vaccine_influenza">Influenza</string>
+    <string name="report_care_vaccine_pneumococcal">Pneumococcal</string>
+    <string name="report_care_vaccine_covid19">COVID-19</string>
+    <string name="report_care_vaccine_hepatitis_b">Hepatitis B</string>
+    <string name="report_care_vaccine_hpv">HPV</string>
+    <string name="report_care_vaccine_zoster">Shingles (zoster)</string>
+    <string name="report_care_vaccine_tetanus">Tetanus</string>
+    <string name="report_care_vaccine_other">Other</string>
+</resources>

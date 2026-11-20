@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weight_title">Poids</string>
+    <string name="weight_add">Ajouter un poids</string>
+    <string name="weight_edit">Modifier le poids</string>
+    <string name="weights_empty">Aucun poids enregistré. Pesez-vous régulièrement pour suivre votre courbe de poids.</string>
+    <string name="weight_value_invalid">Saisissez un poids entre 1 et 400 kg</string>
+    <string name="weight_date">Date de la pesée</string>
+    <string name="weight_latest">Dernière pesée le %1$s</string>
+    <string name="weight_change">%1$s kg depuis le %2$s</string>
+    <string name="weight_unchanged">Stable depuis le %1$s</string>
+    <string name="weight_history">Historique</string>
+    <string name="weight_chart_description">Évolution du poids dans le temps</string>
+</resources>

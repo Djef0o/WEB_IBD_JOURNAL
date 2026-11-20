@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointmentui_title">Termine</string>
+    <string name="appointmentui_add">Termin hinzufügen</string>
+    <string name="appointmentui_edit">Termin bearbeiten</string>
+    <string name="appointmentui_empty">Keine Termine erfasst. Trag deine Arzttermine ein, um erinnert zu werden.</string>
+    <string name="appointmentui_past">Vergangene Termine (%1$d)</string>
+    <string name="appointmentui_show_past">Vergangene Termine anzeigen</string>
+    <string name="appointmentui_hide_past">Vergangene Termine ausblenden</string>
+    <string name="appointmentui_date">Datum</string>
+    <string name="appointmentui_time">Uhrzeit</string>
+    <string name="appointmentui_place">Ärztin/Arzt oder Adresse</string>
+    <string name="appointmentui_note">Notiz</string>
+    <string name="appointmentui_reminders">Erinnerungen</string>
+    <string name="appointmentui_reminders_hint">Benachrichtigung am Vorabend um 18 Uhr und 2 Stunden vorher</string>
+</resources>

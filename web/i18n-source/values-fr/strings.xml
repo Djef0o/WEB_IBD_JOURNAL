@@ -179,7 +179,7 @@
         <item quantity="other">%1$d jours</item>
     </plurals>
     <string name="analysis_liquid_per_day">Selles liquides par jour (types 6–7)</string>
-    <string name="analysis_no_data">Pas encore assez de données. Continue à noter tes journées.</string>
+    <string name="analysis_no_data">Pas encore assez de données. Continuez à noter vos journées.</string>
     <string name="analysis_type">Type %1$d</string>
     <string name="close">Fermer</string>
 

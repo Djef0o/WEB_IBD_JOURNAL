@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="day_card_none">Rien de noté</string>
+    <string name="day_card_expand">Déplier</string>
+    <string name="day_card_collapse">Replier</string>
+</resources>

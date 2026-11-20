@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="emergency_title">Notfall</string>
+    <string name="emergency_info_row">Notfallinformationen</string>
+    <string name="emergency_info_filled">Ausgefüllt</string>
+    <string name="emergency_info_empty">Noch nicht ausgefüllt</string>
+    <string name="emergency_lock_switch">Auf dem Sperrbildschirm anzeigen</string>
+    <string name="emergency_lock_warning">Ohne PIN lesbar: Jeder, der dein Handy in der Hand hat, kann deinen Namen, dein Geburtsdatum, deine Diagnose, deine Behandlungen und die obigen Angaben sehen.</string>
+    <string name="emergency_lock_confirm_title">Auf dem Sperrbildschirm anzeigen?</string>
+    <string name="emergency_lock_confirm_text">Ohne PIN kann jeder, der dein Handy in der Hand hat, deinen Namen, dein Geburtsdatum, deine Diagnose, deine Behandlungen, Allergien, deinen Arzt, deinen Notfallkontakt und deine Notizen lesen. Das Tagebuch selbst bleibt gesperrt. Du kannst das jederzeit wieder ausschalten.</string>
+    <string name="emergency_lock_confirm">Anzeigen</string>
+    <string name="emergency_preview_sheet">Notfallblatt anzeigen</string>
+    <string name="emergency_preview_card">Dringlichkeitskarte anzeigen</string>
+    <string name="emergency_preview_card_sub">Es stehen keine persönlichen Daten darauf</string>
+    <string name="emergency_edit_title">Notfallinformationen</string>
+    <string name="emergency_edit_help">Name, Geburtsdatum, Diagnose und Behandlungen stammen aus deinem Profil und deiner Behandlungsliste.</string>
+    <string name="emergency_allergies">Allergien</string>
+    <string name="emergency_allergies_hint">z. B. Penicillin, Latex</string>
+    <string name="emergency_doctor_name">Arzt</string>
+    <string name="emergency_doctor_phone">Telefonnummer des Arztes</string>
+    <string name="emergency_contact_name">Notfallkontakt</string>
+    <string name="emergency_contact_phone">Telefonnummer des Kontakts</string>
+    <string name="emergency_notes">Notizen</string>
+    <string name="emergency_notes_hint">z. B. Vorerkrankungen, Implantate</string>
+    <string name="emergency_sheet_title">Notfallinformationen</string>
+    <string name="emergency_sheet_empty">Noch nichts ausgefüllt. Ergänze diese Angaben in den Einstellungen unter Notfall.</string>
+    <string name="emergency_field_name">Name</string>
+    <string name="emergency_field_born">Geburtsdatum</string>
+    <string name="emergency_field_allergies">Allergien</string>
+    <string name="emergency_field_treatments">Behandlungen</string>
+    <string name="emergency_field_doctor">Arzt</string>
+    <string name="emergency_field_contact">Notfallkontakt</string>
+    <string name="emergency_field_notes">Notizen</string>
+    <string name="emergency_chooser_title">Notfall</string>
+    <string name="emergency_open_card">Dringlichkeitskarte</string>
+    <string name="emergency_open_sheet">Notfallblatt</string>
+    <string name="urgent_card_title">Ich muss dringend auf die Toilette</string>
+    <string name="urgent_card_text">Ich habe eine chronisch-entzündliche Darmerkrankung (Morbus Crohn / Colitis ulcerosa). Ich muss dringend eine Toilette benutzen. Danke, dass Sie mich durchlassen.</string>
+    <string name="diagnosis_title">Diagnose</string>
+    <string name="diagnosis_crohn">Morbus Crohn</string>
+    <string name="diagnosis_uc">Colitis ulcerosa</string>
+    <string name="diagnosis_other">Andere / nicht angegeben</string>
+    <string name="diagnosis_other_short">Andere</string>
+    <string name="diagnosis_missing">Diagnose nicht angegeben</string>
+</resources>

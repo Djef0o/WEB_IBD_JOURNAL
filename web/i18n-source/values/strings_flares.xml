@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flare_title">Flares</string>
+    <string name="flare_add">Add a flare</string>
+    <string name="flare_edit">Edit flare</string>
+    <string name="flare_empty">No flare recorded. Note the start and end of your flares to keep track of them.</string>
+    <string name="flare_start">Start date</string>
+    <string name="flare_end">End date</string>
+    <string name="flare_ongoing">Ongoing</string>
+    <string name="flare_ongoing_since">Since %1$s (ongoing)</string>
+    <plurals name="flare_range_days">
+        <item quantity="one">%1$s – %2$s (%3$d day)</item>
+        <item quantity="other">%1$s – %2$s (%3$d days)</item>
+    </plurals>
+    <string name="flare_treatment">Treatment</string>
+    <string name="flare_treatment_hint">e.g. prednisone 40 mg</string>
+    <string name="flare_hospitalized">Hospitalized</string>
+    <string name="flare_note">Note</string>
+    <string name="flare_end_before_start">The end date can\'t be before the start date</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flaremark_legend">Días de brote</string>
+    <string name="flaremark_day_desc">%1$s, día de brote</string>
+    <string name="flaremark_day">Brote · día %1$d</string>
+    <string name="flaremark_hospitalized">Hospitalización</string>
+    <string name="flaremark_home">Brote en curso desde el %1$s (día %2$d)</string>
+    <string name="flaremark_chart_legend">Brote</string>
+</resources>

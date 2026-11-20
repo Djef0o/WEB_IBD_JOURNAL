@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_card_title">Sono, estresse, humor</string>
+    <string name="wellbeing_card_hint">Opcional, de 1 a 5. Toque de novo no valor escolhido para apagá-lo.</string>
+    <string name="wellbeing_sleep">Sono</string>
+    <string name="wellbeing_sleep_scale">1 = muito ruim · 5 = muito bom</string>
+    <string name="wellbeing_stress">Estresse</string>
+    <string name="wellbeing_stress_scale">1 = calmo · 5 = muito estressado</string>
+    <string name="wellbeing_mood">Humor</string>
+    <string name="wellbeing_mood_scale">1 = muito baixo · 5 = muito bom</string>
+    <string name="wellbeing_period">Menstruação hoje</string>
+    <string name="wellbeing_factor_poor_sleep">Sono ruim (1–2)</string>
+    <string name="wellbeing_factor_high_stress">Estresse alto (4–5)</string>
+    <string name="wellbeing_factor_low_mood">Humor baixo (1–2)</string>
+    <string name="wellbeing_factor_period">Menstruação</string>
+    <string name="wellbeing_link_title">Sono, estresse, humor e sintomas</string>
+    <string name="wellbeing_link_row">Dia ruim %1$d vezes de %2$d (outros dias: %3$d %%)</string>
+    <string name="wellbeing_link_caveat">Uma observação sobre o que você anotou, não uma causa. Converse com seu médico antes de mudar qualquer coisa.</string>
+    <string name="wellbeing_link_definition">Compara os dias com e sem este fator, entre os dias com uma evacuação anotada. Dia ruim: evacuação líquida (Bristol 6–7), sangue ou dor de 3 ou mais.</string>
+    <string name="report_wellbeing_title">Sono, estresse e humor</string>
+    <string name="report_wellbeing_note">Anotados dia a dia no diário, em escalas de 1 a 5.</string>
+    <string name="report_wellbeing_sleep">Sono: %1$s / 5 em média</string>
+    <string name="report_wellbeing_stress">Estresse: %1$s / 5 em média</string>
+    <string name="report_wellbeing_mood">Humor: %1$s / 5 em média</string>
+    <string name="report_wellbeing_period">Menstruação: %1$s</string>
+    <string name="report_wellbeing_link">%1$s: dia ruim %2$d vezes de %3$d (outros dias: %4$d %%)</string>
+</resources>

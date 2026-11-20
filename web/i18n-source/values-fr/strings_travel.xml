@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="travel_title">Voyage</string>
+    <string name="travel_row_title">Pack voyage</string>
+    <string name="travel_row_desc">Médicaments à emporter, lettre pour votre médecin, carte d\'urgence</string>
+    <string name="travel_departure">Départ</string>
+    <string name="travel_return">Retour</string>
+    <string name="travel_margin">Marge de sécurité</string>
+    <string name="travel_margin_hint">Jours de traitement en plus, en cas de retard.</string>
+    <string name="travel_destination">Destination (facultatif)</string>
+    <string name="travel_language">Langue des documents</string>
+    <string name="travel_list_title">Médicaments à emporter</string>
+    <string name="travel_line_detail">%1$d pour le séjour + %2$d de marge</string>
+    <string name="travel_line_missing">Votre stock compté couvre %1$d : il en manque %2$d</string>
+    <string name="travel_empty">Aucun traitement n\'a de prise prévue sur ces dates.</string>
+    <string name="travel_vaccines">Vaccins : demandez conseil à votre médecin 6 à 8 semaines avant le départ. Les vaccins vivants sont en général déconseillés sous traitement immunosuppresseur.</string>
+    <string name="travel_disclaimer">La lettre est un modèle : elle ne devient un certificat qu\'une fois datée, signée et tamponnée par votre médecin. Renseignez-vous sur les règles de votre destination pour les médicaments (ambassade ou autorité sanitaire).</string>
+    <string name="travel_create">Créer le pack voyage (PDF)</string>
+    <string name="travel_creating">Création…</string>
+    <string name="travel_failed">Le PDF n\'a pas pu être créé.</string>
+    <string name="travel_share_subject">Pack voyage</string>
+    <string name="travel_pdf_title">Liste des médicaments pour le voyage</string>
+    <string name="travel_pdf_trip">Voyage : du %1$s au %2$s (%3$s)</string>
+    <string name="travel_pdf_destination">Destination : %1$s</string>
+    <string name="travel_pdf_list_title">Médicaments emportés</string>
+    <string name="travel_pdf_col_medication">Médicament</string>
+    <string name="travel_pdf_col_schedule">Prise</string>
+    <string name="travel_pdf_col_quantity">Quantité à emporter</string>
+    <string name="travel_pdf_empty">Aucun traitement prévu sur ces dates.</string>
+    <string name="travel_pdf_margin_note">Les quantités incluent une marge de %1$d jours après la date de retour.</string>
+    <string name="travel_pdf_carry_note">Gardez les médicaments dans leur emballage d\'origine, en bagage à main, avec cette liste et vos ordonnances.</string>
+    <string name="travel_pdf_schedule">%1$s à %2$s</string>
+    <string name="travel_pdf_schedule_once">Prise unique</string>
+    <string name="travel_pdf_card_empty">Renseignez vos informations d\'urgence dans l\'app (Réglages, Urgence) pour les voir ici.</string>
+    <string name="travel_cert_title">Lettre pour voyager avec des médicaments</string>
+    <string name="travel_cert_greeting">À qui de droit,</string>
+    <string name="travel_cert_body">%1$s, né(e) le %2$s, est suivi(e) pour %3$s et doit transporter les médicaments listés dans le tableau joint, pour son usage strictement personnel, lors d\'un voyage du %4$s au %5$s.</string>
+    <string name="travel_cert_list_ref">Les quantités du tableau couvrent le voyage plus %1$d jours de marge en cas de retard.</string>
+    <string name="travel_cert_customs">Merci de laisser cette personne conserver ses médicaments, dans leur emballage d\'origine, avec elle (y compris les traitements injectables et le matériel pour les injecter).</string>
+    <string name="travel_cert_sign_place">Date et lieu : ……………………………………………</string>
+    <string name="travel_cert_sign_doctor">Nom, signature et cachet du médecin :</string>
+    <string name="travel_cert_disclaimer">Préparé par le patient avec l\'application IBD Journal. Ce document ne devient un certificat médical qu\'une fois daté, signé et tamponné par le médecin traitant.</string>
+    <string name="travel_cert_condition_default">une maladie inflammatoire chronique de l\'intestin (maladie de Crohn ou rectocolite hémorragique)</string>
+    <plurals name="travel_margin_days">
+        <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
+        <item quantity="other">%d jours</item>
+    </plurals>
+    <plurals name="travel_intakes">
+        <item quantity="one">%d prise</item>
+        <item quantity="many">%d prises</item>
+        <item quantity="other">%d prises</item>
+    </plurals>
+    <plurals name="travel_pdf_days">
+        <item quantity="one">%d jour</item>
+        <item quantity="many">%d jours</item>
+        <item quantity="other">%d jours</item>
+    </plurals>
+    <plurals name="travel_pdf_intakes">
+        <item quantity="one">%d prise</item>
+        <item quantity="many">%d prises</item>
+        <item quantity="other">%d prises</item>
+    </plurals>
+</resources>

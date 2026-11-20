@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="score_title">Score d\'activité</string>
+    <string name="score_add">Ajouter un score</string>
+    <string name="score_edit">Modifier le score</string>
+    <string name="score_empty">Aucun score pour l\'instant. Remplissez un court questionnaire pour suivre l\'activité ressentie de votre maladie dans le temps.</string>
+    <string name="score_hbi">HBI</string>
+    <string name="score_sccai">SCCAI</string>
+    <string name="score_hbi_full">Indice de Harvey-Bradshaw (maladie de Crohn)</string>
+    <string name="score_sccai_full">Indice d\'activité clinique simple de la colite (rectocolite hémorragique)</string>
+    <string name="score_headline">%1$s : %2$d</string>
+    <string name="score_level_remission">Rémission</string>
+    <string name="score_level_mild">Activité légère</string>
+    <string name="score_level_moderate">Activité modérée</string>
+    <string name="score_level_severe">Activité sévère</string>
+    <string name="score_level_active">Maladie active</string>
+    <string name="score_latest">Score du %1$s</string>
+    <string name="score_change">%1$s depuis le %2$s</string>
+    <string name="score_unchanged">Stable depuis le %1$s</string>
+    <string name="score_history">Historique</string>
+    <string name="score_chart_description">Évolution du score %1$s dans le temps</string>
+    <string name="score_disclaimer">Score auto-évalué, à discuter avec votre médecin.</string>
+    <string name="score_date">Date</string>
+    <string name="score_prefilled">Pré-rempli d\'après vos selles du jour</string>
+    <string name="score_total">Total : %1$d</string>
+    <string name="score_stools_less">Une selle de moins</string>
+    <string name="score_stools_more">Une selle de plus</string>
+    <string name="score_q_wellbeing">État général</string>
+    <string name="score_q_pain">Douleurs abdominales</string>
+    <string name="score_q_liquid_stools">Selles liquides ou molles (nombre)</string>
+    <string name="score_q_mass">Masse abdominale</string>
+    <string name="score_q_complications">Complications (cochez celles présentes)</string>
+    <string name="score_q_stools_day">Selles par jour</string>
+    <string name="score_q_stools_night">Selles la nuit</string>
+    <string name="score_q_urgency">Urgence d\'aller à la selle</string>
+    <string name="score_q_blood">Sang dans les selles</string>
+    <string name="score_q_extracolonic">Autres manifestations hors de l\'intestin (cochez celles présentes)</string>
+    <string name="score_flag_arthralgia">Douleurs articulaires (arthralgies)</string>
+    <string name="score_flag_uveitis">Inflammation de l\'œil (uvéite)</string>
+    <string name="score_flag_erythema_nodosum">Érythème noueux</string>
+    <string name="score_flag_aphthous">Aphtes</string>
+    <string name="score_flag_pyoderma">Pyoderma gangrenosum</string>
+    <string name="score_flag_fissure">Fissure anale</string>
+    <string name="score_flag_fistula">Nouvelle fistule</string>
+    <string name="score_flag_abscess">Abcès</string>
+    <string name="score_flag_joint_pains">Douleurs articulaires</string>
+    <string-array name="score_options_wellbeing">
+        <item>Très bon</item>
+        <item>Un peu en dessous de la normale</item>
+        <item>Mauvais</item>
+        <item>Très mauvais</item>
+        <item>Terrible</item>
+    </string-array>
+    <string-array name="score_options_pain">
+        <item>Aucune</item>
+        <item>Légères</item>
+        <item>Modérées</item>
+        <item>Sévères</item>
+    </string-array>
+    <string-array name="score_options_mass">
+        <item>Aucune</item>
+        <item>Douteuse</item>
+        <item>Nette</item>
+        <item>Nette et douloureuse</item>
+    </string-array>
+    <string-array name="score_options_stools_day">
+        <item>1–3</item>
+        <item>4–6</item>
+        <item>7–9</item>
+        <item>Plus de 9</item>
+    </string-array>
+    <string-array name="score_options_stools_night">
+        <item>Aucune</item>
+        <item>1–3</item>
+        <item>4–6</item>
+    </string-array>
+    <string-array name="score_options_urgency">
+        <item>Aucune</item>
+        <item>Besoin pressant</item>
+        <item>Immédiate</item>
+        <item>Incontinence</item>
+    </string-array>
+    <string-array name="score_options_blood">
+        <item>Aucun</item>
+        <item>Traces</item>
+        <item>Sang franc de temps en temps</item>
+        <item>Sang franc la plupart du temps</item>
+    </string-array>
+</resources>

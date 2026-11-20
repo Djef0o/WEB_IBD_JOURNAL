@@ -36,8 +36,6 @@ export const EXCLUDED_KEYS: ReadonlySet<string> = new Set([
   'battery_grant',
   'battery_exempt',
   // Notifications Android (canaux, actions, planification en arrière-plan)
-  'test_notification',
-  'test_notification_desc',
   'exam_reminder_channel',
   'medication_reminder_channel',
   'checkup_reminder_channel',
@@ -45,8 +43,6 @@ export const EXCLUDED_KEYS: ReadonlySet<string> = new Set([
   'onboarding_notifications_text',
   'onboarding_notifications_allow',
   'onboarding_notifications_granted',
-  'last_reminder',
-  'last_reminder_never',
   // Calendrier du téléphone (remplacé par l'export .ics)
   'calendar_section_title',
   'calendar_sync',
@@ -194,13 +190,19 @@ function main(): void {
     const dict = finalize(raw[lang]!);
     const extraPath = join(outDir, `web-extra.${lang}.json`);
     if (existsSync(extraPath)) {
-      const extra = JSON.parse(readFileSync(extraPath, 'utf8')) as Dict;
-      for (const [k, v] of Object.entries(extra)) {
-        if (k in dict) {
-          console.error(`[i18n] ${lang}: la clé web "${k}" existe déjà dans les ressources Android`);
-          problems++;
+      // `web-extra.<lang>.json` plus one `web-extra-<feature>.<lang>.json` per feature (no shared file to merge).
+      const featureFiles = readdirSync(outDir)
+        .filter((f) => f.startsWith('web-extra-') && f.endsWith(`.${lang}.json`))
+        .sort();
+      for (const file of [extraPath, ...featureFiles.map((f) => join(outDir, f))]) {
+        const extra = JSON.parse(readFileSync(file, 'utf8')) as Dict;
+        for (const [k, v] of Object.entries(extra)) {
+          if (k in dict) {
+            console.error(`[i18n] ${lang}: la clé web "${k}" (${file}) existe déjà`);
+            problems++;
+          }
+          dict[k] = v;
         }
-        dict[k] = v;
       }
     } else {
       console.error(`[i18n] fichier manquant : ${extraPath}`);

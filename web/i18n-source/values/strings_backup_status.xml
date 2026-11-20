@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_status_title">Encrypted backup</string>
+    <string name="backup_status_never">No backup yet</string>
+    <string name="backup_status_last">Last backup: %1$s</string>
+    <string name="backup_reminder_switch">Backup reminder</string>
+    <string name="backup_reminder_desc">Reminds you to export an encrypted backup when the last one is a month old.</string>
+    <string name="backup_reminder_title">Backup reminder</string>
+    <string name="backup_reminder_text">Your last encrypted backup is from %1$s. Export a new one from Settings: if you forget your PIN, only a backup can restore your journal.</string>
+    <string name="backup_reminder_text_never">You have not exported an encrypted backup yet. Do it from Settings: if you forget your PIN, only a backup can restore your journal.</string>
+    <string name="backup_reminder_channel">Backup reminders</string>
+    <string name="csv_export_title">Export data (CSV)</string>
+    <string name="csv_export_desc">Spreadsheet files in a password-protected archive</string>
+    <string name="csv_warning_title">Export your data?</string>
+    <string name="csv_warning_text">The CSV files contain your health data. They are packed in an archive encrypted with a password (AES-256), which you choose in the next step. Open it with 7-Zip, Keka or a similar tool: Windows Explorer and some phone apps cannot read this format. Anyone who has the archive and the password can read your data: do not send them together.</string>
+    <string name="csv_warning_continue">Continue</string>
+    <string name="csv_password_title">Archive password</string>
+    <string name="csv_password_message">Choose a password to protect the archive. You will need it to open the files.</string>
+    <string name="csv_password_warning">If you forget this password, the archive cannot be opened. This export cannot be imported back into the app: use the encrypted backup for that.</string>
+    <string name="csv_export_done">CSV archive exported.</string>
+    <string name="csv_export_failed">The CSV export failed. Nothing was saved.</string>
+</resources>

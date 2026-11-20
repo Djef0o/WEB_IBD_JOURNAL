@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_quick_stool_name">Adicionar fezes</string>
+    <string name="widget_quick_stool_label">Fezes</string>
+    <string name="widget_quick_stool_description">Um único botão que abre o registro rápido de fezes. Não mostra dados.</string>
+    <string name="widget_week_name">Últimos 7 dias</string>
+    <string name="widget_week_title">Últimos 7 dias</string>
+    <string name="widget_week_summary">%1$s · Bristol médio %2$s</string>
+    <string name="widget_week_summary_none">Nenhuma evacuação nos últimos 7 dias</string>
+    <string name="widget_week_empty">Abra o IBD Journal uma vez para preencher este widget.</string>
+    <string name="widget_week_description">Evacuações por dia nos últimos 7 dias (● = sangue). Visível na sua tela inicial sem o PIN.</string>
+    <string name="weigh_in_channel">Lembrete de pesagem</string>
+    <string name="weigh_in_title">Pesagem</string>
+    <string name="weigh_in_text">Hora de se pesar. Digite seu peso em kg aqui mesmo.</string>
+    <string name="weigh_in_action">Informar peso</string>
+    <string name="weigh_in_input_hint">Peso (kg)</string>
+    <string name="weigh_in_invalid">Isso não parece um peso em kg. Tente de novo.</string>
+    <string name="weigh_in_recorded">Peso registrado: %1$.1f kg</string>
+    <string name="weigh_in_switch">Lembrete semanal de pesagem</string>
+    <string name="weigh_in_switch_desc">Uma notificação onde você digita seu peso, uma vez por semana às 9:00.</string>
+    <string name="weigh_in_day">Dia da pesagem</string>
+</resources>

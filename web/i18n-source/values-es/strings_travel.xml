@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="travel_title">Viaje</string>
+    <string name="travel_row_title">Pack de viaje</string>
+    <string name="travel_row_desc">Medicamentos que llevar, carta para tu médico, tarjeta de urgencia</string>
+    <string name="travel_departure">Salida</string>
+    <string name="travel_return">Regreso</string>
+    <string name="travel_margin">Margen de seguridad</string>
+    <string name="travel_margin_hint">Días de tratamiento de más, por si hay retraso.</string>
+    <string name="travel_destination">Destino (opcional)</string>
+    <string name="travel_language">Idioma de los documentos</string>
+    <string name="travel_list_title">Medicamentos que llevar</string>
+    <string name="travel_line_detail">%1$d para el viaje + %2$d de margen</string>
+    <string name="travel_line_missing">Tu reserva contada cubre %1$d: faltan %2$d</string>
+    <string name="travel_empty">Ningún tratamiento tiene tomas previstas en estas fechas.</string>
+    <string name="travel_vaccines">Vacunas: pregunta a tu médico 6 a 8 semanas antes de salir. Las vacunas vivas en general no se recomiendan con tratamiento inmunosupresor.</string>
+    <string name="travel_disclaimer">La carta es una plantilla: solo se convierte en certificado cuando tu médico la fecha, firma y sella. Infórmate de las normas de tu destino sobre medicamentos (embajada o autoridad sanitaria).</string>
+    <string name="travel_create">Crear el pack de viaje (PDF)</string>
+    <string name="travel_creating">Creando…</string>
+    <string name="travel_failed">No se pudo crear el PDF.</string>
+    <string name="travel_share_subject">Pack de viaje</string>
+    <string name="travel_pdf_title">Lista de medicamentos para el viaje</string>
+    <string name="travel_pdf_trip">Viaje: del %1$s al %2$s (%3$s)</string>
+    <string name="travel_pdf_destination">Destino: %1$s</string>
+    <string name="travel_pdf_list_title">Medicamentos que se llevan</string>
+    <string name="travel_pdf_col_medication">Medicamento</string>
+    <string name="travel_pdf_col_schedule">Toma</string>
+    <string name="travel_pdf_col_quantity">Cantidad que llevar</string>
+    <string name="travel_pdf_empty">No hay tratamiento previsto en estas fechas.</string>
+    <string name="travel_pdf_margin_note">Las cantidades incluyen un margen de %1$d días tras la fecha de regreso.</string>
+    <string name="travel_pdf_carry_note">Conserve los medicamentos en su envase original, en el equipaje de mano, con esta lista y sus recetas.</string>
+    <string name="travel_pdf_schedule">%1$s a las %2$s</string>
+    <string name="travel_pdf_schedule_once">Toma única</string>
+    <string name="travel_pdf_card_empty">Rellena tu información de emergencia en la app (Ajustes, Emergencia) para verla aquí.</string>
+    <string name="travel_cert_title">Carta para viajar con medicamentos</string>
+    <string name="travel_cert_greeting">A quien corresponda:</string>
+    <string name="travel_cert_body">%1$s, nacido/a el %2$s, está en seguimiento por %3$s y debe llevar los medicamentos indicados en la tabla adjunta, para su uso estrictamente personal, durante un viaje del %4$s al %5$s.</string>
+    <string name="travel_cert_list_ref">Las cantidades de la tabla cubren el viaje más %1$d días de margen por si hay retraso.</string>
+    <string name="travel_cert_customs">Se ruega permitir que esta persona conserve sus medicamentos, en su envase original, consigo (incluidos los tratamientos inyectables y el material para inyectarlos).</string>
+    <string name="travel_cert_sign_place">Fecha y lugar: ……………………………………………</string>
+    <string name="travel_cert_sign_doctor">Nombre, firma y sello del médico:</string>
+    <string name="travel_cert_disclaimer">Preparado por el paciente con la app IBD Journal. Solo se convierte en certificado médico cuando el médico que lo trata lo fecha, firma y sella.</string>
+    <string name="travel_cert_condition_default">una enfermedad inflamatoria crónica del intestino (enfermedad de Crohn o colitis ulcerosa)</string>
+    <plurals name="travel_margin_days">
+        <item quantity="one">%d día</item>
+        <item quantity="many">%d días</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <plurals name="travel_intakes">
+        <item quantity="one">%d toma</item>
+        <item quantity="many">%d tomas</item>
+        <item quantity="other">%d tomas</item>
+    </plurals>
+    <plurals name="travel_pdf_days">
+        <item quantity="one">%d día</item>
+        <item quantity="many">%d días</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <plurals name="travel_pdf_intakes">
+        <item quantity="one">%d toma</item>
+        <item quantity="many">%d tomas</item>
+        <item quantity="other">%d tomas</item>
+    </plurals>
+</resources>

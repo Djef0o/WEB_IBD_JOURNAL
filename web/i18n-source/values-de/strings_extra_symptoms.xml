@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="extra_symptom_joints">Gelenkschmerzen</string>
+    <string name="extra_symptom_skin">Haut (rote Knoten, Ausschlag)</string>
+    <string name="extra_symptom_eyes">Gerötetes oder schmerzendes Auge</string>
+    <string name="extra_symptom_mouth_ulcers">Aphthen im Mund</string>
+    <string name="extra_symptom_fever">Fieber</string>
+    <string name="extra_card_title">Weitere Symptome</string>
+    <string name="extra_card_hint">Gelenke, Haut, Augen, Mund, Fieber: hier für deinen Arzt notiert und zum Vorausfüllen der Aktivitätsscores verwendet.</string>
+</resources>

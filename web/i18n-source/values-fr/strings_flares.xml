@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flare_title">Poussées</string>
+    <string name="flare_add">Ajouter une poussée</string>
+    <string name="flare_edit">Modifier la poussée</string>
+    <string name="flare_empty">Aucune poussée enregistrée. Notez le début et la fin de vos poussées pour en garder une trace.</string>
+    <string name="flare_start">Date de début</string>
+    <string name="flare_end">Date de fin</string>
+    <string name="flare_ongoing">En cours</string>
+    <string name="flare_ongoing_since">Depuis le %1$s (en cours)</string>
+    <plurals name="flare_range_days">
+        <item quantity="one">%1$s – %2$s (%3$d jour)</item>
+        <item quantity="many">%1$s – %2$s (%3$d jours)</item>
+        <item quantity="other">%1$s – %2$s (%3$d jours)</item>
+    </plurals>
+    <string name="flare_treatment">Traitement</string>
+    <string name="flare_treatment_hint">ex. prednisone 40 mg</string>
+    <string name="flare_hospitalized">Hospitalisation</string>
+    <string name="flare_note">Note</string>
+    <string name="flare_end_before_start">La date de fin ne peut pas précéder la date de début</string>
+</resources>
