@@ -24,6 +24,8 @@ export interface IcsEvent {
   description: string;
   /** The alert goes off this many minutes before `start` (0: at the time of the event). */
   alarmMinutesBefore: number;
+  /** Further alerts (a week before a vaccine, the evening before an appointment). */
+  extraAlarmsMinutesBefore?: readonly number[];
 }
 
 export interface IcsOptions {
@@ -251,11 +253,13 @@ function eventLines(event: IcsEvent, options: IcsOptions): string[] {
     `SUMMARY:${escapeText(event.title)}`,
     `DESCRIPTION:${escapeText(event.description)}`,
     'TRANSP:TRANSPARENT',
-    'BEGIN:VALARM',
-    'ACTION:DISPLAY',
-    `DESCRIPTION:${escapeText(event.title)}`,
-    `TRIGGER:${event.alarmMinutesBefore > 0 ? `-PT${event.alarmMinutesBefore}M` : 'PT0S'}`,
-    'END:VALARM',
+    ...[event.alarmMinutesBefore, ...(event.extraAlarmsMinutesBefore ?? [])].flatMap((minutes) => [
+      'BEGIN:VALARM',
+      'ACTION:DISPLAY',
+      `DESCRIPTION:${escapeText(event.title)}`,
+      `TRIGGER:${minutes > 0 ? `-PT${minutes}M` : 'PT0S'}`,
+      'END:VALARM',
+    ]),
     'END:VEVENT',
   );
   return lines;

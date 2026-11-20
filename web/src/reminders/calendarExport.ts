@@ -1,15 +1,24 @@
-import { checkupEvent, doseEvent, examEvents, refillEvent, type CalendarEventSpec } from '../domain/calendarEvents';
+import { APPOINTMENT_EVENING_HOUR } from '../domain/appointmentReminders';
+import {
+  appointmentEvent, checkupEvent, doseEvent, examEvents, refillEvent, vaccineEvent, weighInEvent,
+  type CalendarEventSpec,
+} from '../domain/calendarEvents';
 import { APPOINTMENT_REMINDER_LEAD_MINUTES, EXAM_STEPS } from '../domain/examPlan';
-import type { LocalDateTime } from '../domain/time';
+import { dateTimeParts, type LocalDateTime } from '../domain/time';
+import { VACCINE_REMINDER_LEAD_DAYS } from '../domain/vaccineReminders';
 import { t } from '../i18n';
+import { APPOINTMENT_KIND_LABEL } from '../ui/care/appointments/appointmentLabels';
+import { VACCINE_TYPE_LABEL } from '../ui/care/vaccinations/vaccineLabels';
 import { buildIcs, type IcsEvent } from './ics';
 import type { ReminderData } from './schedule';
 import { checkupTitle, doseText, examStepTitle } from './text';
 
 /** Kinds notified ahead of time: appointments leave time to get there (`stepReminderAt`). */
-const APPOINTMENTS: ReadonlySet<string> = new Set(['EXAM_ANESTHESIA', 'EXAM']);
+const APPOINTMENTS: ReadonlySet<string> = new Set(['EXAM_ANESTHESIA', 'EXAM', 'APPOINTMENT']);
 
-function toIcsEvent(spec: CalendarEventSpec, title: string): IcsEvent {
+const MINUTES_PER_DAY = 24 * 60;
+
+function toIcsEvent(spec: CalendarEventSpec, title: string, extraAlarmsMinutesBefore: readonly number[] = []): IcsEvent {
   return {
     key: spec.key,
     start: spec.start,
@@ -18,12 +27,22 @@ function toIcsEvent(spec: CalendarEventSpec, title: string): IcsEvent {
     title,
     description: t('calendar_event_description'),
     alarmMinutesBefore: APPOINTMENTS.has(spec.kind) ? APPOINTMENT_REMINDER_LEAD_MINUTES : 0,
+    extraAlarmsMinutesBefore,
   };
 }
 
+/** Minutes between the evening-before reminder of an appointment (wall clock) and the appointment. */
+function eveningLeadMinutes(at: LocalDateTime): number {
+  const { hour, minute } = dateTimeParts(at);
+  return MINUTES_PER_DAY + hour * 60 + minute - APPOINTMENT_EVENING_HOUR * 60;
+}
+
 /**
- * Events of the export: doses, reorder alerts, checkups and exam steps whose reminder is on
- * (same events as `CalendarSync`). A one-off event already past is left out: the file is
+ * Events of the export: doses, reorder alerts, checkups, exam steps, vaccines, appointments and
+ * the weekly weigh-in, whose reminder is on (the events of `CalendarSync`, plus vaccines,
+ * appointments and weigh-ins: once the app is closed, the calendar is the only reminder on the
+ * web). Vaccines alert a week before and on the day, appointments the evening before and 2 h
+ * before, as the app's reminders do. A one-off event already past is left out: the file is
  * imported once, a past appointment would only add noise to the calendar.
  */
 export function exportEvents(data: ReminderData, now: LocalDateTime): IcsEvent[] {
@@ -45,6 +64,28 @@ export function exportEvents(data: ReminderData, now: LocalDateTime): IcsEvent[]
       if (spec) events.push(toIcsEvent(spec, examStepTitle(exam, step)));
     }
   }
+  for (const vaccination of data.vaccinations) {
+    const spec = vaccineEvent(vaccination);
+    if (spec) {
+      events.push(toIcsEvent(
+        spec,
+        `${t('vaccine_reminder_title')} · ${VACCINE_TYPE_LABEL[vaccination.type]()}`,
+        [VACCINE_REMINDER_LEAD_DAYS * MINUTES_PER_DAY],
+      ));
+    }
+  }
+  for (const appointment of data.appointments) {
+    const spec = appointmentEvent(appointment);
+    if (spec) {
+      events.push(toIcsEvent(
+        spec,
+        `${t('appointment_reminder_title')} · ${APPOINTMENT_KIND_LABEL[appointment.kind]()}`,
+        [eveningLeadMinutes(appointment.at)],
+      ));
+    }
+  }
+  const weighIn = weighInEvent(data.weighIn, now);
+  if (weighIn) events.push(toIcsEvent(weighIn, t('weigh_in_title')));
   return events
     .filter((e) => e.repeatUnit !== 'ONCE' || e.start >= now)
     .sort((a, b) => (a.start < b.start ? -1 : a.start > b.start ? 1 : a.key < b.key ? -1 : 1));

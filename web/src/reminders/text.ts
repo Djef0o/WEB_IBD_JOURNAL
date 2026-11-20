@@ -7,6 +7,9 @@ import { dateOf, dateTimeParts, type LocalDate, type LocalDateTime } from '../do
 import { lang, t, tp } from '../i18n';
 import { formatLocalDate, formatTime } from '../ui/format';
 import type { ReminderItem } from './schedule';
+import type { Appointment, VaccineType } from '../domain/care';
+import { APPOINTMENT_KIND_LABEL } from '../ui/care/appointments/appointmentLabels';
+import { VACCINE_TYPE_LABEL } from '../ui/care/vaccinations/vaccineLabels';
 
 /*
  * Texts of the reminders (notifications, `.ics` events, "to do today" card). Same wording as
@@ -105,6 +108,32 @@ export function refillText(medication: Medication, alertAt: LocalDateTime): stri
     : t('refill_reminder_text_stock', [medication.name, weekdayDayMonth(medication.stockEndDate)]);
 }
 
+/** "Influenza: next dose planned on Monday, December 7." (`showVaccine`). */
+export function vaccineText(type: VaccineType, due: LocalDate): string {
+  return t('vaccine_reminder_text', [VACCINE_TYPE_LABEL[type](), weekdayDayMonth(due)]);
+}
+
+/** "Gastroenterologist: Thursday, December 4 at 09:30", then the place on a second line (`showAppointment`). */
+export function appointmentText(appointment: Appointment): string {
+  const { hour, minute } = dateTimeParts(appointment.at);
+  const text = t('appointment_reminder_text', [
+    APPOINTMENT_KIND_LABEL[appointment.kind](), weekdayDayMonth(dateOf(appointment.at)), formatTime(hour, minute),
+  ]);
+  return appointment.place.trim() === '' ? text : `${text}\n${appointment.place}`;
+}
+
+/** How old the last encrypted backup is, or that none was ever made (`showBackup`). */
+export function backupText(lastBackup: LocalDate | null): string {
+  return lastBackup === null ? t('backup_reminder_text_never') : t('backup_reminder_text', [formatLocalDate(lastBackup)]);
+}
+
+/** Low-stock alert: the treatment and how many intakes are left (`showLowStock`); null without a count. */
+export function lowStockContent(medication: Medication): { title: string; body: string } | null {
+  const left = medication.stockDoses;
+  if (left === null) return null;
+  return { title: t('stock_notification_title'), body: t('stock_notification_text', [medication.name, tp('stock_intakes', left)]) };
+}
+
 /** Title and body of a reminder, as in the Android notification of the same kind. */
 export function reminderContent(item: ReminderItem): { title: string; body: string } {
   switch (item.kind) {
@@ -117,6 +146,14 @@ export function reminderContent(item: ReminderItem): { title: string; body: stri
         title: CHECKUP_TYPE_LABEL[item.checkup.type](),
         body: item.checkup.note.trim() === '' ? t('checkup_reminder_text') : item.checkup.note,
       };
+    case 'VACCINE':
+      return { title: t('vaccine_reminder_title'), body: vaccineText(item.vaccination.type, item.due) };
+    case 'APPOINTMENT':
+      return { title: t('appointment_reminder_title'), body: appointmentText(item.appointment) };
+    case 'BACKUP':
+      return { title: t('backup_reminder_title'), body: backupText(item.lastBackup) };
+    case 'WEIGH_IN':
+      return { title: t('weigh_in_title'), body: t('weigh_in_text') };
     default:
       return { title: examStepTitle(item.exam, item.step.step), body: examStepText(item.exam, item.step.step, item.step.at) };
   }

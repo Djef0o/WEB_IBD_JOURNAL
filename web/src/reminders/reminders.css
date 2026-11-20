@@ -22,3 +22,5 @@
 @media (forced-colors: active) {
   .chip[aria-pressed="true"] { border: 2px solid Highlight; }
 }
+
+.today-weigh-in { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--space-2); }

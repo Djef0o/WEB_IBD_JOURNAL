@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { appointment, vaccination } from '../src/domain/care';
 import { exam } from '../src/domain/models';
 import { checkup, medication, reminderSchedule } from '../src/domain/profile';
 import { exportEvents } from '../src/reminders/calendarExport';
@@ -29,7 +30,13 @@ const colonoscopy = exam({
   anesthesiaAt: '2026-11-20T10:15', prepFirstAt: '2026-12-03T19:00', prepSecondAt: '2026-12-04T04:30',
 });
 
-const data: ReminderData = { medications: [daily, biweekly, silent], checkups: [blood], exams: [colonoscopy] };
+const none = {
+  vaccinations: [], appointments: [], weights: [],
+  backup: { reminderEnabled: false, lastBackup: null, since: null },
+  weighIn: { enabled: false, day: 7 },
+} satisfies Omit<ReminderData, 'medications' | 'checkups' | 'exams'> & { weights: never[] };
+
+const data: ReminderData = { ...none, medications: [daily, biweekly, silent], checkups: [blood], exams: [colonoscopy] };
 
 describe('remindersBetween', () => {
   it('lists doses, reorder alerts and checkups of a day in order, skipping disabled reminders', () => {
@@ -64,7 +71,7 @@ describe('remindersBetween', () => {
   });
 
   it('drops the exam steps when its reminders are off', () => {
-    const off: ReminderData = { medications: [], checkups: [], exams: [{ ...colonoscopy, remindersEnabled: false }] };
+    const off: ReminderData = { ...none, medications: [], checkups: [], exams: [{ ...colonoscopy, remindersEnabled: false }] };
     expect(remindersBetween(off, '2026-11-01T00:00', '2026-12-31T00:00')).toEqual([]);
   });
 
@@ -72,7 +79,7 @@ describe('remindersBetween', () => {
     const monthly = medication({
       id: 9, name: 'M', schedule: reminderSchedule({ startDate: '2026-01-31', repeatUnit: 'MONTH' }),
     });
-    const items = remindersBetween({ medications: [monthly], checkups: [], exams: [] }, '2026-03-31T09:00', '2026-06-01T00:00');
+    const items = remindersBetween({ ...none, medications: [monthly], checkups: [], exams: [] }, '2026-03-31T09:00', '2026-06-01T00:00');
     expect(items.map((i) => i.at)).toEqual(['2026-04-30T08:00', '2026-05-31T08:00']);
   });
 });
@@ -81,7 +88,7 @@ describe('todayTasks', () => {
   const logs = [{ id: 1, medicationId: 1, scheduledAt: new Date(2026, 10, 18, 8, 0).getTime(), status: 'TAKEN' as const, loggedAt: 0 }];
 
   it('lists doses with their answer, checkups and exam steps of the day, with or without notification', () => {
-    const tasks = todayTasks({ date: '2026-11-18', ...data, doseLogs: logs });
+    const tasks = todayTasks({ date: '2026-11-18', ...data, doseLogs: logs, weights: [] });
     expect(tasks.map((t) => t.type)).toEqual(['checkup', 'dose', 'dose', 'dose']);
     const doses = tasks.filter((t) => t.type === 'dose');
     // Disabled reminders still show their dose (the Android card does too).
@@ -91,18 +98,18 @@ describe('todayTasks', () => {
   });
 
   it('shows the exam steps dated today at their own time', () => {
-    const tasks = todayTasks({ date: '2026-12-04', ...data, doseLogs: [] });
+    const tasks = todayTasks({ date: '2026-12-04', ...data, doseLogs: [], weights: [] });
     const steps = tasks.filter((t) => t.type === 'exam').map((t) => [t.at, t.type === 'exam' ? t.step.step : '']);
     expect(steps).toEqual([['2026-12-04T04:30', 'PREP_SECOND'], ['2026-12-04T09:30', 'EXAM']]);
   });
 
   it('includes the reorder alert of the day', () => {
-    const tasks = todayTasks({ date: '2026-11-11', ...data, doseLogs: [] });
+    const tasks = todayTasks({ date: '2026-11-11', ...data, doseLogs: [], weights: [] });
     expect(tasks.some((t) => t.type === 'refill' && t.medication.id === 2)).toBe(true);
   });
 
   it('is empty without anything to do', () => {
-    expect(todayTasks({ date: '2027-06-01', medications: [], checkups: [], exams: [], doseLogs: [] })).toEqual([]);
+    expect(todayTasks({ date: '2027-06-01', ...none, medications: [], checkups: [], exams: [], doseLogs: [] })).toEqual([]);
   });
 });
 
@@ -172,5 +179,70 @@ describe('summarizeLabs', () => {
     ]);
     expect(summary).toEqual({ latest: '2026-11-10', tests: 3, outside: 2 });
     expect(summarizeLabs([])).toEqual({ latest: null, tests: 0, outside: 0 });
+  });
+});
+
+describe('vaccines, appointments, backup and weigh-in reminders', () => {
+  const flu = vaccination({ id: 4, type: 'INFLUENZA', date: '2025-10-15', nextDue: '2026-12-07', reminderEnabled: true });
+  const visit = appointment({ id: 8, kind: 'GASTROENTEROLOGIST', at: '2026-12-04T09:30', place: 'CHU' });
+  const all: ReminderData = {
+    medications: [], checkups: [], exams: [], vaccinations: [flu], appointments: [visit],
+    backup: { reminderEnabled: true, lastBackup: '2026-10-01', since: '2026-09-01' },
+    weighIn: { enabled: true, day: 1 },
+  };
+
+  it('reminds a vaccine a week before and on the planned day, only with its reminder on', () => {
+    const items = remindersBetween(all, '2026-11-30T00:00', '2026-12-08T00:00').filter((i) => i.kind === 'VACCINE');
+    expect(items.map((i) => i.at)).toEqual(['2026-11-30T09:00', '2026-12-07T09:00']);
+    const off = { ...all, vaccinations: [{ ...flu, reminderEnabled: false }] };
+    expect(remindersBetween(off, '2026-11-30T00:00', '2026-12-08T00:00').some((i) => i.kind === 'VACCINE')).toBe(false);
+    const unplanned = { ...all, vaccinations: [{ ...flu, nextDue: null }] };
+    expect(remindersBetween(unplanned, '2026-11-01T00:00', '2026-12-31T00:00').some((i) => i.kind === 'VACCINE')).toBe(false);
+  });
+
+  it('reminds an appointment the evening before and 2 h before, not once it is past', () => {
+    const items = remindersBetween(all, '2026-12-01T00:00', '2026-12-05T00:00').filter((i) => i.kind === 'APPOINTMENT');
+    expect(items.map((i) => i.at)).toEqual(['2026-12-03T18:00', '2026-12-04T07:30']);
+    expect(remindersBetween(all, '2026-12-04T07:30', '2026-12-31T00:00').some((i) => i.kind === 'APPOINTMENT')).toBe(false);
+    const off = { ...all, appointments: [{ ...visit, remindersEnabled: false }] };
+    expect(remindersBetween(off, '2026-12-01T00:00', '2026-12-05T00:00').some((i) => i.kind === 'APPOINTMENT')).toBe(false);
+  });
+
+  it('reminds the backup a month after the last one, then every week until a backup is made', () => {
+    const items = remindersBetween(all, '2026-10-01T00:00', '2026-11-20T00:00').filter((i) => i.kind === 'BACKUP');
+    expect(items.map((i) => i.at)).toEqual(['2026-10-31T10:00', '2026-11-07T10:00', '2026-11-14T10:00']);
+    const never = { ...all, backup: { reminderEnabled: true, lastBackup: null, since: '2026-11-01' } };
+    expect(remindersBetween(never, '2026-11-01T00:00', '2026-12-02T00:00').filter((i) => i.kind === 'BACKUP')[0]?.at)
+      .toBe('2026-12-01T10:00');
+    const off = { ...all, backup: { ...all.backup, reminderEnabled: false } };
+    expect(remindersBetween(off, '2026-10-01T00:00', '2026-11-20T00:00').some((i) => i.kind === 'BACKUP')).toBe(false);
+  });
+
+  it('reminds the weigh-in every week on the chosen weekday at 9:00', () => {
+    const items = remindersBetween(all, '2026-11-18T00:00', '2026-12-08T00:00').filter((i) => i.kind === 'WEIGH_IN');
+    expect(items.map((i) => i.at)).toEqual(['2026-11-23T09:00', '2026-11-30T09:00', '2026-12-07T09:00']);
+  });
+
+  it('puts them on the day card: weigh-in until a weight is recorded, backup while overdue, low stock', () => {
+    const base = { ...all, doseLogs: [], weights: [] };
+    const monday = todayTasks({ date: '2026-11-23', ...base });
+    expect(monday.map((t) => t.type)).toEqual(['weighIn', 'backup']);
+    expect(todayTasks({ date: '2026-11-23', ...base, weights: [{ id: 1, date: '2026-11-23', kg: 70 }] }).map((t) => t.type))
+      .toEqual(['backup']);
+    expect(todayTasks({ date: '2026-12-07', ...base, backup: { ...all.backup, lastBackup: '2026-12-01' } }).map((t) => t.type))
+      .toEqual(['vaccine', 'weighIn']);
+    const low = medication({ id: 6, name: 'Iron', schedule: reminderSchedule({ startDate: '2027-01-01', enabled: false }), stockDoses: 3 });
+    expect(todayTasks({ date: '2026-11-20', ...base, backup: { ...all.backup, reminderEnabled: false }, medications: [low] })
+      .some((t) => t.type === 'lowStock')).toBe(true);
+  });
+
+  it('exports vaccines, appointments and the weekly weigh-in with their extra alarms', () => {
+    const events = exportEvents(all, '2026-11-20T12:00');
+    const byKey = Object.fromEntries(events.map((e) => [e.key, e]));
+    expect(byKey['vaccine:4']).toMatchObject({ start: '2026-12-07T09:00', repeatUnit: 'ONCE' });
+    expect(byKey['vaccine:4']!.extraAlarmsMinutesBefore).toEqual([7 * 24 * 60]);
+    expect(byKey['appointment:8']).toMatchObject({ start: '2026-12-04T09:30', alarmMinutesBefore: 120 });
+    expect(byKey['appointment:8']!.extraAlarmsMinutesBefore).toEqual([15 * 60 + 30]);
+    expect(byKey['weigh_in:0']).toMatchObject({ start: '2026-11-23T09:00', repeatUnit: 'WEEK' });
   });
 });

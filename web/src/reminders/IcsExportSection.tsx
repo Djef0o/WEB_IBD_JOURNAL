@@ -1,13 +1,11 @@
 import './reminders.css';
 import { useState } from 'preact/hooks';
-import { getAllCheckups } from '../db/checkups';
-import { getAllExams } from '../db/exams';
-import { getAllMedications } from '../db/medications';
 import { localDateTimeAt, today } from '../domain/time';
 import { t } from '../i18n';
 import { Button, Card, Dialog, showToast } from '../ui/components';
 import { downloadBlob } from '../ui/download';
 import { buildCalendarFile } from './calendarExport';
+import { loadReminderData } from './data';
 
 /**
  * Export `.ics` des traitements, contrôles et étapes d'examen (remplace la synchro du
@@ -22,11 +20,7 @@ export function IcsExportSection() {
     if (busy) return;
     setBusy(true);
     try {
-      const data = {
-        medications: await getAllMedications(),
-        checkups: await getAllCheckups(),
-        exams: await getAllExams(),
-      };
+      const data = await loadReminderData();
       const exportedAt = Date.now();
       const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const { text, count } = buildCalendarFile(data, localDateTimeAt(exportedAt), exportedAt, timeZone);

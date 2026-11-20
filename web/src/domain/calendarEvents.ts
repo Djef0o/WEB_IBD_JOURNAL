@@ -4,13 +4,18 @@ import {
   REFILL_LEAD_DAYS, refillBasis,
   type Checkup, type Medication, type ReminderSchedule, type RepeatUnit,
 } from './profile';
-import { atTime, minusDays, type LocalDateTime } from './time';
+import type { Appointment, Vaccination } from './care';
+import { VACCINE_REMINDER_HOUR } from './vaccineReminders';
+import { nextWeighIn, WEIGH_IN_HOUR } from './weighIn';
+import { atTime, dateOf, minusDays, type LocalDateTime } from './time';
 
 /** Calendar event type, one stable key per app item. */
 export const CALENDAR_EVENT_KINDS = [
   'DOSE', 'REFILL', 'CHECKUP',
   // Exam steps: a series of one-off events per exam.
   'EXAM_ANESTHESIA', 'EXAM_DIET', 'EXAM_PREP_FIRST', 'EXAM_PREP_SECOND', 'EXAM',
+  // Web additions: the `.ics` file is the only reminder once the app is closed.
+  'VACCINE', 'APPOINTMENT', 'WEIGH_IN',
 ] as const;
 export type CalendarEventKind = (typeof CALENDAR_EVENT_KINDS)[number];
 
@@ -98,4 +103,29 @@ export function examEvents(exam: Exam): Record<ExamStep, CalendarEventSpec | nul
       return [step, found ? eventSpec(EXAM_STEP_CALENDAR_KIND[step], exam.id, found.at, 1, 'ONCE') : null];
     }),
   ) as Record<ExamStep, CalendarEventSpec | null>;
+}
+
+/** Kinds of the exam steps (the calendar event kinds that are not a treatment, vaccine, appointment or weigh-in). */
+export type ExamCalendarKind = Exclude<
+  CalendarEventKind, 'DOSE' | 'REFILL' | 'CHECKUP' | 'VACCINE' | 'APPOINTMENT' | 'WEIGH_IN'
+>;
+
+/** Vaccine event: planned date at `VACCINE_REMINDER_HOUR`, if reminders are on and a date is planned. */
+export function vaccineEvent(vaccination: Vaccination): CalendarEventSpec | null {
+  if (!vaccination.reminderEnabled || vaccination.nextDue === null) return null;
+  return eventSpec('VACCINE', vaccination.id, atTime(vaccination.nextDue, VACCINE_REMINDER_HOUR, 0), 1, 'ONCE');
+}
+
+/** Appointment event at the appointment time, if its reminders are on. */
+export function appointmentEvent(appointment: Appointment): CalendarEventSpec | null {
+  return appointment.remindersEnabled
+    ? eventSpec('APPOINTMENT', appointment.id, appointment.at, 1, 'ONCE')
+    : null;
+}
+
+/** Weekly weigh-in series starting at the next chosen weekday after `now`, if enabled (`day`: ISO weekday). */
+export function weighInEvent(settings: { enabled: boolean; day: number }, now: LocalDateTime): CalendarEventSpec | null {
+  if (!settings.enabled) return null;
+  const first = nextWeighIn(settings.day, now);
+  return eventSpec('WEIGH_IN', 0, atTime(dateOf(first), WEIGH_IN_HOUR, 0), 1, 'WEEK');
 }

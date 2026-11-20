@@ -1,13 +1,12 @@
 import { signal } from '@preact/signals';
-import { getAllCheckups } from '../db/checkups';
-import { getAllExams } from '../db/exams';
-import { getAllMedications } from '../db/medications';
 import { getDailyCheckIn, getPrefs, isCheckInComplete, markReminderShown } from '../db/prefs';
 import { watchQuery } from '../db/live';
+import { crossedLowStock } from '../domain/stock';
+import { loadReminderData, REMINDER_STORES } from './data';
 import { atTime, dateOf, fromEpochDays, localDateTimeAt, toEpochDays, type LocalDate } from '../domain/time';
 import { t } from '../i18n';
 import { remindersBetween, type ReminderData } from './schedule';
-import { reminderContent } from './text';
+import { lowStockContent, reminderContent } from './text';
 
 /*
  * Notifications while the app is open (tab or installed PWA). The web has no reliable
@@ -64,15 +63,18 @@ async function show(title: string, body: string, tag: string): Promise<void> {
   }
 }
 
+/** Demo of the evening notification, right now (the "Test notification" row of the settings). */
+export function sendTestNotification(): Promise<void> {
+  return show(t('daily_reminder'), t('daily_reminder_desc'), 'test');
+}
+
 interface Snapshot extends ReminderData {
   evening: { enabled: boolean; hour: number; minute: number };
 }
 
 async function load(): Promise<Snapshot> {
-  const [medications, checkups, exams, prefs] = await Promise.all([
-    getAllMedications(), getAllCheckups(), getAllExams(), getPrefs(),
-  ]);
-  return { medications, checkups, exams, evening: prefs.notifications };
+  const [data, prefs] = await Promise.all([loadReminderData(), getPrefs()]);
+  return { ...data, evening: prefs.notifications };
 }
 
 /** Days (inclusive) touched by the window (after, until]. */
@@ -125,7 +127,16 @@ export function startReminderNotifier(): () => void {
     if (!stopped) timer = window.setTimeout(() => void tick(), MINUTE_MS - (Date.now() % MINUTE_MS) + 250);
   };
 
-  const stopWatching = watchQuery(['medications', 'checkups', 'exams', 'prefs'], load, (value) => {
+  const stopWatching = watchQuery([...REMINDER_STORES], load, (value) => {
+    // Low stock: notify once when a treatment falls to its threshold (a confirmed dose changed the count).
+    if (snapshot) {
+      const before = new Map(snapshot.medications.map((m) => [m.id, m]));
+      for (const medication of value.medications) {
+        if (!crossedLowStock(before.get(medication.id) ?? null, medication)) continue;
+        const content = lowStockContent(medication);
+        if (content) void show(content.title, content.body, `stock:${medication.id}`);
+      }
+    }
     snapshot = value;
   });
   const onVisible = (): void => {
