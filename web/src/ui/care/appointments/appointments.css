@@ -1,0 +1,10 @@
+/* Rendez-vous. */
+.appointment-past-toggle {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); width: 100%;
+  min-height: var(--target); padding: var(--space-3); border: 0; border-radius: var(--radius-md);
+  background: transparent; color: var(--c-on-surface-variant); font: inherit; text-align: start; cursor: pointer;
+}
+.appointment-past-toggle:hover { background: color-mix(in srgb, var(--c-on-surface) 8%, transparent); }
+.appointment-past-toggle svg { flex: none; transition: transform 0.15s; }
+.appointment-past-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .appointment-past-toggle svg { transition: none; } }

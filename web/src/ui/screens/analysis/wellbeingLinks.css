@@ -1,0 +1,12 @@
+.wellbeing-link-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.wellbeing-link-row { display: flex; flex-direction: column; gap: var(--space-1); }
+.wellbeing-link-name { font-weight: 600; }
+.wellbeing-link-bar { position: relative; block-size: 8px; border-radius: var(--radius-full); background: var(--c-surface-variant); }
+.wellbeing-link-fill { block-size: 100%; border-radius: var(--radius-full); background: var(--c-primary); }
+.wellbeing-link-tick { position: absolute; inset-block: 0; inline-size: 2px; margin-inline-start: -2px; background: var(--c-on-surface); }
+.wellbeing-link-caveat { font-weight: 600; }
+@media (forced-colors: active) {
+  .wellbeing-link-bar { border: 1px solid CanvasText; }
+  .wellbeing-link-fill { background: Highlight; }
+  .wellbeing-link-tick { background: CanvasText; }
+}

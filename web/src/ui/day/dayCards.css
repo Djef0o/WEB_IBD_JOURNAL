@@ -1,0 +1,36 @@
+/* Cartes optionnelles du jour (autres symptômes, bien-être), repliées par défaut. */
+.collapsible { padding: 0; }
+.collapsible-head { margin: 0; font-size: inherit; }
+.collapsible-toggle {
+  display: flex; align-items: center; gap: var(--space-3); width: 100%; min-height: var(--target);
+  padding: var(--space-3) var(--space-4); border: 0; border-radius: inherit; background: transparent;
+  color: inherit; font: inherit; text-align: start; cursor: pointer;
+}
+.collapsible-toggle:hover { background: color-mix(in srgb, var(--c-on-surface) 6%, transparent); }
+.collapsible-text { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.collapsible-title { font-size: var(--text-md); font-weight: 700; }
+.collapsible-summary { color: var(--c-on-surface-variant); font-size: var(--text-sm); overflow-wrap: anywhere; }
+.collapsible-chevron { flex: none; color: var(--c-on-surface-variant); transition: transform 0.15s; }
+.collapsible-toggle[aria-expanded="true"] .collapsible-chevron { transform: rotate(180deg); }
+.collapsible-body { display: flex; flex-direction: column; gap: var(--space-2); padding: 0 var(--space-4) var(--space-4); }
+@media (prefers-reduced-motion: reduce) { .collapsible-chevron { transition: none; } }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.chip {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-1);
+  min-height: var(--target); min-width: var(--target); padding: var(--space-1) var(--space-4);
+  border: 1px solid var(--c-outline); border-radius: var(--radius-full);
+  background: transparent; color: var(--c-on-surface-variant); font-weight: 500; cursor: pointer;
+}
+.chip:hover { background: color-mix(in srgb, var(--c-on-surface) 8%, transparent); }
+.chip[aria-pressed="true"] {
+  background: var(--c-secondary-container); color: var(--c-on-secondary-container); border-color: transparent;
+}
+/* Sélection jamais signalée par la couleur seule. */
+.chip[aria-pressed="true"]::before { content: "✓"; font-weight: 700; }
+.chip:focus-visible { outline: 3px solid var(--c-primary); outline-offset: 2px; }
+.scale-label { margin-block-start: var(--space-2); font-weight: 600; font-size: var(--text-sm); }
+
+/* Emplacement dans la vue d'un jour : sous le résumé, sur toute la largeur. */
+.day-extras { grid-column: 1 / -1; display: grid; gap: var(--space-4); align-items: start; }
+@media (min-width: 60rem) { .day-extras { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
