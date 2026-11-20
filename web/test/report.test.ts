@@ -1,3 +1,7 @@
+import {
+  activityScore, appointment, doctorQuestion, flare, steroidCourse, vaccination, wellbeingDay, type ExtraSymptomsDay,
+} from '../src/domain/care';
+import { minusDays } from '../src/domain/time';
 import { describe, expect, it } from 'vitest';
 import { doseLog, labResult } from '../src/domain/health';
 import { stool } from '../src/domain/models';
@@ -5,7 +9,8 @@ import { checkup, medication, profile, reminderSchedule } from '../src/domain/pr
 import { atTime, localDate, toEpochMillis } from '../src/domain/time';
 import { displayLabValue, displayReference } from '../src/report/labFormat';
 import {
-  REPORT_CHART_MAX_DAYS, daysFollowed, labPanels, labRowsByCategory, reportData, stoolsPerTrackedDay, trackedDays,
+  REPORT_CHART_MAX_DAYS, daysFollowed, extraSymptomReports, labPanels, labRowsByCategory, reportData,
+  stoolsPerTrackedDay, trackedDays,
   yearsUntil, type ReportInput,
 } from '../src/report/reportData';
 import { barsBetween, historyBars, labelStep, maxTotal } from '../src/ui/charts/dailyStool';
@@ -154,5 +159,98 @@ describe('daily stool bars', () => {
     expect(labelStep(26, 14)).toBe(1);
     expect(labelStep(7, 14)).toBe(2);
     expect(labelStep(3, 14)).toBe(5);
+  });
+});
+
+describe('reportData: care and follow-up sections', () => {
+  const day = (offset: number) => minusDays(D(11, 18), offset);
+
+  it('keeps flares overlapping the period, oldest first, ongoing ones included', () => {
+    const flares = [
+      flare({ id: 1, start: day(5), end: null }),
+      flare({ id: 2, start: day(100), end: day(60) }), // before the period
+      flare({ id: 3, start: day(50), end: day(25) }), // overlaps the start (from = day 29)
+      flare({ id: 4, start: day(-3) }), // starts after today
+    ];
+    expect(reportData(input({ flares })).flares.map((f) => f.id)).toEqual([3, 1]);
+  });
+
+  it('keeps activity scores within the period, by date then id', () => {
+    const answers = [0, 0, 1, 0, 0];
+    const scores = [
+      activityScore({ id: 3, date: day(1), kind: 'HBI', answers }),
+      activityScore({ id: 2, date: day(1), kind: 'HBI', answers }),
+      activityScore({ id: 1, date: day(10), kind: 'HBI', answers }),
+      activityScore({ id: 4, date: day(40), kind: 'HBI', answers }),
+    ];
+    expect(reportData(input({ activityScores: scores })).activityScores.map((s) => s.id)).toEqual([1, 2, 3]);
+  });
+
+  it('keeps steroid courses overlapping the period', () => {
+    const course = (id: number, start: string, days: number) =>
+      steroidCourse({ id, drug: 'P', start, steps: [{ doseMg: 20, days }] });
+    const courses = [course(1, day(100), 10), course(2, day(35), 10), course(3, day(2), 30), course(4, day(-1), 5)];
+    // course 2 ends day(26), inside the period that starts on day(29)
+    expect(reportData(input({ steroidCourses: courses })).steroidCourses.map((c) => c.id)).toEqual([2, 3]);
+  });
+
+  it('lists every vaccination, most recent first', () => {
+    const vaccinations = [
+      vaccination({ id: 1, type: 'TETANUS', date: day(400) }),
+      vaccination({ id: 2, type: 'INFLUENZA', date: day(10) }),
+    ];
+    expect(reportData(input({ vaccinations })).vaccinations.map((v) => v.id)).toEqual([2, 1]);
+  });
+
+  it('counts the days of each extra symptom in the period with the last date', () => {
+    const days: ExtraSymptomsDay[] = [
+      { date: day(2), symptoms: ['JOINTS', 'FEVER'] },
+      { date: day(9), symptoms: ['JOINTS'] },
+      { date: day(60), symptoms: ['SKIN'] }, // outside
+    ];
+    expect(reportData(input({ extraSymptoms: days })).extraSymptoms).toEqual([
+      { symptom: 'JOINTS', days: 2, last: day(2) },
+      { symptom: 'FEVER', days: 1, last: day(2) },
+    ]);
+    expect(extraSymptomReports([])).toEqual([]);
+  });
+
+  it('keeps open questions only, and the next three appointments from now', () => {
+    const questions = [doctorQuestion({ id: 1, text: 'a', done: true }), doctorQuestion({ id: 2, text: 'b' })];
+    const at = (offset: number, hour: number) => atTime(minusDays(D(11, 18), -offset), hour, 0);
+    const appointments = [
+      appointment({ id: 1, kind: 'OTHER', at: at(-1, 9) }), // past
+      appointment({ id: 2, kind: 'OTHER', at: at(0, 11) }), // today before now (12:00)
+      appointment({ id: 3, kind: 'OTHER', at: at(5, 9) }),
+      appointment({ id: 4, kind: 'OTHER', at: at(1, 9) }),
+      appointment({ id: 5, kind: 'OTHER', at: at(0, 15) }),
+      appointment({ id: 6, kind: 'OTHER', at: at(9, 9) }),
+    ];
+    const r = reportData(input({ doctorQuestions: questions, appointments }));
+    expect(r.doctorQuestions.map((q) => q.id)).toEqual([2]);
+    expect(r.appointments.map((a) => a.id)).toEqual([5, 4, 3]);
+  });
+
+  it('well-being: absent without entries, averages and links otherwise', () => {
+    expect(reportData(input()).wellbeing).toBeNull();
+    expect(reportData(input({ wellbeing: [wellbeingDay({ date: day(80), sleep: 3 })] })).wellbeing).toBeNull();
+    const days = [
+      wellbeingDay({ date: day(1), sleep: 2, mood: 4 }),
+      wellbeingDay({ date: day(2), sleep: 4, period: true }),
+    ];
+    const r = reportData(input({ wellbeing: days }));
+    expect(r.wellbeing!.averages).toMatchObject({ sleep: 3, stress: null, mood: 4, periodDays: 1, entries: 2 });
+    expect(r.wellbeing!.links).toEqual([]);
+  });
+
+  it('well-being links use the stools of the whole history, days only within the period', () => {
+    const days = Array.from({ length: 6 }, (_, i) => wellbeingDay({ date: day(i + 1), stress: 5 }));
+    const calm = Array.from({ length: 4 }, (_, i) => wellbeingDay({ date: day(i + 10), stress: 1 }));
+    const stools = [
+      ...days.map((d) => stool({ date: d.date, bristolType: 7 })),
+      ...calm.map((d) => stool({ date: d.date, bristolType: 4 })),
+    ];
+    const r = reportData(input({ wellbeing: [...days, ...calm], stools }));
+    expect(r.wellbeing!.links.map((l) => [l.factor, l.days, l.badRate, l.baseline])).toEqual([['HIGH_STRESS', 6, 1, 0]]);
   });
 });

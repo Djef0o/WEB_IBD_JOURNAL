@@ -1,4 +1,11 @@
 import { adherence, type Adherence } from '../domain/adherence';
+import type {
+  ActivityScore, Appointment, DoctorQuestion, ExtraSymptom, ExtraSymptomsDay, Flare, SteroidCourse, Vaccination,
+  WellbeingDay,
+} from '../domain/care';
+import { EXTRA_SYMPTOMS } from '../domain/care';
+import { steroidEnd } from '../domain/steroids';
+import { wellbeingAverages, wellbeingLinks, type WellbeingAverages, type WellbeingLink } from '../domain/wellbeing';
 import { analyze, startFrom, type AnalysisPeriod, type AnalysisSummary } from '../domain/analysis';
 import {
   LAB_CATEGORIES, LAB_TESTS, labTestCategory, type DoseLog, type LabCategory, type LabResult, type LabTest,
@@ -56,6 +63,25 @@ export interface LabPanels {
   notes: LabResult[];
 }
 
+/** Number of days with `symptom` over the report period, and the most recent one. */
+export interface ExtraSymptomReport {
+  symptom: ExtraSymptom;
+  days: number;
+  last: LocalDate;
+}
+
+/** Means over the period and the factors that came with bad days. */
+export interface WellbeingReport {
+  averages: WellbeingAverages;
+  links: WellbeingLink[];
+}
+
+/** Appointments listed in the report: the next ones from now. */
+export const REPORT_APPOINTMENTS = 3;
+
+/** Most recent activity scores listed in the compact line of the report. */
+export const ACTIVITY_LIST_MAX = 12;
+
 /** Everything the report contains, already computed: the view only does the layout. */
 export interface ReportData {
   profile: Profile;
@@ -72,6 +98,22 @@ export interface ReportData {
   labPanels: LabPanels;
   /** Upcoming check-ups, from nearest to furthest. */
   upcomingCheckups: UpcomingCheckup[];
+  /** Flares overlapping the period, oldest first. */
+  flares: Flare[];
+  /** Activity scores within the period, oldest first. */
+  activityScores: ActivityScore[];
+  /** Steroid courses overlapping the period, oldest first. */
+  steroidCourses: SteroidCourse[];
+  /** All vaccinations, most recent first. */
+  vaccinations: Vaccination[];
+  /** Extra-intestinal manifestations over the period, in `EXTRA_SYMPTOMS` order; only those noted. */
+  extraSymptoms: ExtraSymptomReport[];
+  /** Questions not yet asked, in the repository's order. */
+  doctorQuestions: DoctorQuestion[];
+  /** Next `REPORT_APPOINTMENTS` appointments from now, chronological. */
+  appointments: Appointment[];
+  /** Sleep, stress, mood and period over the period; null when none was noted. */
+  wellbeing: WellbeingReport | null;
 }
 
 export interface ReportInput {
@@ -84,11 +126,21 @@ export interface ReportInput {
   doseLogs: DoseLog[];
   labResults: LabResult[];
   checkups: Checkup[];
+  flares?: Flare[];
+  activityScores?: ActivityScore[];
+  steroidCourses?: SteroidCourse[];
+  vaccinations?: Vaccination[];
+  extraSymptoms?: ExtraSymptomsDay[];
+  doctorQuestions?: DoctorQuestion[];
+  appointments?: Appointment[];
+  wellbeing?: WellbeingDay[];
 }
 
 /** Builds the report for `period` ending on the day of `now`, from the raw data. */
 export function reportData(input: ReportInput): ReportData {
   const { period, now, profile, stools, meals, medications, doseLogs, labResults, checkups } = input;
+  const { flares = [], activityScores = [], steroidCourses = [], vaccinations = [] } = input;
+  const { extraSymptoms = [], doctorQuestions = [], appointments = [], wellbeing = [] } = input;
   const today = dateOf(now);
   const summary = analyze(stools, meals, today, period);
   const from = minusDays(today, summary.periodDays - 1);
@@ -114,7 +166,44 @@ export function reportData(input: ReportInput): ReportData {
         return at === null ? [] : [{ checkup, at }];
       })
       .sort((a, b) => (a.at < b.at ? -1 : a.at > b.at ? 1 : 0)),
+    flares: flares
+      .filter((f) => f.start <= today && (f.end ?? today) >= from)
+      .sort((a, b) => compareText(a.start, b.start)),
+    activityScores: activityScores
+      .filter((s) => s.date >= from && s.date <= today)
+      .sort((a, b) => compareText(a.date, b.date) || a.id - b.id),
+    steroidCourses: steroidCourses
+      .filter((c) => c.start <= today && steroidEnd(c) >= from)
+      .sort((a, b) => compareText(a.start, b.start)),
+    vaccinations: [...vaccinations].sort((a, b) => compareText(b.date, a.date)),
+    extraSymptoms: extraSymptomReports(extraSymptoms.filter((d) => d.date >= from && d.date <= today)),
+    doctorQuestions: doctorQuestions.filter((q) => !q.done),
+    appointments: appointments
+      .filter((a) => a.at >= now)
+      .sort((a, b) => compareText(a.at, b.at))
+      .slice(0, REPORT_APPOINTMENTS),
+    wellbeing: wellbeingReport(wellbeing, stools, from, today),
   };
+}
+
+const compareText = (a: string, b: string): number => (a < b ? -1 : a > b ? 1 : 0);
+
+function wellbeingReport(days: WellbeingDay[], stools: Stool[], from: LocalDate, to: LocalDate): WellbeingReport | null {
+  const averages = wellbeingAverages(days, from, to);
+  if (averages.entries === 0) return null;
+  return { averages, links: wellbeingLinks(days.filter((d) => d.date >= from && d.date <= to), stools) };
+}
+
+/** One entry per manifestation noted at least one day, in `EXTRA_SYMPTOMS` order. */
+export function extraSymptomReports(days: readonly ExtraSymptomsDay[]): ExtraSymptomReport[] {
+  const reports: ExtraSymptomReport[] = [];
+  for (const symptom of EXTRA_SYMPTOMS) {
+    const matching = days.filter((d) => d.symptoms.includes(symptom));
+    if (matching.length === 0) continue;
+    const dates = new Set(matching.map((d) => d.date));
+    reports.push({ symptom, days: dates.size, last: [...dates].sort().reverse()[0]! });
+  }
+  return reports;
 }
 
 /** Table of the last `REPORT_LAB_PANELS` analysis dates, rows in `LAB_TESTS` order. */

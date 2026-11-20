@@ -2,6 +2,12 @@ import './report/report.css';
 import '../../styles/print.css';
 import { useMemo } from 'preact/hooks';
 import { useLiveQuery } from '../../db';
+import { getAllActivityScores } from '../../db/activityScores';
+import { getAllFlares } from '../../db/flares';
+import { getAllSteroidCourses } from '../../db/steroids';
+import { getAllVaccinations } from '../../db/vaccinations';
+import { getAllAppointments, getAllDoctorQuestions, getAllExtraSymptoms } from '../../db/followup';
+import { getAllWellbeing } from '../../db/wellbeing';
 import { getAllCheckups } from '../../db/checkups';
 import { getAllDoseLogs } from '../../db/doses';
 import { getAllLabResults } from '../../db/labs';
@@ -23,7 +29,11 @@ import { ReportView } from './report/ReportView';
 export default function Report(_props: ScreenProps) {
   const period = analysisPeriod.value;
   const data = useLiveQuery(
-    ['stools', 'meals', 'products', 'medications', 'dose_logs', 'lab_results', 'checkups', 'profile'],
+    [
+      'stools', 'meals', 'products', 'medications', 'dose_logs', 'lab_results', 'checkups', 'profile',
+      'flares', 'activity_scores', 'steroid_courses', 'vaccinations', 'extra_symptoms', 'doctor_questions',
+      'appointments', 'wellbeing',
+    ],
     async () => {
       const at = now();
       const mealsFrom = startFrom(period, dateOf(at)) ?? fromEpochDays(0);
@@ -31,8 +41,14 @@ export default function Report(_props: ScreenProps) {
         getProfile(), getAllStools(), getMealsBetween(mealsFrom, dateOf(at)), getAllMedications(),
         getAllDoseLogs(), getAllLabResults(), getAllCheckups(),
       ]);
+      const [flares, activityScores, steroidCourses, vaccinations, extraSymptoms, doctorQuestions, appointments, wellbeing] =
+        await Promise.all([
+          getAllFlares(), getAllActivityScores(), getAllSteroidCourses(), getAllVaccinations(),
+          getAllExtraSymptoms(), getAllDoctorQuestions(), getAllAppointments(), getAllWellbeing(),
+        ]);
       return reportData({
         period, now: at, profile: profile ?? emptyProfile(), stools, meals, medications, doseLogs, labResults, checkups,
+        flares, activityScores, steroidCourses, vaccinations, extraSymptoms, doctorQuestions, appointments, wellbeing,
       });
     },
     [period],

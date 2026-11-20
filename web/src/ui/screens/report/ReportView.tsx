@@ -1,5 +1,5 @@
 import '../analysis/analysis.css';
-import type { ComponentChildren } from 'preact';
+
 import { type Adherence, takenRate } from '../../../domain/adherence';
 import { ANALYSIS_PERIOD_DAYS, averageBristol, realStools } from '../../../domain/analysis';
 import { LAB_TEST_INFO } from '../../../domain/health';
@@ -7,7 +7,7 @@ import type { ReminderSchedule } from '../../../domain/profile';
 import { dateOf, dateTimeParts } from '../../../domain/time';
 import { formatNumber, t, tp } from '../../../i18n';
 import {
-  REPEAT_EVERY_KEY, checkupTypeLabel, labCategoryLabel, labTestLabel, sexLabel,
+  REPEAT_EVERY_KEY, checkupTypeLabel, diagnosisLabel, labCategoryLabel, labTestLabel, sexLabel,
 } from '../../../report/labels';
 import { displayLabValue, displayReference } from '../../../report/labFormat';
 import {
@@ -17,6 +17,11 @@ import { DailyStoolChart } from '../../charts/DailyStoolChart';
 import { barsBetween } from '../../charts/dailyStool';
 import { formatDecimal, formatLocalDate, formatTime } from '../../format';
 import { periodLabel, symptomLabel } from '../analysis/period';
+import {
+  ActivityScoresSection, AppointmentsSection, DoctorQuestionsSection, ExtraSymptomsSection, FlaresSection,
+  SteroidsSection, VaccinationsSection, WellbeingSection,
+} from './ReportCareSections';
+import { Scroll } from './ReportScroll';
 
 /*
  * The report document (content of ReportPdfBuilder.kt): header, summary, symptoms, daily chart,
@@ -44,6 +49,7 @@ export function ReportView({ data }: { data: ReportData }) {
         <h1 id="report-title">{t('report_title')}</h1>
         {name !== '' && <p class="report-patient">{t('report_patient', [name])}</p>}
         {identity !== '' && <p>{identity}</p>}
+        {profile.diagnosis !== null && <p>{t('report_care_diagnosis', [diagnosisLabel(profile.diagnosis)])}</p>}
         <p>{t('report_period', [periodLabel(data.period), formatLocalDate(data.from), formatLocalDate(data.to)])}</p>
         <p class="report-note">
           {t('report_generated', [formatLocalDate(dateOf(data.generatedAt)), formatTime(generated.hour, generated.minute)])}
@@ -53,9 +59,17 @@ export function ReportView({ data }: { data: ReportData }) {
       <Summary data={data} />
       <Symptoms data={data} />
       {summary.stools.length > 0 && <ChartSection data={data} />}
+      <ExtraSymptomsSection data={data} />
+      <WellbeingSection data={data} />
       <Treatments data={data} />
+      <FlaresSection data={data} />
+      <ActivityScoresSection data={data} />
+      <SteroidsSection data={data} />
+      <VaccinationsSection data={data} />
       <Labs data={data} />
       <Checkups data={data} />
+      <AppointmentsSection data={data} />
+      <DoctorQuestionsSection data={data} />
 
       <footer class="report-footer">{t('report_footer')}</footer>
     </article>
@@ -299,13 +313,5 @@ function Checkups({ data }: { data: ReportData }) {
       )}
     </section>
   );
-}
-
-/**
- * Horizontal scroll area for wide tables on narrow screens (focusable, named). A `group`, not a
- * `region`: it shares its name with the section that holds it, and landmarks must be unique.
- */
-function Scroll({ label, children }: { label: string; children: ComponentChildren }) {
-  return <div class="report-scroll" role="group" tabIndex={0} aria-label={label}>{children}</div>;
 }
 
