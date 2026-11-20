@@ -8,12 +8,14 @@ Responsive, installable (PWA) and usable offline. Static site in [`web/`](web/RE
 
 ## Features
 
-- **Daily journal**: stools (Bristol 0–7, blood, mucus, pain and fatigue 0–5, urgency, night-time), false urges (never counted as stools), meals with photo or barcode scan (Open Food Facts), evening check-in.
-- **History and trends**: monthly calendar colored by consistency, stools per day, symptom days compared with the previous period.
-- **Doctor report**: printable page ("Save as PDF" from the browser): period summary, symptoms, treatments with adherence, latest blood panels with the lab's reference ranges.
-- **Care**: treatments with adherence and refill alerts, scheduled blood and stool tests, colonoscopy and rectosigmoidoscopy preparation, 43 lab tests with the lab's own reference ranges, multi-PDF lab report import (read locally, reviewed before saving).
-- **Reminders**: "To do today" card, notifications while the app is open, `.ics` export for your calendar.
-- **Backup**: password-encrypted export and import (AES-256-GCM, PBKDF2).
+- **Daily journal**: stools (Bristol 0–7, blood, mucus, pain and fatigue 0–5, urgency, night-time), false urges (never counted as stools), meals with photo or barcode scan (Open Food Facts), evening check-in, other symptoms (joints, skin, eyes, mouth ulcers, fever), sleep, stress, mood and menstrual period.
+- **History and trends**: monthly calendar colored by consistency with flare days marked, stools per day, symptom days compared with the previous period, foods eaten before bad stools (an observation, never a cause), sleep, stress and mood compared with bad days.
+- **Doctor report**: printable page ("Save as PDF" from the browser): period summary, symptoms, flares, steroid courses, activity scores, vaccinations, questions for the doctor, appointments, treatments with adherence, latest blood panels with the lab's reference ranges.
+- **Care**: treatments with adherence, refill alerts and an optional count of intakes left, scheduled blood and stool tests, colonoscopy and rectosigmoidoscopy preparation, 47 lab tests (including biologic drug levels) with the lab's own reference ranges, multi-PDF lab report import (read locally, reviewed before saving), body weight, flares, HBI / SCCAI activity scores, vaccinations, steroid courses, questions for the doctor, appointments.
+- **Emergency**: a full-screen "I urgently need a toilet" card and an emergency sheet (diagnosis, treatments, allergies, doctor, contact), optionally readable from the PIN lock screen.
+- **Travel pack**: medication to take along for your dates with a safety margin, a letter for your doctor and the urgent-need card, printable in French, English, Spanish or German.
+- **Reminders**: "To do today" card (doses, tests, exam steps, appointments, vaccines, weekly weigh-in, low stock, overdue backup), notifications while the app is open, `.ics` export for your calendar.
+- **Backup**: password-encrypted export and import (AES-256-GCM, PBKDF2), monthly backup reminder, CSV export in a password-protected AES-256 ZIP archive. Backups of the Android app, including its latest sections, can be imported.
 - Light, dark and AMOLED themes, several palettes. English, French, German, Spanish, Italian, Portuguese.
 
 ## Privacy
