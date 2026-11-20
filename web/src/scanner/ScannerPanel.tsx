@@ -19,8 +19,13 @@ type Result =
 const FRAME_INTERVAL_MS = 250;
 
 export interface ScannerPanelProps {
-  /** Pick the barcode (meal editor). Without it, the panel only shows the product (scan page). */
-  onUse?(barcode: string): void;
+  /** Pick the product (meal editor); an unknown barcode comes as a product with only its barcode. Without it, the panel only shows the product (scan page). */
+  onUse?(product: Product): void;
+}
+
+/** "Use the barcode anyway": a product known only by its barcode (`ScannerContent`). */
+function barcodeOnly(barcode: string): Product {
+  return { barcode, name: null, brand: null, nutriscore: null, imageUrl: null, ingredients: null };
 }
 
 /**
@@ -171,7 +176,7 @@ export function ScannerPanel({ onUse }: ScannerPanelProps) {
             <ProductCard product={result.product} />
             <div class="scan-actions">
               {onUse ? (
-                <Button onClick={() => onUse(result.product.barcode)}>{t('use_product')}</Button>
+                <Button onClick={() => onUse(result.product)}>{t('use_product')}</Button>
               ) : (
                 <Button variant="tonal" onClick={again}>{t('web_scan_again')}</Button>
               )}
@@ -184,7 +189,7 @@ export function ScannerPanel({ onUse }: ScannerPanelProps) {
             <p class="scan-barcode">{result.barcode}</p>
             <div class="scan-actions">
               {onUse ? (
-                <Button variant="outlined" onClick={() => onUse(result.barcode)}>{t('use_barcode_anyway')}</Button>
+                <Button variant="outlined" onClick={() => onUse(barcodeOnly(result.barcode))}>{t('use_barcode_anyway')}</Button>
               ) : (
                 <Button variant="tonal" onClick={again}>{t('web_scan_again')}</Button>
               )}

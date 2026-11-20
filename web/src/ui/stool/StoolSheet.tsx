@@ -5,7 +5,8 @@ import { stool as newStool, type Stool } from '../../domain/models';
 import { fromEpochDays, localDateTimeAt } from '../../domain/time';
 import { t } from '../../i18n';
 import { BristolIcon, BristolPicker, Button, Scale0to5, SegmentedControl, Sheet, showToast, Switch } from '../components';
-import { formatLocalDate, formatTime } from '../format';
+import { formatTime } from '../format';
+import { weekdayDayMonth } from '../screens/history/labels';
 import { bristolLabel } from './stoolText';
 
 export interface StoolSheetProps {
@@ -21,8 +22,11 @@ export interface StoolSheetProps {
 
 /** Saisie détaillée d'une selle : Bristol, symptômes, urgence, nuit, commentaire (`StoolSheet`). */
 export function StoolSheet({ open, dateEpochDay, stoolId, initialBristol, initialFalseUrge, onClose }: StoolSheetProps) {
-  const falseUrgeTitle = initialFalseUrge === true;
-  const title = stoolId !== undefined ? t('edit_stool') : falseUrgeTitle ? t('new_false_urge') : t('new_stool');
+  // Le titre suit le choix selle / fausse envie en cours de saisie (`StoolSheetContent`).
+  const [falseUrge, setFalseUrge] = useState(initialFalseUrge === true);
+  const editing = stoolId !== undefined;
+  // i18n-keys: edit_false_urge new_false_urge edit_stool new_stool
+  const title = t(falseUrge ? (editing ? 'edit_false_urge' : 'new_false_urge') : (editing ? 'edit_stool' : 'new_stool'));
   return (
     <Sheet open={open} onClose={onClose} title={title} closeLabel={t('close')} lightDismiss={false}>
       {open && (
@@ -32,13 +36,16 @@ export function StoolSheet({ open, dateEpochDay, stoolId, initialBristol, initia
           initialBristol={initialBristol}
           initialFalseUrge={initialFalseUrge}
           onClose={onClose}
+          onKind={setFalseUrge}
         />
       )}
     </Sheet>
   );
 }
 
-function Loader(props: Omit<StoolSheetProps, 'open'>) {
+type LoaderProps = Omit<StoolSheetProps, 'open'> & { onKind(falseUrge: boolean): void };
+
+function Loader(props: LoaderProps) {
   // undefined : chargement ; null : selle introuvable (supprimée entre-temps) = nouvelle saisie.
   const [existing, setExisting] = useState<Stool | null | undefined>(props.stoolId === undefined ? null : undefined);
   useEffect(() => {
@@ -53,7 +60,7 @@ function Loader(props: Omit<StoolSheetProps, 'open'>) {
 
 type Kind = 'stool' | 'falseUrge';
 
-function StoolForm({ dateEpochDay, existing, initialBristol, initialFalseUrge, onClose }: Omit<StoolSheetProps, 'open'> & { existing: Stool | null }) {
+function StoolForm({ dateEpochDay, existing, initialBristol, initialFalseUrge, onClose, onKind }: LoaderProps & { existing: Stool | null }) {
   const [bristol, setBristol] = useState(
     // Une fausse envie est enregistrée avec le type 0 : la repasser en selle repart du type 4.
     existing && !existing.falseUrge ? existing.bristolType : (initialBristol ?? 4),
@@ -66,6 +73,7 @@ function StoolForm({ dateEpochDay, existing, initialBristol, initialFalseUrge, o
   const [urgency, setUrgency] = useState(existing?.urgency ?? false);
   const [nocturnal, setNocturnal] = useState(existing?.nocturnal ?? false);
   const [falseUrge, setFalseUrge] = useState(existing?.falseUrge ?? initialFalseUrge ?? false);
+  useEffect(() => onKind(falseUrge), [falseUrge]);
   const [busy, setBusy] = useState(false);
   const commentId = useId();
 
@@ -107,7 +115,7 @@ function StoolForm({ dateEpochDay, existing, initialBristol, initialFalseUrge, o
     <form class="stack stool-form" onSubmit={save}>
       <div class="row">
         <p class="text-muted text-sm spacer">
-          {formatLocalDate(date, { weekday: 'long', day: 'numeric', month: 'long' })} · {formatTime(hour, minute)}
+          {weekdayDayMonth(date)} · {formatTime(hour, minute)}
         </p>
         <BristolIcon type={falseUrge ? 0 : bristol} />
       </div>

@@ -28,9 +28,11 @@ export function WeightChart({ weights }: { weights: readonly Weight[] }) {
       <div class="weight-chart-box" ref={box}>
         <svg viewBox={`0 0 ${width} ${HEIGHT}`} width={width} height={HEIGHT} role="img" aria-label={description}>
           <line class="weight-grid" x1={LEFT} x2={width - RIGHT_PAD} y1={model.yMax} y2={model.yMax} />
-          <line class="weight-grid" x1={LEFT} x2={width - RIGHT_PAD} y1={model.yMin} y2={model.yMin} />
-          <text x={LEFT - 6} y={model.yMax} text-anchor="end" dominant-baseline="central">{model.max}</text>
-          <text x={LEFT - 6} y={model.yMin} text-anchor="end" dominant-baseline="central">{model.min}</text>
+          {model.min !== model.max && <line class="weight-grid" x1={LEFT} x2={width - RIGHT_PAD} y1={model.yMin} y2={model.yMin} />}
+          <text x={LEFT - 6} y={model.yMax} text-anchor="end" dominant-baseline="central">{formatDecimal(model.max)}</text>
+          {model.min !== model.max && (
+            <text x={LEFT - 6} y={model.yMin} text-anchor="end" dominant-baseline="central">{formatDecimal(model.min)}</text>
+          )}
           {weights.length > 1 && <path class="weight-line" d={model.path} />}
           {model.points.map((p) => <circle key={p.weight.id} class="weight-point" cx={p.x} cy={p.y} r={4.5} />)}
           {first.date === last.date ? (

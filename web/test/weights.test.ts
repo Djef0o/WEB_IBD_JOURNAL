@@ -47,10 +47,13 @@ describe('weights store', () => {
 });
 
 describe('weight input and chart', () => {
-  it('parses comma or dot decimals and rejects implausible values', () => {
+  it('parses comma or dot decimals and accepts the Android range 1–400 kg', () => {
     expect(parseKg('68,4')).toBe(68.4);
     expect(parseKg(' 70 ')).toBe(70);
-    for (const bad of ['', 'abc', '5', '401', '68.456', '-70']) expect(parseKg(bad)).toBeNull();
+    expect(parseKg('68.456')).toBe(68.456);
+    expect(parseKg('1')).toBe(1);
+    expect(parseKg('400')).toBe(400);
+    for (const bad of ['', 'abc', '0.5', '401', '-70']) expect(parseKg(bad)).toBeNull();
   });
 
   it('places points by date inside the box', () => {
@@ -59,8 +62,23 @@ describe('weight input and chart', () => {
       { left: 0, right: 100, top: 0, bottom: 100 },
     );
     expect(m.points.map((p) => p.x)).toEqual([0, 20, 100]);
-    expect(m.min).toBeLessThan(70);
-    expect(m.max).toBeGreaterThan(72);
+    // The scale spans the lowest and highest weights of the window.
+    expect(m.min).toBe(70);
+    expect(m.max).toBe(72);
     expect(m.points[1]!.y).toBeLessThan(m.points[0]!.y);
+    expect(m.points[0]!.y).toBe(100);
+    expect(m.points[1]!.y).toBe(0);
+  });
+});
+
+describe('weightsByPeriod', () => {
+  it('keeps the weights of the last 6 months and 1 year, and the whole history for "all"', async () => {
+    const { weightsByPeriod } = await import('../src/ui/weight/weightChart');
+    const w = (id: number, date: string) => ({ id, date, kg: 70 });
+    const all = [w(1, '2025-01-10'), w(2, '2025-12-01'), w(3, '2026-06-01'), w(4, '2026-11-15')];
+    const by = weightsByPeriod(all, '2026-11-20');
+    expect(by['6m'].map((x) => x.id)).toEqual([3, 4]);
+    expect(by['1y'].map((x) => x.id)).toEqual([2, 3, 4]);
+    expect(by.all.map((x) => x.id)).toEqual([1, 2, 3, 4]);
   });
 });

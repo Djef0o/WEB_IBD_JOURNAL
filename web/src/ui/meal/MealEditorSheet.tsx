@@ -7,9 +7,8 @@ import { MEAL_TYPES, meal as newMeal, type Meal, type MealType, type Product } f
 import type { LocalDate } from '../../domain/time';
 import { t } from '../../i18n';
 import { BarcodeScanDialog } from '../../scanner/BarcodeScanDialog';
-import { lookupProduct } from '../../scanner/openFoodFacts';
 import { Button, SegmentedControl, Sheet, showToast } from '../components';
-import { formatLocalDate } from '../format';
+import { fullDate } from '../screens/history/labels';
 import { canSaveMeal, planPhoto } from './mealDraft';
 import { resizeImage } from './imageResize';
 
@@ -56,8 +55,6 @@ function MealForm({ date, mealType, mealId, onClose }: Omit<MealEditorSheetProps
   return <MealFields date={date} initialType={mealType} editing={loaded} onClose={onClose} />;
 }
 
-type LookupState = 'idle' | 'loading' | 'notFound';
-
 function MealFields({ date, initialType, editing, onClose }: { date: LocalDate; initialType: MealType; editing: Meal | null; onClose(): void }) {
   const descId = useId();
   const [type, setType] = useState<MealType>(editing?.type ?? initialType);
@@ -67,7 +64,6 @@ function MealFields({ date, initialType, editing, onClose }: { date: LocalDate; 
   const [removePhoto, setRemovePhoto] = useState(false);
   const [photoState, setPhotoState] = useState<'idle' | 'processing' | 'error'>('idle');
   const [scanOpen, setScanOpen] = useState(false);
-  const [lookup, setLookup] = useState<LookupState>('idle');
   const [saving, setSaving] = useState(false);
 
   const existingPhoto = editing?.photoUri ?? null;
@@ -86,16 +82,6 @@ function MealFields({ date, initialType, editing, onClose }: { date: LocalDate; 
     } catch {
       setPhotoState('error');
     }
-  }
-
-  async function onBarcode(barcode: string): Promise<void> {
-    setScanOpen(false);
-    setLookup('loading');
-    const result = await lookupProduct(barcode);
-    if (result.kind === 'found') {
-      setProduct(result.product);
-      setLookup('idle');
-    } else setLookup('notFound');
   }
 
   async function save(): Promise<void> {
@@ -137,7 +123,7 @@ function MealFields({ date, initialType, editing, onClose }: { date: LocalDate; 
         void save();
       }}
     >
-      <p class="text-muted">{formatLocalDate(editing?.date ?? date, { dateStyle: 'full' })}</p>
+      <p class="text-muted">{fullDate(editing?.date ?? date)}</p>
 
       <SegmentedControl
         label={t('meals_label')}
@@ -182,9 +168,6 @@ function MealFields({ date, initialType, editing, onClose }: { date: LocalDate; 
       </div>
 
       <Button variant="outlined" onClick={() => setScanOpen(true)}>{t('scan_barcode')}</Button>
-      <p class="text-sm" role="status">
-        {lookup === 'loading' ? t('web_loading') : lookup === 'notFound' ? t('product_not_found') : ''}
-      </p>
       {product && <ProductCard product={product} onRemove={() => setProduct(null)} />}
 
       <div class="row-wrap meal-actions">
@@ -194,7 +177,7 @@ function MealFields({ date, initialType, editing, onClose }: { date: LocalDate; 
         <Button type="submit" disabled={saving || photoState === 'processing' || !canSaveMeal(draft)}>{t('save')}</Button>
       </div>
     </form>
-    <BarcodeScanDialog open={scanOpen} onResult={(code) => void onBarcode(code)} onClose={() => setScanOpen(false)} />
+    <BarcodeScanDialog open={scanOpen} onResult={(picked) => { setScanOpen(false); setProduct(picked); }} onClose={() => setScanOpen(false)} />
     </>
   );
 }
@@ -256,7 +239,11 @@ function ProductCard({ product, onRemove }: { product: Product; onRemove(): void
       <div class="meal-product-text">
         <strong>{product.name ?? product.barcode}</strong>
         {product.brand && <span class="text-muted text-sm">{product.brand}</span>}
-        {product.nutriscore && <span class="text-sm meal-nutri">{t('nutriscore', [product.nutriscore.toUpperCase()])}</span>}
+        {product.nutriscore && (
+          <span class="text-sm meal-nutri product-nutriscore" data-grade={product.nutriscore.trim().charAt(0).toLowerCase()}>
+            {t('nutriscore', [product.nutriscore.toUpperCase()])}
+          </span>
+        )}
       </div>
       <button type="button" class="icon-btn" aria-label={t('remove_product')} onClick={onRemove}>
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">

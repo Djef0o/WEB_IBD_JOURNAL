@@ -4,7 +4,8 @@ import { saveStool } from '../../db/stools';
 import { stool as newStool } from '../../domain/models';
 import { fromEpochDays } from '../../domain/time';
 import { t } from '../../i18n';
-import { formatLocalDate, formatTime } from '../format';
+import { formatTime } from '../format';
+import { weekdayDayMonth } from '../screens/history/labels';
 import { BristolPicker, Button, Sheet, showToast } from '../components';
 import { bristolLabel } from './stoolText';
 
@@ -43,7 +44,7 @@ function QuickForm({ dateEpochDay, onClose, onDetails }: Omit<QuickStoolSheetPro
   return (
     <form class="stack" onSubmit={save}>
       <p class="text-muted text-sm">
-        {formatLocalDate(fromEpochDays(dateEpochDay), { weekday: 'long', day: 'numeric', month: 'long' })} · {formatTime(now.getHours(), now.getMinutes())}
+        {weekdayDayMonth(fromEpochDays(dateEpochDay))} · {formatTime(now.getHours(), now.getMinutes())}
       </p>
       <BristolPicker
         label={t('quick_stool_question')}

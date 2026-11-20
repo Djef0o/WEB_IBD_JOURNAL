@@ -1,11 +1,12 @@
+import type { Product } from '../domain/models';
 import { t } from '../i18n';
 import { Sheet } from '../ui/components';
 import { ScannerPanel } from './ScannerPanel';
 
 export interface BarcodeScanDialogProps {
   open: boolean;
-  /** The user picked the scanned (or typed) barcode. */
-  onResult(barcode: string): void;
+  /** The user picked the scanned product, or the typed barcode alone when it is unknown. */
+  onResult(product: Product): void;
   onClose(): void;
 }
 
