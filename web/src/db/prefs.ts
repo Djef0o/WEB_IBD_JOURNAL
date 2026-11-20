@@ -1,3 +1,5 @@
+import { DEFAULT_WEIGH_IN_DAY } from '../domain/weighIn';
+import { dateOf, fromEpochDays, localDateTimeAt, toEpochDays, type LocalDate } from '../domain/time';
 import { computed, type ReadonlySignal } from '@preact/signals';
 import { isLang, type Lang } from '../i18n';
 import { THEME_MODES, THEME_PALETTES, type ThemeMode, type ThemePalette } from '../ui/theme';
@@ -27,6 +29,10 @@ const KEYS = {
   checkinBristol: 'checkin_bristol',
   checkinFatigue: 'checkin_fatigue',
   checkinPain: 'checkin_pain',
+  backupReminder: 'backup_reminder',
+  backupSinceDay: 'backup_since_day',
+  weighInReminder: 'weigh_in_reminder',
+  weighInDay: 'weigh_in_day',
 } as const;
 
 /** Evening reminder (`NotificationSettings`). */
@@ -177,6 +183,60 @@ export function setLangPref(lang: Lang | null): Promise<void> {
 /** Records that an export was just made. */
 export function markBackupDone(at: number = Date.now()): Promise<void> {
   return writeRaw({ [KEYS.lastBackupAt]: at });
+}
+
+/** Encrypted-backup status and reminder (`BackupSettings`); dates are local calendar days. */
+export interface BackupSettings {
+  reminderEnabled: boolean;
+  lastBackup: LocalDate | null;
+  /** Start of the reminder countdown while there is no backup (set once, at first use). */
+  since: LocalDate | null;
+}
+
+/** Weekly weigh-in reminder (`WeighInSettings`); `day`: ISO day of the week, 1 = Monday … 7 = Sunday. */
+export interface WeighInSettings {
+  enabled: boolean;
+  day: number;
+}
+
+export async function getBackupSettings(): Promise<BackupSettings> {
+  const raw = await readRaw();
+  const last = readNumber(raw, KEYS.lastBackupAt);
+  const since = readNumber(raw, KEYS.backupSinceDay);
+  return {
+    reminderEnabled: readBoolean(raw, KEYS.backupReminder, true),
+    lastBackup: last === null ? null : dateOf(localDateTimeAt(last)),
+    since: since === null ? null : fromEpochDays(since),
+  };
+}
+
+export async function getWeighInSettings(): Promise<WeighInSettings> {
+  const raw = await readRaw();
+  const day = readNumber(raw, KEYS.weighInDay);
+  return {
+    enabled: readBoolean(raw, KEYS.weighInReminder, false),
+    day: day !== null && Number.isInteger(day) && day >= 1 && day <= 7 ? day : DEFAULT_WEIGH_IN_DAY,
+  };
+}
+
+/** `undefined` until the first read. */
+export const backupSettingsSignal: ReadonlySignal<BackupSettings | undefined> = liveSignal(['prefs'], getBackupSettings);
+export const weighInSignal: ReadonlySignal<WeighInSettings | undefined> = liveSignal(['prefs'], getWeighInSettings);
+
+export function setBackupReminderEnabled(enabled: boolean): Promise<void> {
+  return writeRaw({ [KEYS.backupReminder]: enabled });
+}
+
+/** Day the reminder countdown started when no backup exists yet: set once, at first use. */
+export async function ensureBackupSince(today: LocalDate): Promise<LocalDate> {
+  const saved = readNumber(await readRaw(), KEYS.backupSinceDay);
+  if (saved !== null) return fromEpochDays(saved);
+  await writeRaw({ [KEYS.backupSinceDay]: toEpochDays(today) });
+  return today;
+}
+
+export function setWeighIn(enabled: boolean, day: number): Promise<void> {
+  return writeRaw({ [KEYS.weighInReminder]: enabled, [KEYS.weighInDay]: day });
 }
 
 /**

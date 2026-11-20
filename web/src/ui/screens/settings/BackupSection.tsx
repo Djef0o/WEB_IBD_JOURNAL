@@ -1,24 +1,28 @@
 import './settings.css';
-import { useState } from 'preact/hooks';
-import { lastBackupAt } from '../../../db/prefs';
-import { formatDate, t } from '../../../i18n';
+import { useEffect, useState } from 'preact/hooks';
+import { backupSettingsSignal, ensureBackupSince, setBackupReminderEnabled } from '../../../db/prefs';
+import { isBackupOverdue } from '../../../domain/backupReminders';
+import { today } from '../../../domain/time';
+import { t } from '../../../i18n';
 import { ExportBackupDialog } from '../../backup/ExportBackupDialog';
 import { ImportBackupButton } from '../../backup/ImportBackup';
-import { Button, Card } from '../../components';
+import { Button, Card, Switch } from '../../components';
+import { formatLocalDate } from '../../format';
+import { CsvExportRow } from './CsvExportSection';
 
 /**
- * Sauvegarde chiffrée : export `.ibdj` (mot de passe choisi), import avec confirmation.
+ * Sauvegarde chiffrée : export `.ibdj` (mot de passe choisi), import avec confirmation, état de la
+ * dernière sauvegarde (en rouge au bout d'un mois, `isBackupOverdue`) et rappel mensuel, export CSV.
  * Rappel d'exports réguliers : les données ne vivent que dans ce navigateur.
  */
 export function BackupSection() {
   const [exporting, setExporting] = useState(false);
-  const last = lastBackupAt.value;
-  const lastLabel =
-    last === undefined
-      ? ''
-      : last === null
-        ? t('web_backup_never')
-        : t('web_backup_last_export', [formatDate(last, { dateStyle: 'medium', timeStyle: 'short' })]);
+  const settings = backupSettingsSignal.value;
+  // Start of the reminder countdown while there is no backup: set once, at first use.
+  useEffect(() => { void ensureBackupSince(today()); }, []);
+
+  const last = settings?.lastBackup ?? null;
+  const overdue = settings !== undefined && isBackupOverdue(last, today());
 
   return (
     <>
@@ -27,7 +31,23 @@ export function BackupSection() {
           <h3>{t('web_backup_reminder_title')}</h3>
           <p>{t('web_backup_reminder_text')}</p>
         </div>
-        <p class="text-muted" role="status">{lastLabel}</p>
+        <div>
+          <p class="setting-title">{t('backup_status_title')}</p>
+          <p class={overdue ? 'text-error' : 'text-muted'} role="status">
+            {settings === undefined
+              ? ''
+              : last === null
+                ? t('backup_status_never')
+                : t('backup_status_last', [formatLocalDate(last)])}
+          </p>
+        </div>
+        <Switch
+          label={t('backup_reminder_switch')}
+          description={t('backup_reminder_desc')}
+          checked={settings?.reminderEnabled ?? true}
+          disabled={!settings}
+          onChange={(enabled) => void setBackupReminderEnabled(enabled)}
+        />
         <div class="stack-sm">
           <div class="setting-row">
             <div>
@@ -43,6 +63,7 @@ export function BackupSection() {
             </div>
             <ImportBackupButton variant="outlined">{t('import_data')}</ImportBackupButton>
           </div>
+          <CsvExportRow />
         </div>
       </Card>
       <ExportBackupDialog open={exporting} onClose={() => setExporting(false)} />
