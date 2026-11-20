@@ -1,5 +1,6 @@
 import { doseLogFromEntity, doseLogToEntity, type DoseLogEntity } from '../domain/entities';
 import type { DoseLog, DoseStatus } from '../domain/health';
+import { stockDelta } from '../domain/stock';
 import { stripAutoId, transaction, type ReadTx, type Tx } from './connection';
 
 /** `ORDER BY scheduledAt` (ties: insertion order). */
@@ -40,11 +41,27 @@ export function deleteDoseLog(medicationId: number, scheduledAt: number): Promis
 
 /**
  * Confirms a scheduled dose (`status` null: cancels the confirmation), as
- * `ProfileRepository.logDose`.
+ * `ProfileRepository.logDose`. Only a dose confirmed taken uses up the treatment's counted
+ * stock; undoing or changing it gives the dose back (`stockDelta`, floor 0, no effect without a
+ * count). Confirmation and stock change are written in the same transaction.
  */
 export function logDose(medicationId: number, scheduledAt: number, status: DoseStatus | null): Promise<void> {
-  if (status === null) return deleteDoseLog(medicationId, scheduledAt);
-  return upsertDoseLog({ id: 0, medicationId, scheduledAt, status, loggedAt: Date.now() }).then(() => undefined);
+  return transaction(['dose_logs', 'medications'], 'readwrite', async (tx) => {
+    const logs = tx.objectStore('dose_logs');
+    const index = logs.index('medicationId_scheduledAt');
+    const key = await index.getKey([medicationId, scheduledAt]);
+    const previous = key === undefined ? null : ((await logs.get(key))?.status ?? null);
+    if (key !== undefined) await logs.delete(key);
+    if (status !== null) {
+      await logs.put(stripAutoId(doseLogToEntity({ id: 0, medicationId, scheduledAt, status, loggedAt: Date.now() })));
+    }
+    const delta = stockDelta(previous, status);
+    if (delta === 0) return;
+    const medications = tx.objectStore('medications');
+    const entity = await medications.get(medicationId);
+    if (entity?.stockDoses === undefined || entity.stockDoses === null) return;
+    await medications.put({ ...entity, stockDoses: Math.max(0, entity.stockDoses + delta) });
+  });
 }
 
 /** Deletes all the logs of a treatment (`deleteForMedication`), in the caller's transaction. */

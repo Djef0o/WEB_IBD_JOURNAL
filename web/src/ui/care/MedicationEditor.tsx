@@ -1,7 +1,7 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { deleteMedication, saveMedication } from '../../db/medications';
 import {
-  medication as newMedication, nextRefillAlert, REFILL_LEAD_DAYS, refillBasis, type Medication,
+  DEFAULT_LOW_STOCK_DOSES, medication as newMedication, nextRefillAlert, REFILL_LEAD_DAYS, refillBasis, type Medication,
 } from '../../domain/profile';
 import { localDateTimeAt, today, type LocalDateTime } from '../../domain/time';
 import { t } from '../../i18n';
@@ -12,6 +12,13 @@ import { focusFirstInvalid } from '../forms/focus';
 import { MedicationPicker } from './MedicationPicker';
 import { ScheduleFields } from './ScheduleFields';
 import { draftFromSchedule, newDraft, scheduleFromDraft } from './scheduleDraft';
+
+/** Largest number of digits of the stock fields (`MAX_STOCK_DIGITS`). */
+const MAX_STOCK_DIGITS = 4;
+
+function digitsOnly(value: string): string {
+  return value.replace(/\D/g, '').slice(0, MAX_STOCK_DIGITS);
+}
 
 /** "Order: alert Monday, November 23 at 08:00", or null without an upcoming alert (`refillStatus`). */
 export function refillStatus(medication: Medication, now: LocalDateTime): string | null {
@@ -32,7 +39,16 @@ export function MedicationEditor({ initial, onClose }: MedicationEditorProps) {
   const [draft, setDraft] = useState(() => (initial ? draftFromSchedule(initial.schedule) : newDraft('DAY', today())));
   const [refillAlert, setRefillAlert] = useState(initial?.refillAlert ?? false);
   const [stockEnd, setStockEnd] = useState(initial?.stockEndDate ?? '');
+  const [stockText, setStockText] = useState(initial?.stockDoses?.toString() ?? '');
+  const [lowStockText, setLowStockText] = useState(
+    initial?.stockDoses == null ? '' : initial.lowStockDoses.toString(),
+  );
+  // A new treatment opens on the standard list, as on Android (`showPicker = initial == null`). Opened
+  // after the sheet itself so that the picker stacks above it.
   const [picking, setPicking] = useState(false);
+  useEffect(() => {
+    if (initial === null) setPicking(true);
+  }, []);
   const [attempted, setAttempted] = useState(false);
   const [busy, setBusy] = useState(false);
 
@@ -43,6 +59,8 @@ export function MedicationEditor({ initial, onClose }: MedicationEditorProps) {
     dosage: dosage.trim(),
     schedule,
     refillAlert,
+    stockDoses: stockText === '' ? null : Number(stockText),
+    lowStockDoses: lowStockText === '' ? DEFAULT_LOW_STOCK_DOSES : Number(lowStockText),
     stockEndDate: /^\d{4}-\d{2}-\d{2}$/.test(stockEnd) ? stockEnd : null,
   };
   const basis = draftMedication ? refillBasis(draftMedication) : null;
@@ -120,6 +138,27 @@ export function MedicationEditor({ initial, onClose }: MedicationEditorProps) {
             </>
           )}
           {refillAlert && status !== null && <p class="text-muted text-sm">{status}</p>}
+        </div>
+
+        <div class="stack-sm">
+          <TextField
+            label={t('stock_field')}
+            hint={t('stock_field_hint')}
+            value={stockText}
+            onInput={(value) => setStockText(digitsOnly(value))}
+            inputMode="numeric"
+            autocomplete="off"
+          />
+          {stockText !== '' && (
+            <TextField
+              label={t('stock_low_field')}
+              hint={t('stock_low_hint')}
+              value={lowStockText}
+              onInput={(value) => setLowStockText(digitsOnly(value))}
+              inputMode="numeric"
+              autocomplete="off"
+            />
+          )}
         </div>
 
         <div class="dialog-actions">

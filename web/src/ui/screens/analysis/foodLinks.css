@@ -1,0 +1,12 @@
+.foodlink-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.foodlink-row { display: flex; flex-direction: column; gap: var(--space-1); }
+.foodlink-name { font-weight: 600; }
+.foodlink-bar { position: relative; block-size: 8px; border-radius: var(--radius-full); background: var(--c-surface-variant); }
+.foodlink-fill { block-size: 100%; border-radius: var(--radius-full); background: var(--c-primary); }
+.foodlink-tick { position: absolute; inset-block: 0; inline-size: 2px; margin-inline-start: -2px; background: var(--c-on-surface); }
+.foodlink-caveat { font-weight: 600; }
+@media (forced-colors: active) {
+  .foodlink-bar { border: 1px solid CanvasText; }
+  .foodlink-fill { background: Highlight; }
+  .foodlink-tick { background: CanvasText; }
+}
