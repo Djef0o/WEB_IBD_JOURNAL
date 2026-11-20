@@ -13,6 +13,8 @@ import { monthLabel } from './history/labels';
 import { MonthGrid } from './history/MonthGrid';
 import { RecentDays } from './history/RecentDays';
 import { WeekChart } from './history/WeekChart';
+import { FlareLegend } from '../care/flares/FlareMarks';
+import { useFlareDaysOfMonth } from './history/flareDays';
 
 /** Mois affiché : conservé pendant la session (retour depuis un jour). */
 const shown = signal<MonthRef>(monthOf(todayDate()));
@@ -36,6 +38,7 @@ export default function History(_props: ScreenProps) {
   );
 
   const byDay = groupByDate(stools);
+  const flareDays = useFlareDaysOfMonth(month);
   const average = averageBristol(stools);
   const days = isCurrent && stools.length > 0 && week ? lastWeek(now, groupByDate(week)) : null;
   const label = monthLabel(month);
@@ -77,6 +80,7 @@ export default function History(_props: ScreenProps) {
             byDay={byDay}
             today={now}
             labelledBy="month-title"
+            flareDays={flareDays}
             onMonthChange={(m) => {
               shown.value = m;
             }}
@@ -89,6 +93,7 @@ export default function History(_props: ScreenProps) {
             </span>
             <span class="text-muted text-sm">7</span>
           </div>
+          {flareDays.size > 0 && <FlareLegend />}
           <p class="text-muted text-sm">{t('history_legend_note')}</p>
         </Card>
 
