@@ -148,7 +148,8 @@ describe('medications', () => {
       name: 'Azathioprine', dosage: '50 mg', schedule: schedule('2026-11-10', 20, 30), refillAlert: true, stockEndDate: '2027-01-15',
     }));
     expect(await getMedication(id)).toEqual({
-      id, name: 'Azathioprine', dosage: '50 mg', schedule: schedule('2026-11-10', 20, 30), refillAlert: true, stockEndDate: '2027-01-15',
+      id, name: 'Azathioprine', dosage: '50 mg', schedule: schedule('2026-11-10', 20, 30), refillAlert: true,
+      stockDoses: null, lowStockDoses: 7, stockEndDate: '2027-01-15',
     });
     await saveMedication({ ...(await getMedication(id))!, dosage: '100 mg' });
     expect((await getMedication(id))?.dosage).toBe('100 mg');
@@ -278,9 +279,9 @@ describe('profile', () => {
   it('is null until saved, then a single replaced row', async () => {
     expect(await getProfile()).toBeNull();
     await saveProfile(profile({ firstName: 'Ada', lastName: 'L', birthDate: '1990-05-17', sex: 'FEMALE' }));
-    expect(await getProfile()).toEqual({ firstName: 'Ada', lastName: 'L', birthDate: '1990-05-17', sex: 'FEMALE' });
+    expect(await getProfile()).toEqual({ firstName: 'Ada', lastName: 'L', birthDate: '1990-05-17', sex: 'FEMALE', diagnosis: null });
     await saveProfile(profile({ firstName: 'Bob' }));
-    expect(await getProfile()).toEqual({ firstName: 'Bob', lastName: '', birthDate: null, sex: null });
+    expect(await getProfile()).toEqual({ firstName: 'Bob', lastName: '', birthDate: null, sex: null, diagnosis: null });
     expect(await transaction(['profile'], 'readonly', (tx) => tx.objectStore('profile').count())).toBe(1);
   });
 

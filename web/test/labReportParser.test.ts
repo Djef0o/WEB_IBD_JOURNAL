@@ -115,7 +115,7 @@ describe('LabReportParserTest', () => {
   });
 
   it('catalogCoversEveryLabTest', () => {
-    // Sanity: the ordered catalog is exported and has the 43 tests.
-    expect(LAB_TESTS).toHaveLength(43);
+    // Sanity: the ordered catalog is exported and has the 47 tests (43 read from reports, 4 drug monitoring).
+    expect(LAB_TESTS).toHaveLength(47);
   });
 });

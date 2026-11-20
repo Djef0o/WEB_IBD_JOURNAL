@@ -58,7 +58,7 @@ describe('stored shapes and backup', () => {
       exams: [{ type: 'COLONOSCOPY', at: '2026-12-04T09:30' }],
     });
     const backup = decodeBackupData(json);
-    expect(backup.profile).toEqual({ firstName: 'A', lastName: '', birthDate: '1990-01-02', sex: 'FEMALE' });
+    expect(backup.profile).toEqual({ firstName: 'A', lastName: '', birthDate: '1990-01-02', sex: 'FEMALE', diagnosis: null });
     expect(backup.medications![0]!.schedule).toMatchObject({ enabled: true, hour: 8, repeatUnit: 'DAY' });
     expect(backup.checkups).toBeNull();
     expect(backup.exams![0]!.remindersEnabled).toBe(true);

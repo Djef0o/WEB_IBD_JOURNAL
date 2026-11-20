@@ -1,10 +1,15 @@
+import {
+  APPOINTMENT_KINDS, DIAGNOSES, EXTRA_SYMPTOMS, SCORE_KINDS, VACCINE_TYPES, WELLBEING_MAX, WELLBEING_MIN,
+  type ActivityScore, type Appointment, type DoctorQuestion, type EmergencyInfo, type ExtraSymptom,
+  type ExtraSymptomsDay, type Flare, type SteroidCourse, type Vaccination, type WellbeingDay,
+} from './care';
 import { DOSE_STATUSES, LAB_QUALIFIERS, LAB_TESTS, type DoseLog, type LabResult } from './health';
 import {
   EXAM_TYPES, MEAL_TYPES, nowEpochMillis,
   type BackupData, type Exam, type Meal, type Product, type Stool, type Weight,
 } from './models';
 import {
-  CHECKUP_TYPES, REPEAT_UNITS, SEXES,
+  CHECKUP_TYPES, DEFAULT_LOW_STOCK_DOSES, REPEAT_UNITS, SEXES,
   type Checkup, type Medication, type Profile, type ReminderSchedule,
 } from './profile';
 import { parseLocalDate, parseLocalDateTime } from './time';
@@ -137,6 +142,7 @@ function readProfile(value: unknown, path: string): Profile {
     lastName: text(o, 'lastName', path, ''),
     birthDate: nullableDate(o, 'birthDate', path),
     sex: o.sex === undefined || o.sex === null ? null : oneOf(o, 'sex', path, SEXES),
+    diagnosis: o.diagnosis === undefined || o.diagnosis === null ? null : oneOf(o, 'diagnosis', path, DIAGNOSES),
   };
 }
 
@@ -160,6 +166,8 @@ function readMedication(value: unknown, path: string): Medication {
     dosage: text(o, 'dosage', path, ''),
     schedule: readSchedule(o.schedule, `${path}.schedule`),
     refillAlert: bool(o, 'refillAlert', path, false),
+    stockDoses: nullableNum(o, 'stockDoses', path),
+    lowStockDoses: num(o, 'lowStockDoses', path, DEFAULT_LOW_STOCK_DOSES),
     stockEndDate: nullableDate(o, 'stockEndDate', path),
   };
 }
@@ -221,6 +229,124 @@ function readWeight(value: unknown, path: string): Weight {
   return { id: num(o, 'id', path, 0), date: date(o, 'date', path), kg };
 }
 
+function readFlare(value: unknown, path: string): Flare {
+  const o = obj(value, path);
+  return {
+    id: num(o, 'id', path, 0),
+    start: date(o, 'start', path),
+    end: nullableDate(o, 'end', path),
+    treatment: text(o, 'treatment', path, ''),
+    hospitalized: bool(o, 'hospitalized', path, false),
+    note: text(o, 'note', path, ''),
+  };
+}
+
+function readActivityScore(value: unknown, path: string): ActivityScore {
+  const o = obj(value, path);
+  const answers = list(o.answers, `${path}.answers`, (item, itemPath) => {
+    if (typeof item !== 'number' || !Number.isFinite(item)) throw new TypeError(`${itemPath}: number expected`);
+    return item;
+  });
+  return {
+    id: num(o, 'id', path, 0),
+    date: date(o, 'date', path),
+    kind: oneOf(o, 'kind', path, SCORE_KINDS),
+    answers,
+  };
+}
+
+function readVaccination(value: unknown, path: string): Vaccination {
+  const o = obj(value, path);
+  return {
+    id: num(o, 'id', path, 0),
+    type: oneOf(o, 'type', path, VACCINE_TYPES),
+    date: date(o, 'date', path),
+    nextDue: nullableDate(o, 'nextDue', path),
+    note: text(o, 'note', path, ''),
+    reminderEnabled: bool(o, 'reminderEnabled', path, false),
+  };
+}
+
+function readSteroidCourse(value: unknown, path: string): SteroidCourse {
+  const o = obj(value, path);
+  return {
+    id: num(o, 'id', path, 0),
+    drug: text(o, 'drug', path),
+    start: date(o, 'start', path),
+    steps: list(o.steps, `${path}.steps`, (item, itemPath) => {
+      const step = obj(item, itemPath);
+      return { doseMg: num(step, 'doseMg', itemPath), days: num(step, 'days', itemPath) };
+    }),
+    note: text(o, 'note', path, ''),
+  };
+}
+
+function readEmergencyInfo(value: unknown, path: string): EmergencyInfo {
+  const o = obj(value, path);
+  return {
+    allergies: text(o, 'allergies', path, ''),
+    doctorName: text(o, 'doctorName', path, ''),
+    doctorPhone: text(o, 'doctorPhone', path, ''),
+    contactName: text(o, 'contactName', path, ''),
+    contactPhone: text(o, 'contactPhone', path, ''),
+    notes: text(o, 'notes', path, ''),
+    showOnLockScreen: bool(o, 'showOnLockScreen', path, false),
+  };
+}
+
+function readExtraSymptomsDay(value: unknown, path: string): ExtraSymptomsDay {
+  const o = obj(value, path);
+  const known = new Set(list(o.symptoms, `${path}.symptoms`, (item, itemPath) => {
+    if (typeof item !== 'string' || !(EXTRA_SYMPTOMS as readonly string[]).includes(item)) {
+      throw new TypeError(`${itemPath}: one of ${EXTRA_SYMPTOMS.join(', ')} expected`);
+    }
+    return item as ExtraSymptom;
+  }));
+  return { date: date(o, 'date', path), symptoms: EXTRA_SYMPTOMS.filter((symptom) => known.has(symptom)) };
+}
+
+function readDoctorQuestion(value: unknown, path: string): DoctorQuestion {
+  const o = obj(value, path);
+  return {
+    id: num(o, 'id', path, 0),
+    text: text(o, 'text', path),
+    done: bool(o, 'done', path, false),
+    createdAt: num(o, 'createdAt', path, nowEpochMillis()),
+  };
+}
+
+function readAppointment(value: unknown, path: string): Appointment {
+  const o = obj(value, path);
+  return {
+    id: num(o, 'id', path, 0),
+    kind: oneOf(o, 'kind', path, APPOINTMENT_KINDS),
+    at: parseLocalDateTime(text(o, 'at', path)),
+    place: text(o, 'place', path, ''),
+    note: text(o, 'note', path, ''),
+    remindersEnabled: bool(o, 'remindersEnabled', path, true),
+  };
+}
+
+/** A 1 to 5 scale value, or null when not noted. */
+function scale(o: Obj, key: string, path: string): number | null {
+  const v = nullableNum(o, key, path);
+  if (v !== null && (!Number.isInteger(v) || v < WELLBEING_MIN || v > WELLBEING_MAX)) {
+    throw new TypeError(`${path}.${key}: integer from ${WELLBEING_MIN} to ${WELLBEING_MAX} expected`);
+  }
+  return v;
+}
+
+function readWellbeingDay(value: unknown, path: string): WellbeingDay {
+  const o = obj(value, path);
+  return {
+    date: date(o, 'date', path),
+    sleep: scale(o, 'sleep', path),
+    stress: scale(o, 'stress', path),
+    mood: scale(o, 'mood', path),
+    period: bool(o, 'period', path, false),
+  };
+}
+
 /**
  * Decodes the JSON clear text of a backup (`BackupData`). Sections absent from earlier
  * backups come back as `null`, meaning "leave the current data untouched".
@@ -237,6 +363,17 @@ export function decodeBackupData(json: string): BackupData {
     doseLogs: optionalList(root.doseLogs, 'doseLogs', readDoseLog),
     exams: optionalList(root.exams, 'exams', readExam),
     weights: optionalList(root.weights, 'weights', readWeight),
+    flares: optionalList(root.flares, 'flares', readFlare),
+    activityScores: optionalList(root.activityScores, 'activityScores', readActivityScore),
+    vaccinations: optionalList(root.vaccinations, 'vaccinations', readVaccination),
+    steroidCourses: optionalList(root.steroidCourses, 'steroidCourses', readSteroidCourse),
+    emergencyInfo: root.emergencyInfo === undefined || root.emergencyInfo === null
+      ? null
+      : readEmergencyInfo(root.emergencyInfo, 'emergencyInfo'),
+    extraSymptoms: optionalList(root.extraSymptoms, 'extraSymptoms', readExtraSymptomsDay),
+    doctorQuestions: optionalList(root.doctorQuestions, 'doctorQuestions', readDoctorQuestion),
+    appointments: optionalList(root.appointments, 'appointments', readAppointment),
+    wellbeing: optionalList(root.wellbeing, 'wellbeing', readWellbeingDay),
   };
 }
 

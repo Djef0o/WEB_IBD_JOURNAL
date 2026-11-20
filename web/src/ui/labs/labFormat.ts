@@ -41,11 +41,13 @@ export function statusLabel(status: LabStatus): string {
 export const STATUS_ARROW: Record<LabStatus, string> = { BELOW: '↓', ABOVE: '↑' };
 
 // i18n-keys: lab_crp lab_calprotectin lab_red_blood_cells lab_hemoglobin lab_hematocrit lab_mcv lab_mch lab_mchc lab_white_blood_cells lab_neutrophils lab_lymphocytes lab_monocytes lab_eosinophils lab_basophils lab_platelets lab_ferritin lab_iron lab_transferrin lab_iron_binding_capacity lab_transferrin_saturation lab_creatinine lab_egfr lab_sodium lab_potassium lab_chloride lab_calcium lab_urine_protein lab_ast lab_alt lab_ggt lab_alkaline_phosphatase lab_bilirubin_total lab_bilirubin_direct lab_bilirubin_indirect lab_glucose lab_cholesterol_total lab_cholesterol_hdl lab_cholesterol_ldl lab_triglycerides lab_vitamin_d lab_albumin lab_prothrombin_time lab_psa
+// i18n-keys: lab_infliximab_level lab_adalimumab_level lab_anti_infliximab_antibodies lab_anti_adalimumab_antibodies
 export function labTestLabel(test: LabTest): string {
   return t(`lab_${test.toLowerCase()}`);
 }
 
 // i18n-keys: lab_category_blood_count lab_category_inflammation lab_category_iron lab_category_kidney lab_category_liver lab_category_metabolic lab_category_nutrition lab_category_other
+// i18n-keys: lab_category_drug_monitoring
 export function labCategoryLabel(category: LabCategory): string {
   return t(`lab_category_${category.toLowerCase()}`);
 }

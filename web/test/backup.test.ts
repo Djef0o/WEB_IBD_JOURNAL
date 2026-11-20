@@ -8,13 +8,17 @@ import { encrypt } from '../src/backup/crypto';
 import { closeDb, getDb } from '../src/db/connection';
 import { decodeBackupData } from '../src/domain/backupData';
 import type { BackupData } from '../src/domain/models';
-import { sampleBackup } from './helpers/sampleBackup';
+import { fullSampleBackup, sampleBackup } from './helpers/sampleBackup';
 
 const enc = new TextEncoder();
 
 async function wipe(): Promise<void> {
   const db = await getDb();
-  const stores = ['meals', 'stools', 'profile', 'medications', 'checkups', 'lab_results', 'dose_logs', 'exams', 'weights', 'products', 'prefs'] as const;
+  const stores = [
+    'meals', 'stools', 'profile', 'medications', 'checkups', 'lab_results', 'dose_logs', 'exams', 'weights',
+    'flares', 'activity_scores', 'vaccinations', 'steroid_courses', 'emergency_info', 'extra_symptoms',
+    'doctor_questions', 'appointments', 'wellbeing', 'products', 'prefs',
+  ] as const;
   const tx = db.transaction(stores, 'readwrite');
   await Promise.all(stores.map((name) => tx.objectStore(name).clear()));
   await tx.done;
@@ -24,6 +28,10 @@ async function wipe(): Promise<void> {
 const byId = <T extends { id: number }>(rows: readonly T[] | null | undefined): T[] =>
   [...(rows ?? [])].sort((a, b) => a.id - b.id);
 
+const byDate = <T extends { date: string }>(rows: readonly T[] | null | undefined): T[] =>
+  [...(rows ?? [])].sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+
+/** Sections come back as lists from a snapshot and as `null` from an older backup: compare both as lists. */
 function normalized(b: BackupData): BackupData {
   return {
     ...b,
@@ -35,6 +43,15 @@ function normalized(b: BackupData): BackupData {
     doseLogs: byId(b.doseLogs),
     exams: byId(b.exams),
     weights: byId(b.weights),
+    flares: byId(b.flares),
+    activityScores: byId(b.activityScores),
+    vaccinations: byId(b.vaccinations),
+    steroidCourses: byId(b.steroidCourses),
+    emergencyInfo: b.emergencyInfo ?? null,
+    extraSymptoms: byDate(b.extraSymptoms),
+    doctorQuestions: byId(b.doctorQuestions),
+    appointments: byId(b.appointments),
+    wellbeing: byDate(b.wellbeing),
   };
 }
 
@@ -52,10 +69,36 @@ describe('snapshot / restore', () => {
     expect((await db.getAll('dose_logs')).map((d) => d.medicationId)).toEqual([7, 7]);
   });
 
-  it('snapshot of an empty database has empty sections and a null profile', async () => {
+  it('snapshot of an empty database has empty sections, a null profile and a null emergency sheet', async () => {
     expect(await snapshot()).toEqual({
       meals: [], stools: [], profile: null, medications: [], checkups: [], labResults: [], doseLogs: [], exams: [], weights: [],
+      flares: [], activityScores: [], vaccinations: [], steroidCourses: [], emergencyInfo: null,
+      extraSymptoms: [], doctorQuestions: [], appointments: [], wellbeing: [],
     });
+  });
+
+  it('restores every section of a recent Android backup (flares, scores, vaccines, steroids, emergency, follow-up, well-being)', async () => {
+    const data = fullSampleBackup();
+    await restore(data);
+    expect(normalized(await snapshot())).toEqual(normalized(data));
+  });
+
+  it('restores a backup in the JSON shape of the Android app (all sections, kotlinx.serialization names)', async () => {
+    const json = readFileSync(new URL('./fixtures/android-sample-v14.json', import.meta.url), 'utf8');
+    const decoded = decodeBackupData(json);
+    expect(normalized(decoded)).toEqual(normalized(fullSampleBackup()));
+    await restore(decoded);
+    expect(normalized(await snapshot())).toEqual(normalized(fullSampleBackup()));
+  });
+
+  it('keeps the new sections when an older backup (without them) is restored', async () => {
+    await restore(fullSampleBackup());
+    await restore(sampleBackup());
+    const after = normalized(await snapshot());
+    const full = normalized(fullSampleBackup());
+    expect(after.flares).toEqual(full.flares);
+    expect(after.emergencyInfo).toEqual(full.emergencyInfo);
+    expect(after.wellbeing).toEqual(full.wellbeing);
   });
 
   it('replaces meals and stools but keeps the sections absent from the backup', async () => {
@@ -160,7 +203,7 @@ describe('exportBackup / importBackup', () => {
   }, 30_000);
 
   it('names the file after the local date', () => {
-    expect(backupFileName(new Date(2026, 2, 5))).toBe('ibd-journal-2026-03-05.ibdj');
+    expect(backupFileName(new Date(2026, 2, 5))).toBe('ibd-journal-backup-2026-03-05.ibdj');
   });
 });
 

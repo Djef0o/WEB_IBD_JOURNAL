@@ -1,3 +1,4 @@
+import type { Diagnosis } from './care';
 import {
   atTime, dateOf, minusDays, plusDays, plusUnit, untilUnit,
   type DateUnit, type LocalDate, type LocalDateTime,
@@ -15,10 +16,11 @@ export interface Profile {
   lastName: string;
   birthDate: LocalDate | null;
   sex: Sex | null;
+  diagnosis: Diagnosis | null;
 }
 
 export function profile(init: Partial<Profile> = {}): Profile {
-  return { firstName: '', lastName: '', birthDate: null, sex: null, ...init };
+  return { firstName: '', lastName: '', birthDate: null, sex: null, diagnosis: null, ...init };
 }
 
 export const REPEAT_UNITS = ['ONCE', 'DAY', 'WEEK', 'MONTH'] as const;
@@ -77,9 +79,14 @@ export const REFILL_BASES = [
 ] as const;
 export type RefillBasis = (typeof REFILL_BASES)[number];
 
+/** Intakes left at which the low-stock notification fires, unless the user chooses otherwise. */
+export const DEFAULT_LOW_STOCK_DOSES = 7;
+
 /**
  * Tracked treatment, from the standard list or freely entered. `refillAlert` enables
- * the reorder alert; `stockEndDate` is only used in STOCK_END mode.
+ * the reorder alert; `stockEndDate` is only used in STOCK_END mode. `stockDoses`: intakes left,
+ * counted down as doses are confirmed taken (null: not counted); the low-stock alert fires
+ * when it reaches `lowStockDoses`.
  */
 export interface Medication {
   id: number;
@@ -87,11 +94,21 @@ export interface Medication {
   dosage: string;
   schedule: ReminderSchedule;
   refillAlert: boolean;
+  stockDoses: number | null;
+  lowStockDoses: number;
   stockEndDate: LocalDate | null;
 }
 
 export function medication(init: Pick<Medication, 'name' | 'schedule'> & Partial<Medication>): Medication {
-  return { id: 0, dosage: '', refillAlert: false, stockEndDate: null, ...init };
+  return {
+    id: 0, dosage: '', refillAlert: false, stockDoses: null, lowStockDoses: DEFAULT_LOW_STOCK_DOSES,
+    stockEndDate: null, ...init,
+  };
+}
+
+/** True when the counted stock has reached `lowStockDoses` or less; false when not counted. */
+export function isLowStock(med: Medication): boolean {
+  return med.stockDoses !== null && med.stockDoses <= med.lowStockDoses;
 }
 
 export function refillBasis(med: Medication): RefillBasis {

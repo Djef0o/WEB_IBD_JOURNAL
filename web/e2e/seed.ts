@@ -28,12 +28,12 @@ export function seedData(): BackupData {
       { id: 3, date: dayOffset(-1), type: 'DINNER', description: 'Soupe de légumes', photoUri: null, product: null },
     ],
     stools,
-    profile: { firstName: 'Camille', lastName: 'Martin', birthDate: '1990-05-17', sex: 'FEMALE' },
+    profile: { firstName: 'Camille', lastName: 'Martin', birthDate: '1990-05-17', sex: 'FEMALE', diagnosis: 'CROHN' },
     medications: [
       {
         id: 7, name: 'Adalimumab', dosage: '40 mg',
         schedule: { enabled: true, startDate: dayOffset(-30), hour: 8, minute: 30, repeatEvery: 2, repeatUnit: 'WEEK' },
-        refillAlert: true, stockEndDate: dayOffset(20),
+        refillAlert: true, stockDoses: null, lowStockDoses: 7, stockEndDate: dayOffset(20),
       },
     ],
     checkups: [
@@ -56,6 +56,28 @@ export function seedData(): BackupData {
         remindersEnabled: true,
       },
     ],
+    weights: [{ id: 61, date: dayOffset(-3), kg: 68.4 }, { id: 62, date: dayOffset(-10), kg: 69.1 }],
+    flares: [
+      { id: 71, start: dayOffset(-35), end: dayOffset(-20), treatment: 'prednisone 40 mg', hospitalized: true, note: 'Poussée' },
+      { id: 72, start: dayOffset(-2), end: null, treatment: '', hospitalized: false, note: '' },
+    ],
+    activityScores: [{ id: 81, date: dayOffset(-4), kind: 'HBI', answers: [1, 2, 0, 3, 0, 0, 0, 1] }],
+    vaccinations: [
+      { id: 91, type: 'INFLUENZA', date: dayOffset(-300), nextDue: dayOffset(40), note: 'Pharmacie', reminderEnabled: true },
+    ],
+    steroidCourses: [
+      { id: 101, drug: 'prednisone', start: dayOffset(-35), steps: [{ doseMg: 40, days: 7 }, { doseMg: 30, days: 7 }, { doseMg: 20, days: 3 }], note: '' },
+    ],
+    emergencyInfo: {
+      allergies: 'Pénicilline', doctorName: 'Dr Durand', doctorPhone: '0102030405', contactName: 'Alex',
+      contactPhone: '0607080910', notes: '', showOnLockScreen: false,
+    },
+    extraSymptoms: [{ date: dayOffset(-1), symptoms: ['JOINTS', 'FEVER'] }],
+    doctorQuestions: [{ id: 111, text: 'Dose de vitamine D ?', done: false, createdAt: Date.now() - 86_400_000 }],
+    appointments: [
+      { id: 121, kind: 'GASTROENTEROLOGIST', at: `${dayOffset(12)}T10:15`, place: 'CHU', note: '', remindersEnabled: true },
+    ],
+    wellbeing: [{ date: dayOffset(-1), sleep: 2, stress: 4, mood: null, period: true }],
   };
 }
 

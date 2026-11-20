@@ -26,6 +26,8 @@ const ENC = '__enc';
 const KEY_PATHS = {
   meals: 'id', stools: 'id', products: 'barcode', lab_results: 'id', dose_logs: 'id', profile: 'id',
   medications: 'id', checkups: 'id', exams: 'id', weights: 'id',
+  flares: 'id', activity_scores: 'id', vaccinations: 'id', steroid_courses: 'id', emergency_info: 'id',
+  extra_symptoms: 'id', doctor_questions: 'id', appointments: 'id', wellbeing: 'id',
 } as const;
 
 type EncryptedStore = keyof typeof KEY_PATHS;
@@ -35,6 +37,8 @@ const INDEXES: Readonly<Record<string, Readonly<Record<string, string | readonly
   meals: { dateEpochDay: 'dateEpochDay' },
   stools: { dateEpochDay: 'dateEpochDay' },
   weights: { dateEpochDay: 'dateEpochDay' },
+  extra_symptoms: { dateEpochDay: 'dateEpochDay' },
+  wellbeing: { dateEpochDay: 'dateEpochDay' },
   lab_results: { test_dateEpochDay: ['test', 'dateEpochDay'] },
   dose_logs: { medicationId_scheduledAt: ['medicationId', 'scheduledAt'] },
 };

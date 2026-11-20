@@ -1,3 +1,6 @@
+import type { ActivityLevel } from '../domain/activity';
+import type { AppointmentKind, Diagnosis, ExtraSymptom, ScoreKind, VaccineType } from '../domain/care';
+import type { WellbeingFactor } from '../domain/wellbeing';
 import type { LabCategory, LabTest } from '../domain/health';
 import type { CheckupType, RepeatUnit, Sex } from '../domain/profile';
 import { t } from '../i18n';
@@ -46,6 +49,10 @@ const LAB_TEST_LABEL: Record<LabTest, () => string> = {
   TRIGLYCERIDES: () => t('lab_triglycerides'),
   VITAMIN_D: () => t('lab_vitamin_d'),
   ALBUMIN: () => t('lab_albumin'),
+  INFLIXIMAB_LEVEL: () => t('lab_infliximab_level'),
+  ADALIMUMAB_LEVEL: () => t('lab_adalimumab_level'),
+  ANTI_INFLIXIMAB_ANTIBODIES: () => t('lab_anti_infliximab_antibodies'),
+  ANTI_ADALIMUMAB_ANTIBODIES: () => t('lab_anti_adalimumab_antibodies'),
   PROTHROMBIN_TIME: () => t('lab_prothrombin_time'),
   PSA: () => t('lab_psa'),
 };
@@ -60,6 +67,7 @@ const LAB_CATEGORY_LABEL: Record<LabCategory, () => string> = {
   LIVER: () => t('lab_category_liver'),
   METABOLIC: () => t('lab_category_metabolic'),
   NUTRITION: () => t('lab_category_nutrition'),
+  DRUG_MONITORING: () => t('lab_category_drug_monitoring'),
   OTHER: () => t('lab_category_other'),
 };
 
@@ -77,3 +85,63 @@ export const REPEAT_EVERY_KEY: Record<Exclude<RepeatUnit, 'ONCE'>, string> = {
   WEEK: 'repeat_every_weeks',
   MONTH: 'repeat_every_months',
 };
+
+/** Name of each questionnaire in the report (`scoreName`). */
+export const scoreKindLabel = (kind: ScoreKind): string =>
+  (kind === 'HBI' ? t('report_care_score_hbi') : t('report_care_score_sccai'));
+
+const ACTIVITY_LEVEL_LABEL: Record<ActivityLevel, () => string> = {
+  REMISSION: () => t('report_care_level_remission'),
+  MILD: () => t('report_care_level_mild'),
+  MODERATE: () => t('report_care_level_moderate'),
+  SEVERE: () => t('report_care_level_severe'),
+  ACTIVE: () => t('report_care_level_active'),
+};
+export const activityLevelLabel = (level: ActivityLevel): string => ACTIVITY_LEVEL_LABEL[level]();
+
+const DIAGNOSIS_LABEL: Record<Diagnosis, () => string> = {
+  CROHN: () => t('report_care_diagnosis_crohn'),
+  ULCERATIVE_COLITIS: () => t('report_care_diagnosis_uc'),
+  OTHER: () => t('report_care_diagnosis_other'),
+};
+export const diagnosisLabel = (diagnosis: Diagnosis): string => DIAGNOSIS_LABEL[diagnosis]();
+
+const VACCINE_LABEL: Record<VaccineType, () => string> = {
+  INFLUENZA: () => t('report_care_vaccine_influenza'),
+  PNEUMOCOCCAL: () => t('report_care_vaccine_pneumococcal'),
+  COVID19: () => t('report_care_vaccine_covid19'),
+  HEPATITIS_B: () => t('report_care_vaccine_hepatitis_b'),
+  HPV: () => t('report_care_vaccine_hpv'),
+  ZOSTER: () => t('report_care_vaccine_zoster'),
+  TETANUS: () => t('report_care_vaccine_tetanus'),
+  OTHER: () => t('report_care_vaccine_other'),
+};
+export const vaccineLabel = (type: VaccineType): string => VACCINE_LABEL[type]();
+
+const EXTRA_SYMPTOM_LABEL: Record<ExtraSymptom, () => string> = {
+  JOINTS: () => t('extra_symptom_joints'),
+  SKIN: () => t('extra_symptom_skin'),
+  EYES: () => t('extra_symptom_eyes'),
+  MOUTH_ULCERS: () => t('extra_symptom_mouth_ulcers'),
+  FEVER: () => t('extra_symptom_fever'),
+};
+export const extraSymptomLabel = (symptom: ExtraSymptom): string => EXTRA_SYMPTOM_LABEL[symptom]();
+
+const WELLBEING_FACTOR_LABEL: Record<WellbeingFactor, () => string> = {
+  POOR_SLEEP: () => t('wellbeing_factor_poor_sleep'),
+  HIGH_STRESS: () => t('wellbeing_factor_high_stress'),
+  LOW_MOOD: () => t('wellbeing_factor_low_mood'),
+  PERIOD: () => t('wellbeing_factor_period'),
+};
+export const wellbeingFactorLabel = (factor: WellbeingFactor): string => WELLBEING_FACTOR_LABEL[factor]();
+
+const APPOINTMENT_KIND_LABEL: Record<AppointmentKind, () => string> = {
+  GASTROENTEROLOGIST: () => t('appointment_kind_gastroenterologist'),
+  DERMATOLOGIST: () => t('appointment_kind_dermatologist'),
+  OPHTHALMOLOGIST: () => t('appointment_kind_ophthalmologist'),
+  RHEUMATOLOGIST: () => t('appointment_kind_rheumatologist'),
+  DIETITIAN: () => t('appointment_kind_dietitian'),
+  GENERAL_PRACTITIONER: () => t('appointment_kind_general_practitioner'),
+  OTHER: () => t('appointment_kind_other'),
+};
+export const appointmentKindLabel = (kind: AppointmentKind): string => APPOINTMENT_KIND_LABEL[kind]();

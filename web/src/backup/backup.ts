@@ -1,9 +1,14 @@
 import { stripAutoId, transaction } from '../db/connection';
 import type { StoreName } from '../db/schema';
 import {
-  checkupFromEntity, checkupToEntity, doseLogFromEntity, doseLogToEntity, examFromEntity, examToEntity,
-  labResultFromEntity, labResultToEntity, mealFromEntity, mealToEntity, medicationFromEntity,
-  medicationToEntity, profileFromEntity, profileToEntity, stoolFromEntity, stoolToEntity, weightFromEntity, weightToEntity,
+  activityScoreFromEntity, activityScoreToEntity, appointmentFromEntity, appointmentToEntity,
+  checkupFromEntity, checkupToEntity, doctorQuestionFromEntity, doctorQuestionToEntity, doseLogFromEntity,
+  doseLogToEntity, emergencyInfoFromEntity, emergencyInfoToEntity, examFromEntity, examToEntity,
+  extraSymptomsFromEntity, extraSymptomsToEntity, flareFromEntity, flareToEntity, labResultFromEntity,
+  labResultToEntity, mealFromEntity, mealToEntity, medicationFromEntity, medicationToEntity, profileFromEntity,
+  profileToEntity, steroidCourseFromEntity, steroidCourseToEntity, stoolFromEntity, stoolToEntity,
+  vaccinationFromEntity, vaccinationToEntity, weightFromEntity, weightToEntity, wellbeingFromEntity,
+  wellbeingToEntity,
 } from '../domain/entities';
 import type { BackupData } from '../domain/models';
 
@@ -15,12 +20,18 @@ import type { BackupData } from '../domain/models';
 /** The stores that make up a backup. */
 const BACKUP_STORES = [
   'meals', 'stools', 'profile', 'medications', 'checkups', 'lab_results', 'dose_logs', 'exams', 'weights',
+  'flares', 'activity_scores', 'vaccinations', 'steroid_courses', 'emergency_info', 'extra_symptoms',
+  'doctor_questions', 'appointments', 'wellbeing',
 ] as const satisfies readonly StoreName[];
 
 /** Consistent snapshot of all the data to back up (one read-only transaction). */
 export async function snapshot(): Promise<BackupData> {
   return transaction(BACKUP_STORES, 'readonly', async (tx) => {
-    const [meals, stools, profile, medications, checkups, labResults, doseLogs, exams, weights] = await Promise.all([
+    const [
+      meals, stools, profile, medications, checkups, labResults, doseLogs, exams, weights,
+      flares, activityScores, vaccinations, steroidCourses, emergency, extraSymptoms, doctorQuestions,
+      appointments, wellbeing,
+    ] = await Promise.all([
       tx.objectStore('meals').getAll(),
       tx.objectStore('stools').getAll(),
       tx.objectStore('profile').getAll(),
@@ -30,8 +41,18 @@ export async function snapshot(): Promise<BackupData> {
       tx.objectStore('dose_logs').getAll(),
       tx.objectStore('exams').getAll(),
       tx.objectStore('weights').getAll(),
+      tx.objectStore('flares').getAll(),
+      tx.objectStore('activity_scores').getAll(),
+      tx.objectStore('vaccinations').getAll(),
+      tx.objectStore('steroid_courses').getAll(),
+      tx.objectStore('emergency_info').getAll(),
+      tx.objectStore('extra_symptoms').getAll(),
+      tx.objectStore('doctor_questions').getAll(),
+      tx.objectStore('appointments').getAll(),
+      tx.objectStore('wellbeing').getAll(),
     ]);
     const profileRow = profile[0];
+    const emergencyRow = emergency[0];
     return {
       meals: meals.map((entity) => mealFromEntity(entity)),
       stools: stools.map(stoolFromEntity),
@@ -42,6 +63,15 @@ export async function snapshot(): Promise<BackupData> {
       doseLogs: doseLogs.map(doseLogFromEntity),
       exams: exams.map(examFromEntity),
       weights: weights.map((entity) => weightFromEntity(entity)),
+      flares: flares.map(flareFromEntity),
+      activityScores: activityScores.map(activityScoreFromEntity),
+      vaccinations: vaccinations.map(vaccinationFromEntity),
+      steroidCourses: steroidCourses.map(steroidCourseFromEntity),
+      emergencyInfo: emergencyRow === undefined ? null : emergencyInfoFromEntity(emergencyRow),
+      extraSymptoms: extraSymptoms.map(extraSymptomsFromEntity),
+      doctorQuestions: doctorQuestions.map(doctorQuestionFromEntity),
+      appointments: appointments.map(appointmentFromEntity),
+      wellbeing: wellbeing.map(wellbeingFromEntity),
     };
   });
 }
@@ -62,6 +92,7 @@ export async function restore(backup: BackupData): Promise<void> {
     for (const meal of backup.meals) pending.push(meals.add(stripAutoId(mealToEntity(meal))));
     for (const stool of backup.stools) pending.push(stools.add(stripAutoId(stoolToEntity(stool))));
     if (backup.profile) pending.push(tx.objectStore('profile').put(profileToEntity(backup.profile)));
+    if (backup.emergencyInfo) pending.push(tx.objectStore('emergency_info').put(emergencyInfoToEntity(backup.emergencyInfo)));
 
     if (backup.medications) {
       const store = tx.objectStore('medications');
@@ -92,6 +123,46 @@ export async function restore(backup: BackupData): Promise<void> {
       const store = tx.objectStore('weights');
       pending.push(store.clear());
       for (const row of backup.weights) pending.push(store.add(stripAutoId(weightToEntity(row))));
+    }
+    if (backup.flares) {
+      const store = tx.objectStore('flares');
+      pending.push(store.clear());
+      for (const row of backup.flares) pending.push(store.add(stripAutoId(flareToEntity(row))));
+    }
+    if (backup.activityScores) {
+      const store = tx.objectStore('activity_scores');
+      pending.push(store.clear());
+      for (const row of backup.activityScores) pending.push(store.add(stripAutoId(activityScoreToEntity(row))));
+    }
+    if (backup.vaccinations) {
+      const store = tx.objectStore('vaccinations');
+      pending.push(store.clear());
+      for (const row of backup.vaccinations) pending.push(store.add(stripAutoId(vaccinationToEntity(row))));
+    }
+    if (backup.steroidCourses) {
+      const store = tx.objectStore('steroid_courses');
+      pending.push(store.clear());
+      for (const row of backup.steroidCourses) pending.push(store.add(stripAutoId(steroidCourseToEntity(row))));
+    }
+    if (backup.extraSymptoms) {
+      const store = tx.objectStore('extra_symptoms');
+      pending.push(store.clear());
+      for (const row of backup.extraSymptoms) pending.push(store.add(stripAutoId(extraSymptomsToEntity(row))));
+    }
+    if (backup.doctorQuestions) {
+      const store = tx.objectStore('doctor_questions');
+      pending.push(store.clear());
+      for (const row of backup.doctorQuestions) pending.push(store.add(stripAutoId(doctorQuestionToEntity(row))));
+    }
+    if (backup.appointments) {
+      const store = tx.objectStore('appointments');
+      pending.push(store.clear());
+      for (const row of backup.appointments) pending.push(store.add(stripAutoId(appointmentToEntity(row))));
+    }
+    if (backup.wellbeing) {
+      const store = tx.objectStore('wellbeing');
+      pending.push(store.clear());
+      for (const row of backup.wellbeing) pending.push(store.add(stripAutoId(wellbeingToEntity(row))));
     }
     await Promise.all(pending);
   });

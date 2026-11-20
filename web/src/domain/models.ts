@@ -1,3 +1,7 @@
+import type {
+  ActivityScore, Appointment, DoctorQuestion, EmergencyInfo, ExtraSymptomsDay, Flare, SteroidCourse,
+  Vaccination, WellbeingDay,
+} from './care';
 import type { DoseLog, LabResult } from './health';
 import type { Checkup, Medication, Profile } from './profile';
 import type { LocalDate, LocalDateTime } from './time';
@@ -133,8 +137,16 @@ export interface BackupData {
   labResults?: LabResult[] | null;
   doseLogs?: DoseLog[] | null;
   exams?: Exam[] | null;
-  /** Web addition: the Android app ignores this key. */
   weights?: Weight[] | null;
+  flares?: Flare[] | null;
+  activityScores?: ActivityScore[] | null;
+  vaccinations?: Vaccination[] | null;
+  steroidCourses?: SteroidCourse[] | null;
+  emergencyInfo?: EmergencyInfo | null;
+  extraSymptoms?: ExtraSymptomsDay[] | null;
+  doctorQuestions?: DoctorQuestion[] | null;
+  appointments?: Appointment[] | null;
+  wellbeing?: WellbeingDay[] | null;
 }
 
 /** Result of a product lookup by barcode. */

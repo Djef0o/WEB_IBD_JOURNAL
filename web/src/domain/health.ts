@@ -3,7 +3,7 @@ import type { LocalDate } from './time';
 
 /** Lab test families, in display order. */
 export const LAB_CATEGORIES = [
-  'INFLAMMATION', 'BLOOD_COUNT', 'IRON', 'KIDNEY', 'LIVER', 'METABOLIC', 'NUTRITION', 'OTHER',
+  'INFLAMMATION', 'BLOOD_COUNT', 'IRON', 'KIDNEY', 'LIVER', 'METABOLIC', 'NUTRITION', 'DRUG_MONITORING', 'OTHER',
 ] as const;
 export type LabCategory = (typeof LAB_CATEGORIES)[number];
 
@@ -62,6 +62,13 @@ const LAB_TEST_TABLE = [
 
   ['VITAMIN_D', 'ng/mL', 'NUTRITION'],
   ['ALBUMIN', 'g/L', 'NUTRITION'],
+
+  // Biologic drug monitoring: trough level and anti-drug antibodies. Entered by hand (assays and
+  // units vary by laboratory; the antibody unit may be AU/mL on some reports: note it in the comment).
+  ['INFLIXIMAB_LEVEL', 'µg/mL', 'DRUG_MONITORING'],
+  ['ADALIMUMAB_LEVEL', 'µg/mL', 'DRUG_MONITORING'],
+  ['ANTI_INFLIXIMAB_ANTIBODIES', 'ng/mL', 'DRUG_MONITORING'],
+  ['ANTI_ADALIMUMAB_ANTIBODIES', 'ng/mL', 'DRUG_MONITORING'],
 
   ['PROTHROMBIN_TIME', '%', 'OTHER'],
   ['PSA', 'µg/L', 'OTHER'],
