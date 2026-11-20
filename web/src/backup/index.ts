@@ -5,10 +5,10 @@ import { decrypt, encrypt, InvalidBackupError } from './crypto';
 export { InvalidBackupError, isEncryptedBackup, WrongPasswordError } from './crypto';
 export { restore, snapshot } from './backup';
 
-/** Suggested file name of a backup: `ibd-journal-YYYY-MM-DD.ibdj` (local date). */
+/** Suggested file name of a backup, as on Android: `ibd-journal-backup-YYYY-MM-DD.ibdj` (local date). */
 export function backupFileName(date: Date = new Date()): string {
   const pad = (n: number): string => String(n).padStart(2, '0');
-  return `ibd-journal-${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}.ibdj`;
+  return `ibd-journal-backup-${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}.ibdj`;
 }
 
 /** Encrypted backup of the whole journal, ready to download (the file is read by the Android app too). */

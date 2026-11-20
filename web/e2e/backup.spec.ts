@@ -18,7 +18,7 @@ test('encrypted backup: export from one browser profile, import into a fresh one
   const download = page.waitForEvent('download');
   await dialog.getByRole('button', { name: 'Export data' }).click();
   const file = await download;
-  expect(file.suggestedFilename()).toMatch(/^ibd-journal-\d{4}-\d{2}-\d{2}\.ibdj$/);
+  expect(file.suggestedFilename()).toMatch(/^ibd-journal-backup-\d{4}-\d{2}-\d{2}\.ibdj$/);
   const bytes = await readFile(await file.path());
   expect(bytes.subarray(0, 8).toString('latin1')).toBe('IBDJENC1'); // same container as the Android app
   expect(bytes.includes(Buffer.from('Camille'))).toBe(false); // ciphertext only

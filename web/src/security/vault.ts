@@ -22,8 +22,15 @@ export const PIN_MIN = 6;
 export const PIN_MAX = 12;
 const PBKDF2_ITERATIONS = 600_000;
 const VAULT_KEY = 'vault';
-const AUTO_LOCK_MS = 5 * 60_000;
+const AUTO_LOCK_MS = 60_000;
 const FREE_ATTEMPTS = 5;
+/** Waiting times after the 5th, 6th, … wrong PIN (`Vault.DELAYS_MS`); the last one repeats. */
+const DELAYS_MS = [30_000, 60_000, 5 * 60_000, 15 * 60_000, 60 * 60_000];
+/** Preferences that survive an erase (`AppPrefs.resetJournal`): appearance, language, reminders. */
+const KEPT_PREFS = [
+  'theme_mode', 'theme_palette', 'lang', 'notif_enabled', 'notif_hour', 'notif_minute', 'last_reminder_at',
+  'backup_reminder', 'weigh_in_reminder', 'weigh_in_day',
+];
 
 export type VaultStatus = 'loading' | 'none' | 'locked' | 'unlocked';
 export const vaultStatus = signal<VaultStatus>('loading');
@@ -184,10 +191,18 @@ function throttle(meta: VaultMeta): void {
   if (wait > 0) throw new TooManyAttemptsError(wait);
 }
 
+/** Seconds left of the current waiting time, 0 if there is none (`Vault.lockedOutUntil`). */
+export async function lockedOutSeconds(): Promise<number> {
+  const meta = await readMeta();
+  return meta ? Math.max(0, Math.ceil((meta.lockedUntil - Date.now()) / 1000)) : 0;
+}
+
+/** Counts the failure; the one that starts a waiting time already reports it (`PinResult.LockedOut`). */
 async function registerFailure(meta: VaultMeta): Promise<void> {
   const fails = meta.fails + 1;
-  const lockedUntil = fails >= FREE_ATTEMPTS ? Date.now() + Math.min(30_000 * 2 ** (fails - FREE_ATTEMPTS), 15 * 60_000) : 0;
-  await writeMeta({ ...meta, fails, lockedUntil });
+  const delay = fails < FREE_ATTEMPTS ? 0 : DELAYS_MS[Math.min(fails - FREE_ATTEMPTS, DELAYS_MS.length - 1)]!;
+  await writeMeta({ ...meta, fails, lockedUntil: delay > 0 ? Date.now() + delay : 0 });
+  if (delay > 0) throw new TooManyAttemptsError(Math.ceil(delay / 1000));
 }
 
 /** Unlocks with the PIN. Throws `WrongPinError` or `TooManyAttemptsError`. */
@@ -281,6 +296,13 @@ function watchAutoLock(): void {
 /** Forgotten PIN: deletes every local datum (the encrypted data cannot be read without the PIN) and restarts. */
 export async function eraseEverything(): Promise<void> {
   setDataKey(null);
+  // Appearance, language and reminder settings are kept, like `JournalEraser` on Android.
+  const kept: [string, unknown][] = [];
+  const db = await getDb();
+  for (const key of KEPT_PREFS) {
+    const value = await db.get('prefs', key);
+    if (value !== undefined) kept.push([key, value]);
+  }
   await closeDb();
   await new Promise<void>((resolve, reject) => {
     const request = indexedDB.deleteDatabase(DB_NAME);
@@ -288,5 +310,12 @@ export async function eraseEverything(): Promise<void> {
     request.onerror = () => reject(request.error);
     request.onblocked = () => resolve();
   });
+  if (kept.length > 0) {
+    const fresh = await getDb();
+    const tx = fresh.transaction('prefs', 'readwrite');
+    for (const [key, value] of kept) void tx.store.put(value, key);
+    await tx.done;
+    await closeDb();
+  }
   location.replace('/');
 }

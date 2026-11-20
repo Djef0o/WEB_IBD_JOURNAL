@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getDb } from '../src/db/connection';
 import { getAllStools, getStoolsBetween, saveStool } from '../src/db/stools';
 import { getAllWeights, saveWeight } from '../src/db/weights';
@@ -9,7 +9,7 @@ import { getPhoto, importPhoto } from '../src/db/photos';
 import { stool } from '../src/domain/models';
 import { setDataKey, setVaultPresent } from '../src/security/session';
 import {
-  TooManyAttemptsError, WrongPinError, changePin, loadVault, setupVault, unlockWithPin, vaultStatus,
+  TooManyAttemptsError, WrongPinError, changePin, loadVault, lockedOutSeconds, setupVault, unlockWithPin, vaultStatus,
 } from '../src/security/vault';
 import { freshDb } from './helpers/freshDb';
 
@@ -95,9 +95,33 @@ describe('PIN vault', () => {
     await loadVault();
     await setupVault('123456');
     await relaunch();
-    for (let i = 0; i < 5; i++) await expect(unlockWithPin('999999')).rejects.toBeInstanceOf(WrongPinError);
+    for (let i = 0; i < 4; i++) await expect(unlockWithPin('999999')).rejects.toBeInstanceOf(WrongPinError);
+    // The 5th error starts the first waiting time itself (`PinResult.LockedOut`), even for the right PIN.
+    await expect(unlockWithPin('999999')).rejects.toMatchObject({ name: 'TooManyAttemptsError', seconds: 30 });
     await expect(unlockWithPin('123456')).rejects.toBeInstanceOf(TooManyAttemptsError);
+    expect(await lockedOutSeconds()).toBeGreaterThan(25);
   });
+
+  it('waits 30 s, 1 min, 5 min, 15 min, then 1 h after the 5th wrong PIN (as Android)', async () => {
+    await loadVault();
+    await setupVault('123456');
+    await relaunch();
+    let clock = Date.now();
+    const now = vi.spyOn(Date, 'now').mockImplementation(() => clock);
+    try {
+      for (let i = 0; i < 4; i++) await expect(unlockWithPin('999999')).rejects.toBeInstanceOf(WrongPinError);
+      for (const seconds of [30, 60, 300, 900, 3600, 3600]) {
+        await expect(unlockWithPin('999999')).rejects.toMatchObject({ seconds });
+        clock += seconds * 1000 + 1;
+      }
+      // Waiting time over: the right PIN works and clears the counter.
+      await unlockWithPin('123456');
+      expect(vaultStatus.value).toBe('unlocked');
+      expect(await lockedOutSeconds()).toBe(0);
+    } finally {
+      now.mockRestore();
+    }
+  }, 60_000);
 
   it('changes the PIN without touching the data; the old PIN stops working', async () => {
     await loadVault();

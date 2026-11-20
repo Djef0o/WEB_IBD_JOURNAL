@@ -16,3 +16,8 @@ export function formatTime(hour: number, minute: number): string {
 export function formatDecimal(value: number): string {
   return formatNumber(value, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 }
+
+/** `m:ss`, like the lock screen of the Android app. */
+export function formatCountdown(seconds: number): string {
+  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
+}

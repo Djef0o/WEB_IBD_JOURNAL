@@ -7,6 +7,7 @@ import {
 } from '../../../security/vault';
 import { Button, Card, Dialog, Switch, showToast } from '../../components';
 import { PasswordField } from '../../forms';
+import { formatCountdown } from '../../format';
 
 /** PIN lock: lock now, and biometric unlock on or off. */
 export function SecuritySection() {
@@ -82,7 +83,7 @@ function ChangePinForm({ onDone }: { onDone: () => void }) {
       showToast(t('web_pin_changed'));
       onDone();
     } catch (error) {
-      if (error instanceof TooManyAttemptsError) setWrong(t('web_pin_too_many', [error.seconds]));
+      if (error instanceof TooManyAttemptsError) setWrong(t('pin_locked_out', [formatCountdown(error.seconds)]));
       else if (error instanceof WrongPinError) setWrong(t('web_pin_wrong'));
       else {
         console.error(error);
