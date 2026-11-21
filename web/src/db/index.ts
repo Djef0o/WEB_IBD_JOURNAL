@@ -24,7 +24,6 @@ export * as products from './products';
 export * as photos from './photos';
 export * as prefs from './prefs';
 export * as flares from './flares';
-export * as activityScores from './activityScores';
 export * as vaccinations from './vaccinations';
 export * as steroids from './steroids';
 export * as emergency from './emergency';

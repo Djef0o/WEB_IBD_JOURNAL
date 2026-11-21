@@ -28,7 +28,6 @@ import { ChevronIcon, ReminderIcon } from '../care/icons';
 import { summarizeLabs } from '../care/labSummary';
 import { MedicationEditor, refillStatus } from '../care/MedicationEditor';
 import { TravelLink } from './travel/TravelLink';
-import { ActivityScoresSection } from '../care/scores/ActivityScoresSection';
 import { AppointmentsSection } from '../care/appointments/AppointmentsSection';
 import { QuestionsSection } from '../care/questions/QuestionsSection';
 import { getAllAppointments } from '../../db/followup';
@@ -217,8 +216,6 @@ export default function Care(_props: ScreenProps) {
         <QuestionsSection />
         <AppointmentsSection />
         <FlaresSection />
-
-        <ActivityScoresSection />
         <VaccinationsSection />
         <SteroidsSection />
         <Card title={t('lab_results_title')}>

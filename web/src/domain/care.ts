@@ -41,10 +41,6 @@ export interface ActivityScore {
   answers: number[];
 }
 
-export function activityScore(init: Pick<ActivityScore, 'date' | 'kind' | 'answers'> & Partial<ActivityScore>): ActivityScore {
-  return { id: 0, ...init };
-}
-
 export const VACCINE_TYPES = [
   'INFLUENZA', 'PNEUMOCOCCAL', 'COVID19', 'HEPATITIS_B', 'HPV', 'ZOSTER', 'TETANUS', 'OTHER',
 ] as const;

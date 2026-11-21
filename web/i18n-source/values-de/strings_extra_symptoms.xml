@@ -6,5 +6,5 @@
     <string name="extra_symptom_mouth_ulcers">Aphthen im Mund</string>
     <string name="extra_symptom_fever">Fieber</string>
     <string name="extra_card_title">Weitere Symptome</string>
-    <string name="extra_card_hint">Gelenke, Haut, Augen, Mund, Fieber: hier für deinen Arzt notiert und zum Vorausfüllen der Aktivitätsscores verwendet.</string>
+    <string name="extra_card_hint">Gelenke, Haut, Augen, Mund, Fieber: hier für deinen Arzt notiert.</string>
 </resources>

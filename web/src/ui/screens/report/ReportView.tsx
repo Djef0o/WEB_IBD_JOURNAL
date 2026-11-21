@@ -18,7 +18,7 @@ import { barsBetween } from '../../charts/dailyStool';
 import { formatDecimal, formatLocalDate, formatTime } from '../../format';
 import { periodLabel, symptomLabel } from '../analysis/period';
 import {
-  ActivityScoresSection, AppointmentsSection, DoctorQuestionsSection, ExtraSymptomsSection, FlaresSection,
+  AppointmentsSection, DoctorQuestionsSection, ExtraSymptomsSection, FlaresSection,
   SteroidsSection, VaccinationsSection, WellbeingSection,
 } from './ReportCareSections';
 import { Scroll } from './ReportScroll';
@@ -63,7 +63,6 @@ export function ReportView({ data }: { data: ReportData }) {
       <WellbeingSection data={data} />
       <Treatments data={data} />
       <FlaresSection data={data} />
-      <ActivityScoresSection data={data} />
       <SteroidsSection data={data} />
       <VaccinationsSection data={data} />
       <Labs data={data} />

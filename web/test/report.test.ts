@@ -1,5 +1,5 @@
 import {
-  activityScore, appointment, doctorQuestion, flare, steroidCourse, vaccination, wellbeingDay, type ExtraSymptomsDay,
+  appointment, doctorQuestion, flare, steroidCourse, vaccination, wellbeingDay, type ExtraSymptomsDay,
 } from '../src/domain/care';
 import { minusDays } from '../src/domain/time';
 import { describe, expect, it } from 'vitest';
@@ -173,17 +173,6 @@ describe('reportData: care and follow-up sections', () => {
       flare({ id: 4, start: day(-3) }), // starts after today
     ];
     expect(reportData(input({ flares })).flares.map((f) => f.id)).toEqual([3, 1]);
-  });
-
-  it('keeps activity scores within the period, by date then id', () => {
-    const answers = [0, 0, 1, 0, 0];
-    const scores = [
-      activityScore({ id: 3, date: day(1), kind: 'HBI', answers }),
-      activityScore({ id: 2, date: day(1), kind: 'HBI', answers }),
-      activityScore({ id: 1, date: day(10), kind: 'HBI', answers }),
-      activityScore({ id: 4, date: day(40), kind: 'HBI', answers }),
-    ];
-    expect(reportData(input({ activityScores: scores })).activityScores.map((s) => s.id)).toEqual([1, 2, 3]);
   });
 
   it('keeps steroid courses overlapping the period', () => {

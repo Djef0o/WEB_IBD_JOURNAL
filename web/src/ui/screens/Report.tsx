@@ -2,7 +2,6 @@ import './report/report.css';
 import '../../styles/print.css';
 import { useMemo } from 'preact/hooks';
 import { useLiveQuery } from '../../db';
-import { getAllActivityScores } from '../../db/activityScores';
 import { getAllFlares } from '../../db/flares';
 import { getAllSteroidCourses } from '../../db/steroids';
 import { getAllVaccinations } from '../../db/vaccinations';
@@ -31,7 +30,7 @@ export default function Report(_props: ScreenProps) {
   const data = useLiveQuery(
     [
       'stools', 'meals', 'products', 'medications', 'dose_logs', 'lab_results', 'checkups', 'profile',
-      'flares', 'activity_scores', 'steroid_courses', 'vaccinations', 'extra_symptoms', 'doctor_questions',
+      'flares', 'steroid_courses', 'vaccinations', 'extra_symptoms', 'doctor_questions',
       'appointments', 'wellbeing',
     ],
     async () => {
@@ -41,14 +40,14 @@ export default function Report(_props: ScreenProps) {
         getProfile(), getAllStools(), getMealsBetween(mealsFrom, dateOf(at)), getAllMedications(),
         getAllDoseLogs(), getAllLabResults(), getAllCheckups(),
       ]);
-      const [flares, activityScores, steroidCourses, vaccinations, extraSymptoms, doctorQuestions, appointments, wellbeing] =
+      const [flares, steroidCourses, vaccinations, extraSymptoms, doctorQuestions, appointments, wellbeing] =
         await Promise.all([
-          getAllFlares(), getAllActivityScores(), getAllSteroidCourses(), getAllVaccinations(),
+          getAllFlares(), getAllSteroidCourses(), getAllVaccinations(),
           getAllExtraSymptoms(), getAllDoctorQuestions(), getAllAppointments(), getAllWellbeing(),
         ]);
       return reportData({
         period, now: at, profile: profile ?? emptyProfile(), stools, meals, medications, doseLogs, labResults, checkups,
-        flares, activityScores, steroidCourses, vaccinations, extraSymptoms, doctorQuestions, appointments, wellbeing,
+        flares, steroidCourses, vaccinations, extraSymptoms, doctorQuestions, appointments, wellbeing,
       });
     },
     [period],

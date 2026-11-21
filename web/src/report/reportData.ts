@@ -1,6 +1,6 @@
 import { adherence, type Adherence } from '../domain/adherence';
 import type {
-  ActivityScore, Appointment, DoctorQuestion, ExtraSymptom, ExtraSymptomsDay, Flare, SteroidCourse, Vaccination,
+  Appointment, DoctorQuestion, ExtraSymptom, ExtraSymptomsDay, Flare, SteroidCourse, Vaccination,
   WellbeingDay,
 } from '../domain/care';
 import { EXTRA_SYMPTOMS } from '../domain/care';
@@ -79,9 +79,6 @@ export interface WellbeingReport {
 /** Appointments listed in the report: the next ones from now. */
 export const REPORT_APPOINTMENTS = 3;
 
-/** Most recent activity scores listed in the compact line of the report. */
-export const ACTIVITY_LIST_MAX = 12;
-
 /** Everything the report contains, already computed: the view only does the layout. */
 export interface ReportData {
   profile: Profile;
@@ -100,8 +97,6 @@ export interface ReportData {
   upcomingCheckups: UpcomingCheckup[];
   /** Flares overlapping the period, oldest first. */
   flares: Flare[];
-  /** Activity scores within the period, oldest first. */
-  activityScores: ActivityScore[];
   /** Steroid courses overlapping the period, oldest first. */
   steroidCourses: SteroidCourse[];
   /** All vaccinations, most recent first. */
@@ -127,7 +122,6 @@ export interface ReportInput {
   labResults: LabResult[];
   checkups: Checkup[];
   flares?: Flare[];
-  activityScores?: ActivityScore[];
   steroidCourses?: SteroidCourse[];
   vaccinations?: Vaccination[];
   extraSymptoms?: ExtraSymptomsDay[];
@@ -139,7 +133,7 @@ export interface ReportInput {
 /** Builds the report for `period` ending on the day of `now`, from the raw data. */
 export function reportData(input: ReportInput): ReportData {
   const { period, now, profile, stools, meals, medications, doseLogs, labResults, checkups } = input;
-  const { flares = [], activityScores = [], steroidCourses = [], vaccinations = [] } = input;
+  const { flares = [], steroidCourses = [], vaccinations = [] } = input;
   const { extraSymptoms = [], doctorQuestions = [], appointments = [], wellbeing = [] } = input;
   const today = dateOf(now);
   const summary = analyze(stools, meals, today, period);
@@ -169,9 +163,6 @@ export function reportData(input: ReportInput): ReportData {
     flares: flares
       .filter((f) => f.start <= today && (f.end ?? today) >= from)
       .sort((a, b) => compareText(a.start, b.start)),
-    activityScores: activityScores
-      .filter((s) => s.date >= from && s.date <= today)
-      .sort((a, b) => compareText(a.date, b.date) || a.id - b.id),
     steroidCourses: steroidCourses
       .filter((c) => c.start <= today && steroidEnd(c) >= from)
       .sort((a, b) => compareText(a.start, b.start)),

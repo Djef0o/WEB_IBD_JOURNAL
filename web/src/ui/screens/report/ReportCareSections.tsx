@@ -1,17 +1,16 @@
-import { scoreLevel, scoreTotal } from '../../../domain/activity';
 import { steroidEnd, steroidTotalMg } from '../../../domain/steroids';
 import { dateTimeParts } from '../../../domain/time';
 import { t, tp } from '../../../i18n';
 import {
-  activityLevelLabel, appointmentKindLabel, extraSymptomLabel, scoreKindLabel, vaccineLabel, wellbeingFactorLabel,
+  appointmentKindLabel, extraSymptomLabel, vaccineLabel, wellbeingFactorLabel,
 } from '../../../report/labels';
-import { ACTIVITY_LIST_MAX, type ReportData } from '../../../report/reportData';
+import type { ReportData } from '../../../report/reportData';
 import { formatDecimal, formatLocalDate, formatTime } from '../../format';
 import { Scroll } from './ReportScroll';
 
 /*
  * Care and follow-up sections of the report (`ReportPdfBuilder`: extra symptoms, well-being, flares,
- * activity scores, steroids, vaccinations, appointments, questions). Each one is absent when it
+ * steroids, vaccinations, appointments, questions). Each one is absent when it
  * has nothing to show. Recorded values only, no interpretation.
  */
 
@@ -84,29 +83,6 @@ export function FlaresSection({ data }: { data: ReportData }) {
           );
         })}
       </ul>
-    </section>
-  );
-}
-
-/** Latest score with its level, then the most recent entries of the period in a compact line. */
-export function ActivityScoresSection({ data }: { data: ReportData }) {
-  const scores = data.activityScores;
-  const latest = scores[scores.length - 1];
-  if (latest === undefined) return null;
-  const level = scoreLevel(latest);
-  const kind = scoreKindLabel(latest.kind);
-  const latestText = level === null
-    ? t('report_care_activity_latest', [kind, scoreTotal(latest), date(latest.date)])
-    : t('report_care_activity_latest_level', [kind, scoreTotal(latest), date(latest.date), activityLevelLabel(level)]);
-  const entries = scores.slice(-ACTIVITY_LIST_MAX)
-    .map((s) => t('report_care_activity_entry', [date(s.date), scoreKindLabel(s.kind), scoreTotal(s)]))
-    .join('; ');
-  return (
-    <section class="report-section" aria-labelledby="report-activity">
-      <h2 id="report-activity">{t('report_care_activity')}</h2>
-      <p class="report-note">{t('report_care_activity_note')}</p>
-      <p><strong>{latestText}</strong></p>
-      {scores.length > 1 && <p class="report-list-line">{entries}</p>}
     </section>
   );
 }

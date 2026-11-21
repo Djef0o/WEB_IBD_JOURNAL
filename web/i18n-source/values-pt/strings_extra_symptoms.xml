@@ -6,5 +6,5 @@
     <string name="extra_symptom_mouth_ulcers">Aftas</string>
     <string name="extra_symptom_fever">Febre</string>
     <string name="extra_card_title">Outros sintomas</string>
-    <string name="extra_card_hint">Articulações, pele, olhos, boca, febre: anotados aqui para seu médico e usados para pré-preencher as pontuações de atividade.</string>
+    <string name="extra_card_hint">Articulações, pele, olhos, boca, febre: anotados aqui para seu médico.</string>
 </resources>

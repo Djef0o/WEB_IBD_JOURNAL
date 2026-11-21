@@ -6,5 +6,5 @@
     <string name="extra_symptom_mouth_ulcers">Aphtes</string>
     <string name="extra_symptom_fever">Fièvre</string>
     <string name="extra_card_title">Autres symptômes</string>
-    <string name="extra_card_hint">Articulations, peau, yeux, bouche, fièvre : notés ici pour votre médecin et utilisés pour pré-remplir les scores d\'activité.</string>
+    <string name="extra_card_hint">Articulations, peau, yeux, bouche, fièvre : notés ici pour votre médecin.</string>
 </resources>

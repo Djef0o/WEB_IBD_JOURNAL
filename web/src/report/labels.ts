@@ -1,5 +1,4 @@
-import type { ActivityLevel } from '../domain/activity';
-import type { AppointmentKind, Diagnosis, ExtraSymptom, ScoreKind, VaccineType } from '../domain/care';
+import type { AppointmentKind, Diagnosis, ExtraSymptom, VaccineType } from '../domain/care';
 import type { WellbeingFactor } from '../domain/wellbeing';
 import type { LabCategory, LabTest } from '../domain/health';
 import type { CheckupType, RepeatUnit, Sex } from '../domain/profile';
@@ -85,19 +84,6 @@ export const REPEAT_EVERY_KEY: Record<Exclude<RepeatUnit, 'ONCE'>, string> = {
   WEEK: 'repeat_every_weeks',
   MONTH: 'repeat_every_months',
 };
-
-/** Name of each questionnaire in the report (`scoreName`). */
-export const scoreKindLabel = (kind: ScoreKind): string =>
-  (kind === 'HBI' ? t('report_care_score_hbi') : t('report_care_score_sccai'));
-
-const ACTIVITY_LEVEL_LABEL: Record<ActivityLevel, () => string> = {
-  REMISSION: () => t('report_care_level_remission'),
-  MILD: () => t('report_care_level_mild'),
-  MODERATE: () => t('report_care_level_moderate'),
-  SEVERE: () => t('report_care_level_severe'),
-  ACTIVE: () => t('report_care_level_active'),
-};
-export const activityLevelLabel = (level: ActivityLevel): string => ACTIVITY_LEVEL_LABEL[level]();
 
 const DIAGNOSIS_LABEL: Record<Diagnosis, () => string> = {
   CROHN: () => t('report_care_diagnosis_crohn'),
